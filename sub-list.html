@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/subStyle.css">
+    <script src="../kdnPublish/js/jquery-3.6.3.min.js"></script>
+    <script src="../kdnPublish/js/common.js"></script>
+    <title>제안관리시스템</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="../kdnPublish/main.html"><img src="../kdnPublish/images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li class="focus">
+                                <a href="#none"><span>제안검토<span></a>
+                                <ul class="depth2">
+                                    <li><a href="../kdnPublish/sub-list.html">사전검토</a></li>
+                                    <li><a href="#none">검토접수</a></li>
+                                    <li><a href="#none">검토결과</a></li>
+                                    <li><a href="#none">부서장승인</a></li>
+                                    <li><a href="#none">개선활동</a></li>
+                                    <li><a href="#none">심의결과</a></li>
+                                    <li><a href="#none">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">테마제안</a></li>
+                                    <li><a href="#none">참여현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">경진대회</a></li>
+                                    <li><a href="#none">참여현황</a></li>
+                                    <li><a href="#none">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">분임조관리</a></li>
+                                    <li><a href="#none">분임조원관리</a></li>
+                                    <li><a href="#none">지도사원관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">통합검색</a></li>
+                                    <li><a href="#none">우수과제</a></li>
+                                    <li><a href="#none">부서실적</a></li>
+                                    <li><a href="#none">체험수기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">나의제안</a></li>
+                                    <li><a href="#none">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">코드관리</a></li>
+                                    <li><a href="#none">권한관리</a></li>
+                                    <li><a href="#none">포상금지급관리</a></li>
+                                    <li><a href="#none">공지사항관리</a></li>
+                                    <li><a href="#none">검토기준표관리</a></li>
+                                    <li><a href="#none">사전검토 메시지관리</a></li>
+                                    <li><a href="#none">사후관리</a></li>
+                                    <li><a href="#none">지도사원 등록관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="log-time">
+                        <span>2024-01-05 10:04</span>
+                    </div>
+                    <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <di id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1 active">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li class="focus"><a href="#none">사전검토</a></li>
+                            <li><a href="#none">검토접수</a></li>
+                            <li><a href="#none">검토결과</a></li>
+                            <li><a href="#none">부서장승인</a></li>
+                            <li><a href="#none">개선활동</a></li>
+                            <li><a href="#none">심의결과</a></li>
+                            <li><a href="#none">사후관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">테마제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">테마제안</a></li>
+                            <li><a href="#none">참여현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">경진대회</a></li>
+                            <li><a href="#none">참여현황</a></li>
+                            <li><a href="#none">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">분임조관리</a></li>
+                            <li><a href="#none">분임조원관리</a></li>
+                            <li><a href="#none">지도사원관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">통합검색</a></li>
+                            <li><a href="#none">우수과제</a></li>
+                            <li><a href="#none">부서실적</a></li>
+                            <li><a href="#none">체험수기</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">나의제안</a></li>
+                            <li><a href="#none">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">관리
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="#none">코드관리</a></li>
+                            <li><a href="#none">권한관리</a></li>
+                            <li><a href="#none">포상금지급관리</a></li>
+                            <li><a href="#none">공지사항관리</a></li>
+                            <li><a href="#none">검토기준표관리</a></li>
+                            <li><a href="#none">사전검토 메시지관리</a></li>
+                            <li><a href="#none">사후관리</a></li>
+                            <li><a href="#none">지도사원 등록관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </di>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../kdnPublish/images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../kdnPublish/images/board/ic_depth.svg" alt="depth"></li>
+                        <li>제안검토</li>
+                        <li><img src="../kdnPublish/images/board/ic_depth.svg" alt="depth"></li>
+                        <li>사전검토</li>
+                    </ul>
+                    <h2 class="h2-tit">사전검토</h2>
+                    <!-- board wrap :s-->
+                    <div class="brd-wrap">
+                        <!-- board search :s -->
+                        <div class="brd-search">    
+                            <div class="brd-search-form">
+                                <div class="search-section">
+                                    <div class="search-date">
+                                        <p>제안등록일</p>
+                                        <label for="startDate" class="hide">시작일</label>
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>-</span>
+                                        <label for="endDate" class="hide">종료일</label>
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                    </div>        
+                                    <div class="search-select">
+                                        <p>제안유형</p>
+                                        <label for="searchCate" class="hide">구분</label>
+                                        <select name="searchCate" id="searchCate">
+                                            <option>전체제안</option>
+                                            <option>단순제안</option>
+                                            <option>테마제안</option>
+                                            <option>아이디어</option>
+                                            <option>실시제안</option>
+                                            <option>프로세스</option>
+                                            <option>개선활동</option>
+                                        </select>
+                                    </div>    
+                                    <div class="search-select">
+                                        <p>진행상태</p>
+                                        <label for="searchState" class="hide">구분</label>
+                                        <select name="searchState" id="searchState">
+                                            <option>사전검토중</option>
+                                            <option>접수중</option>
+                                            <option>검토중</option>
+                                            <option>검토승인중</option>
+                                            <option>계획등록중</option>
+                                            <option>결과등록중</option>
+                                            <option>심의중</option>
+                                        </select>
+                                    </div>                                 
+                                </div>
+                                <div class="search-section">
+                                    <div class="search-text">
+                                        <p>소속부서</p>
+                                        <label for="searchCate" class="hide">구분</label>
+                                        <select name="searchCate" id="searchCate">
+                                            <option>소속부서</option>
+                                            <option>제목</option>
+                                            <option>내용</option>
+                                            <option>작성자</option>
+                                        </select>
+                                        <label for="searchWord" class="hide">검색어</label>
+                                        <input type="text" name="searchWord" id="searchWord" class="" placeholder="검색어를 입력하세요.">
+                                        <label for="searchPartBtn" class="hide">부서찾기</label>
+                                        <input type="button" class="search-part" value="부서찾기" id="searchPartBtn">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brd-search-btn">
+                                <input type="button" class="btn-search" value="검색" id="searchActBtn">
+                                <input type="button" class="btn-reset" value="초기화" id="resetBtn">
+                            </div>
+                        </div>                
+                        <!-- board search :e -->
+
+                        <!-- board info : s-->
+                        <div class="brd-info">
+                            <ul class="brd-num">
+                                <li><span>전체 </span><em>112</em>건</li>
+                                <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
+                            </ul>
+                            <input type="button" value="엑셀다운로드" class="btn-excel">
+                        </div>                               
+                        <!-- board info : e-->
+
+                        <!-- board table :s -->
+                        <div class="table-wrap">
+                            <table class="brd-list-01">
+                                <caption>사전검토 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 8%;"> 
+                                    <col style="width: 27%;">  
+                                    <col style="width: 8%;">  
+                                    <col style="width: 8%"> 
+                                    <col style="width: 8%">
+                                    <col style="width: 10%">  
+                                    <col style="width: 10%">  
+                                    <col style="width: 21%">  
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">제안번호</th>
+                                        <th scope="col">제안명</th>
+                                        <th scope="col">제안유형</th>
+                                        <th scope="col">등록일</th>
+                                        <th scope="col">제안자</th>      
+                                        <th scope="col">소속부서</th>   
+                                        <th scope="col">검토부서</th>                                           
+                                        <th scope="col">진행상태</th>                                           
+                                    </tr>
+                                </thead>
+                                <tbody>	
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0025</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">사옥 내 자전거 보관함(소) 관리 강화</p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-11-14</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">에너지ICT연구팀</td>
+                                        <td aria-label="검토부서">정보관리팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>	
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0024</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">제안관리시스템 게시물에 좋아요 기능 추가 제안</p></td> 
+                                        <td aria-label="제안유형">테마제안</td>
+                                        <td aria-label="등록일">2023-10-15</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">품질경영부</td>
+                                        <td aria-label="검토부서">정보관리팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0023</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">결제권한 위임 시 결재 간소화</p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-10-15</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">발전ENG팀</td>
+                                        <td aria-label="검토부서">정보관리부</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0022</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">KAIS로그인용 인증번호 자리수 변경</p></td> 
+                                        <td aria-label="제안유형">개선활동</td>
+                                        <td aria-label="등록일">2023-10-15</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">서울지역본부</td>
+                                        <td aria-label="검토부서">품질경영부</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0021</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">화상회의시스템 구축</p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-09-01</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">영업시스템운영팀</td>
+                                        <td aria-label="검토부서">AMI운영팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0020</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">작업중 안전표지판 개조</p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-09-01</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">계통ICT연구팀</td>
+                                        <td aria-label="검토부서">안전비상재난팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0019</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작</p></td> 
+                                        <td aria-label="제안유형">테마제안</td>
+                                        <td aria-label="등록일">2023-09-01</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">충북지역사업처</td>
+                                        <td aria-label="검토부서">업무지원팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0018</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">테마제안 검토기준표 뜸</p></td> 
+                                        <td aria-label="제안유형">개선활동</td>
+                                        <td aria-label="등록일">2023-08-23</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">대구지역본부</td>
+                                        <td aria-label="검토부서">품질경영팀</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0017</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">보안 취약점 점검 효율화 방안 </p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-08-23</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">에너지ICT연구팀</td>
+                                        <td aria-label="검토부서">홍보문화실</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+                                    <tr>
+                                        <td aria-label="제안번호">2023-0016</td>
+                                        <td aria-label="제안명" class="align-left"><p class="txt-wrap">근무시간 자가체크를 통한 근무문화 개선</p></td> 
+                                        <td aria-label="제안유형">아이디어</td>
+                                        <td aria-label="등록일">2023-08-23</td>
+                                        <td aria-label="제안자">홍길동</td>   
+                                        <td aria-label="소속부서">품질경영부</td>
+                                        <td aria-label="검토부서">품질경영부</td>                                
+                                        <td aria-label="진행상태">
+                                            <ul class="st-gage">
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                                <li class="complete"></li>
+                                            </ul>
+                                        </td>                                
+                                    </tr>
+
+                                    <tr> <!-- 게시글이 없을때  -->
+                                        <td colspan="8" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- board table :e -->
+
+                        <!-- board footnote :s -->
+                        <div class="brd-footnote">
+                            <ul>
+                                <li><span class="fn-num">1</span>사전검토중</li>
+                                <li><span class="fn-num">2</span>접수중</li>
+                                <li><span class="fn-num">3</span>검토중</li>
+                                <li><span class="fn-num">4</span>검토승인중</li>
+                                <li><span class="fn-num">5</span>계획등록중</li>
+                                <li><span class="fn-num">6</span>결과등록중</li>
+                                <li><span class="fn-num">7</span>심의중</li>
+                            </ul>
+                        </div>
+                        <!-- board footnote :e -->
+        
+                        <!-- page:s -->
+                        <div class="pagination">       
+                            <span class="prev-group">
+                                <a class="page-first" href="" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
+                                <a class="page-prev" href="" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
+                            </span>
+                            <a class="on" href="" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                            <span class="next-group">
+                                <a class="page-next" href="" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
+                                <a class="page-end" href="" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
+                            </span>                
+                        </div>                  
+                        <!-- page:e -->      
+                    </div>                          
+                    <!-- board wrap :e-->
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

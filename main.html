@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/mainStyle.css">
+    <script src="../kdnPublish/js/jquery-3.6.3.min.js"></script>
+    <script src="../kdnPublish/js/common.js"></script>
+    <title>제안관리시스템</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="on">
+            <div class="header-layout">
+                <div class="header-left">
+                    <h1 id="logo"><a href="../kdnPublish/main.html"><img src="../kdnPublish/images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토<span></a>
+                                <ul class="depth2">
+                                    <li><a href="../kdnPublish/sub-list.html">사전검토</a></li>
+                                    <li><a href="#none">검토접수</a></li>
+                                    <li><a href="#none">검토결과</a></li>
+                                    <li><a href="#none">부서장승인</a></li>
+                                    <li><a href="#none">개선활동</a></li>
+                                    <li><a href="#none">심의결과</a></li>
+                                    <li><a href="#none">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">테마제안</a></li>
+                                    <li><a href="#none">참여현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">경진대회</a></li>
+                                    <li><a href="#none">참여현황</a></li>
+                                    <li><a href="#none">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">분임조관리</a></li>
+                                    <li><a href="#none">분임조원관리</a></li>
+                                    <li><a href="#none">지도사원관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">통합검색</a></li>
+                                    <li><a href="#none">우수과제</a></li>
+                                    <li><a href="#none">부서실적</a></li>
+                                    <li><a href="#none">체험수기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">나의제안</a></li>
+                                    <li><a href="#none">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#none">코드관리</a></li>
+                                    <li><a href="#none">권한관리</a></li>
+                                    <li><a href="#none">포상금지급관리</a></li>
+                                    <li><a href="#none">공지사항관리</a></li>
+                                    <li><a href="#none">검토기준표관리</a></li>
+                                    <li><a href="#none">사전검토 메시지관리</a></li>
+                                    <li><a href="#none">사후관리</a></li>
+                                    <li><a href="#none">지도사원 등록관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="log-time">
+                        <span>2024-01-05 10:04</span>
+                    </div>
+                    <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+            </div>
+            <div class="gnb-bg"></div>
+            <div class="dim"></div>
+        </header>
+        <main id="main">
+            <div class="main-banner">
+                <a href="#none" class="banner-content">
+                    <div class="banner-tag">경진대회</div>
+                    <div class="banner-title"><p class="overtext">2024 한전KDN의 효율적인 업무개선을 위한 우수제안 경진대회</p></div>
+                    <div class="banner-link">제안하러가기</div>
+                </a>
+                <div class="banner-paging">
+                    <ul class="banner-item">
+                        <li><a href="#none"></a></li>
+                        <li class="on"><a href="#none"></a></li>
+                        <li><a href="#none"></a></li>
+                        <li><a href="#none"></a></li>
+                        <li><a href="#none"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-contents">
+                <section class="ts-wrap">
+                    <div class="ts-left">
+                        <div class="ts-left-title">
+                            <h2>나의 제안</h2>
+                            <p>임직원 여러분의 다양한 제안참여로 한전KDN이 더욱 더 앞으로 나아갑니다.</p>
+                        </div>
+                        <div class="ts-left-content">
+                            <ul>
+                                <li>단순제안<strong>31</strong>건</li>
+                                <li>테마제안<strong>25</strong>건</li>
+                                <li>아이디어<strong>12</strong>건</li>
+                                <li>실시제안<strong>164</strong>건</li>
+                                <li>프로세스<strong>5</strong>건</li>
+                                <li>개선활동<strong>6</strong>건</li>
+                            </ul>
+                        </div>
+                        <div class="ts-left-link">
+                            <a href="#none">나의 제안실적 바로가기</a>
+                        </div>
+                    </div>
+                    <div class="ts-right">
+                        <div class="ts-right-title">
+                            <h3>제안등록 <span>현황<strong> 2 </strong>건</span></h3>
+                            <a href="#none"></a>
+                        </div>
+                        <div class="ts-right-content">
+                            <div class="offer-item">
+                                <div class="offer-title"><span>사옥 내 자전거 보관함(소) 관리 강화</span></div>
+                                <ul class="offer-state">
+                                    <li class="done"></li>
+                                    <li class="done"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="offer-item">
+                                <div class="offer-title"><span>제안관리시스템 게시물에 좋아요 기능 추가 제안</span></div>
+                                <ul class="offer-state">
+                                    <li class="done"></li>
+                                    <li class="done"></li>
+                                    <li class="done"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <ul class="offer-level">
+                                <li>
+                                    <div class="level-num">1</div>
+                                    <div class="level-name">사전검토중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">2</div>
+                                    <div class="level-name">접수중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">3</div>
+                                    <div class="level-name">검토중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">4</div>
+                                    <div class="level-name">검토승인중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">5</div>
+                                    <div class="level-name">계획등록중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">6</div>
+                                    <div class="level-name">결과등록중</div>
+                                </li>
+                                <li>
+                                    <div class="level-num">7</div>
+                                    <div class="level-name">심의중</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ts-right-result">
+                            <div class="offer-result">제안 결과</div>
+                            <ul class="offer-count">
+                                <li><span>채택 제안 <strong>5</strong></span></li>
+                                <li class="dot"></li>
+                                <li><span>자료보완 <strong>2</strong></span></li>
+                                <li class="dot"></li>
+                                <li><span>불채택 제안 <strong>16</strong></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="bs-wrap">
+                    <div class="bs-col">
+                        <div class="bs-items">
+                            <div class="bs-item left">
+                                <div class="bs-title mb16">
+                                    <h3>검토자 검토 <span>현황</span></h3>
+                                </div>
+                                <div class="bs-box-wrap">
+                                    <div class="bs-box">
+                                        <h6>사전검토</h6>
+                                        <strong>7</strong>
+                                    </div>
+                                    <div class="bs-box">
+                                        <h6 class="new">검토접수</h6>
+                                        <strong>22</strong>
+                                    </div>
+                                    <div class="bs-box">
+                                        <h6>검토결과등록</h6>
+                                        <strong>2</strong>
+                                    </div>
+                                    <div class="bs-box">
+                                        <h6>지연검토</h6>
+                                        <strong>4</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="card-best">
+                                <em>우수제안</em>
+                                <span>KDN의 다양한<br>우수제안을 확인하세요.</span>
+                                <div class="card-link">
+                                    바로가기
+                                </div>
+                            </a>
+                        </div>
+                        <div class="bs-item">
+                            <div class="bs-title mb4">
+                                <h3>공지<span>사항</span></h3>
+                                <a href="#none" class="plus"></a>
+                            </div>
+                            <a href="#none" class="bs-notice">
+                                <div class="notice-title"><img src="../kdnPublish/images/main/ic_new.svg" alt="새글"><span>[결과보고] 개선활동 결과보고서 양식</span></div>
+                                <div class="notice-date"><span>2024. 01. 04</span></div>
+                            </a>
+                            <a href="#none" class="bs-notice">
+                                <div class="notice-title"><span>[산출물등록] 개선활동 PAIR  시트 양식</span></div>
+                                <div class="notice-date"><span>2023. 12. 13</span></div>
+                            </a>
+                            <a href="#none" class="bs-notice">
+                                <div class="notice-title"><span>연구원으로 올리는 제안은 해당 연구그룹을 지정</span></div>
+                                <div class="notice-date"><span>2023. 11. 20</span></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bs-item">
+                        <div class="bs-title mb20">
+                            <h3>제안 검토 <span>현황<strong> 16 </strong>건</span></h3>
+                            <ul class="bs-controller">
+                                <li><a href="#none"><img src="../kdnPublish/images/main/ic_slider-pre.svg" alt="이전슬라이드"></a></li>
+                                <li><em class="pcol1">1</em><span>/4</span></li>
+                                <li><a href="#none"><img src="../kdnPublish/images/main/ic_slider-next.svg" alt="다음슬라이드"></a></li>
+                            </ul>
+                        </div>
+                        <div class="bs-confirm-wrap">
+                            <a href="#none" class="bs-confirm">
+                                <div class="confirm-title">
+                                    <div>
+                                        <h5>제안관리시스템 수정 및 삭제 기능 개선</h5>
+                                    </div>
+                                    <ul>
+                                        <li><p>제안유형ㆍ</p><span>아이디어</span></li>
+                                        <li><p>제안자ㆍ</p><span>장진구</span></li>
+                                        <li><p>제안부서ㆍ</p><span>보안컨설팅팀</span></li>
+                                    </ul>
+                                </div>
+                                <div class="confirm-state">검토중</div>
+                            </a>
+                            <a href="#none" class="bs-confirm">
+                                <div class="confirm-title">
+                                    <div>
+                                        <h5>결재권한 위임 시 결재 간소화</h5>
+                                </div>
+                                    <ul>
+                                        <li><p>제안유형ㆍ</p><span>테마제안</span></li>
+                                        <li><p>제안자ㆍ</p><span>안상훈</span></li>
+                                        <li><p>제안부서ㆍ</p><span>정보관리부</span></li>
+                                    </ul>
+                                </div>
+                                <div class="confirm-state">검토 승인중</div>
+                            </a>
+                            <a href="#none" class="bs-confirm">
+                                <div class="confirm-title">
+                                    <div>
+                                        <h5>제안관리 시스템 ActiveX 제거</h5>
+                                    </div>
+                                    <ul>
+                                        <li><p>제안유형ㆍ</p><span>개선활동</span></li>
+                                        <li><p>제안자ㆍ</p><span>김수연</span></li>
+                                        <li><p>제안부서ㆍ</p><span>경영평가부</span></li>
+                                    </ul>
+                                </div>
+                                <div class="confirm-state">검토중</div>
+                            </a>
+                            <a href="#none" class="bs-confirm">
+                                <div class="confirm-title">
+                                    <div>
+                                        <span class="deadline">검토권고기한초과</span>
+                                        <h5>제안등록 후 3개월 이상 검토 결과 없을 시 자동 채택 시행</h5>
+                                    </div>
+                                    <ul>
+                                        <li><p>제안유형ㆍ</p><span>테마제안</span></li>
+                                        <li><p>제안자ㆍ</p><span>장태경</span></li>
+                                        <li><p>제안부서ㆍ</p><span>광주전남지역본부</span></li>
+                                    </ul>
+                                </div>
+                                <div class="confirm-state notyet">접수중</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <a href="#none" class="float-menu">
+                <img src="../kdnPublish/images/main/ic_floating.svg" alt="사용자 매뉴얼">
+                <span>사용자 매뉴얼</span>
+            </a>
+        </main>
+        <footer id="footer">
+            <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+            <p>© 한전KDN(주). All right reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
