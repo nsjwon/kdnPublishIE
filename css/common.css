@@ -96,6 +96,7 @@ div::-webkit-scrollbar-thumb {border-radius: 3px;}
 .mb8 {margin-bottom: 8px !important;}
 .mb10 {margin-bottom: 10px !important;}
 .mb16 {margin-bottom: 16px !important;}
+.mb18 {margin-bottom: 18px !important;}
 .mb20 {margin-bottom: 20px !important;}
 .mb24 {margin-bottom: 24px !important;}
 .mb26 {margin-bottom: 26px !important;}
@@ -183,15 +184,6 @@ div::-webkit-scrollbar-thumb {border-radius: 3px;}
 .fw_700 {font-weight: 700 !important;}
 .fw_800 {font-weight: 800 !important;}
 .fw_900 {font-weight: 900 !important;}
-
-/* input */
-input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
-input[type=submit], input[type=button] {cursor: pointer;}
-input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
-input[type="checkbox"], input[type="radio"] {vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .3; -webkit-appearance: auto;}
-input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
-select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #dedede;}
-button, input[type=button] {transition: all ease 0.2s 0s;}
 
 /* utility */
 .hide {position: absolute; width: 1px; height: 1px; padding: 0;	margin: 0px; overflow: hidden;	clip: rect(0, 0, 0, 0);	border: 0;}

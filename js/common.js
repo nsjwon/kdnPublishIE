@@ -32,4 +32,25 @@ $(document).ready(function() {
             $(".dim").hide();
         });
     });
+    
+    
+    $(document).ready(function() {
+        $(".ct-select > a").click(function() {
+            $(".ct-select").toggleClass("open");
+
+            if ($(".ct-select").hasClass("open")) {
+                $(".ct-option").show();
+            } else {
+                $(".ct-option").hide();
+            }
+
+        });
+
+        $(".ct-option li a").click(function() {
+            var selectedOptionText = $(this).text();
+            $(".ct-select > a").text(selectedOptionText);
+            $(".ct-option").hide();
+            $(".ct-select").removeClass("open");
+        });
+    });
 });

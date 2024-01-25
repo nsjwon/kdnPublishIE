@@ -107,3 +107,12 @@
 .pagination .prev-group a.page-prev {background-position:-37px 12px;}
 .pagination .next-group a.page-end {background-position:-128px 12px;}
 .pagination .next-group a.page-next {background-position:-81px 12px;}
+
+/* input */
+input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+input[type=submit], input[type=button] {cursor: pointer;}
+input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
+input[type="checkbox"], input[type="radio"] {vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .3; -webkit-appearance: auto;}
+input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
+select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #dedede;}
+button, input[type=button] {transition: all ease 0.2s 0s;}

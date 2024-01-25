@@ -75,7 +75,7 @@
 			border-left: 0 none;
 		}
 
-		table td:nth-child(7) {
+		table td:nth-child(6) {
 			font-size: 13px;
 			color: #555;
 			letter-spacing: -1px;
@@ -83,7 +83,7 @@
 			text-align: center;
 		}
 
-		table td:nth-child(8) {
+		table td:nth-child(7) {
 			text-align: center;
 		}
 
@@ -171,6 +171,7 @@
 		}
 
 		.history strong {
+			color: #1c1d1f;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -198,7 +199,7 @@
 </head>
 
 <body>
-	<h1>퍼블리싱 작업현황</h1>
+	<h1>한전KDN 제안관리시스템 퍼블리싱 작업현황</h1>
 
 	<div class="project">
 
@@ -210,19 +211,19 @@
 				</li>
 				<li>
 					<strong>총 작업량</strong>
-					<span>143화면 중 0화면 완료</span>
+					<span>92화면 중 2화면 완료</span>
 				</li>
 				<li>
 					<strong>카테고리 별 작업률</strong>
-					<span>Login(1/1)
-						Main page(3/3)
-						System(15/15)
-						My menu(36/36)
-						Order(10/10)
-						Expense(12/12)
-						Biz-trip(8/8)
-						E-ticket(4/4)
-						Admin(55/55)</span>
+					<span>로그인(0/1)
+						메인화면(1/4)
+						제안검토(1/18)
+						테마제안(0/6)
+						경진대회(0/6)
+						분임조(0/11)
+						제안검색(0/5)
+						나의제안(0/12)
+						관리(0/29)</span>
 				</li>
 			</ul>
 		</div>
@@ -231,13 +232,11 @@
 	<table id="ResultTable">
 		<caption>메뉴구조도에 따른 작업현황</caption>
 		<colgroup>
-			<col width="12%">
-			<col width="12%">
-			<col width="12%">
-			<col width="12%">
-			<col width="17%">
-			<col width="20%">
-			<col width="5%">
+			<col width="15%">
+			<col width="15%">
+			<col width="25%">
+			<col width="10%">
+			<col width="25%">
 			<col width="5%">
 			<col width="5%">
 		</colgroup>
@@ -245,40 +244,100 @@
 			<tr>
 				<th scope="col">1depth</th>
 				<th scope="col">2depth</th>
-				<th scope="col">3depth</th>
-				<th scope="col">4depth</th>
 				<th scope="col">메뉴설명</th>
+				<th scope="col">메뉴유형</th>
 				<th scope="col">link</th>
 				<th scope="col">퍼블리싱</th>
-				<th scope="col">반응형</th>
 				<th scope="col">웹표준</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td><strong>0. Login</strong></td>
+				<td><strong>0. 로그인화면</strong></td>
+				<td>로그인화면</td>
+				<td>로그인화면</td>
 				<td></td>
-				<td></td>
-				<td></td>
-				<td>로그인페이지</td>
-				<td><a href="IMP-UI-000-00-00-00.html" target="_blank">IMP-UI-000-00-00-00.html</a></td>
-				<td>O</td>
-				<td>O</td>
+				<td><a href="./pages/SGST-UI-00-001.html" target="_blank">SGST-UI-00-001.html</a></td>
+				<td>X</td>
 				<td>
-					O
+					X
 					<br>
 					<a href="https://validator.w3.org/"
 						target="_blank">결과보기</a>
 				</td>
 			</tr>
+
 			<tr>
-				<td><strong>1. Main page</strong></td>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>1. 메인화면</strong></td>
+				<td>메인화면</td>
+				<td>메인화면</td>
 				<td></td>
-				<td></td>
-				<td></td>
-				<td>메인페이지</td>
-				<td><a href="IMP-UI-001-00-00-00.html" target="_blank">IMP-UI-001-00-00-00.html</a></td>
+				<td><a href="./pages/SGST-UI-01-001.html" target="_blank">SGST-UI-01-001.html</a></td>
 				<td>O</td>
+				<td>
+					O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>제안검토현황상세</td>
+				<td></td>
+				<td><a href="./pages/SGST-UI-01-002.html" target="_blank">SGST-UI-01-002.html</a></td>
+				<td>X</td>
+				<td>
+					X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>공지사항목록</td>
+				<td>popup</td>
+				<td><a href="./pages/SGST-UI-01-003.html" target="_blank">SGST-UI-01-003.html</a></td>
+				<td>X</td>
+				<td>
+					X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>공지사항상세</td>
+				<td>popup</td>
+				<td><a href="./pages/SGST-UI-01-004.html" target="_blank">SGST-UI-01-004.html</a></td>
+				<td>X</td>
+				<td>
+					X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>2. 제안검토</strong></td>
+				<td>사전검토</td>
+				<td>사전검토결과목록</td>
+				<td>list</td>
+				<td><a href="./pages/SGST-UI-02-001.html" target="_blank">SGST-UI-02-001.html</a></td>
 				<td>O</td>
 				<td>
 					O
@@ -288,39 +347,6 @@
 				</td>
 			</tr>
 
-			<tr>
-				<td></td>
-				<td>User Information</td>
-				<td></td>
-				<td>popup</td>
-				<td>직원 사용자 연락처 조회용 화면</td>
-				<td><a href="IMP-UI-001-01-00-00.html" target="_blank">IMP-UI-001-01-00-00.html</a></td>
-				<td>O</td>
-				<td>O</td>
-				<td>
-					O
-					<br>
-					<a href="https://validator.w3.org/nu/"
-						target="_blank">결과보기</a>
-				</td>
-			</tr>
-
-			<tr>
-				<td></td>
-				<td>Notice Popup</td>
-				<td></td>
-				<td>popup</td>
-				<td>공지사항 팝업</td>
-				<td><a href="IMP-UI-001-02-00-00.html" target="_blank">IMP-UI-001-02-00-00.html</a></td>
-				<td>O</td>
-				<td>O</td>
-				<td>
-					O
-					<br>
-					<a href="https://validator.w3.org/nu/"
-						target="_blank">결과보기</a>
-				</td>
-			</tr>
 
 			<!-- <tr>
 				<td></td>
@@ -384,9 +410,7 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 				<td id="resultCell"></td>
-				<td></td>
 				<td></td>
 			</tr>
 		</tbody>
