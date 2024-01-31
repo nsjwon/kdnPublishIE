@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="wrap">
-        <header id="header" class="on">
+        <header id="header">
             <div class="header-layout">
                 <div class="header-left">
                     <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
@@ -86,10 +86,12 @@
                     </nav>
                 </div>
                 <div class="header-right">
-                    <div class="log-time">
-                        <span>2024-01-05 10:04</span>
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
                     </div>
-                    <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
                     <a href="#none" class="btn-login">로그아웃</a>
                 </div>
             </div>
@@ -198,11 +200,11 @@
                         <div class="ts-right-result">
                             <div class="offer-result">제안&nbsp;<span>결과</span></div>
                             <ul class="offer-count">
-                                <li><span>채택 제안 <strong>5</strong></span></li>
+                                <li><span>채택 제안</span><strong>5</strong></li>
                                 <li class="dot"></li>
-                                <li><span>자료보완 <strong>2</strong></span></li>
+                                <li><span>자료보완</span><strong>2</strong></li>
                                 <li class="dot"></li>
-                                <li><span>불채택 제안 <strong>16</strong></span></li>
+                                <li><span>불채택 제안</span><strong>16</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -219,7 +221,7 @@
                                         <h6>사전검토중</h6>
                                         <strong>7</strong>
                                     </div>
-                                    <div class="bs-box">
+                                    <div class="bs-box mybox">
                                         <h6 class="new">접수중</h6>
                                         <strong>22</strong>
                                     </div>
@@ -227,7 +229,7 @@
                                         <h6>검토중</h6>
                                         <strong>4</strong>
                                     </div>
-                                    <div class="bs-box">
+                                    <div class="bs-box mybox">
                                         <h6>검토승인중</h6>
                                         <strong>12</strong>
                                     </div>
@@ -235,7 +237,7 @@
                                         <h6>개선활동중</h6>
                                         <strong>4</strong>
                                     </div>
-                                    <div class="bs-box">
+                                    <div class="bs-box mybox">
                                         <h6>심의중</h6>
                                         <strong>36</strong>
                                     </div>
@@ -254,8 +256,10 @@
                                 </div>
                             </div>
                             <a class="card-best">
-                                <em>우수제안</em>
-                                <span>KDN의 다양한<br>우수제안을 확인하세요.</span>
+                                <div class="card-title-wrap">
+                                    <em>우수제안</em>
+                                    <span>KDN의 다양한 우수제안을 확인하세요.</span>
+                                </div>
                                 <div class="card-link">
                                     바로가기
                                 </div>
@@ -297,17 +301,20 @@
                                 </div>
                                 <h3>제안 검토 <span>현황<strong> 16 </strong>건</span></h3>
                             </div>
-                            <ul class="bs-controller">
+                            <!-- <ul class="bs-controller">
                                 <li><a href="#none"></a></li>
                                 <li><em class="pcol1">1</em><span>/4</span></li>
                                 <li><a href="#none"></a></li>
-                            </ul>
+                            </ul> -->
+                            <div class="bs-more">
+                                <a href="#none"></a>
+                            </div>
                         </div>
                         <div class="bs-confirm-wrap">
                             <a href="#none" class="bs-confirm">
                                 <div class="confirm-title">
                                     <div>
-                                        <h5>제안관리시스템 수정 및 삭제 기능 개선</h5>
+                                        <h5 class="over2lines">제안관리시스템 수정 및 삭제 기능 개선</h5>
                                     </div>
                                     <ul>
                                         <li><p>제안유형ㆍ</p><span>아이디어</span></li>
@@ -320,10 +327,10 @@
                             <a href="#none" class="bs-confirm">
                                 <div class="confirm-title">
                                     <div>
-                                        <h5>결재권한 위임 시 결재 간소화</h5>
+                                        <h5 class="over2lines">결재권한 위임 시 결재 간소화</h5>
                                 </div>
                                     <ul>
-                                        <li><p>제안유형ㆍ</p><span>테마제안</span></li>
+                                        <li><p>제안유형ㆍ</p><span>아이디어</span></li>
                                         <li><p>제안자ㆍ</p><span>안상훈</span></li>
                                         <li><p>제안부서ㆍ</p><span>정보관리부</span></li>
                                     </ul>
@@ -333,10 +340,10 @@
                             <a href="#none" class="bs-confirm">
                                 <div class="confirm-title">
                                     <div>
-                                        <h5>제안관리 시스템 ActiveX 제거</h5>
+                                        <h5 class="over2lines">제안관리 시스템 ActiveX 제거</h5>
                                     </div>
                                     <ul>
-                                        <li><p>제안유형ㆍ</p><span>개선활동</span></li>
+                                        <li><p>제안유형ㆍ</p><span>아이디어</span></li>
                                         <li><p>제안자ㆍ</p><span>김수연</span></li>
                                         <li><p>제안부서ㆍ</p><span>경영평가부</span></li>
                                     </ul>
@@ -344,13 +351,13 @@
                                 <div class="confirm-state">검토중</div>
                             </a>
                             <a href="#none" class="bs-confirm">
-                                <div class="confirm-title">
+                                <div class="confirm-title deadline">
                                     <div>
                                         <span class="deadline">검토권고기한초과</span>
-                                        <h5>제안등록 후 3개월 이상 검토 결과 없을 시 자동 채택 시행</h5>
+                                        <h5 class="over2lines">제안등록 후 3개월 이상 검토 결과 없을 시 자동 채택 시행</h5>
                                     </div>
                                     <ul>
-                                        <li><p>제안유형ㆍ</p><span>테마제안</span></li>
+                                        <li><p>제안유형ㆍ</p><span>아이디어</span></li>
                                         <li><p>제안자ㆍ</p><span>장태경</span></li>
                                         <li><p>제안부서ㆍ</p><span>광주전남지역본부</span></li>
                                     </ul>
