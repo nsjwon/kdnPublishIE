@@ -55,7 +55,7 @@
 .brd-search .search-section p {color: #222; font-weight: 500; font-size: 1.6rem; min-width: 90px;}
 .brd-search input[type=text]::placeholder {color: #a2a2a2;}
 .brd-search select {min-width: 140px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem;}
-.search-section > div {margin-right: 3.6rem; display: flex; justify-content: flex-start; align-items: center;}
+.search-section > div {margin-right: 5rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
 .search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 160px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem;}
 .search-date input[type=text]::placeholder {color: #a2a2a2;}
