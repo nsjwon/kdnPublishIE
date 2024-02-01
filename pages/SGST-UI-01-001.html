@@ -10,7 +10,13 @@
     <script src="../js/common.js"></script>
     <title>제안관리시스템</title>
 </head>
-<body>
+<body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
     <div id="wrap">
         <header id="header">
             <div class="header-layout">
@@ -169,10 +175,12 @@
                                     <li></li>
                                 </ul>
                             </a>
-                            <div class="offer-item no-item">
+                            <!-- 등록된 제안이 없을 때 표출되는 div:s -->
+                            <!-- <div class="offer-item no-item">
                                 <p>등록된 제안이 없습니다.</p>
                                 <a href="#none"><span>제안등록 바로가기</span></a>
-                            </div>
+                            </div> -->
+                            <!-- 등록된 제안이 없을 때 표출되는 div:e -->
                             <ul class="offer-level">
                                 <li>
                                     <div class="level-num">1</div>
@@ -215,6 +223,10 @@
                             </ul>
                         </div>
                     </div>
+                    <a href="#none" class="float-menu">
+                        <img src="../images/main/ic_floating.svg" alt="사용자 매뉴얼">
+                        <span>사용자 매뉴얼</span>
+                    </a>
                 </section>
                 <section class="bs-wrap">
                     <div class="bs-col">
@@ -375,10 +387,6 @@
                     </div>
                 </section>
             </div>
-            <a href="#none" class="float-menu">
-                <img src="../images/main/ic_floating.svg" alt="사용자 매뉴얼">
-                <span>사용자 매뉴얼</span>
-            </a>
         </main>
         <footer id="footer">
             <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>

@@ -13,14 +13,14 @@
 
 /* 메인 컨텐츠 */
 .main-contents {width: calc(100vw - 140px); max-width: 1780px; margin: 50px auto 44px;}
-.ts-wrap {width: 100%; display: flex; align-items: center; justify-content: space-between; background: url(../images/main/bg_maininfo.png) no-repeat; background-size: cover; border-radius: 20px;}
+.ts-wrap {position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between; background: url(../images/main/bg_maininfo.png) no-repeat; background-size: cover; border-radius: 20px;}
 .ts-wrap>div {display: flex; flex-direction: column; justify-content: center; flex: 1;}
 .ts-left {position: relative; color: #fff; margin: 90px 26px 0 70px; padding-bottom: 79px; padding-right: 48px; align-self: stretch;}
 .ts-left::after {position: absolute; right: 0; bottom: -3px; width: 228px; height: 168px; background: url(../images/main/bg_infogragh.svg) no-repeat bottom left; display: block; content: ''; background-size: contain;}
 .ts-left-title {display: flex; justify-content: flex-start; flex-direction: column; column-gap: 16px; margin: 11px 0 36px; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif;}
 .ts-left-title h2 {position: relative; display: inline-block; width: fit-content; font-size: 4rem; line-height: 4rem; font-weight: 700; margin-bottom: 18px;}
 .ts-left-title h2::after {position: absolute; content: ''; display: block; background: url(../images/main/ic_pencil.svg) no-repeat; width: 40px; height: 40px; right: -47px; top: 0;}
-.ts-left-title p {font-size: 1.8rem; line-height: 1.8rem; font-weight: 500; color: #dadff2; word-break: keep-all;}
+.ts-left-title p {font-size: 1.8rem; line-height: 2.3rem; font-weight: 500; color: #dadff2; word-break: keep-all;}
 .ts-left-content ul {display: flex; flex-wrap: wrap; margin-bottom: 50px; gap: 16px;}
 .ts-left-content ul li {width: 200px; height: 56px; line-height: 20px; display: flex; align-items: center; justify-content: center; border-radius: 50px; border: 1px solid #fff; font-size: 20px; font-weight: 600;}
 .ts-left-content ul li strong {color: #5bebff; font-size: 2.8rem; margin: 0 12px; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif;}
@@ -56,6 +56,18 @@
 .ts-right .offer-level .level-num {width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; line-height: 16px; background: #c4c7d7; color: #fff; font-weight: 500; border-radius: 8px;}
 .ts-right .offer-level .level-name {font-weight: 400;}
 
+@media (max-width: 1840px) {
+    .ts-left::after {right: -32px;}
+}
+
+@media (max-width: 1760px) {
+    .ts-left {margin: 70px 0 0 70px;}
+    .ts-left::after {right: -40px;}
+    .ts-left-title {margin: 11px 0 26px;}
+    .ts-left-content ul {margin-bottom: 36px;}
+    .ts-left-content ul li {width: 180px; height: 52px; font-size: 1.8rem;}
+}
+
 @media (max-width: 1720px) {
     .main-contents {width: calc(100vw - 80px);}
     .ts-wrap {width: calc(100% - 80px); margin: 0 auto;}
@@ -65,6 +77,8 @@
 }
 
 @media (max-width: 1660px) {
+    .ts-left-content ul li {width: 170px; height: 50px; font-size: 1.6rem;}
+    .ts-left-content ul li strong {font-size: 2.4rem;}
     .ts-right {padding: 40px 35px;}
     .ts-right .offer-level {gap: 6px; row-gap: 10px;}
     .ts-right .offer-state {gap: 8px;}
@@ -77,31 +91,34 @@
 
 @media (max-width: 1582px) {
     .ts-left {margin: 90px 0 0 70px;}
-    .ts-left-content ul li {width: 180px; height: 52px; font-size: 1.6rem;}
-    .ts-left-content ul li strong {font-size: 2.4rem;}
+    .ts-left::after {width: 212px;}
+    .ts-left-content ul {gap: 10px;}
+    .ts-left-content ul li {width: 146px; height: 48px; font-size: 1.4rem;}
+    .ts-left-content ul li strong {font-size: 2rem; margin: 0 6px;}
     .ts-right .offer-level {margin-bottom: 0;}
     .ts-right-result .offer-count li {flex-direction: column;}
     .ts-right-result .offer-count li span {font-size: 1.4rem;}
     .ts-right-result .offer-count strong {text-align: center; display: block; margin-left: 0;}
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1440px) {
+    .ts-left {margin: 60px 0 0 40px;}
     .ts-left::after {right: -36px;}
+    .ts-left-content ul li {width: 136px; height: 46px; font-size: 1.4rem;}
     .ts-right .offer-state {gap: 6px;}
     .ts-right .offer-state li {width: 10px; border-radius: 2px;}
     .ts-right .offer-title {width: calc(100% - 132px); max-width: 340px;}
 }
 
 @media (max-width: 1280px) {
+    .main-banner {width: 1280px;}
+    .main-contents {width: 1280px;}
+    .ts-wrap {width: calc(100% - 120px);}
     .ts-left::after {width: 200px; right: 0;}
     .ts-right {margin: 50px 40px 50px 10px;}
     .ts-right .offer-level li {font-size: 10px;}
     .ts-right .offer-level .level-num {width: 14px; height: 14px;}
     .ts-right-result .offer-count {gap: 1.4rem;}
-    .ts-left-content ul li {width: 146px; height: 48px; font-size: 1.4rem;}
-    .ts-left-content ul li strong {font-size: 2rem; margin: 0 6px;}
-    .ts-left {margin: 60px 0 0 40px;}
-    .ts-left::after {width: 168px;}
 }
 
 .bs-wrap {display: flex; justify-content: space-between; margin: 59px 50px 44px; gap: 48px;}
@@ -170,7 +187,9 @@
 
 @media (max-width: 1280px) {
     .ck-result-wrap .ck-count {gap: 1.2rem;}
+    .bs-wrap {margin: 59px 80px 44px;}
 }
+
 .bs-notice {display: flex; align-items: center; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid #edeff4; font-size: 1.6rem; font-weight: 400; line-height: 18px;}
 .notice-title img {margin-right: 5px;}
 .notice-date {color: #878787;}
@@ -206,3 +225,7 @@
 .float-menu {position: fixed; top: 250px; right: -49px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 1.6rem 2rem; color: #fff; background: #3b3b45; border-radius: 0 0 20px 20px; font-weight: 500; font-size: 1.4rem; line-height: 1.4rem; transform: rotate(90deg);}
 .float-menu img {width: 17px; height: 20px; display: block; transform: rotate(-90deg);}
 .float-menu span {display: flex;}
+
+@media (max-width: 1280px) {
+    .float-menu {position: absolute; top: 47px; right: -106px;}
+}
