@@ -162,6 +162,6 @@ button, input[type=button] {transition: all ease 0.2s 0s;}
 }
 
 @media (max-width: 1280px) {
-    .sub-content-wrap {width: 960px; margin: 26px 40px 34px;}
+    .sub-content-wrap {width: 972px; margin: 26px 34px 34px;}
     .search-text .btn-searchpart {margin: 0 0 0 0.6rem;}
 }
