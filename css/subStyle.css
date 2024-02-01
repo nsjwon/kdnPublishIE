@@ -44,7 +44,7 @@
 .btn-title {display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.6rem;}
 .btn-title .h2-tit {margin-bottom: 0;}
 .btn-wrap {display: flex; gap: 10px; justify-content: space-between; align-items: center;}
-.btn-wrap input[type="button"] {height: 38px;}
+.btn-wrap input[type="button"] {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center;}
 
 /* 게시판 검색 */
 .brd-wrap {position: relative;}
@@ -106,7 +106,7 @@
 .brd-footnote ul li {color: #777989; font-size: 1.2rem; display: flex; align-items: center; justify-content: flex-start; gap: 6px;}
 .brd-footnote ul li .fn-num {width: 1.6rem; height: 1.6rem; font-weight: 500; color: #fff; background: #afb2be; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px;} */
 
-/* 페이지 */
+/* 페이지네이션 */
 .pagination { margin: 2.2rem 0 0 0; text-align: center; clear:both; }
 .pagination a {color:#767676; display:inline-block; margin:2px; width:3.2rem; height:3.2rem; text-align:center; font-size:1.4rem; line-height:3.2rem; vertical-align:middle; border-radius: 4px;}
 .pagination a.on {color:#ffffff; background:#43464C; display:inline-block; margin:2px; width: 3.2rem;  height: 3.2rem; text-align: center; font-size: 1.4rem; line-height:3.2rem; border-radius: 4px; vertical-align: middle;}
@@ -122,6 +122,20 @@
 .pagination .prev-group a.page-prev {background-position:-37px 12px;}
 .pagination .next-group a.page-end {background-position:-128px 12px;}
 .pagination .next-group a.page-next {background-position:-81px 12px;}
+
+/* 상세페이지 */
+.dt-wrap {display: flex; align-items: center; justify-content: space-between; padding-bottom: 23px; margin-bottom: 23px; border-bottom: 1px solid #4f4f4f;}
+.dt-wrap .h2-tit {margin-bottom: 0;}
+.btn-print {background: #fff url(../images/button/ic_print.svg) no-repeat 21px 12px; color: #535B63; border: 1px solid #535b63; padding: 0 20px 0 41px; font-size: 1.4rem; font-weight: 500;}
+.btn-print:hover {background: #535B63 url(../images/button/ic_print-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #535b63;}
+.btn-sheet {background: #fff url(../images/button/ic_sheet.svg) no-repeat 21px 12px; color: #3B4EBA; border: 1px solid #3b4eba; padding: 0 20px 0 41px; font-size: 1.4rem; font-weight: 500;}
+.btn-sheet:hover {background: #3B4EBA url(../images/button/ic_sheet-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #3b4eba;}
+.btn-accordion {width: 32px; height: 32px; border-radius: 4px; background: #fff url(../images/button/ic_accordion.svg) no-repeat; background-size: contain; border: 1px solid #333;}
+
+.sub-content-inner {width: 100%;}
+.sc-block {width: 100%;}
+.scb-title {width: 100%; margin: 10px 0; display: flex; align-items: center; justify-content: space-between;}
+.scb-title .h4-tit {font-size: 2.2rem; line-height: 2.2rem; font-weight: 600;}
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
