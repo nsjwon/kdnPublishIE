@@ -46,8 +46,8 @@ body {background: #fff;}
 @media (max-width: 1640px) {
     #header .header-right .user-wrap {flex-direction: column-reverse; align-items: flex-start; gap: 6px;}
     #header .header-right .user-wrap .log-time>span {padding-left: 24px;}
-    #header .header-right .user-wrap>span {font-size: 1.3rem;}
-    #header .header-right .log-time::before {left: 0;}
+    #header .header-right .user-wrap>span {font-size: 1.3rem; word-break: keep-all;}
+    #header .header-right .log-time {display: none;}
 }
 
 @media (max-width: 1540px) {

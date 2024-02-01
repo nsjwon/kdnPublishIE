@@ -8,18 +8,11 @@ $(document).ready(function() {
         $(".dim").show();
     }).mouseleave(function() {
         // 마우스가 나갔을 때
-        // $("#header").removeClass("on");
-        // $(".gnb-bg").removeClass("on");
-        // $(".depth2").removeClass("on");
-        // $(".dim").hide();
+        $("#header").removeClass("on");
+        $(".gnb-bg").removeClass("on");
+        $(".depth2").removeClass("on");
+        $(".dim").hide();
     });
-
-    // $(document).ready(function() {
-    //     $("#gnb>ul>li").hover(function() {
-    //         $("#gnb>ul>li").removeClass("focus");
-    //         $(this).addClass("focus");
-    //     });
-    // });
 });   
 
 //레프트 메뉴 클릭이벤트
