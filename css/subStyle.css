@@ -98,13 +98,20 @@
 /* .brd-list-01 td .st-gage {display: flex; align-items: center; justify-content: center; gap: 5px;}
 .brd-list-01 td .st-gage li {width: 2.8rem; height: 1.2rem; border-radius: 2px; background: #e3e7ec;}
 .brd-list-01 td .st-gage li.complete {background: #46bcef;} */
-.brd-list-01 td.st-level {color: #202020; font-size: 1.4rem;}
+.brd-list-01 td.st-level {color: #232323; font-size: 1.4rem;}
 .brd-list-01 td.st-level>div {background: #e4e4e4; border-radius: 4px; display: flex; align-items: center; justify-content: center; width: 90px; height: 29px; margin: 0 auto;}
+.brd-list-01 td.st-level.st01>div {background: #e9e9e9;}
+.brd-list-01 td.st-level.st02>div {background: #fbecec;}
+.brd-list-01 td.st-level.st03>div {background: #fff4de;}
+.brd-list-01 td.st-level.st04>div {background: #f3efff;}
+.brd-list-01 td.st-level.st05>div {background: #ebf2ff;}
+.brd-list-01 td.st-level.st06>div {background: #ebf6eb;}
+.brd-list-01 td.st-level.st07>div {background: #e4f8fd;}
 
-/* .brd-footnote {margin: 2.2rem 0 0;}
+.brd-footnote {margin: 2.2rem 0 0;}
 .brd-footnote ul {width: 100%; display: flex; justify-content: flex-end; gap: 20px;}
 .brd-footnote ul li {color: #777989; font-size: 1.2rem; display: flex; align-items: center; justify-content: flex-start; gap: 6px;}
-.brd-footnote ul li .fn-num {width: 1.6rem; height: 1.6rem; font-weight: 500; color: #fff; background: #afb2be; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px;} */
+.brd-footnote ul li .fn-num {width: 1.6rem; height: 1.6rem; font-weight: 500; color: #fff; background: #afb2be; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px;}
 
 /* 페이지네이션 */
 .pagination { margin: 2.2rem 0 0 0; text-align: center; clear:both; }
