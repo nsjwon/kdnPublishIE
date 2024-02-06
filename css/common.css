@@ -94,6 +94,7 @@ div::-webkit-scrollbar-thumb {border-radius: 3px;}
 .mt90 {margin-top: 90px !important;}
 .mt100 {margin-top: 100px !important;}
 
+.mb0 {margin-bottom: 0 !important;}
 .mb4 {margin-bottom: 4px !important;}
 .mb8 {margin-bottom: 8px !important;}
 .mb10 {margin-bottom: 10px !important;}
@@ -196,6 +197,7 @@ div::-webkit-scrollbar-thumb {border-radius: 3px;}
 .over3lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 .over5lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 p.lh3 {line-height: 3px;}
+a.underline:hover {text-decoration: underline;}
 
 .pc-style {display: block !important;}
 .pc-style-flex {display: flex !important;}

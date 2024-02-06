@@ -13,7 +13,7 @@
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
     <div id="skipNav">
-        <a href="#main">본문 바로가기</a>
+        <a href="#sub-container">본문 바로가기</a>
         <a href="#footer-sub">하단 바로가기</a>
     </div>
     <!-- //반복영역 건너뛰기 -->
@@ -212,7 +212,7 @@
                     <div class="dt-wrap">
                         <h2 class="h2-tit">나의제안</h2>
                         <div class="btn-wrap">
-                            <input type="button" value="임시저장 목록보기" class="btn-temporlist">
+                            <input type="button" value="임시저장 목록보기" class="btn-temporlist" data-target="#tempList">
                         </div>
                     </div>
                     <div class="sub-content-inner">
@@ -278,6 +278,12 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th scope="row" colspan="2"><span class="rq-mark">*</span>개선내용</th>
+                                            <td colspan="3">
+                                                <textarea name="improveWay" id="improveWay" cols="30" rows="10" class="h20">#  우리회사에서 자주 사용하는 아이콘을 일괄 제작하여 KDN 지적재산권화&#10;전력계통, 전력설비, 통신설비, 컴퓨터, 네트워크 아이콘 등&#10;필요한 아이콘을 설문조사 등을 통해 수집&#10;</textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">파일첨부</th>
                                             <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
@@ -330,6 +336,42 @@
         </main>
         <!-- 서브페이지 메인 layout:e -->
     </div>
+    
+
+
+
+				<!-- 팝업 시작 -->
+				<div id="tempList" class="popup">
+					<div class="popup-content">
+						<div class="popup-header">
+							<h6>임시저장 목록</h6>
+							<a class="close-button" href="#none"></a>
+						</div>
+						<div class="popup-body">
+							<table class="brd-list-01">
+								<colgroup>
+									<col style="width: 10%">
+									<col style="width: 30%">
+									<col style="width: 60%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">No</th>
+										<th scope="col">임시저장일자</th>
+										<th scope="col">제안명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>2022. 11. 02</td>
+										<td>대기전력 차단기 설치로 전기에너지 절약</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 </body>
 </html>
 

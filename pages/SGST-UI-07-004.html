@@ -13,7 +13,7 @@
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
     <div id="skipNav">
-        <a href="#main">본문 바로가기</a>
+        <a href="#sub-container">본문 바로가기</a>
         <a href="#footer-sub">하단 바로가기</a>
     </div>
     <!-- //반복영역 건너뛰기 -->
@@ -266,6 +266,7 @@
                                             </td>
                                             <th scope="row"><span class="rq-mark">*</span>검토부서</th>
                                             <td>
+                                                <label for="loadPart" class="hide">검토부서</label>
                                                 <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly>
                                                 <label for="searchPartBtn" class="hide">부서찾기</label>
                                                 <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
@@ -274,15 +275,17 @@
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
                                             <td colspan="3">
+                                                <label for="ofTitle" class="hide">제안명</label>
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>품질표준명</th>
                                             <td colspan="3">
-                                                <input type="text" name="loadRules" id="loadRules" value="" readonly>
+                                                <label for="standardName" class="hide">품질표준명</label>
+                                                <input type="text" name="standardName" id="standardName" value="" readonly>
                                                 <label for="searchRulesBtn" class="hide">사규찾기</label>
-                                                <input type="button" class="btn-searchpart" value="사규찾기" id="searchRulesBtn">
+                                                <input type="button" class="btn-searchrule" value="사규찾기" id="searchRulesBtn">
                                             </td>
                                         </tr>
                                         <tr>
@@ -305,62 +308,70 @@
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>문제점</th>
                                             <td colspan="3">
+                                                <label for="ofProblem" class="hide">문제점</label>
                                                 <input type="text" name="ofProblem" id="ofProblem" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>기대효과</th>
                                             <td colspan="3">
+                                                <label for="epEffect" class="hide">기대효과</label>
                                                 <input type="text" name="epEffect" id="epEffect" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row" rowspan="2"><span class="rq-mark">*</span>개선사항</th>
-                                            <td colspan="3">
-                                                <div class="in-tr in-header">
-                                                    <div class="in-header-th">조항번호</div>
-                                                    <div class="in-header-th">현재내용(문구)</div>
-                                                    <div class="in-header-th">개선내용(문구)</div>
-                                                    <div class="in-header-btn">
-                                                        <input type="button" value="추가" class="btn-add-tr">
+                                            <th scope="row"><span class="rq-mark">*</span>개선사항</th>
+                                            <td colspan="3" class="add-type">
+                                                <div class="add-tr">
+                                                    <div class="in-tr">
+                                                        <div class="in-header">
+                                                            <div class="in-header-th">조항번호</div>
+                                                            <div class="in-header-th">현재내용(문구)</div>
+                                                            <div class="in-header-th">개선내용(문구)</div>
+                                                        </div>
+                                                        <div class="in-header-btn">
+                                                            <input type="button" value="추가" class="btn-add-tr">
+                                                        </div>
+                                                    </div>
+                                                    <div class="in-tr">
+                                                        <div class="in-body">
+                                                            <div class="in-body-td">
+                                                                <textarea name="clauseNum1" id="clauseNum1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                            <div class="in-body-td">
+                                                                <textarea name="currentWay1" id="currentWay1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                            <div class="in-body-td">
+                                                                <textarea name="improveWay1" id="improveWay1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="in-body-btn">
+                                                            <input type="button" value="삭제" class="btn-del-tr">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="in-tr in-body">
-                                                    <div class="in-body-td">
-                                                        <textarea name="clauseNum1" id="clauseNum1" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-td">
-                                                        <textarea name="currentWay1" id="currentWay1" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-td">
-                                                        <textarea name="improveWay1" id="improveWay1" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-btn">
-                                                        <input type="button" value="삭제" class="btn-del-tr">
+                                                <!-- 추가 버튼을 눌렀을 때 생성되는 영역:s -->
+                                                <div class="add-tr">
+                                                    <div class="in-tr">
+                                                        <div class="in-body">
+                                                            <div class="in-body-td">
+                                                                <textarea name="clauseNum1" id="clauseNum1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                            <div class="in-body-td">
+                                                                <textarea name="currentWay1" id="currentWay1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                            <div class="in-body-td">
+                                                                <textarea name="improveWay1" id="improveWay1" cols="30" rows="10" class="h10"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="in-body-btn">
+                                                            <input type="button" value="삭제" class="btn-del-tr">
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <!-- 추가 버튼을 눌렀을 때 생성되는 영역:e -->
                                             </td>
                                         </tr>
-                                        <!-- 추가 버튼을 눌렀을 때 추가되는 영역:s -->
-                                        <tr>
-                                            <td colspan="3">
-                                                <div class="in-tr in-body">
-                                                    <div class="in-body-td">
-                                                        <textarea name="clauseNum2" id="clauseNum2" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-td">
-                                                        <textarea name="currentWay2" id="currentWay2" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-td">
-                                                        <textarea name="improveWay2" id="improveWay2" cols="30" rows="10" class="h20"></textarea>
-                                                    </div>
-                                                    <div class="in-body-btn">
-                                                        <input type="button" value="삭제" class="btn-del-tr">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- 추가 버튼을 눌렀을 때 추가되는 영역:e -->
                                         <tr>
                                             <th scope="row">파일첨부</th>
                                             <td colspan="3" class="file-upload">
@@ -368,7 +379,7 @@
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
                                                         <label for="searchFileBtn" class="hide">파일찾기</label>
-                                                        <input type="button" class="btn-searchpart" value="파일찾기" id="searchFileBtn">
+                                                        <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                                     </div>
                                                     <ul class="att-file">
                                                         <li>타 기관 전용 문서 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>

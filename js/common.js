@@ -1,5 +1,6 @@
 //헤더 메뉴 드롭다운
 $(document).ready(function() {
+    
     $("#gnb").mouseenter(function() {
         // 마우스가 올라갔을 때
         $("#header").addClass("on");
@@ -13,7 +14,7 @@ $(document).ready(function() {
         $(".depth2").removeClass("on");
         $(".dim").hide();
     });
-});   
+});
 
 //레프트 메뉴 클릭이벤트
 $(document).ready(function() {
@@ -62,3 +63,19 @@ $(document).ready(function() {
     });
 });
 
+
+//제안 상세 페이지 내용 접었다 폈다 하는 기능
+$(document).ready(function() {
+    $(".board-block").on("click", ".btn-accordion", function(event) {
+        var boardBlock = $(this).closest(".board-block");
+        boardBlock.find(".board-list").toggle();
+        boardBlock.toggleClass("fold");
+        $(this).toggleClass("fold");
+
+        if (boardBlock.hasClass("fold")) {
+            boardBlock.find(".board-list").hide();
+        } else {
+            boardBlock.find(".board-list").show();
+        }
+    });
+});
