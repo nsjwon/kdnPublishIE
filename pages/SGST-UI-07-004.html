@@ -17,6 +17,7 @@
         <a href="#footer-sub">하단 바로가기</a>
     </div>
     <!-- //반복영역 건너뛰기 -->
+    <!-- wrap layout:s -->
     <div id="wrap">
         <!-- 상단메뉴 layout:s -->
         <header id="header" class="open">
@@ -212,7 +213,7 @@
                     <div class="dt-wrap">
                         <h2 class="h2-tit">나의제안</h2>
                         <div class="btn-wrap">
-                            <input type="button" value="임시저장 목록보기" class="btn-temporlist">
+                            <input type="button" value="임시저장 목록보기" class="popup-button btn-temporlist" data-target="#tempList">
                         </div>
                     </div>
                     <div class="sub-content-inner">
@@ -268,8 +269,7 @@
                                             <td>
                                                 <label for="loadPart" class="hide">검토부서</label>
                                                 <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly>
-                                                <label for="searchPartBtn" class="hide">부서찾기</label>
-                                                <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
+                                                <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                             </td>
                                         </tr>
                                         <tr>
@@ -424,7 +424,158 @@
             <!-- 서브페이지 컨텐츠 layout:e -->
         </main>
         <!-- 서브페이지 메인 layout:e -->
+
+
+        <!-- 임시저장 목록 팝업 시작 -->
+        <div id="tempList" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-01">
+                <div class="popup-header">
+                    <h2>임시저장 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">임시저장일자</th>
+                                <th scope="col">제안명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="selectable">
+                                <td>10</td>
+                                <td>2022. 12. 02</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>9</td>
+                                <td>2022. 11. 29</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>8</td>
+                                <td>2022. 11. 27</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>7</td>
+                                <td>2022. 11. 26</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>6</td>
+                                <td>2022. 11. 21</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>5</td>
+                                <td>2022. 11. 18</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>4</td>
+                                <td>2022. 11. 16</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>3</td>
+                                <td>2022. 11. 12</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>2</td>
+                                <td>2022. 11. 11</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>1</td>
+                                <td>2022. 11. 11</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="삭제" class="btn-delete">
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 임시저장 목록 팝업 끝 -->
+        <!-- 부서찾기 팝업 시작 -->
+        <div id="findPart" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-03">
+                <div class="popup-header">
+                    <h2>부서찾기</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- board search :s -->
+                    <div class="brd-search">    
+                        <div class="brd-search-form">
+                            <div class="search-section">                              
+                                <div class="search-text">
+                                    <label for="searchWord" class="hide">검색어</label>
+                                    <input type="text" name="searchWord" id="searchWord" placeholder="검색어를 입력하세요.">
+                                    <label for="searchPartBtn" class="hide">부서찾기</label>
+                                    <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parttree-wrap">
+                        <ul>
+                            <li class="p1 open">
+                                <a href="#none">한전KDN(주)</a>
+                                <ul>
+                                    <li class="p2"><a href="#none">감사실</a></li>
+                                    <li class="p2">
+                                        <a href="#none">커뮤니케이션실</a>
+                                        <ul>
+                                            <li class="p3"><a href="#none">커뮤니케이션1팀</a></li>
+                                            <li class="p3"><a href="#none">커뮤니케이션2팀</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="#none">전력 ICT 기술원</a>
+                                        <ul>
+                                            <li class="p3"><a href="#none">1팀</a></li>
+                                            <li class="p3"><a href="#none">2팀</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2"><a href="#none">기획관리본부</a></li>
+                                    <li class="p2"><a href="#none">ICT본부</a></li>
+                                    <li class="p2"><a href="#none">전력지능화안전본부</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- board search :e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 부서찾기 팝업 끝 -->
+
+
     </div>
+    <!-- wrap layout:e -->
+    
 </body>
 </html>
 
