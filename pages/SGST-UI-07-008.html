@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>임시저장목록/삭제</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+
+        
+        <!-- 임시저장 목록 팝업 시작 -->
+        <div id="tempList" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-01">
+                <div class="popup-header">
+                    <h2>임시저장 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">임시저장일자</th>
+                                <th scope="col">제안명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="selectable">
+                                <td>1</td>
+                                <td>2022. 12. 02</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>2</td>
+                                <td>2022. 11. 29</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>3</td>
+                                <td>2022. 11. 27</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>4</td>
+                                <td>2022. 11. 26</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>5</td>
+                                <td>2022. 11. 21</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <!-- <tr class="selectable">
+                                <td>6</td>
+                                <td>2022. 11. 18</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>7</td>
+                                <td>2022. 11. 16</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>8</td>
+                                <td>2022. 11. 12</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>9</td>
+                                <td>2022. 11. 11</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>10</td>
+                                <td>2022. 11. 11</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="삭제" class="btn-delete">
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 임시저장 목록 팝업 끝 -->
+
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+

@@ -71,11 +71,67 @@ $(document).ready(function() {
         boardBlock.find(".board-list").toggle();
         boardBlock.toggleClass("fold");
         $(this).toggleClass("fold");
-
+        
         if (boardBlock.hasClass("fold")) {
             boardBlock.find(".board-list").hide();
+            boardBlock.find(".caution-txt").hide();
         } else {
             boardBlock.find(".board-list").show();
+            boardBlock.find(".caution-txt").show();
+        }
+    });
+});
+
+
+//팝업 이벤트
+$(document).ready(function() {
+    $(".selectable").click(function(event) {
+        $(".selectable").removeClass("select");
+        $(this).toggleClass("select");
+    });
+});
+
+$(document).ready(function() {
+    const body = $('body')[0];
+    // 팝업 열기 버튼 클릭 이벤트
+    $('.popup-button').click(function() {
+        var target = $(this).data('target');
+        $(target).show();
+        //본문창 스크롤 막기
+        $('body').addClass('scrollLock');
+    });
+    
+    // 팝업 닫기 버튼 클릭 이벤트
+    $('.popup-panel .close-button').click(function() {
+        $(this).closest('.popup-panel').hide();
+        //본문창 스크롤 막기 해제
+        $('body').removeClass('scrollLock');
+    });
+});
+
+
+$(document).ready(function() {
+    $(".p2 > ul").hide();
+
+    $(".p1 > a, .p2 > a, .parttree-wrap .p3 > a").click(function(e) {
+        e.preventDefault();
+
+        var parentP = $(this).parent();
+        var childUl = parentP.find("ul");
+
+        // .p3에 대한 처리
+        if (parentP.hasClass("p3")) {
+            $(".parttree-wrap .p3").removeClass("choose");
+            parentP.toggleClass("choose");
+
+            // 만약 choose 클래스가 있다면 부모 <ul>을 보이도록 함
+            if (parentP.hasClass("choose")) {
+                parentP.closest("ul").show();
+            }
+        } else {
+            // .p1, .p2에 대한 처리
+            parentP.toggleClass("open");
+            childUl.toggle();
         }
     });
 });
