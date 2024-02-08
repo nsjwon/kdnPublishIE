@@ -214,7 +214,7 @@
                         <h2 class="h2-tit">사전검토</h2>
                         <div class="btn-wrap">
                             <input type="button" value="인쇄" class="btn-print">
-                            <input type="button" value="검토기준표" class="btn-sheet">
+                            <input type="button" value="검토기준표" class="popup-button btn-sheet" data-target="#selfSheet">
                         </div>
                     </div>
                     <div class="sub-content-inner">
@@ -514,8 +514,249 @@
             <!-- 서브페이지 컨텐츠 layout:e -->
         </main>
         <!-- 서브페이지 메인 layout:e -->
-
         
+        <!-- 자가진단 검토기준표 팝업 시작 -->
+        <div id="selfSheet" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-02">
+                <div class="popup-header">
+                    <h2>자가진단 검토기준표</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 15%">
+                            <col style="width: 55%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">요소</th>
+                                <th scope="col">항목</th>
+                                <th scope="col">점수</th>
+                                <th scope="col">자기평가</th>
+                                <th scope="col">제안부서<br>사전평가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="4">창의성</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-1" checked>
+                                        대단히 새롭고 우수한 아이디어 
+                                    </label>
+                                </td>
+                                <td>10</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-2">
+                                        비교적 새롭고 우수한 아이디어 
+                                    </label>
+                                </td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-3">
+                                        일부분 독창성이 있는 아이디어
+                                    </label>
+                                </td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-4">
+                                        대체로 타를 모방 
+                                    </label>
+                                </td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <th rowspan="4">개선효과</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-1">
+                                        업무개선 효과가 획기적임
+                                    </label>
+                                </td>
+                                <td>35</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-2">
+                                        업무개선 효과가 상당함
+                                    </label>
+                                </td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-3">
+                                        업무개선 효과가 어느 정도 있음
+                                    </label>
+                                </td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-4">
+                                        업무개선 효과가 미미함
+                                    </label>
+                                </td>
+                                <td>4</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">난이도</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-1">
+                                        아주 쉽다
+                                    </label>
+                                </td>
+                                <td>15</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-2">
+                                        비교적 쉽다
+                                    </label>
+                                </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-3">
+                                        약간 어렵다
+                                    </label>
+                                </td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-4">
+                                        상당히 어렵다
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">지속성</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-1">
+                                        10년 이상
+                                    </label>
+                                </td>
+                                <td>20</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-2">
+                                        3년 이상
+                                    </label>
+                                </td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-3">
+                                        2년 이상
+                                    </label>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-4">
+                                        1년 미만
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">활용도</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-1">
+                                        전사적 활용
+                                    </label>
+                                </td>
+                                <td>20</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-2">
+                                        2개 이상 사업소 활용
+                                    </label>
+                                </td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-3">
+                                        1개 사업소 활용
+                                    </label>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-4">
+                                        참고수준
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3">합 계</th>
+                                <th>4</th>
+                                <th></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="평가완료" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 자가진단 검토기준표 팝업 끝 -->
 
         <!-- 부서찾기 팝업 시작 -->
         <div id="findPart" class="popup-panel">
