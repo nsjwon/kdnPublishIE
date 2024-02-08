@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>자가진단 검토기준표 등록</title>
+    <title>자가진단 검토기준표 조회</title>
     <style>
         .popup-panel {display: block;}
     </style>
@@ -17,8 +17,8 @@
     <!-- wrap layout:s -->
     <div id="wrap">        
         
-        <!-- 자가진단 검토기준표 등록 팝업 시작 -->
-        <div id="selfSheet" class="popup-panel">
+        <!-- 자가진단 검토기준표 조회 팝업 시작 -->
+        <div id="selfSheetView" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-02">
                 <div class="popup-header">
@@ -26,7 +26,7 @@
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body">
-                    <table class="pop-list">
+                    <table class="pop-list view-only">
                         <colgroup>
                             <col style="width: 15%">
                             <col style="width: 55%">
@@ -53,13 +53,13 @@
                                     </label>
                                 </td>
                                 <td>10</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">10</td>
+                                <td rowspan="4">10</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-2">
+                                        <input type="radio" name="csItem1" id="cs1-2" disabled>
                                         비교적 새롭고 우수한 아이디어 
                                     </label>
                                 </td>
@@ -68,7 +68,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-3">
+                                        <input type="radio" name="csItem1" id="cs1-3" disabled>
                                         일부분 독창성이 있는 아이디어
                                     </label>
                                 </td>
@@ -77,7 +77,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-4">
+                                        <input type="radio" name="csItem1" id="cs1-4" disabled>
                                         대체로 타를 모방 
                                     </label>
                                 </td>
@@ -88,18 +88,18 @@
                                 <th rowspan="4">개선효과</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-1">
+                                        <input type="radio" name="csItem2" id="cs2-1" checked>
                                         업무개선 효과가 획기적임
                                     </label>
                                 </td>
                                 <td>35</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">35</td>
+                                <td rowspan="4">35</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-2">
+                                        <input type="radio" name="csItem2" id="cs2-2" disabled>
                                         업무개선 효과가 상당함
                                     </label>
                                 </td>
@@ -108,7 +108,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-3">
+                                        <input type="radio" name="csItem2" id="cs2-3" disabled> 
                                         업무개선 효과가 어느 정도 있음
                                     </label>
                                 </td>
@@ -117,7 +117,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-4">
+                                        <input type="radio" name="csItem2" id="cs2-4" disabled>
                                         업무개선 효과가 미미함
                                     </label>
                                 </td>
@@ -128,18 +128,18 @@
                                 <th rowspan="4">난이도</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-1">
+                                        <input type="radio" name="csItem3" id="cs3-1" disabled>
                                         아주 쉽다
                                     </label>
                                 </td>
                                 <td>15</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">12</td>
+                                <td rowspan="4">15</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-2">
+                                        <input type="radio" name="csItem3" id="cs3-2" checked>
                                         비교적 쉽다
                                     </label>
                                 </td>
@@ -148,7 +148,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-3">
+                                        <input type="radio" name="csItem3" id="cs3-3" disabled>
                                         약간 어렵다
                                     </label>
                                 </td>
@@ -157,7 +157,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-4">
+                                        <input type="radio" name="csItem3" id="cs3-4" disabled>
                                         상당히 어렵다
                                     </label>
                                 </td>
@@ -168,18 +168,18 @@
                                 <th rowspan="4">지속성</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-1">
+                                        <input type="radio" name="csItem4" id="cs4-1" checked>
                                         10년 이상
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">20</td>
+                                <td rowspan="4">20</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-2">
+                                        <input type="radio" name="csItem4" id="cs4-2" disabled>
                                         3년 이상
                                     </label>
                                 </td>
@@ -188,7 +188,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-3">
+                                        <input type="radio" name="csItem4" id="cs4-3" disabled>
                                         2년 이상
                                     </label>
                                 </td>
@@ -197,7 +197,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-4">
+                                        <input type="radio" name="csItem4" id="cs4-4" disabled>
                                         1년 미만
                                     </label>
                                 </td>
@@ -208,18 +208,18 @@
                                 <th rowspan="4">활용도</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-1">
+                                        <input type="radio" name="csItem5" id="cs5-1" checked>
                                         전사적 활용
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">20</td>
+                                <td rowspan="4">20</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-2">
+                                        <input type="radio" name="csItem5" id="cs5-2" disabled>
                                         2개 이상 사업소 활용
                                     </label>
                                 </td>
@@ -228,7 +228,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-3">
+                                        <input type="radio" name="csItem5" id="cs5-3" disabled>
                                         1개 사업소 활용
                                     </label>
                                 </td>
@@ -237,7 +237,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-4">
+                                        <input type="radio" name="csItem5" id="cs5-4" disabled>
                                         참고수준
                                     </label>
                                 </td>
@@ -245,20 +245,20 @@
                             </tr>
                             <tr>
                                 <th colspan="3">합 계</th>
-                                <th>4</th>
-                                <th></th>
+                                <th>97</th>
+                                <th>100</th>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="popup-btn-wrap">
                     <div class="btn-wrap">
-                        <input type="button" value="평가완료" class="btn-confirm">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 자가진단 검토기준표 등록 팝업 끝 -->
+        <!-- 자가진단 검토기준표 조회 팝업 끝 -->
 
 
     </div>

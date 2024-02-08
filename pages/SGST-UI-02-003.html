@@ -213,8 +213,8 @@
                     <div class="dt-wrap">
                         <h2 class="h2-tit">사전검토</h2>
                         <div class="btn-wrap">
-                            <input type="button" value="인쇄" class="btn-print">
-                            <input type="button" value="검토기준표" class="popup-button btn-sheet" data-target="#selfSheet">
+                            <!-- <input type="button" value="인쇄" class="btn-print"> -->
+                            <input type="button" value="검토기준표" class="popup-button btn-sheet" data-target="#selfSheetView">
                         </div>
                     </div>
                     <div class="sub-content-inner">
@@ -229,6 +229,106 @@
                             </div>
                             <div class="board-list">
                                 <!-- 제안등록 테이블:s -->
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제안유형</th>
+                                            <td>
+                                                <label for="inputCate" class="hide">제안유형</label>
+                                                <select name="inputCate" id="inputCate" class="l-select" disabled>
+                                                    <option>개선활동</option>
+                                                    <option>단순제안</option>
+                                                    <option>아이디어</option>
+                                                    <option>프로세스</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">제안자</th>
+                                            <td>
+                                                <div class="flex-bt">
+                                                    <span>장태경(321654)</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">업무분류</th>
+                                            <td>
+                                                <label for="inputSort" class="hide">업무분류</label>
+                                                <select name="inputSort" id="inputSort" class="l-select" disabled>
+                                                    <option>사무</option>
+                                                    <option>전산</option>
+                                                    <option>통신</option>
+                                                    <option>특수</option>
+                                                    <option>전사</option>
+                                                    <option>예산</option>
+                                                    <option>대국민서비스</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안명</th>
+                                            <td colspan="3">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">개선활동유형</th>
+                                            <td>
+                                                <label for="actType" class="hide">개선활동유형</label>
+                                                <select name="actType" id="actType" class="l-select" disabled>
+                                                    <option>전체</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">공동제안자</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">전환 제안번호</th>
+                                            <td colspan="3" class="flex-col">
+                                                <div class="num-type">
+                                                    <input type="text" name="Numfirst" id="Numfirst" value="433" readonly><span>-</span>
+                                                    <input type="text" name="Numlast" id="Numlast" value="0000" readonly>
+                                                </div>
+                                                <p class="info-txt">※ 아이디어 제안을 채택하여 개선활동으로 전환하는 경우 최초 아이디어 제안번호를 기입합니다.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 제안등록 테이블:e -->
+                            </div>
+                        </div>
+                        <!-- 제안내용:e -->
+
+
+                        <!-- 사전심사:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">사전심사</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
                                 <table class="board-table">
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
@@ -254,18 +354,7 @@
                                             <th scope="row">제안일자</th>
                                             <td>2022. 11. 02</td>
                                             <th scope="row">진행상태</th>
-                                            <td><div class="stepbox step01">사전검토중</div></td>
-                                            <!-- 진행상태에 따라 표시:s -->
-                                            <!-- <td><div class="stepbox step02">접수중</div></td>
-                                            <td><div class="stepbox step03">검토중</div></td>
-                                            <td><div class="stepbox step04">검토승인중</div></td>
-                                            <td><div class="stepbox step05">계획등록중</div></td>
-                                            <td><div class="stepbox step06">결과등록중</div></td>
-                                            <td><div class="stepbox step07">심의중</div></td>
-                                            <td><div class="stepbox step08">자료보완</div></td>
                                             <td><div class="stepbox step09">종료</div></td>
-                                            <td><div class="stepbox">기타상태</div></td> -->
-                                            <!-- 진행상태에 따라 표시:e -->
                                         </tr>
                                         <tr>
                                             <th scope="row">제안자</th>
@@ -274,46 +363,28 @@
                                             <td colspan="3"></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">개선활동유형</th>
-                                            <td>소집단활동</td>
-                                            <th scope="row">원제안번호</th>
-                                            <td colspan="3"></td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row">제안명</th>
                                             <td colspan="5">
                                                 정보 보안 점검 강화
                                             </td>
                                         </tr>
-                                        <tr class="longtxt">
-                                            <th scope="row">현재방법</th>
-                                            <td colspan="5">
-                                                <p>기본적인 사내 정보 보안 시스템 설치<br>자율적인 보안 점검<br>보안교육 없음</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="longtxt">
-                                            <th scope="row">개선방법</th>
-                                            <td colspan="5">
-                                                <p>전문적인 정보 보안 업체를 통한 취약점 점검 및 정기 교육을 통한 보안의식 강화</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="longtxt">
-                                            <th scope="row">유형효과</th>
-                                            <td colspan="5">
-                                                보안 시스템 강화
-                                            </td>
-                                        </tr>
-                                        <tr class="longtxt">
-                                            <th scope="row">무형효과</th>
-                                            <td colspan="5">
-                                                개개인의 보안 의식 향상
-                                            </td>
-                                        </tr>
                                         <tr>
-                                            <th scope="row">효과금액</th>
-                                            <td colspan="5">
-                                                년 / 26,000,000원
+                                            <th scope="row">사전심사결과</th>
+                                            <td colspan="3" class="radio-type readonly">
+                                                <label for="cpText">
+                                                    <input type="radio" name="preType" id="cpText" checked>
+                                                    자료보완
+                                                </label>
+                                                <label for="ofEnd">
+                                                    <input type="radio" name="preType" id="ofEnd" disabled>
+                                                    심사끝 - 제안적합
+                                                </label>
                                             </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">사전심사내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.<br>선정 시 단계별로 활동을 시행하시고 단계 종료 시 산출물을 등록하셔야 추후 평가가 가능합니다.<br>산출물은 단계별 서식과 증빙 사진등을 올려주시면 되고<br>단계별 서식 양식은 자료실에 올라가 있습니다.</p>                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">첨부</th>
@@ -326,118 +397,11 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">재검토사유</th>
-                                            <td colspan="5">
-                                                -
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- 제안등록 테이블:e -->
-                            </div>
-                        </div>
-                        <!-- 제안내용:e -->
-
-                        <!-- 검토결과:s -->
-                        <div class="board-block">
-                            <div class="board-title caution">
-                                <div>
-                                    <h4 class="h4-tit">사전검토결과 입력</h4>
-                                    <p class="caution-txt"><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
-                                </div>
-                                <!-- 펼쳤을 때 아이콘 -->
-                                <a href="#none" class="btn-accordion"></a>
-                                <!-- 접었을 때 아이콘 -->
-                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
-                            </div>
-                            <div class="board-list">
-                                <table class="board-table">
-                                    <caption class="hide">제안내용 리스트</caption>
-                                    <colgroup>
-                                        <col style="width: 157px;">
-                                        <col>
-                                        <col style="width: 157px;">
-                                        <col>
-                                        <col style="width: 157px;">
-                                        <col>
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">제안명</th>
-                                            <td colspan="5">
-                                                정보 보안 점검 강화
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">제안자</th>
-                                            <td>홍길동(953341)</td>
-                                            <th scope="row">업무분류</th>
-                                            <td>전산</td>
-                                            <th scope="row">검토부서</th>
-                                            <td>
-                                                <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly>
-                                                <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>사전검토결과</th>
-                                            <td colspan="5" class="radio-type">
-                                                <label for="cpText">
-                                                    <input type="radio" name="preType" id="cpText">
-                                                    자료보완
-                                                </label>
-                                                <label for="ofEnd">
-                                                    <input type="radio" name="preType" id="ofEnd" checked>
-                                                    심사끝 - 제안적합
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">메세지선택</th>
-                                            <td colspan="5">
-                                                <label for="inputMessage" class="hide">메세지선택</label>
-                                                <select name="inputMessage" id="inputMessage" class="l-select">
-                                                    <option>전체</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">사전검토내용</th>
-                                            <td colspan="5">
-                                                <textarea name="currentWay" id="currentWay" cols="30" rows="10" class="h20">제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.<br>선정 시 단계별로 활동을 시행하시고 단계 종료 시 산출물을 등록하셔야 추후 평가가 가능합니다.<br>산출물은 단계별 서식과 증빙 사진등을 올려주시면 되고<br>단계별 서식 양식은 자료실에 올라가 있습니다.</textarea>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
-                                                <div class="flex-col">
-                                                    <div>
-                                                        <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
-                                                        <label for="searchFileBtn" class="hide">파일찾기</label>
-                                                        <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
-                                                    </div>
-                                                    <ul class="att-file">
-                                                        <li>타 기관 전용 문서 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                                        <li>타 기관 아이콘 예시.jpeg<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <!-- 검토결과:e -->
-                        
-                        
-                        <!-- 버튼 영역:s -->
-                        <div class="board-btn-wrap mt40">
-                            <div class="btn-wrap">
-                                <input type="button" value="등록" class="btn-regist">
-                            </div>
-                        </div>
-                        <!-- 버튼 영역:e -->
+                        <!-- 사전심사:e -->
                         
                         <!-- 코멘트:s -->
                         <div class="board-block">
@@ -515,8 +479,8 @@
         </main>
         <!-- 서브페이지 메인 layout:e -->
         
-        <!-- 자가진단 검토기준표 등록 팝업 시작 -->
-        <div id="selfSheet" class="popup-panel">
+        <!-- 자가진단 검토기준표 조회 팝업 시작 -->
+        <div id="selfSheetView" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-02">
                 <div class="popup-header">
@@ -524,7 +488,7 @@
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body">
-                    <table class="pop-list">
+                    <table class="pop-list view-only">
                         <colgroup>
                             <col style="width: 15%">
                             <col style="width: 55%">
@@ -551,13 +515,13 @@
                                     </label>
                                 </td>
                                 <td>10</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">10</td>
+                                <td rowspan="4">10</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-2">
+                                        <input type="radio" name="csItem1" id="cs1-2" disabled>
                                         비교적 새롭고 우수한 아이디어 
                                     </label>
                                 </td>
@@ -566,7 +530,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-3">
+                                        <input type="radio" name="csItem1" id="cs1-3" disabled>
                                         일부분 독창성이 있는 아이디어
                                     </label>
                                 </td>
@@ -575,7 +539,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem1" id="cs1-4">
+                                        <input type="radio" name="csItem1" id="cs1-4" disabled>
                                         대체로 타를 모방 
                                     </label>
                                 </td>
@@ -586,18 +550,18 @@
                                 <th rowspan="4">개선효과</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-1">
+                                        <input type="radio" name="csItem2" id="cs2-1" checked>
                                         업무개선 효과가 획기적임
                                     </label>
                                 </td>
                                 <td>35</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">35</td>
+                                <td rowspan="4">35</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-2">
+                                        <input type="radio" name="csItem2" id="cs2-2" disabled>
                                         업무개선 효과가 상당함
                                     </label>
                                 </td>
@@ -606,7 +570,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-3">
+                                        <input type="radio" name="csItem2" id="cs2-3" disabled> 
                                         업무개선 효과가 어느 정도 있음
                                     </label>
                                 </td>
@@ -615,7 +579,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem2" id="cs2-4">
+                                        <input type="radio" name="csItem2" id="cs2-4" disabled>
                                         업무개선 효과가 미미함
                                     </label>
                                 </td>
@@ -626,18 +590,18 @@
                                 <th rowspan="4">난이도</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-1">
+                                        <input type="radio" name="csItem3" id="cs3-1" disabled>
                                         아주 쉽다
                                     </label>
                                 </td>
                                 <td>15</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">12</td>
+                                <td rowspan="4">15</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-2">
+                                        <input type="radio" name="csItem3" id="cs3-2" checked>
                                         비교적 쉽다
                                     </label>
                                 </td>
@@ -646,7 +610,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-3">
+                                        <input type="radio" name="csItem3" id="cs3-3" disabled>
                                         약간 어렵다
                                     </label>
                                 </td>
@@ -655,7 +619,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem3" id="cs3-4">
+                                        <input type="radio" name="csItem3" id="cs3-4" disabled>
                                         상당히 어렵다
                                     </label>
                                 </td>
@@ -666,18 +630,18 @@
                                 <th rowspan="4">지속성</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-1">
+                                        <input type="radio" name="csItem4" id="cs4-1" checked>
                                         10년 이상
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">20</td>
+                                <td rowspan="4">20</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-2">
+                                        <input type="radio" name="csItem4" id="cs4-2" disabled>
                                         3년 이상
                                     </label>
                                 </td>
@@ -686,7 +650,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-3">
+                                        <input type="radio" name="csItem4" id="cs4-3" disabled>
                                         2년 이상
                                     </label>
                                 </td>
@@ -695,7 +659,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem4" id="cs4-4">
+                                        <input type="radio" name="csItem4" id="cs4-4" disabled>
                                         1년 미만
                                     </label>
                                 </td>
@@ -706,18 +670,18 @@
                                 <th rowspan="4">활용도</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-1">
+                                        <input type="radio" name="csItem5" id="cs5-1" checked>
                                         전사적 활용
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4"></td>
-                                <td rowspan="4"></td>
+                                <td rowspan="4">20</td>
+                                <td rowspan="4">20</td>
                             </tr>
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-2">
+                                        <input type="radio" name="csItem5" id="cs5-2" disabled>
                                         2개 이상 사업소 활용
                                     </label>
                                 </td>
@@ -726,7 +690,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-3">
+                                        <input type="radio" name="csItem5" id="cs5-3" disabled>
                                         1개 사업소 활용
                                     </label>
                                 </td>
@@ -735,7 +699,7 @@
                             <tr>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="csItem5" id="cs5-4">
+                                        <input type="radio" name="csItem5" id="cs5-4" disabled>
                                         참고수준
                                     </label>
                                 </td>
@@ -743,81 +707,21 @@
                             </tr>
                             <tr>
                                 <th colspan="3">합 계</th>
-                                <th>4</th>
-                                <th></th>
+                                <th>97</th>
+                                <th>100</th>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="popup-btn-wrap">
                     <div class="btn-wrap">
-                        <input type="button" value="평가완료" class="btn-confirm">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 자가진단 검토기준표 등록 팝업 끝 -->
+        <!-- 자가진단 검토기준표 조회 팝업 끝 -->
 
-        <!-- 부서찾기 팝업 시작 -->
-        <div id="findPart" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-03">
-                <div class="popup-header">
-                    <h2>부서찾기</h2>
-                    <a class="close-button" href="#none"></a>
-                </div>
-                <div class="popup-body flex-col">
-                    <!-- board search :s -->
-                    <div class="brd-search">    
-                        <div class="brd-search-form">
-                            <div class="search-section">                              
-                                <div class="search-text">
-                                    <label for="searchWord" class="hide">검색어</label>
-                                    <input type="text" name="searchWord" id="searchWord" placeholder="검색어를 입력하세요.">
-                                    <label for="searchPartBtn" class="hide">부서찾기</label>
-                                    <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="parttree-wrap">
-                        <ul>
-                            <li class="p1 open">
-                                <a href="#none">한전KDN(주)</a>
-                                <ul>
-                                    <li class="p2"><a href="#none">감사실</a></li>
-                                    <li class="p2">
-                                        <a href="#none">커뮤니케이션실</a>
-                                        <ul>
-                                            <li class="p3"><a href="#none">커뮤니케이션1팀</a></li>
-                                            <li class="p3"><a href="#none">커뮤니케이션2팀</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="p2">
-                                        <a href="#none">전력 ICT 기술원</a>
-                                        <ul>
-                                            <li class="p3"><a href="#none">1팀</a></li>
-                                            <li class="p3"><a href="#none">2팀</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="p2"><a href="#none">기획관리본부</a></li>
-                                    <li class="p2"><a href="#none">ICT본부</a></li>
-                                    <li class="p2"><a href="#none">전력지능화안전본부</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- board search :e -->
-                </div>
-                <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
-                        <input type="button" value="확인" class="btn-confirm">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 부서찾기 팝업 끝 -->
     </div>
     <!-- wrap layout:e -->
     

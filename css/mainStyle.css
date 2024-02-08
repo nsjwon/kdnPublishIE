@@ -6,7 +6,7 @@
 .main-banner .banner-tag {display: flex; align-items: center; justify-content: center; height: 28px; padding: 0 16px; font-size: 1.4rem; line-height: 1.4rem; border: 1px solid #111827; color: #111827; border-radius: 150px;}
 .main-banner .banner-title {font-weight: 500; font-size: 1.5rem;}
 .main-banner .banner-link {position: relative; font-size: 1.5rem; color: #2141B0; line-height: 24px;}
-.main-banner .banner-link::after {position: absolute; display: block; content: ''; width: 24px; height: 24px; background: url(../images/main/ic_arrowright.svg) no-repeat; right: -28px; top: -1px;}
+.main-banner .banner-link::after {position: absolute; display: block; content: ''; width: 24px; height: 24px; background: url(../images/main/ic_arrowright.svg) no-repeat; right: -25px; top: 0;}
 .main-banner .banner-item {display: flex; align-items: center; gap: 6px;}
 .main-banner .banner-item li>a {display: block; width: 8px; height: 8px; background: #c5cada; border-radius: 4px; transition: all .5s;}
 .main-banner .banner-item li.on>a {width: 40px; background: #52639b;}

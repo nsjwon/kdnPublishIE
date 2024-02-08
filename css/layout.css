@@ -126,6 +126,8 @@ body {position: relative; background: #fff;}
 .popup-content-02 .pop-list td.radio-type {text-align: left;}
 .popup-content-02 .pop-list td.radio-type label {cursor: pointer; width: 100%; display: block;}
 .popup-content-02 .pop-list td.radio-type label input[type="radio"] {margin: 0 8px;}
+.popup-content-02 .pop-list.view-only td.radio-type label {cursor: default;}
+.popup-content-02 .pop-list.view-only td.radio-type label input[type="radio"] {cursor: default;}
 
 /* 부서찾기 */
 .popup-content-03 .brd-search {padding: 2.4rem;}

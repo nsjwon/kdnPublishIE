@@ -123,8 +123,7 @@
 .dt-wrap .h2-tit {margin-bottom: 0;}
 
 .sub-content-inner {width: 100%; padding-top: 7px;}
-.board-block {width: 100%; margin-top: 5.2rem;}
-.board-block.fold {margin-top: 4rem;}
+.board-block {width: 100%; margin-top: 4rem;}
 .board-block.fold .board-list {display: none;}
 .sub-content-inner .board-block:first-child {margin-top: 0;}
 .board-title {width: 100%; padding: 1rem 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #4f4f4f;}
@@ -133,6 +132,7 @@
 .board-title.caution .caution-txt {margin: 1.6rem 0 0;}
 .h4-tit {font-size: 2.2rem; line-height: 2.2rem; font-weight: 600;}
 
+.board-list {padding-bottom: 1.2rem;}
 .board-list .stepbox {background: #e4e4e4; border-radius: 4px; display: flex; align-items: center; justify-content: center; width: 90px; height: 29px;}
 .board-list .stepbox.step01 {background: #e6ecf2;}/*사전검토중*/
 .board-list .stepbox.step02 {background: #fbecec;}/*접수중*/
@@ -163,7 +163,8 @@
 .board-table td.file-upload input[type="text"]:read-only {background: #fff; min-width: 46rem;}
 .board-table td.file-upload input[type="text"]:read-only:focus {outline: none;}
 .board-table td .num-type {display: flex; align-items: center; gap: 8px;}
-.board-table td .num-type input[type="text"] {width: 7rem;}
+.board-table td .num-type input[type="text"] {width: 6.8rem; text-align: right;}
+.board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 10rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem;}
 .board-table td select.l-select {min-width: 316px;}
