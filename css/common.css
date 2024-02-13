@@ -36,7 +36,7 @@ button, input, optgroup, select, textarea {font-family: inherit; font-size: inhe
 pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", sans-serif; line-height: 1.6; color: #555;}
 
 @media (max-width: 720px) {
-	html {font-size: 8px;}
+	/* html {font-size: 8px;} */
 }
 
 /* color */
@@ -127,6 +127,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 .ml80 {margin-left: 80px !important;}
 .ml100 {margin-left: 100px !important;}
 
+.mr0 {margin-right: 0px !important;}
 .mr8 {margin-right: 8px !important;}
 .mr10 {margin-right: 10px !important;}
 .mr16 {margin-right: 16px !important;}

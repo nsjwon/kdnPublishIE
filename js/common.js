@@ -109,7 +109,7 @@ $(document).ready(function() {
     });
 });
 
-
+//부서 찾기 팝업 조직도 클릭이벤트
 $(document).ready(function() {
     $(".p2 > ul").hide();
 
@@ -130,6 +130,34 @@ $(document).ready(function() {
             }
         } else {
             // .p1, .p2에 대한 처리
+            parentP.toggleClass("open");
+            childUl.toggle();
+        }
+    });
+});
+
+//검토자 조회 팝업 조직도 클릭이벤트
+$(document).ready(function() {
+    $(".f2 > ul").hide();
+    // $(".f3 > ul").hide();
+
+    $(".f1 > a, .f2 > a, .f3 > a, .findperson-wrap .f4 > a").click(function(e) {
+        e.preventDefault();
+
+        var parentP = $(this).parent();
+        var childUl = parentP.find("ul");
+
+        // .p4에 대한 처리
+        if (parentP.hasClass("f4")) {
+            $(".findperson-wrap .f4").removeClass("choose");
+            parentP.toggleClass("choose");
+
+            // 만약 choose 클래스가 있다면 부모 <ul>을 보이도록 함
+            if (parentP.hasClass("choose")) {
+                parentP.closest("ul").show();
+            }
+        } else {
+            // .p1, .p2, .p3에 대한 처리
             parentP.toggleClass("open");
             childUl.toggle();
         }

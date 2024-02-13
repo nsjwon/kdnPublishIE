@@ -36,6 +36,12 @@
 .two-depth li a {width: 100%; display: block; height: 35px; line-height: 35px; color: #666C75; padding: 0 20px 0 56px;}
 .two-depth li a:hover {background: #ecedf3; border-radius: 6px; color: #1c1d1f;}
 .two-depth li.focus a {text-decoration: underline; color: #3b4eba; font-weight: 600;}
+.regist-card {display: flex; align-items: center; width: 100%; height: 7.2rem; margin-top: 4rem; background-size: contain; background: url(../images/common/bg_regist-link.svg) no-repeat; border-radius: 6px; overflow: hidden;}
+.gt-regist {position: relative; width: 100%; display: flex; align-items: center; font-size: 1.6rem; color: #fff; font-weight: 600; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif; padding: 0 2.4rem; height: 7.2rem;}
+.gt-regist::after {position: absolute; top: 24px; right: 16px; background: url(../images/common/iconArrowRight.svg) no-repeat; background-size: contain; width: 24px; height: 24px; content: ''; display: block;}
+.gt-regist span {position: relative; display: block; margin-top: 4px;}
+.gt-regist span::before {position: absolute; top: -10px; right: -12px; background: url(../images/common/ic_regist-txt.svg) no-repeat; background-size: contain; width: 12px; height: 12px; content: ''; display: block;}
+
 
 .sub-content-wrap {width: calc(100% - 300px); margin: 26px 70px 34px;}
 .menu-nav {display: flex; align-items: center; justify-content: flex-end; gap: 8px; color: #666; font-weight: 300; margin-bottom: 1.8rem;}
@@ -62,7 +68,7 @@
 .search-text input[type=text] {width: 485px; max-width: 44%; margin: 0; font-size: 1.4rem;}
 .board-note-wrap {margin-bottom: 3rem; margin-left: 6px;}
 .board-note-wrap p {line-height: 2.4rem; font-size: 1.4rem;}
-.board-note-wrap span {color: #c60008;}
+.board-note-wrap span {color: #e14242;}
 
 /* 게시판 정보 */
 .brd-info {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.6rem;}
@@ -74,6 +80,8 @@
 .brd-list-01 th::before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
 .brd-list-01 th:first-child:before {display: none;}
 .brd-list-01 tr {position:relative;}
+.brd-list-01 tr.overdue td {color: #e14242;}
+.brd-list-01 td.o-day>div {background: #fbecec; border-radius: 4px; display: flex; align-items: center; justify-content: center; width: fit-content; height: 29px; margin: 0 auto; padding: 0 24px;}
 .brd-list-01 td {cursor: pointer; padding: 2rem 1rem; vertical-align: middle; text-align: center; font-size: 1.5rem; border-bottom: 1px solid #e8e8e8; word-break: break-all; color: #333333; line-height: 1.4;}
 .brd-list-01 th:first-child,
 .brd-list-01 td:first-child{border-left:none;}
@@ -163,7 +171,7 @@
 .board-table td.file-upload input[type="text"]:read-only {background: #fff; min-width: 46rem;}
 .board-table td.file-upload input[type="text"]:read-only:focus {outline: none;}
 .board-table td .num-type {display: flex; align-items: center; gap: 8px;}
-.board-table td .num-type input[type="text"] {width: 6.8rem; text-align: right;}
+.board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 10rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem;}
@@ -173,6 +181,7 @@
 .rq-mark {display: inline-block; margin-right: 0.4rem; color: #cd3839;}
 .board-table textarea {padding: 1rem 1.4rem;}
 .board-table textarea.h20 {height: 20rem;}
+.board-table textarea.h15 {height: 15rem;}
 .board-table textarea.h10 {height: 10rem;}
 .board-table th.lh20 {line-height: 2rem; border-right: 1px solid #e8e8e8;}
 .att-file {margin: 1.6rem 0 1rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem;}
@@ -201,6 +210,7 @@
 
 .board-btn-wrap {margin: 6rem 0;}
 .board-btn-wrap .btn-wrap {justify-content: center;}
+.board-btn-wrap .btn-wrap.end {justify-content: flex-end;}
 .board-btn-wrap .btn-wrap input[type="button"] {width: 10rem; height: 40px; border-radius: 4px; transition: all ease 0.2s 0s;}
 
 /* 상세 테이블 내부 테이블 */
@@ -263,6 +273,8 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-searchpart:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-searchfile {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.4rem;}
 .btn-searchfile:hover {background: #4a5369; transition: all ease 0.2s 0s;}
+.btn-searchperson {background: #6c7282; color: #ffffff; border: none; padding: 1rem 4rem; font-size: 1.4rem; margin: 0 0.4rem;}
+.btn-searchperson:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-searchrule {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.4rem;}
 .btn-searchrule:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-temporary {background: #8591a3; color: #fff;}
@@ -283,8 +295,11 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-comment:hover {background: #42444d; transition: all ease 0.2s 0s;}
 .btn-delete {background: #8591a3; color: #fff;}
 .btn-delete:hover {background: #6c7282;}
+.btn-transfer {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem; font-size: 1.4rem; font-weight: 500;}
+.btn-transfer:hover {background: #325bc4; color: #fff; border: 1px solid #325bc4;}
 .btn-confirm {background: #325bc4; color: #fff;}
 .btn-confirm:hover {background: #1c44aa;}
+
 
 
 @media (max-width: 1660px) {
@@ -292,6 +307,9 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
     .one-depth .d1>a {width: 220px;}
     .sub-content-wrap {width: calc(100% - 240px); margin: 26px 40px 34px;}
     .search-section > div.search-date {width: 100%;}
+    .regist-card {width: 20rem;}
+    .gt-regist {padding-right: 5rem; word-break: auto-phrase;}
+    .gt-regist span::before {display: none;}
 }
 
 @media (max-width: 1440px) {

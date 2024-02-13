@@ -86,7 +86,7 @@ body {position: relative; background: #fff;}
 .popup-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: .65; filter: alpha(opacity=65); z-index: 9998;}
 .popup-content {overflow: hidden; display: block; padding: 5rem; position: absolute; border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
 .popup-content-01 {top: calc((100vh - 80rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 80rem;}
-.popup-content-02 {top: calc((100vh - 100rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 100rem;}
+.popup-content-02 {top: 10vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 80vh;}
 .popup-content-03 {top: calc((100vh - 80rem) / 2); left: calc((100% - 60rem) / 2); width: 60rem; height: 80rem;}
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
@@ -150,8 +150,38 @@ body {position: relative; background: #fff;}
 .parttree-wrap .p2>a::after {left: 38px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
 .parttree-wrap .p2.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
 
-.parttree-wrap .p3>a {padding-left: 98px;}
-.parttree-wrap .p3>a::after {left: 70px; top: 14px; background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.parttree-wrap .p3>a {padding-left: 90px;}
+.parttree-wrap .p3>a::after {left: 64px; top: 14px; background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
 .parttree-wrap .p3.choose {background: #EBF2FF;}
 .parttree-wrap .p3.choose>a:hover {background: #EBF2FF;}
 .parttree-wrap .p3.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
+
+/* 검토자 조회 */
+.findperson-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
+.findperson-wrap::-webkit-scrollbar {width: 1em;}
+.findperson-wrap::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
+.findperson-wrap::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.findperson-wrap li>a {border-bottom: 1px solid #e8e8e8;}
+.findperson-wrap li>a:hover {background: #fcfcfc;}
+.findperson-wrap>ul {border-top: 1px solid #e8e8e8;}
+.findperson-wrap a {position: relative; height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
+.findperson-wrap a::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
+
+.findperson-wrap .f1>a {padding-left: 40px;}
+.findperson-wrap .f1>a::after {left: 10px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.findperson-wrap .f1.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+
+.findperson-wrap .f2>a {padding-left: 68px;}
+.findperson-wrap .f2>a::after {left: 38px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.findperson-wrap .f2.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+
+.findperson-wrap .f3>a {padding-left: 96px;}
+.findperson-wrap .f3>a::after {left: 66px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.findperson-wrap .f3.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+
+.findperson-wrap .f4>a {padding-left: 124px;}
+.findperson-wrap .f4>a::after {left: 96px; top: 14px; background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.findperson-wrap .f4.choose {background: #EBF2FF;}
+.findperson-wrap .f4.choose>a:hover {background: #EBF2FF;}
+.findperson-wrap .f4.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
+
