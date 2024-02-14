@@ -141,6 +141,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 .mr100 {margin-right: 100px !important;}
 
 .pt0 {padding-top: 0 !important;}
+.pt2 {padding-top: 2px !important;}
 .pt8 {padding-top: 8px !important;}
 .pt10 {padding-top: 10px !important;}
 .pt16 {padding-top: 16px !important;}
@@ -235,6 +236,17 @@ ul.circle-30 li::before {position: absolute; content: ''; display: block; width:
 .flex-al {display: flex; align-items: center;}
 .flex-bt {display: flex; justify-content: space-between; align-items: center;}
 .flex-col {display: flex; flex-direction: column;}
+
+.gap4 {gap: 4px !important;}
+.gap8 {gap: 8px !important;}
+.gap10 {gap: 10px !important;}
+.gap16 {gap: 16px !important;}
+.gap20 {gap: 20px !important;}
+.gap24 {gap: 24px !important;}
+.gap30 {gap: 30px !important;}
+.gap40 {gap: 40px !important;}
+.gap50 {gap: 50px !important;}
+.gap60 {gap: 60px !important;}
 
 /* Animation */
 @keyframes moveUp {

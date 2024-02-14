@@ -138,6 +138,7 @@
 .board-title.caution {width: 100%; padding: 1rem 0; display: flex; align-items: flex-start; justify-content: space-between; border-bottom: 1px solid #4f4f4f;}
 .board-title.caution>div {display: flex; flex-direction: column; align-items: flex-start;}
 .board-title.caution .caution-txt {margin: 1.6rem 0 0;}
+.board-title.noborder {border-bottom: none;}
 .h4-tit {font-size: 2.2rem; line-height: 2.2rem; font-weight: 600;}
 
 .board-list {padding-bottom: 1.2rem;}
@@ -176,6 +177,7 @@
 .board-table tr.longtxt {height: 10rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem;}
 .board-table td select.l-select {min-width: 316px;}
+.board-table td select.m-select {min-width: 200px;}
 .board-table td select.s-select {min-width: 95px;}
 .info-txt {margin-top: 0.8rem; font-size: 1.4rem; color: #999999; word-break: keep-all;}
 .rq-mark {display: inline-block; margin-right: 0.4rem; color: #cd3839;}
@@ -245,6 +247,8 @@ textarea {position: relative; resize: none; background-color: #ffffff; line-heig
 textarea::-webkit-scrollbar {width: 1em;}
 textarea::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.typeLabel {display: flex; align-items: center; gap: 8px; cursor: pointer;}
+.typeLabel input[type="radio"]:checked {opacity: 1; accent-color: #3b4eba;}
 
 /* Button */
 .btn-title {display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.6rem;}
