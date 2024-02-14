@@ -304,6 +304,8 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-transfer:hover {background: #325bc4; color: #fff; border: 1px solid #325bc4;}
 .btn-confirm {background: #325bc4; color: #fff;}
 .btn-confirm:hover {background: #1c44aa;}
+.btn-save {background: #325bc4; color: #fff;}
+.btn-save:hover {background: #1c44aa;}
 
 
 
