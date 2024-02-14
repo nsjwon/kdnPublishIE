@@ -425,7 +425,7 @@
                             <div class="board-title caution">
                                 <div>
                                     <h4 class="h4-tit">검토결과입력</h4>
-                                    <!-- <p class="caution-txt"><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p> -->
+                                    <p class="caution-txt"><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
                                 </div>
                                 <a href="#none" class="btn-accordion"></a>
                             </div>
@@ -434,9 +434,9 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 300px;">
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 300px;">
                                         <col style="width: 157px;">
                                         <col>
                                     </colgroup>
@@ -492,13 +492,13 @@
                                             <td colspan="5" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
-                                                        <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
+                                                        <input type="text" name="loadFile" id="loadFile" value="첨부파일서식2.xl" class="overtext" readonly>
                                                         <label for="searchFileBtn" class="hide">파일찾기</label>
                                                         <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                                     </div>
                                                     <ul class="att-file">
-                                                        <li>타 기관 전용 문서 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                                        <li>타 기관 아이콘 예시.jpeg<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                        <li>첨부파일서식1.xl<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                        <li>첨부파일서식2.xl<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -506,7 +506,10 @@
                                         <tr>
                                             <th scope="row">검토예정일</th>
                                             <td colspan="5">
-                                                <input type="date">
+                                                <div class="search-date">
+                                                    <label for="reviewDate" class="hide">검토예정일</label>
+                                                    <input type="text" name="reviewDate" id="reviewDate" value="" placeholder="" class="hasDatepicker">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -517,8 +520,8 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="caution-txt mt20">※ 검토자를 지정하시고 접수처리를 하시기 바랍니다.<span class="pcol1">(부서이관시 사유를 간단히 입력하고 검토자는 지정하지 않음)</span></p>
-                                <p class="caution-txt mt10">※ 단순제안은 검토자 지정이 필요 없으며 접수 처리하시면 프로세스가 바로 종료됩니다.</p>
+                                <!-- <p class="caution-txt mt20">※ 검토자를 지정하시고 접수처리를 하시기 바랍니다.<span class="pcol1">(부서이관시 사유를 간단히 입력하고 검토자는 지정하지 않음)</span></p> -->
+                                <p class="caution-txt mt10">※ 검토권고기한(15일)내에 검토가 어려운 경우 검토예정일 및 지연사유를 입력해주시기 바랍니다.</p>
                                 <!-- 버튼 영역:s -->
                                 <div class="board-btn-wrap mt20 mb0">
                                     <div class="btn-wrap">

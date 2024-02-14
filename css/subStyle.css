@@ -175,7 +175,7 @@
 .board-table td .num-type {display: flex; align-items: center; gap: 8px;}
 .board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
-.board-table tr.longtxt {height: 10rem;}
+.board-table tr.longtxt {height: 12rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem;}
 .board-table td select.l-select {min-width: 316px;}
 .board-table td select.m-select {min-width: 200px;}

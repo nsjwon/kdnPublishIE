@@ -221,14 +221,13 @@
                         </div>
                     </div>
                     <div class="sub-content-inner">
+
+
                         <!-- 제안내용:s -->
-                        <div class="board-block">
+                        <div class="board-block fold">
                             <div class="board-title">
                                 <h4 class="h4-tit">제안내용</h4>
-                                <!-- 펼쳤을 때 아이콘 -->
-                                <a href="#none" class="btn-accordion"></a>
-                                <!-- 접었을 때 아이콘 -->
-                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                                <a href="#none" class="btn-accordion fold"></a>
                             </div>
                             <div class="board-list">
                                 <!-- 제안등록 테이블:s -->
@@ -343,13 +342,10 @@
                         <!-- 제안내용:e -->
 
                         <!-- 사전심사:s -->
-                        <div class="board-block">
+                        <div class="board-block fold">
                             <div class="board-title">
                                 <h4 class="h4-tit">사전심사</h4>
-                                <!-- 펼쳤을 때 아이콘 -->
-                                <a href="#none" class="btn-accordion"></a>
-                                <!-- 접었을 때 아이콘 -->
-                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                                <a href="#none" class="btn-accordion fold"></a>
                             </div>
                             <div class="board-list">
                                 <table class="board-table">
@@ -491,18 +487,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
-                                                <div class="flex-col">
-                                                    <div>
-                                                        <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
-                                                        <label for="searchFileBtn" class="hide">파일찾기</label>
-                                                        <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
-                                                    </div>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
                                                     <ul class="att-file">
-                                                        <li>타 기관 전용 문서 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                                        <li>타 기관 아이콘 예시.jpeg<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                        <li><a href="#none" class="underline">첨부파일서식.xl<span>(75.52KB)</span></a></li>
                                                     </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
                                                 </div>
                                             </td>
                                         </tr>
@@ -531,10 +522,10 @@
                         
                         
                         <!-- 코멘트:s -->
-                        <div class="board-block">
+                        <div class="board-block fold">
                             <div class="board-title">
                                 <h4 class="h4-tit">코멘트(<span>1</span>건)</h4>
-                                <a href="#none" class="btn-accordion"></a>
+                                <a href="#none" class="btn-accordion fold"></a>
                             </div>
                             <div class="board-list">
                                 <div class="bg-box comment-box">

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 심의결과</title>
+    <title>제안관리시스템 - 사후관리</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -124,8 +124,8 @@
                             <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
                             <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
                             <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
-                            <li class="focus"><a href="./SGST-UI-02-014.html">심의결과</a></li>
-                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li class="focus"><a href="./SGST-UI-02-017.html">사후관리</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -210,11 +210,11 @@
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
                         <li>제안검토</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>심의결과</li>
+                        <li>사후관리</li>
                     </ul>
                     <!-- 현재 페이지 경로:e -->
                     <div class="dt-wrap">
-                        <h2 class="h2-tit">심의결과</h2>
+                        <h2 class="h2-tit">사후관리</h2>
                         <div class="btn-wrap">
                             <input type="button" value="인쇄" class="btn-print">
                             <input type="button" value="검토기준표" class="popup-button btn-sheet" data-target="#selfSheetView">
@@ -616,8 +616,11 @@
 
                         <!-- 심의결과:s -->
                         <div class="board-block fold">
-                            <div class="board-title">
-                                <h4 class="h4-tit">심의결과</h4>
+                            <div class="board-title caution">
+                                <div>
+                                    <h4 class="h4-tit">심의결과</h4>
+                                    <!-- <p class="caution-txt"><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p> -->
+                                </div>
                                 <a href="#none" class="btn-accordion fold"></a>
                             </div>
                             <div class="board-list">
@@ -625,7 +628,7 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 53px;">
-                                        <col style="width: 103px;">
+                                        <col style="width: 113px;">
                                         <col>
                                         <col style="width: 157px;">
                                         <col>
@@ -634,37 +637,29 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row" colspan="2">제안번호</th>
-                                            <td>2022-0018</td>
-                                            <th scope="row">업무분류</th>
-                                            <td>전산</td>
-                                            <th scope="row">검토부서</th>
-                                            <td>품질경영부</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" colspan="2">제안유형</th>
-                                            <td>개선활동</td>
-                                            <th scope="row">제안일자</th>
-                                            <td>2022. 11. 02</td>
-                                            <th scope="row">진행상태</th>
-                                            <td><div class="stepbox step09">종료</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" colspan="2">제안자</th>
-                                            <td>홍길동(953341)</td>
-                                            <th scope="row">공동제안자</th>
-                                            <td colspan="3"></td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row" colspan="2">제안명</th>
                                             <td colspan="5">
                                                 정보 보안 점검 강화
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th scope="row" colspan="2">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">공동제안자</th>
+                                            <td colspan="5">
+                                                김이영(383838)  박지영(391290)  김태영(235456)
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th rowspan="2" class="lh20">실<br>무<br>위<br>원<br>회</th>
                                             <th scope="row">심의결과</th>
-                                            <td colspan="3" class="radio-type readonly">
+                                            <td colspan="5" class="radio-type readonly">
                                                 <label for="rvPass">
                                                     <input type="radio" name="rvResult" id="rvPass" checked>
                                                     상정
@@ -678,28 +673,35 @@
                                         <tr class="longtxt">
                                             <th scope="row">심의내용</th>
                                             <td colspan="5">
-                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                                <p>제안등록에 감사드립니다.<br>정보보안의식 개선에 대한 적절한 방법이라고 생각됩니다.</p>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th rowspan="3" class="lh20">심<br>의<br>위<br>원<br>회</th>
+                                            <th rowspan="3" class="lh20">인<br>사<br>위<br>원<br>회</th>
                                             <th scope="row">포상등급</th>
-                                            <td colspan="5"></td>
+                                            <td>우수과제5등급</td>
+                                            <th>포상금</th>
+                                            <td colspan="3">1,000,000원</td>
                                         </tr>
                                         <tr class="longtxt">
                                             <th scope="row">심의내용</th>
                                             <td colspan="5">
-                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                                <p>심의가 완료되었습니다.<br>좋은 의견 감사드립니다.</p>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">첨부</th>
-                                            <td colspan="5" class="file-download">
-                                                <div class="flex-bt">
+                                            <td colspan="5" class="file-upload">
+                                                <div class="flex-col">
+                                                    <div>
+                                                        <input type="text" name="loadFile1" id="loadFile1" value="첨부파일서식2.xl" class="overtext" readonly>
+                                                        <label for="searchFileBtn1" class="hide">파일찾기</label>
+                                                        <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn1">
+                                                    </div>
                                                     <ul class="att-file">
-                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                        <li>첨부파일서식1.xl<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                        <li>첨부파일서식2.xl<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
                                                     </ul>
-                                                    <input type="button" class="btn-download" value="일괄다운로드">
                                                 </div>
                                             </td>
                                         </tr>
@@ -725,8 +727,6 @@
                                     <colgroup>
                                         <col style="width: 53px;">
                                         <col style="width: 113px;">
-                                        <col>
-                                        <col style="width: 157px;">
                                         <col>
                                         <col style="width: 157px;">
                                         <col>
