@@ -69,6 +69,7 @@
 .board-note-wrap {margin-bottom: 3rem; margin-left: 6px;}
 .board-note-wrap p {line-height: 2.4rem; font-size: 1.4rem;}
 .board-note-wrap span {color: #e14242;}
+.search-select.typeSelect {display: flex; align-items: center; gap: 6rem;}
 
 /* 게시판 정보 */
 .brd-info {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.6rem;}
