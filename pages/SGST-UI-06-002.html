@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>제안관리시스템 - 통합검색</title>
+</head>
+<body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                                    <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-006.html">분임조원관리</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">지도사원관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                                    <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-007.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-019.html">경진대회포상관리</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">테마제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                            <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-006.html">분임조원관리</a></li>
+                            <li><a href="./SGST-UI-05-009.html">지도사원관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">제안검색
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li class="focus"><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">관리
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-007.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-019.html">경진대회포상관리</a></li>
+                            <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>제안검색</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>통합검색</li>
+                    </ul>
+                    <div class="dt-wrap">
+                        <h2 class="h2-tit">통합검색</h2>
+                        <div class="btn-wrap">
+                            <!-- <input type="button" value="인쇄" class="btn-print"> -->
+                            <!-- <a href="./SGST-UI-07-007.html" class="btn-rewrite">수정작성</a>
+                            <a href="./SGST-UI-07-007.html" class="btn-recheck">재검토작성</a> -->
+                            <input type="button" value="검토기준표" class="popup-button btn-sheet" data-target="#selfSheet">
+                        </div>
+                    </div>
+                    <div class="sub-content-inner">
+
+
+                        <!-- 제안내용:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">제안내용</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                            <!-- 진행상태에 따라 표시:s -->
+                                            <!-- <td><div class="stepbox step01">사전검토중</div></td>
+                                            <td><div class="stepbox step02">접수중</div></td>
+                                            <td><div class="stepbox step03">검토중</div></td>
+                                            <td><div class="stepbox step04">검토승인중</div></td>
+                                            <td><div class="stepbox step05">계획등록중</div></td>
+                                            <td><div class="stepbox step06">결과등록중</div></td>
+                                            <td><div class="stepbox step07">심의중</div></td>
+                                            <td><div class="stepbox step08">자료보완</div></td>
+                                            <td><div class="stepbox">기타상태</div></td> -->
+                                            <!-- 진행상태에 따라 표시:e -->
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">개선활동유형</th>
+                                            <td>소집단활동</td>
+                                            <th scope="row">원제안번호</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">현재방법</th>
+                                            <td colspan="5">
+                                                <p>기본적인 사내 정보 보안 시스템 설치<br>자율적인 보안 점검<br>보안교육 없음</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">개선방법</th>
+                                            <td colspan="5">
+                                                <p>전문적인 정보 보안 업체를 통한 취약점 점검 및 정기 교육을 통한 보안의식 강화</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">유형효과</th>
+                                            <td colspan="5">
+                                                보안 시스템 강화
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">무형효과</th>
+                                            <td colspan="5">
+                                                개개인의 보안 의식 향상
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">효과금액</th>
+                                            <td colspan="5">
+                                                년 / 26,000,000원
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">재검토사유</th>
+                                            <td colspan="5">
+                                                -
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 제안내용:e -->
+
+
+                        <!-- 사전심사:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">사전심사</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사전심사결과</th>
+                                            <td colspan="5" class="radio-type readonly">
+                                                <label for="cpText">
+                                                    <input type="radio" name="preType" id="cpText" disabled>
+                                                    자료보완
+                                                </label>
+                                                <label for="ofEnd">
+                                                    <input type="radio" name="preType" id="ofEnd" checked>
+                                                    심사끝 - 제안적합
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">사전심사내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.<br>선정 시 단계별로 활동을 시행하시고 단계 종료 시 산출물을 등록하셔야 추후 평가가 가능합니다.<br>산출물은 단계별 서식과 증빙 사진등을 올려주시면 되고<br>단계별 서식 양식은 자료실에 올라가 있습니다.</p>                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 사전심사:e -->
+
+
+                        <!-- 검토결과:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">검토결과</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">검토결과</th>
+                                            <td colspan="5" class="radio-type readonly">
+                                                <label for="prrFile">
+                                                    <input type="radio" name="preResult" id="prrFile" disabled>
+                                                    자료보완
+                                                </label>
+                                                <label for="prrAdopt">
+                                                    <input type="radio" name="preResult" id="prrAdopt" checked>
+                                                    채택
+                                                </label>
+                                                <label for="prrNon">
+                                                    <input type="radio" name="preResult" id="prrNon" disabled>
+                                                    불채택
+                                                </label>
+                                                <label for="prrTrans">
+                                                    <input type="radio" name="preResult" id="prrTrans" disabled>
+                                                    부서이관
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">검토내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">검토예정일</th>
+                                            <td colspan="5">
+                                                <p></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">검토지연사유</th>
+                                            <td colspan="5">
+                                                <p></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 검토결과:e -->
+
+
+                        <!-- 개선활동:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">개선활동</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 53px;">
+                                        <col style="width: 103px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th rowspan="2" class="lh20">산<br>출<br>물</th>
+                                            <th scope="row">내용</th>
+                                            <td colspan="5">
+                                                <p>국내에서 가장 많이 이용하는 보안업체 리스트 파일첨부<br>
+                                                    업체별 업무 프로세서 확인<br>
+                                                    보안교육 실시 여부 확인</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th rowspan="2" class="lh20">결<br>과<br>서</th>
+                                            <th scope="row">심사내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 개선활동:e -->
+
+
+                        <!-- 심의결과:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">심의결과</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 53px;">
+                                        <col style="width: 103px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="2" class="lh20">실<br>무<br>위<br>원<br>회</th>
+                                            <th scope="row">심의결과</th>
+                                            <td colspan="5" class="radio-type readonly">
+                                                <label for="rvPass">
+                                                    <input type="radio" name="rvResult" id="rvPass" checked>
+                                                    상정
+                                                </label>
+                                                <label for="rvDeny">
+                                                    <input type="radio" name="rvResult" id="rvDeny" disabled>
+                                                    기각
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">심의내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="3" class="lh20">심<br>의<br>위<br>원<br>회</th>
+                                            <th scope="row">포상등급</th>
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">심의내용</th>
+                                            <td colspan="5">
+                                                <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 심의결과:e -->
+
+
+                        <!-- 사후관리:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">사후관리</h4>
+                                <!-- 펼쳤을 때 아이콘 -->
+                                <a href="#none" class="btn-accordion"></a>
+                                <!-- 접었을 때 아이콘 -->
+                                <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">제안내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 53px;">
+                                        <col style="width: 103px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안번호</th>
+                                            <td>2022-0018</td>
+                                            <th scope="row">업무분류</th>
+                                            <td>전산</td>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안유형</th>
+                                            <td>개선활동</td>
+                                            <th scope="row">제안일자</th>
+                                            <td>2022. 11. 02</td>
+                                            <th scope="row">진행상태</th>
+                                            <td><div class="stepbox step09">종료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">공동제안자</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2">제안명</th>
+                                            <td colspan="5">
+                                                정보 보안 점검 강화
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row" colspan="2">제안요지</th>
+                                            <td colspan="5">
+                                                <p>전문적인 정보 보안 업체를 통한 취약점 점검 및 정기 교육을 통한 보안의식 강화</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="5" class="lh20">실<br>시<br>개<br>요</th>
+                                            <th scope="row">실시자</th>
+                                            <td>홍길동(953341)</td>
+                                            <th scope="row">실시기간</th>
+                                            <td colspan="3">2023. 01. 03 ~ 2023. 03. 03</td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">실시내용</th>
+                                            <td colspan="5">
+                                                <p>전문적인 정보 보안 업체를 통한 취약점 점검 및 정기 교육을 통한 보안의식 강화</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">개선효과</th>
+                                            <td colspan="5">
+                                                <p>전문적인 정보 보안 업체를 통한 취약점 점검 및 정기 교육을 통한 보안의식 강화</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">효과금액</th>
+                                            <td colspan="5">년 / 원</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">첨부</th>
+                                            <td colspan="5" class="file-download">
+                                                <div class="flex-bt">
+                                                    <ul class="att-file">
+                                                        <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    </ul>
+                                                    <input type="button" class="btn-download" value="일괄다운로드">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 사후관리:e -->
+
+
+                        <!-- 코멘트:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">코멘트(<span>1</span>건)</h4>
+                                <a href="#none" class="btn-accordion"></a>
+                            </div>
+                            <div class="board-list">
+                                <div class="bg-box comment-box">
+                                    <div class="comment-input">
+                                        <label class="cmt-input">
+                                            <input type="text" name="cmTxt" id="cmTxt">
+                                        </label>
+                                        <label>
+                                            <input type="button" class="btn-comment" value="입력완료">
+                                        </label>
+                                    </div>
+                                    <p>입력글자제한(0 / 2000) - 영문 2.000자, 한글 1.000자를 초과할 수 없습니다.</p>
+                                </div>
+                                <div class="comment-history">
+                                    <div class="comment-item">
+                                        <div class="cmt-info">
+                                            <div class="cmt-person">
+                                                <img src="../images/board/ic_cmt-person.svg" alt="">
+                                                <span>이나라(234242 / 품질경영부)</span>
+                                            </div>
+                                            <div class="cmt-time">
+                                                <span>2024-01-02</span>
+                                            </div>
+                                        </div>
+                                        <div class="cmt-text">
+                                            <p>안녕하세요.<br>꼭 필요한 제안인 듯 합니다. 제안 감사합니다.</p>
+                                        </div>
+                                    </div>
+                                    <!-- 코멘트 추가 시 생성되는 영역:s -->
+                                    <!-- <div class="comment-item">
+                                        <div class="cmt-info">
+                                            <div class="cmt-person">
+                                                <img src="../images/board/ic_cmt-person.svg" alt="">
+                                                <span>이나라(234242 / 품질경영부)</span>
+                                            </div>
+                                            <div class="cmt-time">
+                                                <span>2024-01-02</span>
+                                            </div>
+                                        </div>
+                                        <div class="cmt-text">
+                                            <p>안녕하세요.<br>꼭 필요한 제안인 듯 합니다. 제안 감사합니다.</p>
+                                        </div>
+                                    </div> -->
+                                    <!-- 코멘트 추가 시 생성되는 영역:e -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 코멘트:e -->
+
+
+                        <div class="board-btn-wrap">
+                            <div class="btn-wrap">
+                                <input type="button" value="목록" class="btn-listview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
+        
+        <!-- 자가진단 검토기준표 등록 팝업 시작 -->
+        <div id="selfSheet" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-02">
+                <div class="popup-header">
+                    <h2>자가진단 검토기준표</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 15%">
+                            <col style="width: 55%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">요소</th>
+                                <th scope="col">항목</th>
+                                <th scope="col">점수</th>
+                                <th scope="col">자기평가</th>
+                                <th scope="col">제안부서<br>사전평가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="4">창의성</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-1" checked>
+                                        대단히 새롭고 우수한 아이디어 
+                                    </label>
+                                </td>
+                                <td>10</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-2">
+                                        비교적 새롭고 우수한 아이디어 
+                                    </label>
+                                </td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-3">
+                                        일부분 독창성이 있는 아이디어
+                                    </label>
+                                </td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem1" id="cs1-4">
+                                        대체로 타를 모방 
+                                    </label>
+                                </td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <th rowspan="4">개선효과</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-1">
+                                        업무개선 효과가 획기적임
+                                    </label>
+                                </td>
+                                <td>35</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-2">
+                                        업무개선 효과가 상당함
+                                    </label>
+                                </td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-3">
+                                        업무개선 효과가 어느 정도 있음
+                                    </label>
+                                </td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem2" id="cs2-4">
+                                        업무개선 효과가 미미함
+                                    </label>
+                                </td>
+                                <td>4</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">난이도</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-1">
+                                        아주 쉽다
+                                    </label>
+                                </td>
+                                <td>15</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-2">
+                                        비교적 쉽다
+                                    </label>
+                                </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-3">
+                                        약간 어렵다
+                                    </label>
+                                </td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem3" id="cs3-4">
+                                        상당히 어렵다
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">지속성</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-1">
+                                        10년 이상
+                                    </label>
+                                </td>
+                                <td>20</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-2">
+                                        3년 이상
+                                    </label>
+                                </td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-3">
+                                        2년 이상
+                                    </label>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem4" id="cs4-4">
+                                        1년 미만
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th rowspan="4">활용도</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-1">
+                                        전사적 활용
+                                    </label>
+                                </td>
+                                <td>20</td>
+                                <td rowspan="4"></td>
+                                <td rowspan="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-2">
+                                        2개 이상 사업소 활용
+                                    </label>
+                                </td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-3">
+                                        1개 사업소 활용
+                                    </label>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="csItem5" id="cs5-4">
+                                        참고수준
+                                    </label>
+                                </td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3">합 계</th>
+                                <th>4</th>
+                                <th></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="평가완료" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 자가진단 검토기준표 등록 팝업 끝 -->
+
+    </div>
+</body>
+</html>
+

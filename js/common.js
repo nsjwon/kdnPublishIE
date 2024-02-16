@@ -163,3 +163,25 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+$(document).ready(function() {
+    // 문서가 로드될 때 각 라디오 버튼을 확인하고 해당 .typeLabel에 "checked" 클래스를 추가합니다.
+    $('.typeSuggest').each(function() {
+        if ($(this).prop('checked')) {
+            $(this).closest('.typeLabel').addClass('checked');
+        }
+    });
+
+    // 라디오 버튼의 변경 이벤트를 감지하여 .typeLabel에 "checked" 클래스를 추가 또는 제거합니다.
+    $('.typeSuggest').change(function() {
+        // 모든 .typeLabel 요소에서 "checked" 클래스를 제거합니다.
+        $('.typeLabel').removeClass('checked');
+
+        // 선택한 라디오 버튼에 해당하는 .typeLabel에 "checked" 클래스를 추가합니다.
+        if ($(this).prop('checked')) {
+            $(this).closest('.typeLabel').addClass('checked');
+        }
+    });
+});
