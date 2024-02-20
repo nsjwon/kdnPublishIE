@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+    <title>제안관리시스템 - 부서실적</title>
+</head>
+<body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                                    <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                                    <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-019.html">경진대회포상관리</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">테마제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                            <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-006.html">분임조원관리</a></li>
+                            <li><a href="./SGST-UI-05-009.html">지도사원관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">제안검색
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li class="focus"><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의제안
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">관리
+                            
+                        </a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-007.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-019.html">경진대회포상관리</a></li>
+                            <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003-test.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>제안검색</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>부서실적</li>
+                    </ul>
+                    <h2 class="h2-tit">부서실적</h2>
+                    <!-- board wrap :s-->
+                    <div class="brd-wrap">
+                        <!-- board search :s -->
+                        <div class="brd-search mb10"> 
+                            <div class="brd-search-form">
+                                <div class="search-section">
+                                    <div class="search-text medium">
+                                        <p>부서</p>
+                                        <label for="searchPart" class="hide">구분</label>
+                                        <select name="searchPart" id="searchPart">
+                                            <option>소속부서</option>
+                                            <option>제목</option>
+                                            <option>내용</option>
+                                            <option>작성자</option>
+                                        </select>
+                                        <input type="text" name="searchField1" id="searchField1" placeholder="">
+                                        <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brd-search-btn">
+                                <input type="button" class="btn-search" value="조회">
+                                <input type="button" class="btn-reset" value="초기화">
+                            </div>
+                        </div>                
+                        <!-- board search :e -->
+
+                        <!-- board note:s -->
+                        <div class="board-note-wrap">
+                            <p>※ 월말인원 산정 시 제외대상: 1직급 이상, 장기위탁교육자, 휴직자, 대외기관 파견자, 기사, 비서업무 수행자, 장기휴가자 등</p>
+                        </div>
+                        <!-- board note:e -->
+
+                        <!-- 월말인원 chart:s -->
+                        <div class="chart-block">
+                            <div class="chart-title">
+                                <h4 class="h4-tit">월말인원</h4>
+                            </div>
+                            <div class="chart-wrap">
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+                        <!-- 월말인원 chart:e -->
+
+                        <!-- 월별제안건수 chart:s -->
+                        <div class="chart-block">
+                            <div class="chart-title">
+                                <h4 class="h4-tit">월별제안건수</h4>
+                            </div>
+                            <div class="chart-wrap">
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+                        <!-- 월별제안건수 chart:e -->
+                        
+                        <!-- 월별검토결과 chart:s -->
+                        <div class="chart-block">
+                            <div class="chart-title">
+                                <h4 class="h4-tit">월별검토결과</h4>
+                            </div>
+                            <div class="chart-wrap">
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+                        <!-- 월별검토결과 chart:e -->
+                        
+                        <!-- 월별실적 chart:s -->
+                        <div class="num-table-wrap">
+                            <table class="num-table">
+                                <caption>월별실적 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 8%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 12%;">
+                                </colgroup>
+                                
+                                <tbody>	
+                                    <tr>
+                                        <th scope="col" colspan="2">구분</th>
+                                        <th scope="col">1월</th>                                         
+                                        <th scope="col">2월</th>                                         
+                                        <th scope="col">3월</th>                                         
+                                        <th scope="col">4월</th>                                         
+                                        <th scope="col">5월</th>                                         
+                                        <th scope="col">6월</th>                                         
+                                        <th scope="col">7월</th>                                         
+                                        <th scope="col">8월</th>                                         
+                                        <th scope="col">9월</th>
+
+                                        <th scope="col">10월</th>                                         
+                                        <th scope="col">11월</th>                                         
+                                        <th scope="col">12월</th>                                         
+                                        <th scope="col">평균(합계)</th>                                         
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">월말인원</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>9</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">제안건수</td>    
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>4</td>          
+                                        <td>0</td>          
+                                        <td>1</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>
+
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>5</td>          
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">검토결과</td>
+                                        <td>채택</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>43</td>
+                                        <td>27</td>
+                                        <td>9</td>
+                                        <td>30</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>11</td>
+                                        <td>159</td>
+                                    </tr>
+                                    <tr>
+                                        <td>불채택</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>43</td>
+                                        <td>27</td>
+                                        <td>9</td>
+                                        <td>30</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>11</td>
+                                        <td>159</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                    
+                    <!-- 월별실적 chart:e -->
+
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script>
+        import { LineChart } from '@toast-ui/chart';
+        const options = {
+            series: {
+                shift: true
+            }
+        }
+        const chart = new LineChart({el, data, options});
+
+        const data = {
+            categories: [
+                '01/01/2020',
+                '02/01/2020',
+                '03/01/2020',
+                '04/01/2020',
+                '05/01/2020',
+                '06/01/2020',
+                '07/01/2020',
+                '08/01/2020',
+                '09/01/2020',
+                '10/01/2020',
+                '11/01/2020',
+                '12/01/2020',
+            ],
+            series: [
+                {
+                name: 'Seoul',
+                data: [-3.5, -1.1, 4.0, 11.3, 17.5, 21.5, 25.9, 27.2, 24.4, 13.9, 6.6, -0.6],
+                },
+                {
+                name: 'Seattle',
+                data: [3.8, 5.6, 7.0, 9.1, 12.4, 15.3, 17.5, 17.8, 15.0, 10.6, 6.6, 3.7],
+                },
+            ],
+            }
+    </script>
+</body>
+</html>
+

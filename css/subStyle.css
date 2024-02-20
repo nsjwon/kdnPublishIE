@@ -33,9 +33,9 @@
 .one-depth .d1 .two-depth {display: none;}
 .one-depth .d1.active .two-depth {display: block;}
 .two-depth {padding: 9px 0 18px 0;}
-.two-depth li a {width: 100%; display: block; height: 35px; line-height: 35px; color: #666C75; padding: 0 20px 0 56px;}
-.two-depth li a:hover {background: #ecedf3; border-radius: 6px; color: #1c1d1f;}
-.two-depth li.focus a {text-decoration: underline; color: #3b4eba; font-weight: 600;}
+.two-depth li a {width: 100%; display: block; height: 35px; line-height: 35px; color: #666C75; padding: 0 20px 0 56px; border-radius: 6px;}
+.two-depth li a:hover {background: #ecedf3; color: #1c1d1f;}
+.two-depth li.focus a {text-decoration: underline; color: #3b4eba; font-weight: 600; background: #ecedf3;}
 .regist-card {display: flex; align-items: center; width: 100%; height: 7.2rem; margin-top: 4rem; background-size: contain; background: url(../images/common/bg_regist-link.svg) no-repeat; border-radius: 6px; overflow: hidden;}
 .gt-regist {position: relative; width: 100%; display: flex; align-items: center; font-size: 1.6rem; color: #fff; font-weight: 600; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif; padding: 0 2.4rem; height: 7.2rem;}
 .gt-regist::after {position: absolute; top: 24px; right: 16px; background: url(../images/common/iconArrowRight.svg) no-repeat; background-size: contain; width: 24px; height: 24px; content: ''; display: block;}
@@ -88,6 +88,7 @@
 
 /* 게시판 정보 */
 .brd-info {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.6rem;}
+.brd-btn-wrap {display: flex; align-items: center; justify-content: space-between; gap: 12px;}
 .brd-num {display: flex; align-items: center; font-size: 1.4rem;}
 .brd-num li::after {display: inline-block; content: ''; height: 12px; width: 1px; background: #999; margin: 0 10px;}
 .brd-num li:last-child::after {display: none;}
@@ -192,7 +193,8 @@
 .board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 12rem;}
-.board-table tr.longtxt td {padding: 1.6rem 2rem;}
+.board-table tr.longtxt.medium {height: 36rem;}
+.board-table tr.longtxt td {padding: 1.6rem 2rem; vertical-align: baseline;}
 .board-table td select.l-select {min-width: 316px;}
 .board-table td select.m-select {min-width: 200px;}
 .board-table td select.s-select {min-width: 95px;}
@@ -252,6 +254,22 @@
 .in-body-td textarea {border-radius: 4px; border: none;}
 .in-body-btn, .in-header-btn {margin-left: 1rem;}
 .in-body-btn input[type=button], .in-header-btn input[type=button] {width: 100px; height: 40px; border-radius: 4px;}
+
+/* 차트 영역 */
+.chart-block {width: 100%; margin-top: 4rem;}
+.chart-title {width: 100%; padding: 0 0 2rem; display: flex; align-items: center; justify-content: space-between;}
+.chart-wrap {width: 100%; min-height: 36rem; border-radius: 6px; border: 1px solid #d9d9d9;}
+
+.num-table-wrap {margin: 4rem 0;}
+.num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #4f4f4f;}
+.num-table th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; text-wrap: nowrap;}
+.num-table th::before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
+.num-table th:first-child:before {display: none;}
+.num-table tr {position:relative;}
+.num-table td {padding: 2rem 1rem; vertical-align: middle; text-align: center; font-size: 1.5rem; border-bottom: 1px solid #e8e8e8; word-break: break-all; color: #333333; line-height: 1.4;}
+.num-table th:first-child, .num-table td:first-child {border-left:none;}
+.num-table th:last-child, .num-table td:last-child {border-right:none;}
+.num-table tbody tr:first-child th, .num-table tbody tr:first-child td {border-top:none;}
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
@@ -325,6 +343,10 @@ a.btn-rewrite {height: 38px; border-radius: 4px; display: flex; align-items: cen
 a.btn-rewrite:hover {background: #1F7C70 url(../images/button/ic_rewrite-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #1F7C70;}
 a.btn-recheck {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #fff url(../images/button/ic_recheck.svg) no-repeat 21px 12px; color: #1F7C70; border: 1px solid #1F7C70; padding: 0 20px 0 41px; font-size: 1.4rem; font-weight: 500;}
 a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #1F7C70;}
+.btn-paystatus {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem; font-size: 1.4rem; font-weight: 500; cursor: default;}
+.btn-edit {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #1F7C70; color: #fff; border: 1px solid #1F7C70; padding: 0 20px; font-size: 1.4rem; font-weight: 500;}
+.btn-edit:hover {background: #155950;}
+
 
 .table-wrap.scroll {overflow-x: scroll;}
 

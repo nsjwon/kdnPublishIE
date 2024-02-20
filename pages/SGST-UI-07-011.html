@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 통합검색</title>
+    <title>제안관리시스템 - 나의실적</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -58,7 +58,7 @@
                                     <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
                                 </ul>
                             </li>
-                            <li class="focus">
+                            <li>
                                 <a href="#none"><span>제안검색</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
@@ -66,7 +66,7 @@
                                     <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="focus">
                                 <a href="#none"><span>나의제안</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
@@ -148,23 +148,23 @@
                             <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
                         </ul>
                     </li>
-                    <li class="d1 active">
+                    <li class="d1">
                         <a href="#none">제안검색
                             
                         </a>
                         <ul class="two-depth">
-                            <li class="focus"><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
                             <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
                             <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                         </ul>
                     </li>
-                    <li class="d1">
+                    <li class="d1 active">
                         <a href="#none">나의제안
                             
                         </a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                            <li class="focus"><a href="./SGST-UI-07-011.html">나의실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -195,124 +195,129 @@
                     <ul class="menu-nav">
                         <li><img src="../images/board/ic_home.svg" alt="home"></li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>제안검색</li>
+                        <li>나의제안</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>통합검색</li>
+                        <li>나의실적</li>
                     </ul>
-                    <h2 class="h2-tit">통합검색</h2>
+                    <h2 class="h2-tit">나의실적</h2>
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
-                        <!-- board search :s -->
-                        <div class="brd-search flex-col"> 
-                            <div class="brd-search-form">
-                                <div class="search-section">
-                                    <div class="search-date">
-                                        <p>검색기준일</p>
-                                        <label for="dateOption" class="hide">검색기준일</label>
-                                        <select name="dateOption" id="dateOption">
-                                            <option>등록일</option>
-                                            <option>검토일</option>
-                                            <option>사전검토일</option>
-                                            <option>검토경과일</option>
-                                            <option>검토예정일</option>
-                                        </select>
-                                        <label for="startDate" class="hide">시작일</label>
-                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
-                                        <span>-</span>
-                                        <label for="endDate" class="hide">종료일</label>
-                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
-                                    </div>
-                                    <div class="search-select">
-                                        <p>제안유형</p>
-                                        <label for="searchType" class="hide">제안유형</label>
-                                        <select name="searchType" id="searchType">
-                                            <option>전체제안</option>
-                                            <option>아이디어</option>
-                                            <option>프로세스</option>
-                                            <option>개선활동</option>
-                                            <option>단순제안</option>
-                                            <option>테마제안</option>
-                                            <option>경진대회</option>
-                                        </select>
-                                    </div>
-                                    <div class="search-select">
-                                        <p>업무분류</p>
-                                        <label for="inputSort" class="hide">업무분류</label>
-                                        <select name="inputSort" id="inputSort" class="m-select">
-                                            <option>전체</option>
-                                            <option>사무</option>
-                                            <option>전산</option>
-                                            <option>통신</option>
-                                            <option>특수</option>
-                                            <option>전사</option>
-                                            <option>예산</option>
-                                            <option>대국민서비스</option>
-                                        </select>
-                                    </div> 
-                                    <div class="search-text short">
-                                        <p>제안자</p>
-                                        <input type="text" name="searchField" id="searchField" placeholder="">
-                                    </div>
-                                    <div class="search-text medium">
-                                        <p>부서</p>
-                                        <label for="searchPart" class="hide">구분</label>
-                                        <select name="searchPart" id="searchPart">
-                                            <option>소속부서</option>
-                                            <option>제목</option>
-                                            <option>내용</option>
-                                            <option>작성자</option>
-                                        </select>
-                                        <input type="text" name="searchField1" id="searchField1" placeholder="">
-                                        <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
-                                    </div>
-                                    <div class="search-text medium">
-                                        <p>검색어</p>
-                                        <label for="searchWord" class="hide">구분</label>
-                                        <select name="searchWord" id="searchWord">
-                                            <option>제안명</option>
-                                            <option>현행내용</option>
-                                            <option>개선내용</option>
-                                            <option>제안명+모든내용</option>
-                                        </select>
-                                        <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
-                                    </div>
-                                    <div class="search-check">
-                                        <p>진행상태</p>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel1">사전검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel2">자료보완</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel3">접수중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel4">검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel5">검토승인중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel6">산출물등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel7">결과서등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel8">심의중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel9">종료</label>
-                                    </div>
-                                    <div class="search-check">
-                                        <p>제안결과</p>
-                                        <label><input type="checkbox" name="offresult" id="offresult1">채택</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult2">자료보완</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult3">접수중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult4">검토중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult5">검토승인중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult6">산출물등록</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult7">결과서등록</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult8">심의중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult9">종료</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="brd-search-btn mt10">
-                                <input type="button" class="btn-search" value="조회">
-                                <input type="button" class="btn-reset" value="초기화">
-                            </div>
-                        </div>                
-                        <!-- board search :e -->
+                        <!-- board chart :s -->   
+                        <div class="num-table-wrap">
+                            <table class="num-table">
+                                <caption>나의실적 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 8%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 12%;">
+                                </colgroup>
+                                
+                                <tbody>	
+                                    <tr>
+                                        <th scope="col" colspan="2">구분</th>
+                                        <th scope="col">1월</th>                                         
+                                        <th scope="col">2월</th>                                         
+                                        <th scope="col">3월</th>                                         
+                                        <th scope="col">4월</th>                                         
+                                        <th scope="col">5월</th>                                         
+                                        <th scope="col">6월</th>                                         
+                                        <th scope="col">7월</th>                                         
+                                        <th scope="col">8월</th>                                         
+                                        <th scope="col">9월</th>
+
+                                        <th scope="col">10월</th>                                         
+                                        <th scope="col">11월</th>                                         
+                                        <th scope="col">12월</th>                                         
+                                        <th scope="col">평균(합계)</th>                                         
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">월말인원</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>9</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">제안건수</td>    
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>4</td>          
+                                        <td>0</td>          
+                                        <td>1</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>
+
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>0</td>          
+                                        <td>5</td>          
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">검토결과</td>
+                                        <td>채택</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>43</td>
+                                        <td>27</td>
+                                        <td>9</td>
+                                        <td>30</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>11</td>
+                                        <td>159</td>
+                                    </tr>
+                                    <tr>
+                                        <td>불채택</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>43</td>
+                                        <td>27</td>
+                                        <td>9</td>
+                                        <td>30</td>
+                                        <td>1</td>
+                                        <td>10</td>
+                                        <td>1</td>
+                                        <td>11</td>
+                                        <td>159</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- board chart :e -->
 
                         <!-- board note:s -->
                         <!-- <div class="board-note-wrap">
-                            <p>※ 제안수정: 자료보완이 요청된 제안을 수정 또는 삭제합니다.<span>(가능상태: 자료보완)</span></p>
-                            <p>※ 재검토: 과거 불채택된 제안이 검토부서에서 시행되고 있을 경우 등 재검토가 필요한 경우.<span>(가능상태: 불채택으로 종료된 제안)</span></p>
+                            <p>※ 지급여부를 <span>미지급</span>으로 조회해야 지급처리를 할 수 있습니다.</p>
                         </div> -->
                         <!-- board note:e -->
 
@@ -321,129 +326,87 @@
                             <ul class="brd-num">
                                 <li><span>전체 </span><em>112</em>건</li>
                                 <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
-                                <li><span>포상금합계 <em>3,000</em></span></li>
+                                <li><span>포상금합계 <em>630,000</em></span></li>
                             </ul>
-                            <input type="button" value="엑셀 다운로드" class="btn-excel">
+                            <div class="brd-btn-wrap">
+                                <input type="button" value="엑셀 다운로드" class="btn-excel">
+                                <input type="button" value="지급완료" class="btn-paystatus">
+                            </div>
                         </div>                               
                         <!-- board info : e-->
 
                         <!-- board table :s -->
                         <div class="table-wrap scroll">
                             <table class="brd-list-01">
-                                <caption>나의제안 리스트</caption>
+                                <caption>관리 리스트</caption>
                                 <colgroup>
+                                    <col style="width: 60px;">
                                     <col style="width: 110px;">
                                     <col style="width: 400px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 140px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    
-                                    <col style="width: 100px;">
-                                    <col style="width: 140px;">
-                                    <col style="width: 110px;">
                                     <col style="width: 110px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
-                                    <col style="width: 100px;">
+                                    <col style="width: 140px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
+                                        <th scope="col"><input type="checkbox" name="" disabled></th>
                                         <th scope="col">제안번호</th>
                                         <th scope="col">제안명</th>
-                                        <th scope="col">제안유형</th>
-                                        <th scope="col">업무분류</th>                                           
-                                        <th scope="col">코멘트</th>                                        
-                                        <th scope="col">제안자</th>                                        
-                                        <th scope="col">소속부서</th>                                        
-                                        <th scope="col">등록일</th>
-                                        <th scope="col">진행상태</th>                                        
+                                        <th scope="col">제안구분</th>
+                                        <th scope="col">제안자</th>
+                                        <th scope="col">소속부서</th>
+                                        <th scope="col">진행상태</th>
                                         <th scope="col">제안결과</th>
-                                        
-                                        <th scope="col">검토부서</th>
-                                        <th scope="col">검토자</th>
-                                        <th scope="col">검토일</th>
-                                        <th scope="col">사전검토일<br>(부서이관일)</th>
-                                        <th scope="col">검토경과일</th>
-                                        <th scope="col">검토예정일</th>
                                         <th scope="col">포상금</th>
                                     </tr>
                                 </thead>
                                 <tbody>	
                                     <tr>
+                                        <td><input type="checkbox" name=""></td>
                                         <td>2023-0025</td>
-                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
+                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
                                         <td>아이디어</td>
-                                        <td>사무</td>
-                                        <td>0</td>
-                                        <td>장태경(953341)</td>
+                                        <td>장태경</td>
                                         <td>품질경영부</td>
-                                        <td>2023-11-14</td>
                                         <td class="st-level st09">
                                             <div>종료</div>
                                         </td>
                                         <td>채택</td>
-                                        
-                                        <td>품질경영부</td>
-                                        <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        <td>10,000</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0025</td>
-                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
+                                        <td><input type="checkbox" name=""></td>
+                                        <td>2023-0024</td>
+                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
                                         <td>아이디어</td>
-                                        <td>사무</td>
-                                        <td>0</td>
-                                        <td>장태경(953341)</td>
+                                        <td>장태경</td>
                                         <td>품질경영부</td>
-                                        <td>2023-11-14</td>
                                         <td class="st-level st09">
                                             <div>종료</div>
                                         </td>
                                         <td>채택</td>
-                                        
-                                        <td>품질경영부</td>
-                                        <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        <td>10,000</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0025</td>
-                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
+                                        <td><input type="checkbox" name=""></td>
+                                        <td>2023-0023</td>
+                                        <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
                                         <td>아이디어</td>
-                                        <td>사무</td>
-                                        <td>0</td>
-                                        <td>장태경(953341)</td>
+                                        <td>장태경</td>
                                         <td>품질경영부</td>
-                                        <td>2023-11-14</td>
                                         <td class="st-level st09">
                                             <div>종료</div>
                                         </td>
                                         <td>채택</td>
-                                        
-                                        <td>품질경영부</td>
-                                        <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        <td>10,000</td>
                                     </tr>
 
                                     <!-- 게시글이 없을때  -->
                                     <tr> 
-                                        <td colspan="17">등록된 게시글이 없습니다.</td>
+                                        <td colspan="9">등록된 게시글이 없습니다.</td>
                                     </tr>
                                     
                                 </tbody>

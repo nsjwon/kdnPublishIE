@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 통합검색</title>
+    <title>제안관리시스템 - 우수과제</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -153,8 +153,8 @@
                             
                         </a>
                         <ul class="two-depth">
-                            <li class="focus"><a href="./SGST-UI-06-001.html">통합검색</a></li>
-                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li class="focus"><a href="./SGST-UI-06-003.html">우수과제</a></li>
                             <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                         </ul>
                     </li>
@@ -197,9 +197,9 @@
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
                         <li>제안검색</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>통합검색</li>
+                        <li>우수과제</li>
                     </ul>
-                    <h2 class="h2-tit">통합검색</h2>
+                    <h2 class="h2-tit">우수과제</h2>
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
                         <!-- board search :s -->
@@ -277,28 +277,12 @@
                                         <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
                                     </div>
                                     <div class="search-check">
-                                        <p>진행상태</p>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel1">사전검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel2">자료보완</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel3">접수중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel4">검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel5">검토승인중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel6">산출물등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel7">결과서등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel8">심의중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel9">종료</label>
-                                    </div>
-                                    <div class="search-check">
-                                        <p>제안결과</p>
-                                        <label><input type="checkbox" name="offresult" id="offresult1">채택</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult2">자료보완</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult3">접수중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult4">검토중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult5">검토승인중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult6">산출물등록</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult7">결과서등록</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult8">심의중</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult9">종료</label>
+                                        <p>포상등급</p>
+                                        <label><input type="checkbox" name="rdlevel" id="rdlevel1">창안상</label>
+                                        <label><input type="checkbox" name="rdlevel" id="rdlevel2">우수제안1등급</label>
+                                        <label><input type="checkbox" name="rdlevel" id="rdlevel3">우수제안2등급</label>
+                                        <label><input type="checkbox" name="rdlevel" id="rdlevel4">우수제안3등급</label>
+                                        <label><input type="checkbox" name="rdlevel" id="rdlevel5">우수제안4등급</label>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +305,6 @@
                             <ul class="brd-num">
                                 <li><span>전체 </span><em>112</em>건</li>
                                 <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
-                                <li><span>포상금합계 <em>3,000</em></span></li>
                             </ul>
                             <input type="button" value="엑셀 다운로드" class="btn-excel">
                         </div>                               
@@ -338,39 +321,27 @@
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
                                     <col style="width: 140px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    
-                                    <col style="width: 100px;">
+                                    <col style="width: 140px;">
                                     <col style="width: 140px;">
                                     <col style="width: 110px;">
-                                    <col style="width: 110px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
+                                    <col style="width: 140px;">
+                                    
+                                    <col style="width: 180px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th scope="col">제안번호</th>
                                         <th scope="col">제안명</th>
                                         <th scope="col">제안유형</th>
-                                        <th scope="col">업무분류</th>                                           
-                                        <th scope="col">코멘트</th>                                        
-                                        <th scope="col">제안자</th>                                        
-                                        <th scope="col">소속부서</th>                                        
-                                        <th scope="col">등록일</th>
-                                        <th scope="col">진행상태</th>                                        
-                                        <th scope="col">제안결과</th>
-                                        
+                                        <th scope="col">코멘트</th>                                             
                                         <th scope="col">검토부서</th>
-                                        <th scope="col">검토자</th>
+                                        <th scope="col">등록일</th>
                                         <th scope="col">검토일</th>
-                                        <th scope="col">사전검토일<br>(부서이관일)</th>
-                                        <th scope="col">검토경과일</th>
-                                        <th scope="col">검토예정일</th>
-                                        <th scope="col">포상금</th>
+                                        <th scope="col">검토자</th>
+                                        <th scope="col">포상결과</th>
+                                        <th scope="col">제안자</th>                                        
+                                        
+                                        <th scope="col">제안자 소속부서</th>
                                     </tr>
                                 </thead>
                                 <tbody>	
@@ -378,67 +349,43 @@
                                         <td>2023-0025</td>
                                         <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
                                         <td>아이디어</td>
-                                        <td>사무</td>
                                         <td>0</td>
-                                        <td>장태경(953341)</td>
-                                        <td>품질경영부</td>
+                                        <td>품질경영팀</td>
                                         <td>2023-11-14</td>
-                                        <td class="st-level st09">
-                                            <div>종료</div>
-                                        </td>
-                                        <td>채택</td>
-                                        
-                                        <td>품질경영부</td>
+                                        <td>2023-11-14</td>
+                                        <td>장태경(953341)</td>
+                                        <td>창안상</td>
                                         <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        
+                                        <td>ICT기획처 ICT 수탁팀</td>
                                     </tr>
                                     <tr>
                                         <td>2023-0025</td>
                                         <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
                                         <td>아이디어</td>
-                                        <td>사무</td>
                                         <td>0</td>
-                                        <td>장태경(953341)</td>
-                                        <td>품질경영부</td>
+                                        <td>품질경영팀</td>
                                         <td>2023-11-14</td>
-                                        <td class="st-level st09">
-                                            <div>종료</div>
-                                        </td>
-                                        <td>채택</td>
+                                        <td>2023-11-14</td>
+                                        <td>장태경(953341)</td>
+                                        <td>우수과제1등급</td>
+                                        <td>박서준(321456)</td>
                                         
-                                        <td>품질경영부</td>
-                                        <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        <td>ICT기획처 ICT 수탁팀</td>
                                     </tr>
                                     <tr>
                                         <td>2023-0025</td>
                                         <td class="align-left"><a href="./SGST-UI-06-002.html"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td> 
                                         <td>아이디어</td>
-                                        <td>사무</td>
                                         <td>0</td>
-                                        <td>장태경(953341)</td>
-                                        <td>품질경영부</td>
+                                        <td>품질경영팀</td>
                                         <td>2023-11-14</td>
-                                        <td class="st-level st09">
-                                            <div>종료</div>
-                                        </td>
-                                        <td>채택</td>
+                                        <td>2023-11-14</td>
+                                        <td>장태경(953341)</td>
+                                        <td>우수과제3등급</td>
+                                        <td>박형식(321456)</td>
                                         
-                                        <td>품질경영부</td>
-                                        <td>임시완(123456)</td>
-                                        <td>2024-01-14</td>
-                                        <td>2024-01-02</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1,000</td>
+                                        <td>ICT기획처 ICT 수탁팀</td>
                                     </tr>
 
                                     <!-- 게시글이 없을때  -->
