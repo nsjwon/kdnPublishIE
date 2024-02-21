@@ -88,6 +88,7 @@ body {position: relative; background: #fff;}
 .popup-content-01 {top: calc((100vh - 80rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 80rem;}
 .popup-content-02 {top: 10vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 80vh;}
 .popup-content-03 {top: calc((100vh - 80rem) / 2); left: calc((100% - 60rem) / 2); width: 60rem; height: 80rem;}
+.popup-content-04 {top: calc((100vh - 60rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 60rem;}
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
 .popup-header .close-button {display: block; width: 30px; height: 30px; background: url(../images/common/pop-close.svg) no-repeat; background-size: contain;}
@@ -185,3 +186,7 @@ body {position: relative; background: #fff;}
 .findperson-wrap .f4.choose>a:hover {background: #EBF2FF;}
 .findperson-wrap .f4.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
 
+
+/* 그룹코드 등록/수정 */
+.board-table.popup {width: 100%; border-top: 1px solid #4f4f4f;}
+.board-table.popup input[type="text"] {width: 100%;}

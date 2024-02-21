@@ -10,10 +10,14 @@
     <script src="../js/common.js"></script>
     <title>제안관리시스템</title>
     <style>
-        #sub-gnb-wrap {background: #3b4eba;}
+        #sub-gnb-wrap {background: #4e6bca;}
         .one-depth .d1>a {color: #fff;}
+        .one-depth .d1>a:hover {color: #405DBC;}
+        .one-depth .d1.active>a {border: 1px solid transparent; color: #405DBC;}
+        .two-depth li {padding: 1px 0;}
         .two-depth li a {color: #fff;}
-        .two-depth li.focus a {color: #fff;}
+        .two-depth li a:hover {background: #405DBC; color: #fff;}
+        .two-depth li.focus a {color: #fff; background: #405DBC;}
         .one-depth .d1:first-child>a::before {background: url(../images/common/side01-white.svg) no-repeat; background-size: contain;}
         .one-depth .d1:nth-child(2)>a::before {background: url(../images/common/side02-white.svg) no-repeat; background-size: contain;}
         .one-depth .d1:nth-child(3)>a::before {background: url(../images/common/side03-white.svg) no-repeat; background-size: contain;}
@@ -21,10 +25,8 @@
         .one-depth .d1:nth-child(5)>a::before {background: url(../images/common/side05-white.svg) no-repeat; background-size: contain;}
         .one-depth .d1:nth-child(6)>a::before {background: url(../images/common/side06-white.svg) no-repeat; background-size: contain;}
         .one-depth .d1:nth-child(7)>a::before {background: url(../images/common/side07-white.svg) no-repeat; background-size: contain;}
-        .two-depth li a:hover {background: #2C3FA6; color: #fff;}
-        .regist-card {background: url(../images/common/bg_regist-link2.svg) no-repeat;}
+        .regist-card {background: url(../images/common/bg_regist-link3.svg) no-repeat;}
         .gt-regist {color: #fff;}
-        /* .gt-regist span::before {background: none;} */
     </style>
 </head>
 <body class="scroll">
@@ -498,7 +500,7 @@
                     <div class="brd-search">    
                         <div class="brd-search-form">
                             <div class="search-section">                              
-                                <div class="search-text">
+                                <div class="search-text w100">
                                     <label for="searchWord" class="hide">검색어</label>
                                     <input type="text" name="searchWord" id="searchWord" placeholder="검색어를 입력하세요.">
                                     <label for="searchPartBtn" class="hide">부서찾기</label>

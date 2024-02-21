@@ -49,6 +49,7 @@
 
 /* 게시판 검색 */
 .brd-wrap {position: relative;}
+.brd-half-type {display: flex; gap: 4rem; align-items: flex-start; justify-content: space-between;}
 .brd-search {display: flex; justify-content: space-between; width: 100%; margin-bottom: 3rem; background: #f6f6f9; border-radius: 6px; border: 1px solid #eff1f5; padding: 3rem 4rem;}
 .brd-search-form {flex: 1;}
 .brd-search-btn {display: flex; align-items: flex-end; justify-content: flex-end;}
@@ -69,6 +70,7 @@
 .search-text input[type=text] {width: 485px; margin: 0; font-size: 1.4rem;}
 .search-text.medium input[type=text] {width: 280px;}
 .search-text.short input[type=text] {width: 160px;}
+.search-text.small input[type=text] {width: 80px;}
 .board-note-wrap {margin-bottom: 3rem; margin-left: 6px;}
 .board-note-wrap p {line-height: 2.4rem; font-size: 1.4rem;}
 .board-note-wrap span {color: #e14242;}
@@ -94,6 +96,9 @@
 .brd-num li:last-child::after {display: none;}
 
 .brd-list-01 {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #4f4f4f;}
+.brd-list-01 thead tr {height: 6rem;}
+.brd-list-01 tbody tr {height: 6.2rem;}
+.brd-list-01 tbody tr.input-type td {padding: 1rem;}
 .brd-list-01 th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; text-wrap: nowrap;}
 .brd-list-01 th::before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
 .brd-list-01 th:first-child:before {display: none;}
@@ -186,6 +191,7 @@
 .board-table td.radio-type.readonly input[type="radio"] {cursor: default;}
 .board-table td input[type="text"]:read-only {background: #efeff2;}
 .board-table td input[type="text"]:read-only:focus {outline: none;}
+.board-table td input.small {width: 5.8rem; text-align: right;}
 .board-table td.file-download .att-file {margin-top: 1rem;}
 .board-table td.file-upload input[type="text"]:read-only {background: #fff; min-width: 46rem;}
 .board-table td.file-upload input[type="text"]:read-only:focus {outline: none;}
@@ -194,6 +200,7 @@
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 12rem;}
 .board-table tr.longtxt.medium {height: 36rem;}
+.board-table tr.longtxt.large {height: 60rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem; vertical-align: baseline;}
 .board-table td select.l-select {min-width: 316px;}
 .board-table td select.m-select {min-width: 200px;}
@@ -288,6 +295,8 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-title {display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.6rem;}
 .btn-title .h2-tit {margin-bottom: 0;}
 .btn-wrap {display: flex; gap: 10px; justify-content: space-between; align-items: center;}
+.btn-wrap.bw100 input[type="button"] {width: 100px;}
+.btn-wrap.bw90 input[type="button"] {width: 90px;}
 .btn-wrap input[type="button"] {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center;}
 .search-text .btn-searchpart {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.6rem;}
 .search-text .btn-searchpart:hover {background: #4a5369; transition: all ease 0.2s 0s;}
@@ -323,6 +332,8 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-regist:hover {background: #1c44aa;}
 .btn-add-tr {background: #325bc4; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem;}
 .btn-add-tr:hover {background: #1C44AA; transition: all ease 0.2s 0s;}
+.btn-add-code {background: #325bc4; color: #ffffff; border: none; padding: 1rem 2rem; font-size: 1.4rem;}
+.btn-add-code:hover {background: #1C44AA; transition: all ease 0.2s 0s;}
 .btn-del-tr {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem;}
 .btn-del-tr:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-new {height: 40px; border-radius: 4px; background: #325bc4 url(../images/button/btn_new.svg) no-repeat 20px 12px; color: #ffffff; border: none; padding: 1rem 2.4rem 1rem 3.9rem; font-size: 1.5rem; line-height: 1.9rem;}
@@ -344,11 +355,45 @@ a.btn-rewrite:hover {background: #1F7C70 url(../images/button/ic_rewrite-hover.s
 a.btn-recheck {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #fff url(../images/button/ic_recheck.svg) no-repeat 21px 12px; color: #1F7C70; border: 1px solid #1F7C70; padding: 0 20px 0 41px; font-size: 1.4rem; font-weight: 500;}
 a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #1F7C70;}
 .btn-paystatus {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem; font-size: 1.4rem; font-weight: 500; cursor: default;}
-.btn-edit {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #1F7C70; color: #fff; border: 1px solid #1F7C70; padding: 0 20px; font-size: 1.4rem; font-weight: 500;}
-.btn-edit:hover {background: #155950;}
+.btn-edit {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #325bc4; color: #fff; border: 1px solid #325bc4; padding: 0 20px; font-size: 1.4rem; font-weight: 500;}
+.btn-edit:hover {background: #1c44aa;}
+
+.btn-gray {background: #6c7282; color: #fff; border: 1px solid transparent;}
+.btn-gray:hover {background: #4a5369; border: 1px solid transparent;}
+.btn-grayline {background: #fff; color: #6c7282; border: 1px solid #6c7282;}
+.btn-grayline:hover {background: #6c7282; color: #fff;}
+.btn-lightgray {background: #8591a3; color: #fff; border: 1px solid transparent;}
+.btn-lightgray:hover {background: #6c7282; border: 1px solid transparent;}
+.btn-green {background: #1F7C70; color: #fff;}
+.btn-green:hover {background: #155950;}
+.btn-blue {background: #325bc4; color: #fff;}
+.btn-blue:hover {background: #1C44AA;}
+.btn-navy {background: #233D75; color: #fff;}
+.btn-navy:hover {background: #121F3C;}
+.btn-blueline {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 1rem 2rem;}
+.btn-blueline:hover {background: #325bc4; color: #fff;}
+.btn-red {background: #D14343; color: #fff;}
+.btn-red:hover {background: #C32E2E;}
+.btn-redline {background: #fff; color: #D14343; border: 1px solid #D14343;}
+.btn-redline:hover {background: #C32E2E; color: #fff;}
 
 
 .table-wrap.scroll {overflow-x: scroll;}
+
+/* 코드관리목록 */
+.bh-title {height: 3.8rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;}
+.brd-half-block {flex: 1;}
+.helf-table-wrap {max-width: 100%; border: 1px solid #d9d9d9; padding: 4rem; height: 78rem; overflow-y: auto;}
+.helf-table-wrap::-webkit-scrollbar {width: 1em;}
+.helf-table-wrap::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
+.helf-table-wrap::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.helf-table-wrap .brd-list-01 input[type="text"] {width: 100%;}
+.helf-table-wrap .brd-list-01 input[type="text"].wauto {width: auto;}
+.helf-table-wrap .brd-list-01 select {width: 100%; padding: 0.8rem 3.8rem 0.8rem 1.3rem;}
+
+.helf-table-wrap tbody tr.selectable.select {background: #f3f4fb;}
+.helf-table-wrap tbody tr.selectable.select:hover {background: #f3f4fb;}
+.helf-note-wrap {padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;}
 
 @media (max-width: 1660px) {
     #sub-gnb-wrap {width: 240px;}
