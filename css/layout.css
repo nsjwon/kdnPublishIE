@@ -131,7 +131,7 @@ body {position: relative; background: #fff;}
 .popup-content-02 .pop-list.view-only td.radio-type label input[type="radio"] {cursor: default;}
 
 /* 부서찾기 */
-.popup-content-03 .brd-search {padding: 2.4rem;}
+/* .popup-content-03 .brd-search {padding: 2.4rem;}
 .popup-content-03 .search-text input[type=text] {width: 100%; max-width: 100%;}
 .parttree-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
 .parttree-wrap::-webkit-scrollbar {width: 1em;}
@@ -155,7 +155,37 @@ body {position: relative; background: #fff;}
 .parttree-wrap .p3>a::after {left: 64px; top: 14px; background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
 .parttree-wrap .p3.choose {background: #EBF2FF;}
 .parttree-wrap .p3.choose>a:hover {background: #EBF2FF;}
-.parttree-wrap .p3.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
+.parttree-wrap .p3.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;} */
+
+/* 부서찾기 */
+.popup-content-03 .brd-search {padding: 2.4rem;}
+.popup-content-03 .search-text input[type=text] {width: 100%; max-width: 100%;}
+.parttree-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
+.parttree-wrap::-webkit-scrollbar {width: 1em;}
+.parttree-wrap::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
+.parttree-wrap::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.parttree-wrap li>a {border-bottom: 1px solid #e8e8e8;}
+.parttree-wrap li>a:hover {background: #fcfcfc;}
+.parttree-wrap>ul {border-top: 1px solid #e8e8e8;}
+.parttree-wrap a { height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
+.parttree-wrap a>span {position: relative;}
+.parttree-wrap a>span::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
+
+.parttree-wrap .p1 a {padding-left: 40px;}
+.parttree-wrap .p1>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p2 a {padding-left: 68px;}
+.parttree-wrap .p2>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p3 a {padding-left: 96px;}
+.parttree-wrap .p3>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p4 a {padding-left: 124px;}
+.parttree-wrap .p4>a>span::after {left: -28px; top: 0px;}
+
+.parttree-wrap li.choose>a {background: #EBF2FF;}
+.parttree-wrap li.choose>a:hover {background: #EBF2FF;}
+.parttree-wrap li.folder>a>span::after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.folder.open>a>span::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.part>a>span::after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.part.choose>a>span::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
 
 /* 검토자 조회 */
 .findperson-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
@@ -165,27 +195,25 @@ body {position: relative; background: #fff;}
 .findperson-wrap li>a {border-bottom: 1px solid #e8e8e8;}
 .findperson-wrap li>a:hover {background: #fcfcfc;}
 .findperson-wrap>ul {border-top: 1px solid #e8e8e8;}
-.findperson-wrap a {position: relative; height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
-.findperson-wrap a::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
+.findperson-wrap a { height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
+.findperson-wrap a>span {position: relative;}
+.findperson-wrap a>span::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
 
-.findperson-wrap .f1>a {padding-left: 40px;}
-.findperson-wrap .f1>a::after {left: 10px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
-.findperson-wrap .f1.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+.findperson-wrap .f1 a {padding-left: 40px;}
+.findperson-wrap .f1>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f2 a {padding-left: 68px;}
+.findperson-wrap .f2>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f3 a {padding-left: 96px;}
+.findperson-wrap .f3>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f4 a {padding-left: 124px;}
+.findperson-wrap .f4>a>span::after {left: -28px; top: 0px;}
+.findperson-wrap li.choose>a {background: #EBF2FF;}
+.findperson-wrap li.choose>a:hover {background: #EBF2FF;}
 
-.findperson-wrap .f2>a {padding-left: 68px;}
-.findperson-wrap .f2>a::after {left: 38px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
-.findperson-wrap .f2.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
-
-.findperson-wrap .f3>a {padding-left: 96px;}
-.findperson-wrap .f3>a::after {left: 66px; top: 12px; background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
-.findperson-wrap .f3.open>a::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
-
-.findperson-wrap .f4>a {padding-left: 124px;}
-.findperson-wrap .f4>a::after {left: 96px; top: 14px; background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
-.findperson-wrap .f4.choose {background: #EBF2FF;}
-.findperson-wrap .f4.choose>a:hover {background: #EBF2FF;}
-.findperson-wrap .f4.choose>a::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
-
+.findperson-wrap li.folder>a>span::after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.folder.open>a>span::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.person>a>span::after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.person.choose>a>span::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
 
 /* 그룹코드 등록/수정 */
 .board-table.popup {width: 100%; border-top: 1px solid #4f4f4f;}

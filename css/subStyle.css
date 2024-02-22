@@ -64,10 +64,10 @@
 .search-date input[type=text]::placeholder {color: #a2a2a2;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
 .search-check {display: flex; flex-wrap: wrap;}
-.search-check label {margin-right: 2.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
-.search-check input[type=checkbox] {margin-right: 8px; padding: 10px 0;}
+.search-check label {margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
+.search-check input[type=checkbox] {margin-right: 10px; padding: 10px 0;}
 /* .search-text {width: 100%;} */
-.search-text input[type=text] {width: 485px; margin: 0; font-size: 1.4rem;}
+.search-text input[type=text] {width: 485px; margin: 0 0.6rem 0 0; font-size: 1.4rem;}
 .search-text.medium input[type=text] {width: 280px;}
 .search-text.short input[type=text] {width: 160px;}
 .search-text.small input[type=text] {width: 80px;}
@@ -195,7 +195,7 @@
 .board-table td.file-download .att-file {margin-top: 1rem;}
 .board-table td.file-upload input[type="text"]:read-only {background: #fff; min-width: 46rem;}
 .board-table td.file-upload input[type="text"]:read-only:focus {outline: none;}
-.board-table td .num-type {display: flex; align-items: center; gap: 8px;}
+/* .board-table td .num-type {display: flex; align-items: center; gap: 8px;} */
 .board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 12rem;}
@@ -247,13 +247,16 @@
 .board-table td.add-type .add-tr {padding: 1rem 2rem; border-top: 1px solid #e8e8e8;}
 .board-table td.add-type .add-tr:first-child {padding: 1rem 2rem; border-top: none;}
 .board-table .in-tr {display: grid; align-items: center; grid-template-columns: 1fr 110px;}
+.board-table .in-tr.readonly {grid-template-columns: 1fr;}
+.board-table .in-tr.readonly .in-body {min-height: 14rem;}
+.board-table .in-tr.readonly .in-body-td p {padding: 1rem 2rem;}
 .in-header, .in-body {display: flex;}
 .in-header {border-radius: 4px 4px 0 0; border: 1px solid #dbdbdb; border-bottom: none; background: #f6f6f9; box-sizing: border-box;}
 .in-header .in-header-th {display: flex; height: 4.8rem; align-items: center; justify-content: center; font-weight: 500;}
 .in-header .in-header-th:nth-child(1) {flex: 1; border-right: 1px solid #dbdbdb;}
 .in-header .in-header-th:nth-child(2) {flex: 2; border-right: 1px solid #dbdbdb;}
 .in-header .in-header-th:nth-child(3) {flex: 2;}
-.in-body {border-radius: 0 0 4px 4px; border: 1px solid #dbdbdb; box-sizing: border-box;}
+.in-body {border-radius: 0 0 4px 4px; border: 1px solid #dbdbdb; box-sizing: border-box; height: auto;}
 .in-body .in-body-td {display: flex;}
 .in-body .in-body-td:nth-child(1) {flex: 1; border-right: 1px solid #dbdbdb;}
 .in-body .in-body-td:nth-child(2) {flex: 2; border-right: 1px solid #dbdbdb;}
@@ -366,7 +369,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .btn-lightgray:hover {background: #6c7282; border: 1px solid transparent;}
 .btn-green {background: #1F7C70; color: #fff;}
 .btn-green:hover {background: #155950;}
-.btn-blue {background: #325bc4; color: #fff;}
+.btn-blue {background: #325bc4; color: #fff; padding: 1rem 2rem;}
 .btn-blue:hover {background: #1C44AA;}
 .btn-navy {background: #233D75; color: #fff;}
 .btn-navy:hover {background: #121F3C;}

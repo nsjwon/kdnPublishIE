@@ -113,15 +113,15 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".p2 > ul").hide();
 
-    $(".p1 > a, .p2 > a, .parttree-wrap .p3 > a").click(function(e) {
+    $(".p1 > a, .p2 > a, .p3 > a, .parttree-wrap .p4 > a").click(function(e) {
         e.preventDefault();
 
         var parentP = $(this).parent();
         var childUl = parentP.find("ul");
 
         // .p3에 대한 처리
-        if (parentP.hasClass("p3")) {
-            $(".parttree-wrap .p3").removeClass("choose");
+        if (parentP.hasClass("part")) {
+            $(".parttree-wrap .part").removeClass("choose");
             parentP.toggleClass("choose");
 
             // 만약 choose 클래스가 있다면 부모 <ul>을 보이도록 함
@@ -148,8 +148,8 @@ $(document).ready(function() {
         var childUl = parentP.find("ul");
 
         // .p4에 대한 처리
-        if (parentP.hasClass("f4")) {
-            $(".findperson-wrap .f4").removeClass("choose");
+        if (parentP.hasClass("person")) {
+            $(".findperson-wrap .person").removeClass("choose");
             parentP.toggleClass("choose");
 
             // 만약 choose 클래스가 있다면 부모 <ul>을 보이도록 함

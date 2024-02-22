@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템</title>
+    <title>제안관리시스템 - 프로세스등록</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -485,6 +485,7 @@
             </div>
         </div>
         <!-- 임시저장 목록 팝업 끝 -->
+
         <!-- 부서찾기 팝업 시작 -->
         <div id="findPart" class="popup-panel">
             <div class="popup-bg"></div>
@@ -509,27 +510,51 @@
                     </div>
                     <div class="parttree-wrap">
                         <ul>
-                            <li class="p1 open">
-                                <a href="#none">한전KDN(주)</a>
+                            <li class="p1 folder open">
+                                <a href="#none"><span>한전KDN(주)</span></a>
                                 <ul>
-                                    <li class="p2"><a href="#none">감사실</a></li>
-                                    <li class="p2">
-                                        <a href="#none">커뮤니케이션실</a>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>감사실</span></a>
                                         <ul>
-                                            <li class="p3"><a href="#none">커뮤니케이션1팀</a></li>
-                                            <li class="p3"><a href="#none">커뮤니케이션2팀</a></li>
+                                            <li class="p3 part"><a href="#none"><span>감사1팀</span></a></li>
+                                            <li class="p3 part"><a href="#none"><span>감사2팀</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="p2">
-                                        <a href="#none">전력 ICT 기술원</a>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>커뮤니케이션실</span></a>
                                         <ul>
-                                            <li class="p3"><a href="#none">1팀</a></li>
-                                            <li class="p3"><a href="#none">2팀</a></li>
+                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
+                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="p2"><a href="#none">기획관리본부</a></li>
-                                    <li class="p2"><a href="#none">ICT본부</a></li>
-                                    <li class="p2"><a href="#none">전력지능화안전본부</a></li>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>전력 ICT 기술원</span></a>
+                                        <ul>
+                                            <li class="p3 folder">
+                                                <a href="#none"><span>연구개발부</span></a>
+                                                <ul>
+                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
+                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="p3 part">
+                                                <a href="#none"><span>사업기획부</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder"><a href="#none">
+                                        <span>기획관리본부</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>기획관리1팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder"><a href="#none">
+                                        <span>ICT본부</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>ICT1팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 part"><a href="#none"><span>전력지능화안전본부</span></a></li>
                                 </ul>
                             </li>
                         </ul>

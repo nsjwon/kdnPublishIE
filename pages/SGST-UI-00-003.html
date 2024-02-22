@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>부서찾기</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+
+        <!-- 부서찾기 팝업 시작 -->
+        <div id="findPart" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-03">
+                <div class="popup-header">
+                    <h2>부서찾기</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- board search :s -->
+                    <div class="brd-search">    
+                        <div class="brd-search-form">
+                            <div class="search-section">                              
+                                <div class="search-text w100">
+                                    <label for="searchWord" class="hide">검색어</label>
+                                    <input type="text" name="searchWord" id="searchWord" placeholder="검색어를 입력하세요.">
+                                    <label for="searchPartBtn" class="hide">부서찾기</label>
+                                    <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parttree-wrap">
+                        <ul>
+                            <li class="p1 folder open">
+                                <a href="#none"><span>한전KDN(주)</span></a>
+                                <ul>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>감사실</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>감사1팀</span></a></li>
+                                            <li class="p3 part"><a href="#none"><span>감사2팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>커뮤니케이션실</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
+                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder">
+                                        <a href="#none"><span>전력 ICT 기술원</span></a>
+                                        <ul>
+                                            <li class="p3 folder">
+                                                <a href="#none"><span>연구개발부</span></a>
+                                                <ul>
+                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
+                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="p3 part">
+                                                <a href="#none"><span>사업기획부</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder"><a href="#none">
+                                        <span>기획관리본부</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>기획관리1팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 folder"><a href="#none">
+                                        <span>ICT본부</span></a>
+                                        <ul>
+                                            <li class="p3 part"><a href="#none"><span>ICT1팀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="p2 part"><a href="#none"><span>전력지능화안전본부</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- board search :e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 부서찾기 팝업 끝 -->
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+
