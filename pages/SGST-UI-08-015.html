@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/subStyle.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 코드관리</title>
+    <title>제안관리시스템 - 사전검토 메시지관리</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -161,12 +161,12 @@
                     <li class="d1 active">
                         <a href="#none">관리</a>
                         <ul class="two-depth">
-                            <li class="focus"><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
                             <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
                             <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
                             <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
                             <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
-                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li class="focus"><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
                             <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
                             <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
                             <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
@@ -186,10 +186,10 @@
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
                         <li>관리</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>코드관리</li>
+                        <li>사전검토 메시지관리</li>
                     </ul>
                     <div class="dt-wrap">
-                        <h2 class="h2-tit">코드관리</h2>
+                        <h2 class="h2-tit">사전검토 메시지관리</h2>
 
                     </div>
                     <!-- board wrap :s-->
@@ -198,9 +198,9 @@
                         <!-- brd-half-block :s-->
                         <div class="brd-half-block">
                             <div class="bh-title">
-                                <h4 class="h4-tit">그룹코드</h4>
-                                <div class="btn-wrap">
-                                    <input type="button" class="popup-button btn-add-code" value="그룹코드 등록" data-target="#editCode">
+                                <h4 class="h4-tit">메시지 목록</h4>
+                                <div class="btn-wrap bw90">
+                                    <input type="button" class="btn-add-code" value="추가">
                                 </div>
                             </div>
                             <!-- board table :s -->
@@ -208,55 +208,63 @@
                                 <table class="brd-list-01">
                                     <caption>관리 리스트</caption>
                                     <colgroup>
-                                        <col style="width: 18%;">
-                                        <col style="width: 18%;">
-                                        <col style="width: 36%;">
-                                        <col style="width: 14%;">
-                                        <col style="width: 14%;">
+                                        <col style="width: 15%;">
+                                        <col style="width: 25%;">
+                                        <col style="width: 60%;">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col">시스템코드</th>
-                                            <th scope="col">그룹코드</th>
-                                            <th scope="col">그룹코드설명</th>
-                                            <th scope="col">사용여부</th>
-                                            <th scope="col">편집</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">제목</th>
                                         </tr>
                                     </thead>
                                     <tbody>	
-                                        <tr class="input-type selectable">
-                                            <td>SU</td>
-                                            <td>AC</td>
-                                            <td>실무위원회 심의결과코드</td>
-                                            <td>Y</td>
-                                            <td><input type="button" class="popup-button btn-lightgray" value="수정" data-target="#editCode"></td>
+                                        <tr class="selectable">
+                                            <td>1</td>
+                                            <td>자료보완</td>
+                                            <td>PAIR 방법론</td>
                                         </tr>
-                                        <tr class="input-type selectable">
-                                            <td>SU</td>
-                                            <td>AD</td>
-                                            <td>업무분류 코드</td>
-                                            <td>Y</td>
-                                            <td><input type="button" class="popup-button btn-lightgray" value="수정" data-target="#editCode"></td>
+                                        <tr class="selectable">
+                                            <td>2</td>
+                                            <td>자료보완</td>
+                                            <td>개선활동 계획서</td>
                                         </tr>
-                                        <tr class="input-type selectable">
-                                            <td>SU</td>
-                                            <td>AU</td>
-                                            <td>부서장 승인</td>
-                                            <td>Y</td>
-                                            <td><input type="button" class="popup-button btn-lightgray" value="수정" data-target="#editCode"></td>
+                                        <tr class="selectable">
+                                            <td>3</td>
+                                            <td>자료보완</td>
+                                            <td>개선활동 선택오류</td>
                                         </tr>
-                                        <tr class="input-type selectable">
-                                            <td>SU</td>
-                                            <td>AI</td>
-                                            <td>시행후 심사결과 코드</td>
-                                            <td>Y</td>
-                                            <td><input type="button" class="popup-button btn-lightgray" value="수정" data-target="#editCode"></td>
+                                        <tr class="selectable">
+                                            <td>4</td>
+                                            <td>자료보완</td>
+                                            <td>내용구체화</td>
                                         </tr>
-
-                                        <!-- 등록된 코드가 없을때  -->
-                                        <!-- <tr> 
-                                            <td colspan="5">등록된 그룹코드가 없습니다.</td>
-                                        </tr> -->
+                                        <tr class="selectable">
+                                            <td>5</td>
+                                            <td>자료보완</td>
+                                            <td>단순건의사항</td>
+                                        </tr>
+                                        <tr class="selectable">
+                                            <td>6</td>
+                                            <td>자료보완</td>
+                                            <td>동일부서 불인정</td>
+                                        </tr>
+                                        <tr class="selectable">
+                                            <td>7</td>
+                                            <td>자료보완</td>
+                                            <td>유무형효과 미입력</td>
+                                        </tr>
+                                        <tr class="selectable">
+                                            <td>8</td>
+                                            <td>자료보완</td>
+                                            <td>유형효과 비계량화</td>
+                                        </tr>
+                                        <tr class="selectable">
+                                            <td>9</td>
+                                            <td>자료보완</td>
+                                            <td>정보시스템 기능개선</td>
+                                        </tr>
                                         
                                     </tbody>
                                 </table>
@@ -268,85 +276,47 @@
                         <!-- brd-half-block :s-->
                         <div class="brd-half-block">
                             <div class="bh-title">
-                                <h4 class="h4-tit">상세코드</h4>
+                                <h4 class="h4-tit">메시지 내용</h4>
                                 <div class="btn-wrap bw90">
-                                    <input type="button" class="btn-blue" value="추가">
-                                    <input type="button" class="btn-lightgray" value="선택삭제">
-                                    <input type="button" class="btn-navy" value="저장">
+                                    <input type="button" class="btn-lightgray" value="삭제">
+                                    <input type="button" class="btn-blue" value="저장">
                                 </div>
                             </div>
-                            <!-- board table :s -->
-                            <div class="helf-table-wrap">
-                                <table class="brd-list-01">
-                                    <caption>관리 리스트</caption>
-                                    <colgroup>
-                                        <col style="width: 5%;">
-                                        <col style="width: 10%;">
-                                        <col style="width: 10%;">
-                                        <col style="width: 20%;">
-                                        <col style="width: 10%;">
-                                        <col style="width: 10%;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"><input type="checkbox" name="deCodenon" disabled></th>
-                                            <th scope="col">시스템코드</th>
-                                            <th scope="col">그룹코드</th>
-                                            <th scope="col">상세코드</th>
-                                            <th scope="col">코드설명</th>
-                                            <th scope="col">사용여부</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>	
-                                        <tr class="input-type">
-                                            <td><input type="checkbox" name="codeCk"></td>
-                                            <td>SU</td>
-                                            <td>AC</td>
-                                            <td><input type="text" name="deCode1" id="deCode1" value="01"></td>
-                                            <td><input type="text" name="deInfo1" id="deInfo1" value="상정"></td>
-                                            <td>
-                                                <select name="useOt1" id="useOt1">
-                                                    <option value="Y">Y</option>
-                                                    <option value="N">N</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr class="input-type">
-                                            <td><input type="checkbox" name="codeCk"></td>
-                                            <td>SU</td>
-                                            <td>AC</td>
-                                            <td><input type="text" name="deCode2" id="deCode2" value="02"></td>
-                                            <td><input type="text" name="deInfo2" id="deInfo2" value="기각"></td>
-                                            <td>
-                                                <select name="useOt2" id="useOt2">
-                                                    <option value="N">N</option>
-                                                    <option value="Y">Y</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr class="input-type">
-                                            <td><input type="checkbox" name="codeCk"></td>
-                                            <td>SU</td>
-                                            <td>AC</td>
-                                            <td><input type="text" name="deCode3" id="deCode3" value=""></td>
-                                            <td><input type="text" name="deInfo3" id="deInfo3" value=""></td>
-                                            <td>
-                                                <select name="useOt3" id="useOt3">
-                                                    <option value="Y">Y</option>
-                                                    <option value="N">N</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-
-                                        <!-- 등록된 코드가 없을때  -->
-                                        <!-- <tr> 
-                                            <td colspan="6">등록된 상세코드가 없습니다.</td>
-                                        </tr> -->
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- board table :e -->
+                            <!-- 제안등록 테이블:s -->
+                            <table class="board-table popup">
+                                <caption class="hide">제안내용 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 20%;">
+                                    <col style="width: 80%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">구분</th>
+                                        <td class="radio-type">
+                                            <label for="cpText">
+                                                <input type="radio" name="preType" id="cpText" checked>
+                                                자료보완
+                                            </label>
+                                            <label for="ofEnd">
+                                                <input type="radio" name="preType" id="ofEnd">
+                                                심사끝
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제목</th>
+                                        <td><input type="text" name="pckTitle"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">내용</th>
+                                        <td>
+                                            <textarea name="pckScript" id="pckScript" cols="30" rows="10" class="h20"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 제안등록 테이블:e -->
+                            
                         </div>
                         <!-- brd-half-block :e -->
                     </div>                          
@@ -358,61 +328,6 @@
                 </footer>
             </div>
         </main>
-
-        
-        <!-- 그룹코드 등록/수정 팝업 시작 -->
-        <div id="editCode" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-04">
-                <div class="popup-header">
-                    <h2>그룹코드 등록/수정</h2>
-                    <a class="close-button" href="#none"></a>
-                </div>
-                <div class="popup-body flex-col">
-                    
-                    <!-- 제안등록 테이블:s -->
-                    <table class="board-table popup">
-                        <caption class="hide">제안내용 리스트</caption>
-                        <colgroup>
-                            <col style="width: 20%;">
-                            <col style="width: 30%;">
-                            <col style="width: 20%;">
-                            <col style="width: 30%;">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">시스템코드</th>
-                                <td><input type="text" name="sysCk"></td>
-                                <th scope="row">그룹코드</th>
-                                <td><input type="text" name="grCk"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">그룹코드 설명</th>
-                                <td colspan="3"><input type="text" name="grCkinfo"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">사용여부</th>
-                                <td colspan="3">
-                                    <select name="editUse" id="editUse">
-                                        <option value="Y">Y</option>
-                                        <option value="N">N</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- 제안등록 테이블:e -->
-                </div>
-                <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <input type="button" value="삭제" class="btn-delete">
-                        <input type="button" value="저장" class="btn-confirm">
-                        <!-- <input type="button" value="닫기" class="btn-gray close-button"> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 그룹코드 등록/수정 팝업 끝 -->
 
     </div>
     <!-- wrap layout:e -->

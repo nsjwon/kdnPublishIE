@@ -39,7 +39,7 @@
 .regist-card {display: flex; align-items: center; width: 100%; height: 7.2rem; margin-top: 4rem; background-size: contain; background: url(../images/common/bg_regist-link.svg) no-repeat; border-radius: 6px; overflow: hidden;}
 .gt-regist {position: relative; width: 100%; display: flex; align-items: center; font-size: 1.6rem; color: #fff; font-weight: 600; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif; padding: 0 2.4rem; height: 7.2rem;}
 .gt-regist::after {position: absolute; top: 24px; right: 16px; background: url(../images/common/iconArrowRight.svg) no-repeat; background-size: contain; width: 24px; height: 24px; content: ''; display: block;}
-.gt-regist span {position: relative; display: block; margin-top: 4px;}
+.gt-regist span {position: relative; display: block; margin-top: 5px;}
 .gt-regist span::before {position: absolute; top: -10px; right: -12px; background: url(../images/common/ic_regist-txt.svg) no-repeat; background-size: contain; width: 12px; height: 12px; content: ''; display: block;}
 
 .sub-content-wrap {width: calc(100vw - 450px); margin: 26px 70px 34px;}
@@ -178,13 +178,13 @@
 
 /* 상세 테이블 */
 .board-table {width: 100%;}
-.board-table th {background: #f6f6f9; border-bottom: 1px solid #e8e8e8; padding: 2rem; color: #333; font-size: 1.5rem; line-height: 1.5rem; font-weight: 500; text-align: center; word-break: keep-all;}
+.board-table th {background: #f6f6f9; border-bottom: 1px solid #e8e8e8; padding: 2rem; color: #333; font-size: 1.5rem; line-height: 2rem; font-weight: 500; text-align: center; word-break: keep-all;}
 .board-table td {padding: 1rem 2rem; border-bottom: 1px solid #e8e8e8;}
 .board-table td select {padding: 0 40px 0 14px; display: inline-block;}
 .board-table td p {line-height: 2.4rem;}
 .board-table td input[type="radio"] {margin-right: 6px;}
-.board-table td input[type="checkbox"] {margin-right: 6px;}
-.board-table td input[type="checkbox"]+label {cursor: pointer;}
+.board-table td input[type="checkbox"] {margin-right: 6px; height: 4rem;}
+.board-table td input[type="checkbox"]+label {cursor: pointer; height: 4rem;}
 .board-table td.radio-type label {margin-right: 20px; cursor: pointer;}
 .board-table td.radio-type input[type="radio"]:disabled {cursor: default; opacity: 1;}
 .board-table td.radio-type.readonly label {cursor: text;}
@@ -199,6 +199,7 @@
 .board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 12rem;}
+.board-table tr.longtxt.small {height: 24rem;}
 .board-table tr.longtxt.medium {height: 36rem;}
 .board-table tr.longtxt.large {height: 60rem;}
 .board-table tr.longtxt td {padding: 1.6rem 2rem; vertical-align: baseline;}
@@ -271,14 +272,12 @@
 .chart-wrap {width: 100%; min-height: 36rem; border-radius: 6px; border: 1px solid #d9d9d9;}
 
 .num-table-wrap {margin: 4rem 0;}
-.num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #4f4f4f;}
-.num-table th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; text-wrap: nowrap;}
-.num-table th::before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
-.num-table th:first-child:before {display: none;}
+.num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
+.num-table th {background: #fafbff; vertical-align: middle; font-weight: 500; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
+.num-table th, .num-table td {font-size: 1.5rem; line-height: 1.5rem; padding: 2.25rem 1rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
+.num-table tr th:first-child {border-left: 1px solid #E3E9EF;}
 .num-table tr {position:relative;}
-.num-table td {padding: 2rem 1rem; vertical-align: middle; text-align: center; font-size: 1.5rem; border-bottom: 1px solid #e8e8e8; word-break: break-all; color: #333333; line-height: 1.4;}
-.num-table th:first-child, .num-table td:first-child {border-left:none;}
-.num-table th:last-child, .num-table td:last-child {border-right:none;}
+.num-table td {word-break: break-all; color: #333333;}
 .num-table tbody tr:first-child th, .num-table tbody tr:first-child td {border-top:none;}
 
 /* input */
@@ -381,7 +380,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .btn-redline:hover {background: #C32E2E; color: #fff;}
 
 
-.table-wrap.scroll {overflow-x: scroll;}
+.table-wrap.scroll {overflow-x: auto;}
 
 /* 코드관리목록 */
 .bh-title {height: 3.8rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>공지사항 목록</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">        
+        
+        <!-- 공지사항 목록 팝업 시작 -->
+        <div id="noticeList" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-05">
+                <div class="popup-header">
+                    <h2>공지사항</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <!-- board search :s -->
+                    <div class="brd-search">    
+                        <div class="brd-search-form">
+                            <div class="search-section">
+                                <div class="search-text">
+                                    <p>키워드검색</p>
+                                    <label for="searchWord" class="hide">선택</label>
+                                    <select name="searchWord" id="searchWord">
+                                        <option>선택</option>
+                                        <option>내용</option>
+                                        <option>제목</option>
+                                        <option>작성자</option>
+                                    </select>
+                                    <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brd-search-btn">
+                            <input type="button" class="btn-search" value="조회">
+                            <input type="button" class="btn-reset" value="초기화">
+                        </div>
+                    </div>                
+                    <!-- board search :e -->
+                    <!-- board info : s-->
+                    <div class="brd-info">
+                        <ul class="brd-num">
+                            <li><span>전체 </span><em>112</em>건</li>
+                            <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
+                        </ul>
+                    </div>                               
+                    <!-- board info : e-->
+
+                    <!-- board table :s -->
+                    <div class="table-wrap">
+                        <table class="brd-list-01">
+                            <caption>나의제안 리스트</caption>
+                            <colgroup>
+                                <col style="width: 60%;">
+                                <col style="width: 10%;">
+                                <col style="width: 10%;">
+                                <col style="width: 10%;">
+                                <col style="width: 10%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">첨부파일</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">조회수</th>                                            
+                                </tr>
+                            </thead>
+                            <tbody>	
+                                <tr>
+                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[결과보고] 개선활동 결과보고서 양식</p></a></td> 
+                                    <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                    <td>홍길동</td>
+                                    <td>2023-11-14</td>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[산출물등록] 개선활동 PAIR 시트양식</p></a></td> 
+                                    <td></td>
+                                    <td>홍길동</td>
+                                    <td>2023-11-14</td>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
+                                    <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                    <td>홍길동</td>
+                                    <td>2023-11-14</td>
+                                    <td>100</td>
+                                </tr>
+
+                                <!-- 게시글이 없을때  -->
+                                <!-- <tr> 
+                                    <td colspan="5" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                </tr> -->
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- board table :e -->
+    
+                    <!-- page:s -->
+                    <div class="pagination">       
+                        <span class="prev-group">
+                            <a class="page-first" href="" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
+                            <a class="page-prev" href="" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
+                        </span>
+                        <a class="on" href="" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                        <span class="next-group">
+                            <a class="page-next" href="" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
+                            <a class="page-end" href="" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
+                        </span>                
+                    </div>                  
+                    <!-- page:e -->      
+                </div>
+                <!-- <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 공지사항 목록 팝업 끝 -->
+
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+
