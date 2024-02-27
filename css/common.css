@@ -78,6 +78,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 
 /* margin & padding */
 .mp0 {margin: 0 !important; padding: 0 !important;}
+.mt0 {margin-top: 0px !important;}
 .mt8 {margin-top: 8px !important;}
 .mt10 {margin-top: 10px !important;}
 .mt16 {margin-top: 16px !important;}
@@ -198,11 +199,13 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 .w100 {width: 100%;}
 .w80 {width: 80%;}
 .w60 {width: 60%;}
+.underline {text-decoration: underline;}
 .overtext {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .over2lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 .over3lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 .over5lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 p.lh3 {line-height: 3px;}
+a.underline {text-decoration: unset;}
 a.underline:hover {text-decoration: underline;}
 
 .pc-style {display: block !important;}
@@ -238,6 +241,7 @@ ul.circle-30 li::before {position: absolute; content: ''; display: block; width:
 .flex-al {display: flex; align-items: center;}
 .flex-bt {display: flex; justify-content: space-between; align-items: center;}
 .flex-col {display: flex; flex-direction: column;}
+.flex-end {display: flex; justify-content: flex-end;}
 
 .gap4 {gap: 4px !important;}
 .gap8 {gap: 8px !important;}

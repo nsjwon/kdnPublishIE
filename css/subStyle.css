@@ -182,13 +182,17 @@
 .board-table td {padding: 1rem 2rem; border-bottom: 1px solid #e8e8e8;}
 .board-table td select {padding: 0 40px 0 14px; display: inline-block;}
 .board-table td p {line-height: 2.4rem;}
-.board-table td input[type="radio"] {margin-right: 6px;}
-.board-table td input[type="checkbox"] {margin-right: 6px; height: 4rem;}
+.board-table td input[type="radio"] {margin-right: 6px; margin-bottom: 2px;}
+.board-table td input[type="checkbox"] {margin: 1rem 0.6rem 1rem 0; height: 2rem;}
 .board-table td input[type="checkbox"]+label {cursor: pointer; height: 4rem;}
 .board-table td.radio-type label {margin-right: 20px; cursor: pointer;}
 .board-table td.radio-type input[type="radio"]:disabled {cursor: default; opacity: 1;}
 .board-table td.radio-type.readonly label {cursor: text;}
 .board-table td.radio-type.readonly input[type="radio"] {cursor: default;}
+.board-table td.check-type label {margin-right: 20px; cursor: pointer;}
+.board-table td.check-type input[type="radio"]:disabled {cursor: default; opacity: 1;}
+.board-table td.check-type.readonly label {cursor: text;}
+.board-table td.check-type.readonly input[type="radio"] {cursor: default;}
 .board-table td input[type="text"]:read-only {background: #efeff2;}
 .board-table td input[type="text"]:read-only:focus {outline: none;}
 .board-table td input.small {width: 5.8rem; text-align: right;}
@@ -214,8 +218,8 @@
 .board-table textarea.h10 {height: 10rem;}
 .board-table th.lh20 {line-height: 2rem; border-right: 1px solid #e8e8e8;}
 .att-file {margin: 1.6rem 0 1rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem;}
-.att-file li {position: relative; padding-left: 23px; height: 18px;}
-.att-file li::before {position: absolute; left: 0; top: 0; width: 15px; height: 18px; background: url(../images/board/ic_attfile.svg) no-repeat; content: ''; display: block;}
+.att-file li {position: relative; padding-left: 27px; height: 18px;}
+.att-file li::before {position: absolute; left: 3px; top: 0; width: 15px; height: 18px; background: url(../images/board/ic_attfile.svg) no-repeat; content: ''; display: block;}
 .att-file li span {color: #a4a4a4; font-size: 1.3rem;}
 .board-note {display: flex; flex-direction: column; margin-top: 2.6rem;}
 .board-note>p {color: #cd3839; font-weight: 600; font-size: 1.6rem; line-height: 1.6rem; position: relative; padding-left: 30px;}
@@ -250,7 +254,7 @@
 .board-table .in-tr {display: grid; align-items: center; grid-template-columns: 1fr 110px;}
 .board-table .in-tr.readonly {grid-template-columns: 1fr;}
 .board-table .in-tr.readonly .in-body {min-height: 14rem;}
-.board-table .in-tr.readonly .in-body-td p {padding: 1rem 2rem;}
+.board-table .in-tr .in-body-td p {padding: 1rem 2rem;}
 .in-header, .in-body {display: flex;}
 .in-header {border-radius: 4px 4px 0 0; border: 1px solid #dbdbdb; border-bottom: none; background: #f6f6f9; box-sizing: border-box;}
 .in-header .in-header-th {display: flex; height: 4.8rem; align-items: center; justify-content: center; font-weight: 500;}
@@ -286,9 +290,9 @@ input[type=submit], input[type=button] {cursor: pointer;}
 input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .3; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
-select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #dedede;}
+select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #e9e9ec;}
 button, input[type=button] {transition: all ease 0.2s 0s;}
-textarea {position: relative; resize: none; background-color: #ffffff; line-height: 2.4rem; width: 100%; display: inline-block; margin: 0; box-sizing: border-box; vertical-align: middle; border: 1px solid #dbdbdb; border-radius: 4px; font-size: 1.5rem;}
+textarea {position: relative; resize: none; background-color: #ffffff; line-height: 2.4rem; width: 100%; display: inline-block; margin: 0; box-sizing: border-box; vertical-align: middle; border: 1px solid #e9e9ec; border-radius: 4px; font-size: 1.5rem;}
 textarea::-webkit-scrollbar {width: 1em;}
 textarea::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
@@ -299,6 +303,7 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-wrap {display: flex; gap: 10px; justify-content: space-between; align-items: center;}
 .btn-wrap.bw100 input[type="button"] {width: 100px;}
 .btn-wrap.bw90 input[type="button"] {width: 90px;}
+.btn-wrap.bw80 input[type="button"] {width: 80px;}
 .btn-wrap input[type="button"] {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center;}
 .search-text .btn-searchpart {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.6rem;}
 .search-text .btn-searchpart:hover {background: #4a5369; transition: all ease 0.2s 0s;}
@@ -344,7 +349,7 @@ textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1re
 .btn-download:hover {background: #4a5369 url(../images/button/ic_alldown.svg) no-repeat 21px 13px; transition: all ease 0.2s 0s;}
 .btn-comment {background: #54555c; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.4rem;}
 .btn-comment:hover {background: #42444d; transition: all ease 0.2s 0s;}
-.btn-delete {background: #D14343; color: #fff;}
+.btn-delete {background: #D14343; color: #fff; padding: 0 2rem;}
 .btn-delete:hover {background: #C32E2E;}
 .btn-transfer {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem; font-size: 1.4rem; font-weight: 500;}
 .btn-transfer:hover {background: #325bc4; color: #fff; border: 1px solid #325bc4;}
@@ -360,23 +365,24 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .btn-edit {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #325bc4; color: #fff; border: 1px solid #325bc4; padding: 0 20px; font-size: 1.4rem; font-weight: 500;}
 .btn-edit:hover {background: #1c44aa;}
 
-.btn-gray {background: #6c7282; color: #fff; border: 1px solid transparent;}
+
+.btn-gray {background: #6c7282; color: #fff; border: 1px solid transparent; padding: 0 2rem;}
 .btn-gray:hover {background: #4a5369; border: 1px solid transparent;}
-.btn-grayline {background: #fff; color: #6c7282; border: 1px solid #6c7282;}
+.btn-grayline {background: #fff; color: #6c7282; border: 1px solid #6c7282; padding: 0 2rem;}
 .btn-grayline:hover {background: #6c7282; color: #fff;}
-.btn-lightgray {background: #8591a3; color: #fff; border: 1px solid transparent;}
+.btn-lightgray {background: #8591a3; color: #fff; border: 1px solid transparent; padding: 0 2rem;}
 .btn-lightgray:hover {background: #6c7282; border: 1px solid transparent;}
-.btn-green {background: #1F7C70; color: #fff;}
+.btn-green {background: #1F7C70; color: #fff; padding: 0 2rem;}
 .btn-green:hover {background: #155950;}
-.btn-blue {background: #325bc4; color: #fff; padding: 1rem 2rem;}
+.btn-blue {background: #325bc4; color: #fff; padding: 0 2rem;}
 .btn-blue:hover {background: #1C44AA;}
-.btn-navy {background: #233D75; color: #fff;}
+.btn-navy {background: #233D75; color: #fff; padding: 0 2rem;}
 .btn-navy:hover {background: #121F3C;}
-.btn-blueline {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 1rem 2rem;}
+.btn-blueline {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem;}
 .btn-blueline:hover {background: #325bc4; color: #fff;}
-.btn-red {background: #D14343; color: #fff;}
+.btn-red {background: #D14343; color: #fff; padding: 0 2rem;}
 .btn-red:hover {background: #C32E2E;}
-.btn-redline {background: #fff; color: #D14343; border: 1px solid #D14343;}
+.btn-redline {background: #fff; color: #D14343; border: 1px solid #D14343; padding: 0 2rem;}
 .btn-redline:hover {background: #C32E2E; color: #fff;}
 
 
@@ -396,6 +402,22 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .helf-table-wrap tbody tr.selectable.select {background: #f3f4fb;}
 .helf-table-wrap tbody tr.selectable.select:hover {background: #f3f4fb;}
 .helf-note-wrap {padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;}
+
+/* 분임조 */
+.inner-table-wrap {border: 1px solid #e8e8e8; border-radius: 4px;}
+.inner-table-wrap.square {border: 1px solid #e8e8e8; border-radius: 0;}
+.inner-table tr {height: 56px;}
+.inner-table.short tr {height: 48px;}
+.inner-table.short tr th {padding: 0;}
+.inner-table tr:first-child th:first-child {border-radius: 4px;}
+.inner-table tr:first-child th:last-child {border-radius: 4px;}
+.inner-table tr th {padding: 0.8rem 2rem; border-right: 1px solid #e8e8e8;}
+.inner-table tr th:last-child {border-right: none;}
+.inner-table tr td {padding: 0.8rem 2rem; border-right: 1px solid #e8e8e8; word-break: keep-all;}
+.inner-table tr td:last-child {border-right: none;}
+.inner-table tr:last-child td {border-bottom: none;}
+.inner-table .btn-wrap {justify-content: center; min-height: 60px;}
+/* .inner-table .btn-wrap input[type="button"] {display: inline-block; margin: 0 4px;} */
 
 @media (max-width: 1660px) {
     #sub-gnb-wrap {width: 240px;}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>제안관리시스템 - 분임조관리</title>
+</head>
+<body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                                    <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                                    <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">테마제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
+                            <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">분임조</a>
+                        <ul class="two-depth">
+                            <li class="focus"><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">관리</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>분임조</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>분임조관리</li>
+                    </ul>
+                    <div class="dt-wrap">
+                        <h2 class="h2-tit">분임조관리</h2>
+                    </div>
+                    <div class="sub-content-inner">
+
+
+                        <!-- 상세현황:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">분임조 상세현황</h4>
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">상세현황 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">과제명</th>
+                                            <td colspan="3">업무효율을 높이기 위한 사내환경개선 아이디어</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">부문</th>
+                                            <td>사무간접</td>
+                                            <th scope="row">지역</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">분임조명</th>
+                                            <td>KDN 혁신분임조</td>
+                                            <th scope="row">활동연도</th>
+                                            <td>2024</td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">분임조설명</th>
+                                            <td colspan="3">2024년도 혁신 분임조 소개</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">분임조 조원</th>
+                                            <td colspan="3">
+                                                <div>
+                                                    <div class="align-right">
+                                                        <input type="button" value="지도사원등록" class="popup-button btn-add-tr mb10" data-target="#guidePlus">
+                                                    </div>
+                                                    <div class="inner-table-wrap">                      
+                                                        <!-- 분임조 조원 테이블:s -->
+                                                        <table class="inner-table short align-center">
+                                                            <caption class="hide">분임조 조원 리스트</caption>
+                                                            <colgroup>
+                                                                <col style="width: 8%;">
+                                                                <col style="width: 23%;">
+                                                                <col style="width: 23%;">
+                                                                <col style="width: 23%;">
+                                                                <col style="width: 23%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>No</th>
+                                                                    <th>부서명</th>
+                                                                    <th>성명</th>
+                                                                    <th>역할</th>
+                                                                    <th>상세역할</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>품질혁신부</td>
+                                                                    <td><span class="underline">홍길동(123456)</span></td>
+                                                                    <td>조장</td>
+                                                                    <td>발표자</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>품질혁신부</td>
+                                                                    <td><span class="underline">이무진(123456)</span></td>
+                                                                    <td>조원</td>
+                                                                    <td>오퍼레이션</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>품질혁신부</td>
+                                                                    <td><span class="underline">박형식(123456)</span></td>
+                                                                    <td>조원</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>4</td>
+                                                                    <td>품질혁신부</td>
+                                                                    <td><span class="underline">박서준(123456)</span></td>
+                                                                    <td>조원</td>
+                                                                    <td> </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- 분임조 조원 테이블:e -->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">분임조 지도사원</th>
+                                            <td colspan="3">품질혁신부 - 박형식(123456)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 상세현황:e -->
+
+                        <!-- 대회이력:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">대회이력</h4>
+                            </div>
+                            <!-- 대회이력 테이블:s -->
+                            <div class="inner-table-wrap">    
+                                <table class="board-table inner-table align-center">
+                                    <caption class="hide">대회이력 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 10%;">
+                                        <col style="width: 10%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 10%;">
+                                        <col style="width: 10%;">
+                                        <col style="width: 20%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>대회유형</th>
+                                            <th>등록일시</th>
+                                            <th>대회명</th>
+                                            <th>대회기간</th>
+                                            <th>지역명</th>
+                                            <th>수상이력</th>
+                                            <th>첨부파일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>지역대회</td>
+                                            <td>2023. 01. 07</td>
+                                            <td>2023 KDN 품질혁신대회</td>
+                                            <td>2023. 01. 07 ~ 2023. 01. 10</td>
+                                            <td>대전</td>
+                                            <td>금상</td>
+                                            <td><a href="#none">품질혁신_아이디어.hwp</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>전국대회</td>
+                                            <td>2023. 01. 07</td>
+                                            <td>2023 KDN 품질혁신대회</td>
+                                            <td>2023. 01. 07 ~ 2023. 01. 10</td>
+                                            <td>서울</td>
+                                            <td>금상</td>
+                                            <td><a href="#none">품질혁신_아이디어.hwp</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>국제대회</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 대회이력 테이블:e -->
+                        </div>
+                        <!-- 대회이력:e -->
+
+                        <!-- 활동이력:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">활동이력</h4>
+                            </div>
+                            <!-- 활동이력 테이블:s -->
+                            <div class="inner-table-wrap square">    
+                                <table class="board-table inner-table align-center">
+                                    <caption class="hide">활동이력 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 15%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 25%;">
+                                        <col style="width: 20%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>활동유형</th>
+                                            <th>활동일시</th>
+                                            <th>활동내용</th>
+                                            <th>참석자(자문위원)</th>
+                                            <th>첨부파일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>자문</td>
+                                            <td>2023. 01. 07 ~ 2023. 01. 10</td>
+                                            <td>하반기 품질혁신대회 워크샵</td>
+                                            <td>이영수, 김지훈, 박형식, 김희선, 박보영, 강영수</td>
+                                            <td><a href="#none">워크샵일정.hwp</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>교육</td>
+                                            <td>2023. 01. 07 ~ 2023. 01. 07</td>
+                                            <td>혁신대회 금상 수상</td>
+                                            <td>김희선</td>
+                                            <td><a href="#none">수상내역.hwp</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 활동이력 테이블:e -->
+                        </div>
+                        <!-- 활동이력:e -->
+
+
+                        <!-- 버튼 영역:s -->
+                        <div class="board-btn-wrap">
+                            <div class="btn-wrap">
+                                <input type="button" value="수정" class="btn-edit"  onclick="fn_pageMove('./SGST-UI-05-003.html')">
+                                <input type="button" value="목록" class="btn-listview">
+                            </div>
+                        </div>
+                        <!-- 버튼 영역:e -->
+                    </div>
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
+        
+        
+        <!-- 지도사원등록 팝업 시작 -->
+        <div id="guidePlus" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-04">
+                <div class="popup-header">
+                    <h2>지도사원등록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    
+                    <!-- 활동이력 테이블:s -->
+                    <div class="inner-table-wrap popup">    
+                        <table class="board-table inner-table align-center">
+                            <caption class="hide">활동이력 리스트</caption>
+                            <colgroup>
+                                <col style="width: 33%;">
+                                <col style="width: 33%;">
+                                <col style="width: 34%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>부서명</th>
+                                    <th>성명</th>
+                                    <th>지도사원 체크</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>품질혁신부</td>
+                                    <td>홍길동(123456)</td>
+                                    <td><input type="checkbox" name="guiChck" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>품질혁신부</td>
+                                    <td>이무진(123456)</td>
+                                    <td><input type="checkbox" name="guiChck"></td>
+                                </tr>
+                                <tr>
+                                    <td>품질혁신부</td>
+                                    <td>박형식(123456)</td>
+                                    <td><input type="checkbox" name="guiChck" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>품질혁신부</td>
+                                    <td>박서준(123456)</td>
+                                    <td><input type="checkbox" name="guiChck"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 활동이력 테이블:e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="등록" class="btn-confirm">
+                        <!-- <input type="button" value="닫기" class="btn-lightgray close-button"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 지도사원등록 팝업 끝 -->
+
+
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>대회이력 등록/수정</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+        
+        <!-- 대회이력 등록/수정 팝업 시작 -->
+        <div id="ctsHistory" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-04">
+                <div class="popup-header">
+                    <h2>대회이력</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    
+                    <!-- 대회이력 테이블:s -->
+                    <table class="board-table popup">
+                        <caption class="hide">대회이력 리스트</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 80%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">시스템코드</th>
+                                <td>지역대회</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대회기간</th>
+                                <td>
+                                    <div class="search-date">
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>-</span>
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">지역명</th>
+                                <td>
+                                    <select name="areaName" id="areaName">
+                                        <option value="area1">서울</option>
+                                        <option value="area2">인천</option>
+                                        <option value="area3">대전</option>
+                                        <option value="area4">광주</option>
+                                        <option value="area5">대구</option>
+                                        <option value="area6">부산</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수상이력</th>
+                                <td>
+                                    <input type="text" name="gpHist">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부</th>
+                                <td class="file-upload">
+                                    <div class="flex-col">
+                                        <div class="flex-bt">
+                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly>
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
+                                        </div>
+                                        <ul class="att-file">
+                                            <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 대회이력 테이블:e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="등록" class="btn-confirm">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 대회이력 등록/수정 팝업 끝 -->
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+

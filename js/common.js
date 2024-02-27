@@ -136,10 +136,11 @@ $(document).ready(function() {
     });
 });
 
+                    
 //검토자 조회 팝업 조직도 클릭이벤트
+//조원관리 팝업 조직도 클릭이벤트
 $(document).ready(function() {
     $(".f2 > ul").hide();
-    // $(".f3 > ul").hide();
 
     $(".f1 > a, .f2 > a, .f3 > a, .findperson-wrap .f4 > a").click(function(e) {
         e.preventDefault();
@@ -147,7 +148,7 @@ $(document).ready(function() {
         var parentP = $(this).parent();
         var childUl = parentP.find("ul");
 
-        // .p4에 대한 처리
+        // .f4에 대한 처리
         if (parentP.hasClass("person")) {
             $(".findperson-wrap .person").removeClass("choose");
             parentP.toggleClass("choose");
@@ -155,9 +156,12 @@ $(document).ready(function() {
             // 만약 choose 클래스가 있다면 부모 <ul>을 보이도록 함
             if (parentP.hasClass("choose")) {
                 parentP.closest("ul").show();
+                $(".btn-addmb").addClass("active"); // choose 클래스가 있으면 .btn-addmb에 active 클래스 추가
+            } else {
+                $(".btn-addmb").removeClass("active"); // choose 클래스가 없으면 .btn-addmb의 active 클래스 제거
             }
         } else {
-            // .p1, .p2, .p3에 대한 처리
+            // .f1, .f2, .f3에 대한 처리
             parentP.toggleClass("open");
             childUl.toggle();
         }
@@ -185,3 +189,9 @@ $(document).ready(function() {
         }
     });
 });
+
+
+// 클릭 시 해당 url로 이동하는 이동함수
+function fn_pageMove(url) {
+    window.location.href = url;
+}
