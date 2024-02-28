@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 사후관리</title>
+    <title>제안관리시스템 - 테마제안</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -25,7 +25,7 @@
                     <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
                     <nav id="gnb">
                         <ul>
-                            <li class="focus">
+                            <li>
                                 <a href="#none"><span>제안검토</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
@@ -37,7 +37,7 @@
                                     <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="focus">
                                 <a href="#none"><span>테마제안</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
@@ -109,7 +109,7 @@
         <main id="sub-container">
             <div id="sub-gnb-wrap">
                 <ul class="one-depth">
-                    <li class="d1 active">
+                    <li class="d1">
                         <a href="#none">제안검토</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
@@ -118,13 +118,13 @@
                             <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
                             <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
                             <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
-                            <li class="focus"><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                         </ul>
                     </li>
-                    <li class="d1">
+                    <li class="d1 active">
                         <a href="#none">테마제안</a>
                         <ul class="two-depth">
-                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li class="focus"><a href="./SGST-UI-03-001.html">테마제안</a></li>
                             <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
                         </ul>
                     </li>
@@ -184,17 +184,29 @@
                     <ul class="menu-nav">
                         <li><img src="../images/board/ic_home.svg" alt="home"></li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>제안검토</li>
+                        <li>테마제안</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>사후관리</li>
+                        <li>테마제안</li>
                     </ul>
-                    <h2 class="h2-tit">사후관리</h2>
+                    <h2 class="h2-tit">테마제안</h2>
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
                         <!-- board search :s -->
                         <div class="brd-search">    
                             <div class="brd-search-form">
                                 <div class="search-section">
+                                    <div class="search-select">
+                                        <p>기준년도</p>
+                                        <label for="stdYear" class="hide">선택</label>
+                                        <select name="stdYear" id="stdYear">
+                                            <option>전체</option>
+                                            <option>2024</option>
+                                            <option>2023</option>
+                                            <option>2022</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
                                     <div class="search-date">
                                         <p>제안등록일</p>
                                         <label for="startDate" class="hide">시작일</label>
@@ -203,45 +215,20 @@
                                         <label for="endDate" class="hide">종료일</label>
                                         <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
                                     </div>
-                                    <div class="search-select">
-                                        <p>제안유형</p>
-                                        <label for="searchType" class="hide">구분</label>
-                                        <select name="searchType" id="searchType">
-                                            <option>전체</option>
-                                            <option>아이디어</option>
-                                            <option>프로세스</option>
-                                            <option>개선활동</option>
-                                        </select>
-                                    </div>
-                                    <div class="search-select">
-                                        <p>입력여부</p>
-                                        <label for="inputOrn" class="hide">구분</label>
-                                        <select name="inputOrn" id="inputOrn">
-                                            <option>전체</option>
-                                            <option>입력</option>
-                                            <option>미입력</option>
-                                        </select>
-                                    </div>
                                     <div class="search-text">
                                         <p>키워드검색</p>
                                         <label for="searchWord" class="hide">선택</label>
-                                        <select name="searchWord" id="searchWord">
+                                        <select name="searchWord" id="searchWord2">
                                             <option>선택</option>
-                                            <option>제안명</option>
-                                            <option>제안자</option>
+                                            <option>분임조명</option>
+                                            <option>조장</option>
+                                            <option>지도사원</option>
                                         </select>
-                                        <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                                        <input type="text" name="searchField2" id="searchField4" placeholder="검색어를 입력하세요.">
                                     </div>
-                                    <div class="search-text">
-                                        <p>소속부서</p>
-                                        <label for="searchPart" class="hide">구분</label>
-                                        <select name="searchPart" id="searchPart">
-                                            <option>소속부서</option>
-                                            <option>제목</option>
-                                            <option>내용</option>
-                                            <option>작성자</option>
-                                        </select>
-                                        <input type="text" name="searchField" id="searchField" placeholder="검색어를 입력하세요.">
+                                    <div class="search-text medium">
+                                        <p>부서</p>
+                                        <input type="text" name="searchField" id="searchField3" placeholder="검색어를 입력하세요.">
                                         <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                     </div>
                                 </div>
@@ -259,168 +246,152 @@
                                 <li><span>전체 </span><em>112</em>건</li>
                                 <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
                             </ul>
-                            <input type="button" value="엑셀 다운로드" class="btn-excel">
+                            <div class="brd-btn-wrap">
+                                <!-- <input type="button" value="엑셀 다운로드" class="btn-excel"> -->
+                                <input type="button" value="임시저장목록" class="popup-button btn-temporlist" data-target="#tempList">
+                                <input type="button" value="테마등록" class="btn-blue" onclick="fn_pageMove('./SGST-UI-03-003.html')">
+                            </div>
                         </div>                               
                         <!-- board info : e-->
 
                         <!-- board table :s -->
                         <div class="table-wrap">
                             <table class="brd-list-01">
-                                <caption>사후관리 리스트</caption>
+                                <caption>테마제안 리스트</caption>
                                 <colgroup>
+                                    <col style="width: 60px;">
                                     <col style="width: 100px;">
                                     <col style="width: 30%;">
+                                    <col style="width: 160px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
-                                    <col style="width: 110px;">
                                     <col style="width: 100px;">
-                                    <col style="width: 110px;">
-                                    <col style="width: 110px;">
                                     <col style="width: 100px;">
+                                    <col style="width: 60px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col">제안번호</th>
-                                        <th scope="col">제안명</th>
-                                        <th scope="col">제안유형</th>
-                                        <th scope="col">제안자</th>      
-                                        <th scope="col">소속부서</th>                                           
-                                        <th scope="col">검토자</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">기준년도</th>
+                                        <th scope="col">테마명</th>
+                                        <th scope="col">일정</th>
+                                        <th scope="col">담당부서</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">상태</th>      
                                         <th scope="col">등록일</th>                                           
-                                        <th scope="col">검토일</th>                                           
-                                        <th scope="col">입력여부</th>                                           
+                                        <th scope="col">참여수</th>
                                     </tr>
                                 </thead>
                                 <tbody>	
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st01">
-                                            <div>미입력</div>
-                                        </td>                                
+                                        <td>1</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st07">
-                                            <div>입력</div>
-                                        </td>                                
+                                        <td>2</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st01">
-                                            <div>미입력</div>
-                                        </td>                                
+                                        <td>3</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st07">
-                                            <div>입력</div>
-                                        </td>                                
+                                        <td>4</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st01">
-                                            <div>미입력</div>
-                                        </td>                                
+                                        <td>5</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st07">
-                                            <div>입력</div>
-                                        </td>                                
+                                        <td>6</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st01">
-                                            <div>미입력</div>
-                                        </td>                                
+                                        <td>7</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st07">
-                                            <div>입력</div>
-                                        </td>                                
+                                        <td>8</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st01">
-                                            <div>미입력</div>
-                                        </td>                                
+                                        <td>9</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
-                                        <td>2023-0003</td>
-                                        <td class="align-left"><a href="./SGST-UI-02-018.html"><p class="over2lines">사옥 내 자전거 보관함 관리 강화</p></a></td> 
-                                        <td>아이디어</td>   
-                                        <td>***</td>
-                                        <td>*****</td>
-                                        <td>장태경</td>
-                                        <td>2023-11-14</td>
-                                        <td>2023-11-14</td>
-                                        <td class="st-level st07">
-                                            <div>입력</div>
-                                        </td>                                
+                                        <td>10</td>
+                                        <td>2023</td>
+                                        <td class="align-left"><a href="./SGST-UI-03-002.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
+                                        <td>2023.06.01 ~ 2023.10.01</td>
+                                        <td>정보관리부</td>
+                                        <td>홍길동</td>
+                                        <td>종료</td>
+                                        <td>2023.04.12</td>
+                                        <td>2</td>
                                     </tr>
 
                                     <!-- 게시글이 없을때  -->
@@ -555,6 +526,70 @@
             </div>
         </div>
         <!-- 부서찾기 팝업 끝 -->
+
+        
+        <!-- 임시저장 목록 팝업 시작 -->
+        <div id="tempList" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-01">
+                <div class="popup-header">
+                    <h2>임시저장 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">임시저장일자</th>
+                                <th scope="col">제안명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="selectable">
+                                <td>1</td>
+                                <td>2022. 12. 02</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>2</td>
+                                <td>2022. 11. 29</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>3</td>
+                                <td>2022. 11. 27</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>4</td>
+                                <td>2022. 11. 26</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>5</td>
+                                <td>2022. 11. 21</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="삭제" class="btn-delete">
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 임시저장 목록 팝업 끝 -->
+
+
     </div>
     <!-- wrap layout:e -->
 

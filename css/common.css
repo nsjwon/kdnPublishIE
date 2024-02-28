@@ -205,6 +205,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 .over3lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 .over5lines {display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow: hidden; text-overflow: ellipsis;}
 p.lh3 {line-height: 3px;}
+a.colorline {text-decoration: underline; color: var(--main-color1);}
 a.underline {text-decoration: unset;}
 a.underline:hover {text-decoration: underline;}
 

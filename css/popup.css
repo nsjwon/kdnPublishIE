@@ -10,13 +10,31 @@
 .popup-content-04 {top: calc((100vh - 60rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 60rem;}
 .popup-content-05 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
 .popup-content-06 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
-.popup-content-setMember {top: calc((100vh - 82rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 82rem;}
+/* 조원관리 */
+.popup-content-setMember {top: calc((100vh - 82rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 82rem;} 
+/* 활동이력 등록/수정 */
 .popup-content-acthistoryAdd {top: calc((100vh - 66rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 66rem;}
 .popup-content-acthistoryEdit {top: calc((100vh - 83rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 83rem;}
+/* 분임조원 상세이력 */
+.popup-content-memberView {top: 6vh; left: 18vw; width: 64vw; height: 88vh;}
+/* 이벤트 대상자 추첨 */
+.popup-content-eventDraw {top: 10vh; left: 10vw; width: 80vw; height: 80vh;}
+/* 테마제안 수정 추첨 */
+.popup-content-tmofEdit {top: calc((100vh - 84rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 84rem;}
+.popup-content-tmofAdd {top: 8vh; left: 18vw; width: 64vw; height: 84vh;}
+.popup-content-tmofDetail {top: 8vh; left: 18vw; width: 64vw; height: 84vh;}
+
+@media (max-width: 1420px) {
+    .popup-content-setMember {top: 18vh; left: 10vw; width: 80vw; height: 64vh;} 
+}
+@media (max-width: 1280px) {
+    .popup-content-setMember {top: 18vh; left: 8vw; width: 84vw; height: 64vh;} 
+}
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
 .popup-header .close-button {display: block; width: 30px; height: 30px; background: url(../images/common/pop-close.svg) no-repeat; background-size: contain;}
 .popup-body {height: calc(100% - 142px); overflow-y: auto;}
+.popup-body .board-block:first-child {margin-top: 0;}
 .popup-content-05 .popup-body {height: calc(100% - 72px);}
 .popup-body::-webkit-scrollbar {width: 1em;}
 .popup-body::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
@@ -40,9 +58,8 @@
 .pop-list tbody tr:hover {background: #fcfcfc;}
 .pop-list tbody tr:hover p {text-decoration: underline; font-weight: 500;} 
 .pop-list td .t-title {max-width: 720px; text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block;}
-
-.pop-list tbody tr.selectable.select {background: #4763c2;}
-.pop-list tbody tr.selectable.select td {color: #fff;}
+.pop-list tbody tr.selectable.select {background: #EBF2FF;}
+.popup-content select {min-width: 120px;}
 /* 임시저장목록 */
 .popup-content-01 .pop-list tbody td {cursor: pointer;}
 
@@ -136,10 +153,15 @@
 .popup-content-setMember .inner-table-wrap.popup tr td:last-child.border1 {border-right: 1px solid #e8e8e8;}
 .popup-content-setMember .inner-table tr {height: 52px;}
 .popup-content-setMember .inner-table tr th {padding: 1rem;}
-.popup-content-setMember .inner-table tr td {padding: 2rem 1rem; line-height: 2.2rem;}
+.popup-content-setMember .inner-table tr td {padding: 1.4rem 1rem; line-height: 2.2rem;}
 
 /* 활동이력 */
 .popup-content .search-date {display: flex; align-items: center;}
 .popup-content .file-upload .btn-searchfile {margin: 0 0 0 8px;}
 .popup-content td.check-type label {display: flex; align-items: center;}
 .popup-content td.check-type label input[type="checkbox"] {margin: 10px 10px 10px 0;}
+
+@media (max-width: 1280px) {
+    .popup-content-setMember .brd-search {padding: 2rem;}
+    .popup-content-setMember #searchTxt {width: 180px;}
+}

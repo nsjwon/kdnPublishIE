@@ -69,14 +69,17 @@ $(document).ready(function() {
     $(".board-block").on("click", ".btn-accordion", function(event) {
         var boardBlock = $(this).closest(".board-block");
         boardBlock.find(".board-list").toggle();
+        boardBlock.find(".inner-table-wrap").toggle();
         boardBlock.toggleClass("fold");
         $(this).toggleClass("fold");
         
         if (boardBlock.hasClass("fold")) {
             boardBlock.find(".board-list").hide();
+            boardBlock.find(".inner-table-wrap").hide();
             boardBlock.find(".caution-txt").hide();
         } else {
             boardBlock.find(".board-list").show();
+            boardBlock.find(".inner-table-wrap").show();
             boardBlock.find(".caution-txt").show();
         }
     });
@@ -195,3 +198,19 @@ $(document).ready(function() {
 function fn_pageMove(url) {
     window.location.href = url;
 }
+
+$(document).ready(function() {
+    // fn_overlap 함수 정의
+    function fn_overlap(targetPopup) {
+        // #popup1 숨기기
+        $('.popup-panel').hide();
+
+        // 목표 팝업 보이기
+        $('#' + targetPopup).show();
+    }
+
+    // 버튼 클릭 이벤트 핸들러 등록
+    // $('#popup1 input[type=button]').click(function() {
+    //     fn_overlap('popup2');
+    // });
+});

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>테마제안 수정</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+        
+                
+        <!-- 테마제안 수정 팝업 시작 -->
+        <div id="tmofEdit" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-tmofEdit">
+                <div class="popup-header">
+                    <h2>테마제안 수정</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    
+                    <div class="board-title">
+                        <h4 class="h4-tit">테마제안 내용</h4>
+                        <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
+                    </div>
+                    <!-- 제안등록 테이블:s -->
+                    <table class="board-table">
+                        <caption class="hide">제안등록 리스트</caption>
+                        <colgroup>
+                            <col style="width: 157px;">
+                            <col>
+                            <col style="width: 157px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="rq-mark">*</span>기준년도</th>
+                                <td colspan="3">
+                                    <label for="stdYear" class="hide">선택</label>
+                                    <select name="stdYear" id="stdYear">
+                                        <option>전체</option>
+                                        <option>2024</option>
+                                        <option>2023</option>
+                                        <option>2022</option>
+                                        <option>2021</option>
+                                        <option>2020</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="rq-mark">*</span>테마명</th>
+                                <td colspan="3">
+                                    <input type="text" name="tmTitle" id="tmTitle" class="w100" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="rq-mark">*</span>제안명</th>
+                                <td colspan="3">
+                                    <input type="text" name="ofTitle" id="ofTitle" class="w100" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="rq-mark">*</span>일정</th>
+                                <td>
+                                    <div class="search-date">
+                                        <label for="startDate" class="hide">시작일</label>
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>-</span>
+                                        <label for="endDate" class="hide">종료일</label>
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="rq-mark">*</span>담당자</th>
+                                <td>
+                                    <input type="text" name="loadPerson" id="loadPerson" value="장태경(9103245)" readonly>
+                                    <input type="button" class="popup-button btn-searchperson" value="조회" data-target="#findPerson">
+                                </td>
+                            </tr>
+                            <tr class="longtxt">
+                                <th scope="row">기타 안내사항</th>
+                                <td colspan="3">
+                                    <textarea name="actCont" id="actCont" cols="30" rows="10" class="h15"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부</th>
+                                <td colspan="3" class="file-upload">
+                                    <div class="flex-col">
+                                        <div>
+                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 서식.hwp" class="overtext" readonly>
+                                            <label for="searchFileBtn" class="hide">파일찾기</label>
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
+                                        </div>
+                                        <ul class="att-file">
+                                            <li>첨부파일 서식.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 제안등록 테이블:e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="등록" class="btn-confirm">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 테마제안 수정 팝업 끝 -->
+
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+

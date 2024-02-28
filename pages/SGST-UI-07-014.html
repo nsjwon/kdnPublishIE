@@ -49,14 +49,14 @@
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                                     <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
-                                    <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                                    <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#none"><span>분임조</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
-                                    <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
+                                    <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -133,14 +133,14 @@
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                             <li><a href="./SGST-UI-04-004.html">참여현황</a></li>
-                            <li><a href="./SGST-UI-04-006.html">나의실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
                         <a href="#none">분임조</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
-                            <li><a href="./SGST-UI-05-008.html">과제선정평가</a></li>
+                            <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -264,7 +264,7 @@
                                             <th scope="row">품질표준명</th>
                                             <td colspan="5">
                                                 <span class="mr20">연구개발 성과물 인수인계</span>
-                                                <input type="button" class="btn-searchrule" value="사규찾기" id="searchRulesBtn">
+                                                <input type="button" class="popup-button btn-searchrule" value="사규찾기" id="searchRulesBtn" data-target="#findRules">
                                             </td>
                                         </tr>
                                         <tr>
@@ -605,6 +605,151 @@
             </div>
         </div>
         <!-- 자가진단 검토기준표 등록 팝업 끝 -->
+
+                
+        <!-- 사규찾기 팝업 시작 -->
+        <div id="findRules" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-05">
+                <div class="popup-header">
+                    <h2>사규찾기</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <!-- board search :s -->
+                    <div class="brd-search">    
+                        <div class="brd-search-form">
+                            <div class="search-section">
+                                <div class="search-select">
+                                    <p>사규명</p>
+                                    <label for="searchState" class="hide">사규명</label>
+                                    <select name="searchState" id="searchState">
+                                        <option>전체</option>
+                                        <option>규정</option>
+                                        <option>공통관리절차서</option>
+                                        <option>업무별절차서</option>
+                                        <option>지침서</option>
+                                        <option>K-AIMM</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="search-text">
+                                    <p>사규명</p>
+                                    <label for="searchWord" class="hide">사규명</label>
+                                    <select name="searchWord" id="searchWord">
+                                        <option>전체</option>
+                                        <option>규정</option>
+                                        <option>공통관리절차서</option>
+                                        <option>업무별절차서</option>
+                                        <option>지침서</option>
+                                        <option>K-AIMM</option>
+                                    </select>
+                                    <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="brd-search-btn">
+                            <input type="button" class="btn-search" value="조회">
+                            <!-- <input type="button" class="btn-reset" value="초기화"> -->
+                        </div>
+                    </div>                
+                    <!-- board search :e -->
+                    <!-- board info : s-->
+                    <!-- <div class="brd-info">
+                        <ul class="brd-num">
+                            <li><span>전체 </span><em>112</em>건</li>
+                            <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
+                        </ul>
+                    </div>                                -->
+                    <!-- board info : e-->
+
+                    <!-- board table :s -->
+                    <div class="table-wrap">
+                        <table class="brd-list-01">
+                            <caption>나의제안 리스트</caption>
+                            <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">그룹</th>
+                                    <th scope="col">사규명</th>
+                                    <th scope="col">사규번호</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>	
+                                <tr>
+                                    <td>1</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">목차</p></a></td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">정관</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">이사회</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">임원 직무 청렴계약 운영</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">품질경영</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="./SGST-UI-07-000.html"><p class="over2lines">규정관리</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+
+                                <!-- 게시글이 없을때  -->
+                                <!-- <tr> 
+                                    <td colspan="5" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                </tr> -->
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- board table :e -->
+    
+                    <!-- page:s -->
+                    <div class="pagination">       
+                        <span class="prev-group">
+                            <a class="page-first" href="#none" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
+                            <a class="page-prev" href="#none" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
+                        </span>
+                        <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                        <span class="next-group">
+                            <a class="page-next" href="#none" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
+                            <a class="page-end" href="#none" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
+                        </span>                
+                    </div>                  
+                    <!-- page:e -->      
+                </div>
+                <!-- <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 사규찾기 팝업 끝 -->
 
     </div>
 </body>

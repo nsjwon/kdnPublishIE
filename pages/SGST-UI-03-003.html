@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 프로세스등록</title>
+    <title>제안관리시스템 - 테마제안 등록</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -39,7 +39,7 @@
                                     <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="focus">
                                 <a href="#none"><span>테마제안</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
@@ -69,7 +69,7 @@
                                     <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                                 </ul>
                             </li>
-                            <li class="focus">
+                            <li>
                                 <a href="#none"><span>나의제안</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
@@ -127,10 +127,10 @@
                             <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                         </ul>
                     </li>
-                    <li class="d1">
+                    <li class="d1 active">
                         <a href="#none">테마제안</a>
                         <ul class="two-depth">
-                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li class="focus"><a href="./SGST-UI-03-001.html">테마제안</a></li>
                             <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li>
                         </ul>
                     </li>
@@ -157,10 +157,10 @@
                             <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                         </ul>
                     </li>
-                    <li class="d1 active">
+                    <li class="d1">
                         <a href="#none">나의제안</a>
                         <ul class="two-depth">
-                            <li class="focus"><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
                             <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
                         </ul>
                     </li>
@@ -193,27 +193,27 @@
                     <ul class="menu-nav">
                         <li><img src="../images/board/ic_home.svg" alt="home"></li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>나의제안</li>
+                        <li>테마제안</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>나의제안</li>
+                        <li>테마제안</li>
                     </ul>
                     <!-- 현재 페이지 경로:e -->
                     <div class="dt-wrap">
-                        <h2 class="h2-tit">나의제안</h2>
-                        <div class="btn-wrap">
+                        <h2 class="h2-tit">테마제안 등록</h2>
+                        <!-- <div class="btn-wrap">
                             <input type="button" value="임시저장 목록보기" class="popup-button btn-temporlist" data-target="#tempList">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="sub-content-inner">
                         <div class="board-block">
                             <div class="board-title">
-                                <h4 class="h4-tit">제안등록</h4>
+                                <h4 class="h4-tit">테마내용</h4>
                                 <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
                             </div>
                             <div class="board-list">
                                 <!-- 제안등록 테이블:s -->
                                 <table class="board-table">
-                                    <caption class="hide">제안내용 리스트</caption>
+                                    <caption class="hide">제안등록 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
                                         <col>
@@ -222,142 +222,52 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>제안유형</th>
-                                            <td>
-                                                <label for="inputCate" class="hide">제안유형</label>
-                                                <select name="inputCate" id="inputCate" class="l-select">
-                                                    <option>프로세스</option>
-                                                    <option>아이디어</option>
-                                                    <option>개선활동</option>
-                                                    <option>단순제안</option>
+                                            <th scope="row"><span class="rq-mark">*</span>기준년도</th>
+                                            <td colspan="3">
+                                                <label for="stdYear" class="hide">선택</label>
+                                                <select name="stdYear" id="stdYear">
+                                                    <option>전체</option>
+                                                    <option>2024</option>
+                                                    <option>2023</option>
+                                                    <option>2022</option>
+                                                    <option>2021</option>
+                                                    <option>2020</option>
                                                 </select>
-                                            </td>
-                                            <th scope="row">제안자</th>
-                                            <td>
-                                                <div class="flex-bt">
-                                                    <span>장태경</span>
-                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>업무분류</th>
-                                            <td>
-                                                <label for="inputSort" class="hide">업무분류</label>
-                                                <select name="inputSort" id="inputSort" class="l-select">
-                                                    <option>사무</option>
-                                                    <option>전산</option>
-                                                    <option>통신</option>
-                                                    <option>특수</option>
-                                                    <option>전사</option>
-                                                    <option>예산</option>
-                                                    <option>대국민서비스</option>
-                                                </select>
-                                            </td>
-                                            <th scope="row"><span class="rq-mark">*</span>검토부서</th>
-                                            <td>
-                                                <label for="loadPart" class="hide">검토부서</label>
-                                                <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly>
-                                                <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
+                                            <th scope="row"><span class="rq-mark">*</span>테마명</th>
+                                            <td colspan="3">
+                                                <input type="text" name="tmTitle" id="tmTitle" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
                                             <td colspan="3">
-                                                <label for="ofTitle" class="hide">제안명</label>
-                                                <input type="text" name="ofTitle" id="ofTitle" class="w100" value="KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작">
+                                                <input type="text" name="ofTitle" id="ofTitle" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>품질표준명</th>
-                                            <td colspan="3">
-                                                <label for="standardName" class="hide">품질표준명</label>
-                                                <input type="text" name="standardName" id="standardName" value="" readonly>
-                                                <label for="searchRulesBtn" class="hide">사규찾기</label>
-                                                <input type="button" class="btn-searchrule" value="사규찾기" id="searchRulesBtn">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>개선부분</th>
-                                            <td colspan="3" class="radio-type">
-                                                <label for="reText">
-                                                    <input type="radio" name="rePart" id="reText">
-                                                    본문
-                                                </label>
-                                                <label for="reForm">
-                                                    <input type="radio" name="rePart" id="reForm">
-                                                    양식
-                                                </label>
-                                                <label for="reAttech">
-                                                    <input type="radio" name="rePart" id="reAttech">
-                                                    붙임
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>문제점</th>
-                                            <td colspan="3">
-                                                <label for="ofProblem" class="hide">문제점</label>
-                                                <input type="text" name="ofProblem" id="ofProblem" class="w100" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>기대효과</th>
-                                            <td colspan="3">
-                                                <label for="epEffect" class="hide">기대효과</label>
-                                                <input type="text" name="epEffect" id="epEffect" class="w100" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>개선사항</th>
-                                            <td colspan="3" class="add-type">
-                                                <div class="add-tr">
-                                                    <div class="in-tr">
-                                                        <div class="in-header">
-                                                            <div class="in-header-th">조항번호</div>
-                                                            <div class="in-header-th">현재내용(문구)</div>
-                                                            <div class="in-header-th">개선내용(문구)</div>
-                                                        </div>
-                                                        <div class="in-header-btn">
-                                                            <input type="button" value="추가" class="btn-add-tr">
-                                                        </div>
-                                                    </div>
-                                                    <div class="in-tr">
-                                                        <div class="in-body">
-                                                            <div class="in-body-td">
-                                                                <textarea name="clauseNum1" id="clauseNum1" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                            <div class="in-body-td">
-                                                                <textarea name="currentWay1" id="currentWay1" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                            <div class="in-body-td">
-                                                                <textarea name="improveWay1" id="improveWay1" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="in-body-btn">
-                                                            <input type="button" value="삭제" class="btn-del-tr">
-                                                        </div>
-                                                    </div>
+                                            <th scope="row"><span class="rq-mark">*</span>일정</th>
+                                            <td>
+                                                <div class="search-date">
+                                                    <label for="startDate" class="hide">시작일</label>
+                                                    <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                                    <span>-</span>
+                                                    <label for="endDate" class="hide">종료일</label>
+                                                    <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
                                                 </div>
-                                                <!-- 추가 버튼을 눌렀을 때 생성되는 영역:s -->
-                                                <div class="add-tr">
-                                                    <div class="in-tr">
-                                                        <div class="in-body">
-                                                            <div class="in-body-td">
-                                                                <textarea name="clauseNum2" id="clauseNum2" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                            <div class="in-body-td">
-                                                                <textarea name="currentWay2" id="currentWay2" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                            <div class="in-body-td">
-                                                                <textarea name="improveWay2" id="improveWay2" cols="30" rows="10" class="h10"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="in-body-btn">
-                                                            <input type="button" value="삭제" class="btn-del-tr">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 추가 버튼을 눌렀을 때 생성되는 영역:e -->
+                                            </td>
+                                            <th scope="row"><span class="rq-mark">*</span>담당자</th>
+                                            <td>
+                                                <input type="text" name="loadPerson" id="loadPerson" value="장태경(9103245)" readonly>
+                                                <input type="button" class="popup-button btn-searchperson" value="조회" data-target="#findPerson">
+                                            </td>
+                                        </tr>
+                                        <tr class="longtxt">
+                                            <th scope="row">기타 안내사항</th>
+                                            <td colspan="3">
+                                                <textarea name="actCont" id="actCont" cols="30" rows="10" class="h15"></textarea>
                                             </td>
                                         </tr>
                                         <tr>
@@ -365,13 +275,12 @@
                                             <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
-                                                        <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
+                                                        <input type="text" name="loadFile" id="loadFile" value="첨부파일 서식.hwp" class="overtext" readonly>
                                                         <label for="searchFileBtn" class="hide">파일찾기</label>
                                                         <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                                     </div>
                                                     <ul class="att-file">
-                                                        <li>타 기관 전용 문서 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                                        <li>타 기관 아이콘 예시.jpeg<span>(630KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                        <li>첨부파일 서식.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -382,19 +291,20 @@
                             </div>
                             
                             <!-- 제안등록 시 유의사항:s -->
-                            <div class="board-note">
+                            <!-- <div class="board-note">
                                 <p>제안등록 시 유의사항</p>
                                 <ul class="note-list">
                                     <li>각 항목별 내용을 구체적으로 기술</li>
                                     <li>예상효과는 유형과 무형 중 한가지는 반드시 입력 (특히 유형효과는 계량화된 수치 또는 수식으로 표현)</li>
                                     <li>열려있는 파일은 반드시 종료한 후에 첨부하시기 바랍니다.</li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- 제안등록 시 유의사항:e -->
                         </div>
                         <!-- 버튼 영역:s -->
                         <div class="board-btn-wrap">
                             <div class="btn-wrap">
+                                <input type="button" value="목록" class="btn-listview">
                                 <input type="button" value="임시저장" class="btn-temporary">
                                 <input type="button" value="등록" class="btn-regist">
                             </div>
@@ -412,10 +322,10 @@
             <!-- 서브페이지 컨텐츠 layout:e -->
         </main>
         <!-- 서브페이지 메인 layout:e -->
-
+        
 
         <!-- 임시저장 목록 팝업 시작 -->
-        <div id="tempList" class="popup-panel">
+        <!-- <div id="tempList" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-01">
                 <div class="popup-header">
@@ -472,15 +382,16 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- 임시저장 목록 팝업 끝 -->
 
-        <!-- 부서찾기 팝업 시작 -->
-        <div id="findPart" class="popup-panel">
+                
+        <!-- 사원찾기 팝업 시작 -->        
+        <div id="findPerson" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-03">
                 <div class="popup-header">
-                    <h2>부서찾기</h2>
+                    <h2>실시자 조회</h2>
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body flex-col">
@@ -489,61 +400,80 @@
                         <div class="brd-search-form">
                             <div class="search-section">                              
                                 <div class="search-text w100">
-                                    <label for="searchWord" class="hide">검색어</label>
-                                    <input type="text" name="searchWord" id="searchWord" placeholder="검색어를 입력하세요.">
-                                    <label for="searchPartBtn" class="hide">검색</label>
-                                    <input type="button" class="btn-searchpart" value="부서찾기" id="searchPartBtn">
+                                    <label for="searchTxt" class="hide">검색어</label>
+                                    <input type="text" name="searchTxt" id="searchTxt" placeholder="사원명 또는 사원번호">
+                                    <label for="searchPersonBtn" class="hide">조회</label>
+                                    <input type="button" class="btn-searchpart mr0" value="조회" id="searchPersonBtn">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="parttree-wrap">
+                    <div class="findperson-wrap">
                         <ul>
-                            <li class="p1 folder open">
+                            <li class="f1 folder open">
                                 <a href="#none"><span>한전KDN(주)</span></a>
                                 <ul>
-                                    <li class="p2 folder">
+                                    <li class="f2 folder">
                                         <a href="#none"><span>감사실</span></a>
                                         <ul>
-                                            <li class="p3 part"><a href="#none"><span>감사1팀</span></a></li>
-                                            <li class="p3 part"><a href="#none"><span>감사2팀</span></a></li>
+                                            <li class="f3 person"><a href="#none"><span>손우민(23006)</span></a></li>
+                                            <li class="f3 person"><a href="#none"><span>박희정(18027)</span></a></li>
+                                            <li class="f3 person"><a href="#none"><span>김유찬(21011)</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="p2 folder">
+                                    <li class="f2 folder">
                                         <a href="#none"><span>커뮤니케이션실</span></a>
                                         <ul>
-                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
-                                            <li class="p3 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="p2 folder">
-                                        <a href="#none"><span>전력 ICT 기술원</span></a>
-                                        <ul>
-                                            <li class="p3 folder">
-                                                <a href="#none"><span>연구개발부</span></a>
+                                            <li class="f3 folder">
+                                                <a href="#none"><span>커뮤니케이션1팀</span></a>
                                                 <ul>
-                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션1팀</span></a></li>
-                                                    <li class="p4 part"><a href="#none"><span>커뮤니케이션2팀</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>임시완(123456)</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>박형식(654231)</span></a></li>
                                                 </ul>
                                             </li>
-                                            <li class="p3 part">
-                                                <a href="#none"><span>사업기획부</span></a>
+                                        </ul>
+                                    </li>
+                                    <li class="f2 folder">
+                                        <a href="#none"><span>전력 ICT 기술원</span></a>
+                                        <ul>
+                                            <li class="f3 folder">
+                                                <a href="#none"><span>1팀</span></a>
+                                                <ul>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="f3 folder">
+                                                <a href="#none"><span>2팀</span></a>
+                                                <ul>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="p2 folder"><a href="#none">
-                                        <span>기획관리본부</span></a>
+                                    <li class="f2 folder folder"><a href="#none"><span>기획관리본부</span></a></li>
+                                    <li class="f2 folder folder"><a href="#none"><span>ICT본부</span></a></li>
+                                    <li class="f2 folder folder"><a href="#none"><span>전력지능화안전본부</span></a></li>
+                                    <li class="f2 folder folder">
+                                        <a href="#none"><span>전력지능화안전본부</span></a>
                                         <ul>
-                                            <li class="p3 part"><a href="#none"><span>기획관리1팀</span></a></li>
+                                            <li class="f3 folder">
+                                                <a href="#none"><span>전력지능화안전1팀</span></a>
+                                                <ul>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="f3 folder">
+                                                <a href="#none"><span>전력지능화안전2팀</span></a>
+                                                <ul>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                    <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li class="p2 folder"><a href="#none">
-                                        <span>ICT본부</span></a>
-                                        <ul>
-                                            <li class="p3 part"><a href="#none"><span>ICT1팀</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="p2 part"><a href="#none"><span>전력지능화안전본부</span></a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -558,12 +488,11 @@
                 </div>
             </div>
         </div>
-        <!-- 부서찾기 팝업 끝 -->
-
-
+        <!-- 사원찾기 팝업 끝 -->
+        
     </div>
     <!-- wrap layout:e -->
-    
+
 </body>
 </html>
 
