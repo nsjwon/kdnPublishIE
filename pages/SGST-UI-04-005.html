@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>경진대회 참여 등록/수정</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+        
+
+        <!-- 경진대회 참여 등록/수정 팝업 시작 -->
+        <div id="ctsofEdit" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-ctsofEdit">
+                <div class="popup-header">
+                    <h2>경진대회 참여 등록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+
+                    <!-- 제안내용:s -->
+                    <div class="board-block mt10">
+                        <div class="board-title">
+                            <!-- <h4 class="h4-tit">제안내용</h4> -->
+                        </div>
+                        <!-- 제안상세 테이블:s -->
+                        <div class="board-list">
+                            <table class="board-table">
+                                <caption class="hide">제안내용 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 157px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">제출자</th>
+                                        <td>
+                                            품질혁신부 - 박형식(123456)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">과제명</th>
+                                        <td>
+                                            <input type="text" name="ctsofTitle" class="w100">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부파일<br>(제출)</th>
+                                        <td class="file-upload">
+                                            <div class="flex-col">
+                                                <div>
+                                                    <input type="text" name="loadFile" id="loadFile" value="첨부파일 서식.hwp" class="overtext" readonly>
+                                                    <label for="searchFileBtn" class="hide">파일찾기</label>
+                                                    <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
+                                                </div>
+                                                <ul class="att-file">
+                                                    <li>첨부파일 서식.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                </ul>
+                                                <p class="mt10 pcol2">※ 열려있는 파일은 반드시 종료한 후에 첨부하시기 바랍니다.</p>
+                                                <p class="pcol2">※ 첨부파일이 여러개일 경우 압축해서 하나의 파일로 제출해 주시기 바랍니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>참여조원</th>
+                                        <td>
+                                            <div class="align-right mb10">
+                                                <input type="button" value="조원삭제" class="btn-delete bw100">
+                                                <input type="button" value="조원등록" class="btn-blue bw100">
+                                            </div>
+                                            <div class="inner-table-wrap">                      
+                                                <!-- 분임조 조원 테이블:s -->
+                                                <table class="inner-table short align-center">
+                                                    <caption class="hide">분임조 조원 리스트</caption>
+                                                    <colgroup>
+                                                        <col style="width: 8%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th>유형</th>
+                                                            <th>부서명</th>
+                                                            <th>성명</th>
+                                                            <th>기여율</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>조장</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>홍길동(123456)</td>
+                                                            <td><input type="text" name="rate" value="50%"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>조원</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>임시완(123456)</td>
+                                                            <td><input type="text" name="rate" value="30%"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>조원</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>이지훈(123456)</td>
+                                                            <td><input type="text" name="rate" value="20%"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- 분임조 조원 테이블:e -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 제안상세 테이블:e -->
+                    </div>
+                    <!-- 제안내용:e -->
+
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="등록" class="btn-confirm">
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 경진대회 참여 등록/수정 팝업 끝 -->
+
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+

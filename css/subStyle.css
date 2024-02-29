@@ -293,6 +293,7 @@ input[type=submit], input[type=button] {cursor: pointer;}
 input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .3; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
+input[type="checkbox"]:disabled {cursor: default;}
 select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #e9e9ec;}
 button, input[type=button] {transition: all ease 0.2s 0s;}
 textarea {position: relative; resize: none; background-color: #ffffff; line-height: 2.4rem; width: 100%; display: inline-block; margin: 0; box-sizing: border-box; vertical-align: middle; border: 1px solid #e9e9ec; border-radius: 4px; font-size: 1.5rem;}
@@ -313,6 +314,10 @@ input[type=button].bw80 {min-width: 80px;}
 .btn-wrap input[type="button"] {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center;}
 .search-text .btn-searchpart {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.6rem;}
 .search-text .btn-searchpart:hover {background: #4a5369; transition: all ease 0.2s 0s;}
+.btn-sorter {width: 8px; height: 16px; background: url(../images/button/btn_sorter.svg) no-repeat; margin-left: 8px; padding-bottom: 2px;}
+.btn-sorter.up {background: url(../images/button/btn_sorter-up.svg) no-repeat;}
+.btn-sorter.down {background: url(../images/button/btn_sorter-down.svg) no-repeat;}
+
 
 .brd-search-btn input[type=button] {height: 4rem; border-radius: 4px; display: flex; align-items: center; justify-content: center;} 
 .btn-search {background: #325bc4 url(../images/board/ic_search.svg) no-repeat 26px 13px; color: #ffffff; border: none; padding: 0 26px 0 47.5px; font-size: 1.4rem; margin: 0 0.6rem; display: flex;}
