@@ -180,7 +180,7 @@
 .board-table {width: 100%;}
 .board-table.borderT {border-top: 1px solid #4f4f4f;}
 .board-table th {background: #f6f6f9; border-bottom: 1px solid #e8e8e8; padding: 2rem; color: #333; font-size: 1.5rem; line-height: 2rem; font-weight: 500; text-align: center; word-break: keep-all;}
-.board-table td {padding: 1rem 2rem; border-bottom: 1px solid #e8e8e8;}
+.board-table td {padding: 1rem 2rem; border-bottom: 1px solid #ddd;}
 .board-table td select {padding: 0 40px 0 14px; display: inline-block;}
 .board-table td p {line-height: 2.4rem;}
 .board-table td input[type="radio"] {margin-right: 6px; margin-bottom: 2px;}
@@ -422,7 +422,8 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .inner-table.short tr th {padding: 0;}
 .inner-table tr:first-child th:first-child {border-radius: 4px;}
 .inner-table tr:first-child th:last-child {border-radius: 4px;}
-.inner-table tr th {padding: 0.8rem 2rem; border-right: 1px solid #e8e8e8;}
+.inner-table-wrap.square tr:first-child th:first-child, .inner-table-wrap.square tr:first-child th:last-child {border-radius: 0;}
+.inner-table tr th {padding: 0.8rem 2rem; border-right: 1px solid #fff;}
 .inner-table tr th:last-child {border-right: none;}
 .inner-table tr td {padding: 0.8rem 1.6rem; border-right: 1px solid #e8e8e8; word-break: keep-all;}
 .inner-table tr td:last-child {border-right: none;}
