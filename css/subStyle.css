@@ -37,7 +37,7 @@
 .two-depth li a {color: #fff; width: 100%; display: block; height: 35px; line-height: 35px; padding: 0 20px 0 56px; border-radius: 6px;}
 .two-depth li a:hover {background: #405DBC; color: #fff;}
 .two-depth li.focus a {text-decoration: underline; font-weight: 600; color: #fff; background: #405DBC;}
-.regist-card {background: url(../images/common/bg_regist-link2.svg) no-repeat; display: flex; align-items: center; width: 100%; height: 7.2rem; margin-top: 4rem; background-size: contain; border-radius: 6px; overflow: hidden;}
+.regist-card {background: url(../images/common/bg_regist-link2.svg) no-repeat; display: flex; align-items: center; width: 100%; height: 7.2rem; margin-top: 4rem; background-size: cover; border-radius: 6px; overflow: hidden;}
 .gt-regist {position: relative; width: 100%; display: flex; align-items: center; font-size: 1.6rem; color: #fff; font-weight: 600; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif; padding: 0 2.4rem; height: 7.2rem;}
 .gt-regist::after {position: absolute; top: 24px; right: 16px; background: url(../images/common/iconArrowRight.svg) no-repeat; background-size: contain; width: 24px; height: 24px; content: ''; display: block;}
 .gt-regist span {position: relative; display: block; margin-top: 5px;}
