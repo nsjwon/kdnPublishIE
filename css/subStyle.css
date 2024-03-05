@@ -227,7 +227,7 @@
 .board-note>p::before {position: absolute; left: 6px; top: 0; background: url(../images/board/ic_exclamation.svg) no-repeat; width: 16px; height: 16px; display: block; content: '';}
 .note-list {display: flex; flex-direction: column; background: #dae2f1; border-radius: 0.6rem; padding: 2rem 4.5rem; margin-top: 1.6rem;}
 .note-list li {height: 2.8rem; line-height: 2.8rem; list-style-type: disc;}
-.bg-box {background: #F6F6F9; border-radius: 0.6rem; margin-top: 1.6rem;}
+.bg-box {background: #dae2f1; border-radius: 0.6rem; margin-top: 1.6rem;}
 
 /* 코멘트 영역 스타일 */
 .comment-box {display: flex; flex-direction: column; padding: 3rem; margin-top: 1.8rem;}
@@ -277,8 +277,8 @@
 /* 차트 영역 */
 .chart-block {width: 100%; margin-top: 4rem;}
 .chart-title {width: 100%; padding: 0 0 2rem; display: flex; align-items: center; justify-content: space-between;}
-.chart-wrap {width: 100%; min-height: 36rem; border-radius: 6px; border: 1px solid #d9d9d9;}
-
+.chart-wrap {width: 100%; min-height: 36rem; padding: 4rem; border-radius: 6px; border: 1px solid #d9d9d9;}
+.apexcharts-text, .apexcharts-title-text, .apexcharts-legend-text, .apexcharts-xaxis-title, .apexcharts-yaxis-label {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif' !important;}
 .num-table-wrap {margin: 4rem 0;}
 .num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
 .num-table th {background: #fafbff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
@@ -430,6 +430,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .inner-table tr td:last-child {border-right: none;}
 .inner-table tr:last-child td {border-bottom: none;}
 .inner-table .btn-wrap {justify-content: center; min-height: 60px;}
+.inner-table tr.picked td {background: #d2ff8e; border-color: #fff;}
 
 @media (max-width: 1660px) {
     #sub-gnb-wrap {width: 240px;}
