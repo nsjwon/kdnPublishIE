@@ -296,9 +296,11 @@
 .num-table th {background: #fafbff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
 .num-table th, .num-table td {line-height: 1.5rem; padding: 2.25rem 1rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
 .num-table tr th:first-child {border-left: 1px solid #E3E9EF;}
+.num-table tr td:first-child {border-left: 1px solid #E3E9EF;}
 .num-table tr {position:relative;}
 .num-table td {word-break: break-all; color: #333333; font-size: 1.5rem;}
 .num-table tbody tr:first-child th, .num-table tbody tr:first-child td {border-top:none;}
+.num-table tbody tr.picked td {background: #e4f5ff; border-color: #fff;}
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
@@ -355,11 +357,13 @@ input[type=button].bw80 {min-width: 80px;}
 .btn-searchperson:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-searchrule {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.4rem;}
 .btn-searchrule:hover {background: #4a5369; transition: all ease 0.2s 0s;}
-.btn-temporary {background: #8591a3; color: #fff;}
-.btn-temporary:hover {background: #6c7282;}
+/* .btn-temporary {background: #8591a3; color: #fff;}
+.btn-temporary:hover {background: #6c7282;} */
+.btn-temporary {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem;}
+.btn-temporary:hover {background: #325bc4; color: #fff;}
 .btn-listview {background: #8591a3; color: #fff;}
 .btn-listview:hover {background: #6c7282;}
-.btn-regist {background: #325bc4; color: #fff;}
+.btn-regist {background: #325bc4; color: #fff; border: 1px solid #325bc4;}
 .btn-regist:hover {background: #1c44aa;}
 .btn-add-tr {background: #325bc4; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem;}
 .btn-add-tr:hover {background: #1C44AA; transition: all ease 0.2s 0s;}
@@ -398,7 +402,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .btn-lightgray:hover {background: #6c7282; border: 1px solid transparent;}
 .btn-green {background: #1F7C70; color: #fff; padding: 0 2rem;}
 .btn-green:hover {background: #155950;}
-.btn-blue {background: #325bc4; color: #fff; padding: 0 2rem;}
+.btn-blue {background: #325bc4; color: #fff; padding: 0 2rem; border: 1px solid #325bc4;}
 .btn-blue:hover {background: #1C44AA;}
 .btn-navy {background: #233D75; color: #fff; padding: 0 2rem;}
 .btn-navy:hover {background: #121F3C;}

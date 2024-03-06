@@ -9,274 +9,524 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>이벤트 대상자 추첨</title>
-    <style>
-        .popup-panel {display: block;}
-    </style>
+    <title>제안관리시스템 - 이벤트관리</title>
 </head>
 <body class="scroll">
-    <!-- wrap layout:s -->
-    <div id="wrap">        
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
+                                    <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                                    <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024. 01. 05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">테마제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
+                            <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
+                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">관리</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li class="focus"><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>관리</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>이벤트관리</li>
+                    </ul>
+                    <div class="dt-wrap">
+                        <h2 class="h2-tit">이벤트관리</h2>
+                    </div>
+                    <div class="sub-content-inner">
+
+
+                        <!-- 기본정보:s -->
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">이벤트 상세내용</h4>
+                            </div>
+                            <div class="board-list">
+                                <table class="board-table">
+                                    <caption class="hide">이벤트 상세내용 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col style="width: 40%;">
+                                        <col style="width: 157px;">
+                                        <col style="width: 40%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">이벤트구분</th>
+                                            <td colspan="3">
+                                                <label for="eventName" class="hide">이벤트구분</label>
+                                                <select name="eventName" id="eventName" class="m-select">
+                                                    <option>테마제안 이벤트</option>
+                                                    <option>제안 이벤트</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">테마제안명</th>
+                                            <td>
+                                                <input type="text" name="loadThema" id="loadThema" value="사내정보시스템 제안" readonly>
+                                                <input type="button" class="popup-button btn-gray ml4" value="테마제안찾기" data-target="#findThema">
+                                            </td>
+                                            <th scope="row">일정</th>
+                                            <td>2023. 06. 01 ~ 2023. 06. 30</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">검토부서</th>
+                                            <td>품질혁신부</td>
+                                            <th scope="row">검토자</th>
+                                            <td>홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">진행상태</th>
+                                            <td>종료</td>
+                                            <th scope="row">참여수</th>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">선정인원</th>
+                                            <td>
+                                                <label for="ppNum" class="hide">이벤트명</label>
+                                                <select name="ppNum" id="ppNum" class="s-select">
+                                                    <option>전체</option>
+                                                    <option>제안자</option>
+                                                    <option>검토자</option>
+                                                </select>
+                                                <input type="text" name="psNum" id="psNum" class="s-text align-right"> 명
+                                            </td>
+                                            <th scope="row">중복여부</th>
+                                            <td class="check-type">
+                                                <label><input type="checkbox" name="olRemove" id="olRemove" checked>중복제거 후 추첨</label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                
+                                <!-- 버튼 영역:s -->
+                                <div class="board-btn-wrap mb0">
+                                    <div class="btn-wrap">
+                                        <input type="button" value="추첨하기" class="btn-blue">
+                                    </div>
+                                </div>
+                                <!-- 버튼 영역:e -->
+                            </div>
+                        </div>
+                        <!-- 기본정보:e -->
+                        
+                        <!-- 이벤트 상세현황:s -->
+                        <div class="board-block">
+                            <div class="num-table-wrap">    
+                                <table class="num-table">
+                                    <caption class="hide">이벤트 상세현황 리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 60px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 300px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 80px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>소속부서</th>
+                                            <th>제안명</th>
+                                            <th>제안자</th>
+                                            <th>제안등록일</th>
+                                            <th>검토자</th>
+                                            <th>진행상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="picked">
+                                            <td>1</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                        <tr class="picked">
+                                            <td>2</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                        <tr class="picked">
+                                            <td>3</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>품질혁신부</td>
+                                            <td>한영길(123456)</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>홍길동(123456)</td>
+                                            <td>품질혁신부</td>
+                                            <td>종료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 이벤트 상세현황:e -->
+
+
+                        <!-- 버튼 영역:s -->
+                        <div class="board-btn-wrap">
+                            <div class="btn-wrap">
+                                <input type="button" value="목록" class="btn-listview">
+                                <input type="button" value="저장" class="btn-save">
+                            </div>
+                        </div>
+                        <!-- 버튼 영역:e -->
+                    </div>
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
         
-        <!-- 이벤트 대상자 추첨 팝업 시작 -->
-        <div id="eventDraw" class="popup-panel">
+        
+        <!-- 테마제안찾기 팝업 시작 -->
+        <div id="findThema" class="popup-panel">
             <div class="popup-bg"></div>
             <div class="popup-content popup-content-eventDraw">
                 <div class="popup-header">
-                    <h2>이벤트 대상자 추첨</h2>
+                    <h2>테마제안찾기</h2>
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body">
 
-                    <!-- board search :s -->
-                    <div class="brd-search">    
-                        <div class="brd-search-form">
-                            <div class="search-section">
-                                <div class="search-text">
-                                    <p>이벤트명</p>
-                                    <input type="text" name="searchField" id="searchField" placeholder="검색어를 입력하세요.">
-                                </div>
-                                <div class="search-date">
-                                    <p>제안기간</p>
-                                    <label for="startDate" class="hide">시작일</label>
-                                    <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
-                                    <span>-</span>
-                                    <label for="endDate" class="hide">종료일</label>
-                                    <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
-                                </div>
-                                <div class="search-select">
-                                    <p>제안유형</p>
-                                    <label for="ofType" class="hide">구분</label>
-                                    <select name="ofType" id="ofType">
-                                        <option>전체</option>
-                                        <option>단순제안</option>
-                                        <option>아이디어</option>
-                                        <option>프로세스</option>
-                                        <option>개선활동</option>
-                                        <option>테마제안</option>
-                                    </select>
-                                </div>
-                                <div class="search-text small">
-                                    <p>선정인원</p>
-                                    <input type="text" name="searchField1" id="searchField1" placeholder="" class="align-right">명
-                                    <label for="searchState" class="hide">구분</label>
-                                    <select name="searchState" id="searchState" class="ml20">
-                                        <option>전체</option>
-                                        <option>제안자</option>
-                                        <option>검토자</option>
-                                    </select>
-                                </div>
-                                <div class="search-check">
-                                    <p>중복여부</p>
-                                    <label><input type="checkbox" name="olRemove" id="olRemove" checked>중복제거 후 추첨</label>
+                        <!-- board search :s -->
+                        <div class="brd-search"> 
+                            <div class="brd-search-form">
+                                <div class="search-section">
+                                    <div class="search-select">
+                                        <p>제안연도</p>
+                                        <label for="searchYear" class="hide">제안연도</label>
+                                        <select name="searchYear" id="searchYear">
+                                            <option>2024</option>
+                                            <option>2023</option>
+                                            <option>2022</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                    <div class="search-text">
+                                        <p class="mr20">테마제안명</p>
+                                        <input type="text" name="searchField" id="searchField" placeholder="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="brd-search-btn">
-                            <input type="button" class="btn-blue bw100" value="추첨하기">
-                        </div>
-                    </div>                
-                    <!-- board search :e -->
+                            <div class="brd-search-btn">
+                                <input type="button" class="btn-search" value="조회">
+                                <input type="button" class="btn-reset" value="초기화">
+                            </div>
+                        </div>                
+                        <!-- board search :e -->
 
-                    <!-- 이벤트 상세현황:s -->
+                    <!-- 테마제안 테이블:s -->
                     <div class="board-block">
-                        <div class="board-title mp0">
-                        </div>
-                        <div class="inner-table-wrap square">    
-                            <table class="board-table inner-table align-center">
-                                <caption class="hide">이벤트 상세현황 리스트</caption>
+                        <div class="board-wrap">
+                            <table class="brd-list-01">
+                                <caption class="hide">테마제안 리스트</caption>
                                 <colgroup>
-                                    <col style="width: 5%;">
-                                    <col style="width: 9%;">
-                                    <col style="width: 22%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 10%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 9%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 10%;">
-
-                                    <col style="width: 6%;">
+                                    <col style="width: 60px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 400px;">
+                                    <col style="width: 220px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 140px;">
+                                    <col style="width: 100px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>제안번호</th>
-                                        <th>제안명</th>
-                                        <th>제안유형</th>
-                                        <th>제안자</th>
-                                        <th>소속부서</th>
-                                        <th>제안등록일</th>
-                                        <th>제안결과</th>
+                                        <th>기준연도</th>
+                                        <th>테마명</th>
+                                        <th>일정</th>
                                         <th>검토부서</th>
                                         <th>검토자</th>
-
-                                        <th>당첨횟수</th>
+                                        <th>상태</th>
+                                        <th>등록일자</th>
+                                        <th>참여수</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr class="selectable">
                                         <td>1</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
+                                        <td>2023</td>
+                                        <td>사내정보시스템 보안강화방안</td>
+                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
                                         <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023. 05. 20</td>
+                                        <td>13</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="selectable">
                                         <td>2</td>
-                                        <td>2023-0001</td>
-                                        <td>직원 건강을 위한 기숙사 세탁기 관리</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
+                                        <td>2023</td>
+                                        <td>환경개선 경진대회</td>
+                                        <td>2023. 01. 01 ~ 2023. 01. 15</td>
                                         <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>2023-0001</td>
-                                        <td>사내 시스템 장애시 알림기능 제안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>2023-0001</td>
-                                        <td>전자입찰시스템 기능개선</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2022. 12. 30</td>
                                         <td>5</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="selectable">
+                                        <td>3</td>
+                                        <td>2023</td>
+                                        <td>사내정보시스템 보안강화방안</td>
+                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023. 05. 20</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr class="selectable">
+                                        <td>4</td>
+                                        <td>2023</td>
+                                        <td>사내정보시스템 보안강화방안</td>
+                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023. 05. 20</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr class="selectable">
+                                        <td>5</td>
+                                        <td>2023</td>
+                                        <td>사내정보시스템 보안강화방안</td>
+                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023. 05. 20</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr class="selectable">
                                         <td>6</td>
-                                        <td>2023-0001</td>
-                                        <td>전자입찰시스템 기능개선</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
+                                        <td>2023</td>
+                                        <td>사내정보시스템 보안강화방안</td>
+                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
                                         <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>2023-0001</td>
-                                        <td>보안강화방안</td>
-                                        <td>아이디어</td>
-                                        <td>홍길동(123456)</td>
-                                        <td>품질혁신부</td>
-                                        <td>2023. 01. 10</td>
-                                        <td>채택</td>
-                                        <td>경영기획부</td>
-                                        <td>임시완(321654)</td>
-
-                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>진행중</td>
+                                        <td>2023. 05. 20</td>
+                                        <td>13</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <!-- 이벤트 상세현황:e -->
+                    <!-- 테마제안 테이블:e -->
 
                 </div>
                 <div class="popup-btn-wrap">
                     <div class="btn-wrap">
+                        <input type="button" value="확인" class="btn-save">
                         <input type="button" value="닫기" class="btn-listview close-button">
-                        <input type="button" value="저장" class="btn-save">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 이벤트 대상자 추첨 팝업 끝 -->
+        <!-- 테마제안찾기 팝업 끝 -->
 
 
     </div>
-    <!-- wrap layout:e -->
-    
 </body>
 </html>
 
