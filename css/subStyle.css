@@ -63,6 +63,9 @@
 .search-section > div:last-child {margin-right: 0;}
 .search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 160px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem;}
 .search-date input[type=text]::placeholder {color: #a2a2a2;}
+.brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
+.brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto;}
+.search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
 .search-check {display: flex; flex-wrap: wrap;}
 .search-check label {margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
@@ -114,7 +117,12 @@
 .brd-list-01 tbody tr:first-child th,
 .brd-list-01 tbody tr:first-child td {border-top:none;}
 .brd-list-01 tbody tr:hover {background: #fcfcfc;}
-.brd-list-01 tbody tr:hover p {text-decoration: underline; font-weight: 500;} 
+.brd-list-01 tbody tr:hover p {text-decoration: underline; font-weight: 500;}
+.brd-list-01 tbody tr.nolink:hover p {text-decoration: unset; font-weight: 400;}
+.brd-list-01 tbody tr.nolink:hover td {cursor: default;}
+.brd-list-01 tbody tr.nolink:hover td a {cursor: default;}
+.brd-list-01 tbody tr.selectable.select {background: #ebf3ff;}
+.brd-list-01 tbody tr.selectable.select:hover {background: #ebf3ff;}
 .brd-list-01 td .t-title {max-width: 720px; text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block;}
 .brd-list-01 td.st-level {color: #232323; font-size: 1.4rem;}
 .brd-list-01 td.st-level>div {background: #e4e4e4; border-radius: 4px; display: flex; align-items: center; justify-content: center; width: 90px; height: 29px; margin: 0 auto;}
@@ -191,7 +199,7 @@
 .board-table td.radio-type input[type="radio"]:disabled {cursor: default; opacity: 1;}
 .board-table td.radio-type.readonly label {cursor: text;}
 .board-table td.radio-type.readonly input[type="radio"] {cursor: default;}
-.board-table td.check-type label {margin-right: 20px; cursor: pointer;}
+.board-table td.check-type label {margin-right: 20px; cursor: pointer; display: flex; align-items: center;}
 .board-table td.check-type input[type="radio"]:disabled {cursor: default; opacity: 1;}
 .board-table td.check-type.readonly label {cursor: text;}
 .board-table td.check-type.readonly input[type="radio"] {cursor: default;}
@@ -211,6 +219,10 @@
 .board-table td select.l-select {min-width: 316px;}
 .board-table td select.m-select {min-width: 200px;}
 .board-table td select.s-select {min-width: 95px;}
+.board-table td input[type="text"].l-text {width: 280px;}
+.board-table td input[type="text"].m-text {width: 160px;}
+.board-table td input[type="text"].s-text {width: 80px;}
+.board-table tr:last-child th {border-bottom: 1px solid #ddd;}
 .info-txt {margin-top: 0.8rem; font-size: 1.4rem; color: #999999; word-break: keep-all;}
 .rq-mark {display: inline-block; margin-right: 0.4rem; color: #cd3839;}
 .board-table textarea {padding: 1rem 1.4rem;}
@@ -291,7 +303,7 @@
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 input[type=submit], input[type=button] {cursor: pointer;}
-input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #cfd7e4;}
+input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .5; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
 input[type="checkbox"]:disabled {cursor: default;}
@@ -398,7 +410,11 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .btn-redline:hover {background: #C32E2E; color: #fff;}
 
 
-.table-wrap.scroll {overflow-x: auto;}
+.board-wrap {overflow-x: auto;}
+.board-wrap::-webkit-scrollbar {width: 1em; height: 1rem;}
+.board-wrap::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
+.board-wrap::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
+.table-wrap.scroll table {min-width: 1080px;}
 
 /* 코드관리목록 */
 .bh-title {height: 3.8rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;}
@@ -421,16 +437,18 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .inner-table tr {height: 56px;}
 .inner-table.short tr {height: 48px;}
 .inner-table.short tr th {padding: 0;}
-.inner-table tr:first-child th:first-child {border-radius: 4px;}
-.inner-table tr:first-child th:last-child {border-radius: 4px;}
 .inner-table-wrap.square tr:first-child th:first-child, .inner-table-wrap.square tr:first-child th:last-child {border-radius: 0;}
 .inner-table tr th {padding: 0.8rem 2rem; border-right: 1px solid #fff;}
+.board-table.inner-table tr th {padding: 0.8rem 2rem; border-right: 1px solid #fff; border-bottom: 1px solid #fff; border-top: none;}
+.board-table.inner-table tr th:first-child {border-left: none;}
+.board-table.inner-table tr th:last-child {border-right: none;}
 .inner-table tr th:last-child {border-right: none;}
 .inner-table tr td {padding: 0.8rem 1.6rem; border-right: 1px solid #e8e8e8; word-break: keep-all;}
 .inner-table tr td:last-child {border-right: none;}
 .inner-table tr:last-child td {border-bottom: none;}
 .inner-table .btn-wrap {justify-content: center; min-height: 60px;}
-.inner-table tr.picked td {background: #d2ff8e; border-color: #fff;}
+.inner-table tr.picked td {background: #bfe8ff; border-color: #fff;}
+.board-table .inner-table tr:last-child th {border-bottom: none;}
 
 @media (max-width: 1660px) {
     #sub-gnb-wrap {width: 240px;}
@@ -451,6 +469,10 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 }
 
 @media (max-width: 1280px) {
-    .sub-content-wrap {width: 972px; margin: 26px 34px 34px;}
+    .sub-content-wrap {width: 965px; margin: 26px 34px 34px;}
     .search-text .btn-searchpart {margin: 0 0 0 0.6rem;}
+    .helf-table-wrap {height: 48rem;}
+    .brd-half-type {flex-direction: column;}
+    .brd-search-btn {margin-top: 1rem;}
+    .brd-half-block {width: 100%;}
 }

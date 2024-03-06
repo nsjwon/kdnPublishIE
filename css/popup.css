@@ -37,6 +37,7 @@
 }
 @media (max-width: 1280px) {
     .popup-content-setMember {top: 18vh; left: 8vw; width: 84vw; height: 64vh;} 
+    .popup-content-eventDraw {top: 5vh; left: 5vw; width: 90vw; height: 90vh;}
 }
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}

@@ -85,9 +85,9 @@
                                     <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
                                     <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
                                     <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
-                                    <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
-                                    <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
-                                    <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                                    <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -96,7 +96,7 @@
                 <div class="header-right">
                     <div class="user-wrap">
                         <div class="log-time">
-                            <span>2024-01-05 10:04</span>
+                            <span>2024. 01. 05 10:04</span>
                         </div>
                         <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
                     </div>
@@ -169,9 +169,9 @@
                             <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
                             <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
                             <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
-                            <li><a href="./SGST-UI-08-025.html">검토요청</a></li>
-                            <li><a href="./SGST-UI-08-027.html">분임조목록</a></li>
-                            <li><a href="./SGST-UI-08-029.html">제안통계정보</a></li>
+                            <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
                         </ul>
                     </li>
                     <li class="regist-card">
@@ -344,7 +344,7 @@
                             <div class="board-title">
                                 <h4 class="h4-tit">경진대회이력</h4>
                                 <div class="btn-wrap bw80">
-                                    <input type="button" value="등록" class="popup-button btn-regist" data-target="#ctsHistory">
+                                    <input type="button" value="등록" class="popup-button btn-regist" data-target="#ctsHistoryAdd">
                                 </div>
                             </div>
                             <div class="inner-table-wrap square">
@@ -380,6 +380,8 @@
                                             <td>수상명단.pdf</td>
                                             <td>금상</td>
                                             <td class="btn-wrap">
+                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#ctsHistoryEdit">
+                                                <input type="button" value="삭제" class="btn-lightgray">
                                             </td>
                                         </tr>
                                         <tr>
@@ -391,7 +393,7 @@
                                             <td>수상명단.pdf</td>
                                             <td>금상</td>
                                             <td class="btn-wrap">
-                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#ctsHistory">
+                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#ctsHistoryEdit">
                                                 <input type="button" value="삭제" class="btn-lightgray">
                                             </td>
                                         </tr>
@@ -399,9 +401,9 @@
                                 </table>
                             </div>                        
                             <!-- board note:s -->
-                            <div class="board-note-wrap mt10">
+                            <!-- <div class="board-note-wrap mt10">
                                 <p><span>* 사외 경진대회이력은 직접 등록 및 수정/삭제 해주시기 바랍니다.</span></p>
-                            </div>
+                            </div> -->
                             <!-- board note:e -->
                         </div>
                         <!-- 경진대회이력:e -->
@@ -424,85 +426,6 @@
         </main>
         
 
-        <!-- 대회이력 등록/수정 팝업 시작 -->
-        <div id="ctsHistory" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-04">
-                <div class="popup-header">
-                    <h2>대회이력</h2>
-                    <a class="close-button" href="#none"></a>
-                </div>
-                <div class="popup-body flex-col">
-                    
-                    <!-- 대회이력 테이블:s -->
-                    <table class="board-table popup">
-                        <caption class="hide">대회이력 리스트</caption>
-                        <colgroup>
-                            <col style="width: 20%;">
-                            <col style="width: 80%;">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">시스템코드</th>
-                                <td>지역대회</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">대회기간</th>
-                                <td>
-                                    <div class="search-date">
-                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
-                                        <span>-</span>
-                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">지역명</th>
-                                <td>
-                                    <select name="areaName" id="areaName">
-                                        <option value="area1">서울</option>
-                                        <option value="area2">인천</option>
-                                        <option value="area3">대전</option>
-                                        <option value="area4">광주</option>
-                                        <option value="area5">대구</option>
-                                        <option value="area6">부산</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">수상이력</th>
-                                <td>
-                                    <input type="text" name="gpHist">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">파일첨부</th>
-                                <td class="file-upload">
-                                    <div class="flex-col">
-                                        <div class="flex-bt">
-                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly>
-                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
-                                        </div>
-                                        <ul class="att-file">
-                                            <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- 대회이력 테이블:e -->
-                </div>
-                <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <input type="button" value="등록" class="btn-confirm">
-                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
-                        <input type="button" value="닫기" class="btn-lightgray close-button">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 대회이력 등록/수정 팝업 끝 -->
 
         <!-- 활동이력 등록 팝업 시작 -->
         <div id="acthistoryAdd" class="popup-panel">
@@ -589,6 +512,186 @@
         <!-- 활동이력 등록 팝업 끝 -->
                         
 
+        
+        <!-- 경진대회이력 등록 팝업 시작 -->
+        <div id="ctsHistoryAdd" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-acthistoryAdd">
+                <div class="popup-header">
+                    <h2>경진대회이력</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    
+                    <!-- 경진대회이력 테이블:s -->
+                    <table class="board-table popup">
+                        <caption class="hide">경진대회이력 리스트</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 80%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">유형</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="cttType1" checked>
+                                        사외경진대회
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="cttType1">
+                                        사내경진대회
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기준연도</th>
+                                <td>
+                                    <select>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대회명</th>
+                                <td>
+                                    <input type="text" name="cttname1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">과제명</th>
+                                <td>
+                                    <input type="text" name="mssname1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수상명</th>
+                                <td>
+                                    <input type="text" name="prcname1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부</th>
+                                <td class="file-upload">
+                                    <div class="flex-col">
+                                        <div class="flex-bt">
+                                            <input type="text" name="loadFile2" id="loadFile2" value="첨부파일 예시.hwp" class="overtext" readonly>
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn2">
+                                        </div>
+                                        <ul class="att-file">
+                                            <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 경진대회이력 테이블:e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                        <input type="button" value="등록" class="btn-confirm">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 경진대회이력 등록 팝업 끝 -->
+
+
+        <!-- 경진대회이력 수정 팝업 시작 -->
+        <div id="ctsHistoryEdit" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-acthistoryAdd">
+                <div class="popup-header">
+                    <h2>경진대회이력</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+                    <!-- 경진대회이력 테이블:s -->
+                    <table class="board-table popup">
+                        <caption class="hide">경진대회이력 리스트</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 80%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">유형</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="cttType2" checked>
+                                        사외경진대회
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="cttType2">
+                                        사내경진대회
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기준연도</th>
+                                <td>
+                                    <select>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대회명</th>
+                                <td>
+                                    <input type="text" name="cttname2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">과제명</th>
+                                <td>
+                                    <input type="text" name="mssname2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수상명</th>
+                                <td>
+                                    <input type="text" name="prcname2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부</th>
+                                <td class="file-upload">
+                                    <div class="flex-col">
+                                        <div class="flex-bt">
+                                            <input type="text" name="loadFile3" id="loadFile3" value="첨부파일 예시.hwp" class="overtext" readonly>
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn3">
+                                        </div>
+                                        <ul class="att-file">
+                                            <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 경진대회이력 테이블:e -->
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                        <input type="button" value="수정" class="btn-confirm">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 경진대회이력 수정 팝업 끝 -->
     </div>
 </body>
 </html>

@@ -116,6 +116,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 .mb160 {margin-bottom: 160px !important;}
 
 .ml4 {margin-left: 4px !important;}
+.ml6 {margin-left: 6px !important;}
 .ml8 {margin-left: 8px !important;}
 .ml10 {margin-left: 10px !important;}
 .ml16 {margin-left: 16px !important;}
@@ -240,6 +241,7 @@ ul.circle-30 li::before {position: absolute; content: ''; display: block; width:
 .align-right {text-align: right !important;}
 .align-center {text-align: center !important;}
 .flex-al {display: flex; align-items: center;}
+.flex-ct {display: flex; align-items: center; justify-content: center;}
 .flex-bt {display: flex; justify-content: space-between; align-items: center;}
 .flex-col {display: flex; flex-direction: column;}
 .flex-end {display: flex; justify-content: flex-end;}
