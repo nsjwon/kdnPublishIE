@@ -7,26 +7,11 @@
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/subStyle.css">
     <link rel="stylesheet" href="../css/popup.css">
-    <link rel="stylesheet" href="../css/animation.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
     <title>제안관리시스템 - 이벤트관리</title>
 </head>
 <body class="scroll">
-    <!-- 로딩 애니메이션 시작 -->
-    <!-- <div id="loading-box">
-        <div class="loading">
-            <div class="cube">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div> -->
-    <!-- 로딩 애니메이션 끝 -->
     <!-- 반복영역 건너뛰기 -->
     <div id="skipNav">
         <a href="#main">본문 바로가기</a>
@@ -212,11 +197,11 @@
                         <!-- 기본정보:s -->
                         <div class="board-block">
                             <div class="board-title">
-                                <h4 class="h4-tit">이벤트 상세내용</h4>
+                                <h4 class="h4-tit">이벤트 등록</h4>
                             </div>
                             <div class="board-list">
                                 <table class="board-table">
-                                    <caption class="hide">이벤트 상세내용 리스트</caption>
+                                    <caption class="hide">이벤트 등록 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
                                         <col style="width: 40%;">
@@ -229,36 +214,54 @@
                                             <td colspan="3">
                                                 <label for="eventName" class="hide">이벤트구분</label>
                                                 <select name="eventName" id="eventName" class="m-select">
-                                                    <option>테마제안 이벤트</option>
                                                     <option>제안 이벤트</option>
+                                                    <option>테마제안 이벤트</option>
                                                 </select>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">테마제안명</th>
+                                            <th scope="row">이벤트명</th>
                                             <td>
-                                                <input type="text" name="loadThema" id="loadThema" value="사내정보시스템 제안" readonly>
-                                                <input type="button" class="popup-button btn-gray ml4" value="테마제안찾기" data-target="#findThema">
+                                                <input type="text" class="w100">
                                             </td>
-                                            <th scope="row">일정</th>
-                                            <td>2023. 06. 01 ~ 2023. 06. 30</td>
+                                            <th scope="row">제안유형</th>
+                                            <td>
+                                                <label for="inputCate" class="hide">제안유형</label>
+                                                <select name="inputCate" id="inputCate" class="m-select">
+                                                    <option>전체</option>
+                                                    <option>아이디어</option>
+                                                    <option>프로세스</option>
+                                                    <option>개선활동</option>
+                                                    <option>단순제안</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">검토부서</th>
-                                            <td>품질혁신부</td>
-                                            <th scope="row">검토자</th>
-                                            <td>홍길동</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">진행상태</th>
-                                            <td>종료</td>
-                                            <th scope="row">참여수</th>
-                                            <td>12</td>
+                                            <th scope="row">제안기간</th>
+                                            <td>
+                                                <div class="search-date">
+                                                    <label for="startDate" class="hide">시작일</label>
+                                                    <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                                    <span>-</span>
+                                                    <label for="endDate" class="hide">종료일</label>
+                                                    <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                                </div>
+                                            </td>
+                                            <th scope="row">제안결과</th>
+                                            <td>
+                                                <label for="searchResult" class="hide">제안결과</label>
+                                                <select name="searchResult" id="searchResult">
+                                                    <option>전체</option>
+                                                    <option>채택</option>
+                                                    <option>불채택</option>
+                                                    <option>자료보완</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">선정인원</th>
                                             <td>
-                                                <label for="ppNum" class="hide">이벤트명</label>
+                                                <label for="ppNum" class="hide">선정인원</label>
                                                 <select name="ppNum" id="ppNum" class="s-select">
                                                     <option>전체</option>
                                                     <option>제안자</option>
@@ -271,113 +274,24 @@
                                                 <label><input type="checkbox" name="olRemove" id="olRemove" checked>중복제거 후 추첨</label>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>                                
-                                <!-- 버튼 영역:s -->
-                                <div class="board-btn-wrap mb0">
-                                    <div class="roulette-box">
-                                        <button class="btn-roulette">추첨하기</button>
-                                    </div>
-                                </div>
-                                <!-- 버튼 영역:e -->
-                            </div>
-                        </div>
-                        <!-- 기본정보:e -->
-                        
-                        <!-- 이벤트 상세현황:s -->
-                        <div class="board-block">
-                            <div class="vtc-table-wrap">    
-                                <table class="vtc-table">
-                                    <caption class="hide">이벤트 상세현황 리스트</caption>
-                                    <colgroup>
-                                        <col style="width: 60px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: 300px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: 80px;">
-                                    </colgroup>
-                                    <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>소속부서</th>
-                                            <th>제안명</th>
-                                            <th>제안자</th>
-                                            <th>제안등록일</th>
-                                            <th>검토자</th>
-                                            <th>진행상태</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- 당첨 시 나타나는 목록 시작 -->
-                                        <!-- <tr class="picked">
-                                            <td>1</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr> -->
-                                        <!-- 당첨 시 나타나는 목록 끝 -->
-                                        <tr>
-                                            <td>1</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <th scope="row">추첨참관자</th>
+                                            <td colspan="3">
+                                                <input type="text" name="loadPerson" id="loadPerson" value="" readonly>
+                                                <input type="button" class="btn-searchperson" value="참관자찾기" data-target="">
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <!-- 이벤트 상세현황:e -->
-
+                        <!-- 기본정보:e -->
 
                         <!-- 버튼 영역:s -->
                         <div class="board-btn-wrap">
                             <div class="btn-wrap">
                                 <input type="button" value="목록" class="btn-listview">
-                                <input type="button" value="저장" class="btn-save">
+                                <input type="button" value="등록" class="btn-regist">
                             </div>
                         </div>
                         <!-- 버튼 영역:e -->
@@ -543,17 +457,9 @@
         <!-- 테마제안찾기 팝업 끝 -->
 
 
+
+
     </div>
-    <!-- <script>
-        $(window).ready(function () {
-            $(".btn-roulette").click(function () {
-                $("#loading-box").css("display", "flex");
-                setTimeout(function(){
-                    $("#loading-box").css("display", "none");
-                }, 1800); 
-            });
-        });
-    </script> -->
 </body>
 </html>
 

@@ -53,6 +53,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 	--point-color2: #c60008;
 	--bg-color1: #f3f4fb;
 	--gradient-color1: linear-gradient(94deg, #FDFDFD 0%, #67DCFF 55.9%, #D27EFF 100%);
+	--gradient-color2: linear-gradient(90deg, #2f68e0 0%, #218ff1 55.9%, #26b2c0 100%);
 }
 
 .mcol1 {color: var(--main-color1)}

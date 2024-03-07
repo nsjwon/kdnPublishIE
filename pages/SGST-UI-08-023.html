@@ -96,7 +96,7 @@
                 <div class="header-right">
                     <div class="user-wrap">
                         <div class="log-time">
-                            <span>2024. 01. 05 10:04</span>
+                            <span>2024-01-05 10:04</span>
                         </div>
                         <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
                     </div>
@@ -243,7 +243,7 @@
                                         <tr>
                                             <th scope="row">선정인원</th>
                                             <td>
-                                                <label for="ppNum" class="hide">이벤트명</label>
+                                                <label for="ppNum" class="hide">선정인원</label>
                                                 <select name="ppNum" id="ppNum" class="s-select">
                                                     <option>전체</option>
                                                     <option>제안자</option>
@@ -254,6 +254,22 @@
                                             <th scope="row">중복여부</th>
                                             <td class="check-type">
                                                 <label><input type="checkbox" name="olRemove" id="olRemove" checked>중복제거 후 추첨</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제안결과</th>
+                                            <td>
+                                                <label for="offResult" class="hide">제안결과</label>
+                                                <select name="offResult" id="offResult" class="m-select">
+                                                    <option>전체</option>
+                                                    <option>채택</option>
+                                                    <option>불채택</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">추첨참관자</th>
+                                            <td>
+                                                <input type="text" name="loadPerson" id="loadPerson" value="" readonly>
+                                                <input type="button" class="btn-searchperson" value="참관자찾기" data-target="">
                                             </td>
                                         </tr>
                                     </tbody>
@@ -431,6 +447,7 @@
         </div>
         <!-- 테마제안찾기 팝업 끝 -->
 
+        
 
     </div>
 </body>

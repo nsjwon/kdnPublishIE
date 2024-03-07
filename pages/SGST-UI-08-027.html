@@ -216,7 +216,7 @@
                             </div>
                             <div class="board-list">
                                 <table class="board-table">
-                                    <caption class="hide">이벤트 상세내용 리스트</caption>
+                                    <caption class="hide">이벤트 등록 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
                                         <col style="width: 40%;">
@@ -229,36 +229,54 @@
                                             <td colspan="3">
                                                 <label for="eventName" class="hide">이벤트구분</label>
                                                 <select name="eventName" id="eventName" class="m-select">
-                                                    <option>테마제안 이벤트</option>
                                                     <option>제안 이벤트</option>
+                                                    <option>테마제안 이벤트</option>
                                                 </select>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">테마제안명</th>
+                                            <th scope="row">이벤트명</th>
                                             <td>
-                                                <input type="text" name="loadThema" id="loadThema" value="사내정보시스템 제안" readonly>
-                                                <input type="button" class="popup-button btn-gray ml4" value="테마제안찾기" data-target="#findThema">
+                                                <input type="text" class="w100">
                                             </td>
-                                            <th scope="row">일정</th>
-                                            <td>2023. 06. 01 ~ 2023. 06. 30</td>
+                                            <th scope="row">제안유형</th>
+                                            <td>
+                                                <label for="inputCate" class="hide">제안유형</label>
+                                                <select name="inputCate" id="inputCate" class="m-select">
+                                                    <option>전체</option>
+                                                    <option>아이디어</option>
+                                                    <option>프로세스</option>
+                                                    <option>개선활동</option>
+                                                    <option>단순제안</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">검토부서</th>
-                                            <td>품질혁신부</td>
-                                            <th scope="row">검토자</th>
-                                            <td>홍길동</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">진행상태</th>
-                                            <td>종료</td>
-                                            <th scope="row">참여수</th>
-                                            <td>12</td>
+                                            <th scope="row">제안기간</th>
+                                            <td>
+                                                <div class="search-date">
+                                                    <label for="startDate" class="hide">시작일</label>
+                                                    <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                                    <span>-</span>
+                                                    <label for="endDate" class="hide">종료일</label>
+                                                    <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                                </div>
+                                            </td>
+                                            <th scope="row">제안결과</th>
+                                            <td>
+                                                <label for="searchResult" class="hide">제안결과</label>
+                                                <select name="searchResult" id="searchResult">
+                                                    <option>전체</option>
+                                                    <option>채택</option>
+                                                    <option>불채택</option>
+                                                    <option>자료보완</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">선정인원</th>
                                             <td>
-                                                <label for="ppNum" class="hide">이벤트명</label>
+                                                <label for="ppNum" class="hide">선정인원</label>
                                                 <select name="ppNum" id="ppNum" class="s-select">
                                                     <option>전체</option>
                                                     <option>제안자</option>
@@ -271,8 +289,15 @@
                                                 <label><input type="checkbox" name="olRemove" id="olRemove" checked>중복제거 후 추첨</label>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <th scope="row">추첨참관자</th>
+                                            <td colspan="3">
+                                                <input type="text" name="loadPerson" id="loadPerson" value="" readonly>
+                                                <input type="button" class="btn-searchperson" value="참관자찾기" data-target="">
+                                            </td>
+                                        </tr>
                                     </tbody>
-                                </table>                                
+                                </table>                             
                                 <!-- 버튼 영역:s -->
                                 <div class="board-btn-wrap mb0">
                                     <div class="roulette-box">
@@ -291,80 +316,112 @@
                                     <caption class="hide">이벤트 상세현황 리스트</caption>
                                     <colgroup>
                                         <col style="width: 60px;">
-                                        <col style="width: 120px;">
+                                        <col style="width: 100px;">
                                         <col style="width: 300px;">
+                                        <col style="width: 100px;">
                                         <col style="width: 120px;">
                                         <col style="width: 120px;">
                                         <col style="width: 120px;">
+                                        <col style="width: 80px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 120px;">
+
                                         <col style="width: 80px;">
                                     </colgroup>
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>소속부서</th>
+                                            <th>제안번호</th>
                                             <th>제안명</th>
+                                            <th>제안유형</th>
                                             <th>제안자</th>
+                                            <th>소속부서</th>
                                             <th>제안등록일</th>
+                                            <th>제안결과</th>
+                                            <th>검토부서</th>
                                             <th>검토자</th>
-                                            <th>진행상태</th>
+
+                                            <th>당첨횟수</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- 당첨 시 나타나는 목록 시작 -->
-                                        <!-- <tr class="picked">
+                                        <tr class="picked">
                                             <td>1</td>
-                                            <td>품질혁신부</td>
+                                            <td>2023-0001</td>
+                                            <td><p class="over2lines">사내 시스템 장애시 알림기능 제안</p></td>
+                                            <td>아이디어</td>
                                             <td>한영길(123456)</td>
+                                            <td>품질혁신부</td>
                                             <td>2023. 01. 10</td>
+                                            <td>채택</td>
+                                            <td>경영기획부</td>
                                             <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
-                                        </tr> -->
-                                        <!-- 당첨 시 나타나는 목록 끝 -->
-                                        <tr>
-                                            <td>1</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
-                                            <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
-                                            <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <td>0</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="picked">
                                             <td>2</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
+                                            <td>2023-0002</td>
+                                            <td><p class="over2lines">보안강화방안</p></td>
+                                            <td>아이디어</td>
+                                            <td>김유진(123456)</td>
+                                            <td>정보통신부</td>
                                             <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
+                                            <td>채택</td>
                                             <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <td>임시완(321654)</td>
+                                            <td>0</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="picked">
                                             <td>3</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
+                                            <td>2023-0003</td>
+                                            <td><p class="over2lines">직원 건강을 위한 기숙사 세탁기 관리</p></td>
+                                            <td>아이디어</td>
+                                            <td>김지영(123456)</td>
+                                            <td>경영관리부</td>
                                             <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
+                                            <td>채택</td>
                                             <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <td>임시완(321654)</td>
+                                            <td>0</td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
+                                            <td>2023-0023</td>
+                                            <td><p class="over2lines">전자입찰시스템 기능개선</p></td>
+                                            <td>아이디어</td>
+                                            <td>김지영(123456)</td>
+                                            <td>경영관리부</td>
                                             <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
+                                            <td>채택</td>
                                             <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <td>임시완(321654)</td>
+                                            <td>1</td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
-                                            <td>품질혁신부</td>
-                                            <td>한영길(123456)</td>
+                                            <td>2023-0025</td>
+                                            <td><p class="over2lines">전자입찰시스템 기능개선</p></td>
+                                            <td>아이디어</td>
+                                            <td>김지영(123456)</td>
+                                            <td>경영관리부</td>
                                             <td>2023. 01. 10</td>
-                                            <td>홍길동(123456)</td>
+                                            <td>채택</td>
                                             <td>품질혁신부</td>
-                                            <td>종료</td>
+                                            <td>임시완(321654)</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>2023-0034</td>
+                                            <td><p class="over2lines">전자입찰시스템 기능개선</p></td>
+                                            <td>아이디어</td>
+                                            <td>김지영(123456)</td>
+                                            <td>경영관리부</td>
+                                            <td>2023. 01. 10</td>
+                                            <td>채택</td>
+                                            <td>품질혁신부</td>
+                                            <td>임시완(321654)</td>
+                                            <td>0</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -378,6 +435,7 @@
                             <div class="btn-wrap">
                                 <input type="button" value="목록" class="btn-listview">
                                 <input type="button" value="저장" class="btn-save">
+                                <input type="button" value="최종등록" class="btn-save">
                             </div>
                         </div>
                         <!-- 버튼 영역:e -->
@@ -391,156 +449,6 @@
         </main>
         
         
-        <!-- 테마제안찾기 팝업 시작 -->
-        <div id="findThema" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-eventDraw">
-                <div class="popup-header">
-                    <h2>테마제안찾기</h2>
-                    <a class="close-button" href="#none"></a>
-                </div>
-                <div class="popup-body">
-
-                        <!-- board search :s -->
-                        <div class="brd-search"> 
-                            <div class="brd-search-form">
-                                <div class="search-section">
-                                    <div class="search-select">
-                                        <p>제안연도</p>
-                                        <label for="searchYear" class="hide">제안연도</label>
-                                        <select name="searchYear" id="searchYear">
-                                            <option>2024</option>
-                                            <option>2023</option>
-                                            <option>2022</option>
-                                            <option>2021</option>
-                                            <option>2020</option>
-                                        </select>
-                                    </div>
-                                    <div class="search-text">
-                                        <p class="mr20">테마제안명</p>
-                                        <input type="text" name="searchField" id="searchField" placeholder="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="brd-search-btn">
-                                <input type="button" class="btn-search" value="조회">
-                                <input type="button" class="btn-reset" value="초기화">
-                            </div>
-                        </div>                
-                        <!-- board search :e -->
-
-                    <!-- 테마제안 테이블:s -->
-                    <div class="board-block">
-                        <div class="board-wrap">
-                            <table class="brd-list-01">
-                                <caption class="hide">테마제안 리스트</caption>
-                                <colgroup>
-                                    <col style="width: 60px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 400px;">
-                                    <col style="width: 220px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 140px;">
-                                    <col style="width: 100px;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>기준연도</th>
-                                        <th>테마명</th>
-                                        <th>일정</th>
-                                        <th>검토부서</th>
-                                        <th>검토자</th>
-                                        <th>상태</th>
-                                        <th>등록일자</th>
-                                        <th>참여수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="selectable">
-                                        <td>1</td>
-                                        <td>2023</td>
-                                        <td>사내정보시스템 보안강화방안</td>
-                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
-                                        <td>경영기획부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2023. 05. 20</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr class="selectable">
-                                        <td>2</td>
-                                        <td>2023</td>
-                                        <td>환경개선 경진대회</td>
-                                        <td>2023. 01. 01 ~ 2023. 01. 15</td>
-                                        <td>품질혁신부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2022. 12. 30</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr class="selectable">
-                                        <td>3</td>
-                                        <td>2023</td>
-                                        <td>사내정보시스템 보안강화방안</td>
-                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
-                                        <td>품질혁신부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2023. 05. 20</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr class="selectable">
-                                        <td>4</td>
-                                        <td>2023</td>
-                                        <td>사내정보시스템 보안강화방안</td>
-                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
-                                        <td>품질혁신부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2023. 05. 20</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr class="selectable">
-                                        <td>5</td>
-                                        <td>2023</td>
-                                        <td>사내정보시스템 보안강화방안</td>
-                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
-                                        <td>품질혁신부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2023. 05. 20</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr class="selectable">
-                                        <td>6</td>
-                                        <td>2023</td>
-                                        <td>사내정보시스템 보안강화방안</td>
-                                        <td>2023. 06. 01 ~ 2023. 06. 23</td>
-                                        <td>품질혁신부</td>
-                                        <td>홍길동</td>
-                                        <td>진행중</td>
-                                        <td>2023. 05. 20</td>
-                                        <td>13</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- 테마제안 테이블:e -->
-
-                </div>
-                <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <input type="button" value="확인" class="btn-save">
-                        <input type="button" value="닫기" class="btn-listview close-button">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 테마제안찾기 팝업 끝 -->
 
 
     </div>
