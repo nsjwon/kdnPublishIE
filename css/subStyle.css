@@ -61,7 +61,7 @@
 .brd-search select {min-width: 160px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-section > div {margin-right: 5rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
-.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 160px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem;}
+.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 160px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-date input[type=text]::placeholder {color: #a2a2a2;}
 .brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto;}
@@ -71,7 +71,7 @@
 .search-check label {margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
 .search-check input[type=checkbox] {margin-right: 10px; padding: 10px 0;}
 /* .search-text {width: 100%;} */
-.search-text input[type=text] {width: 485px; margin: 0 0.6rem 0 0; font-size: 1.4rem;}
+.search-text input[type=text] {width: 485px; margin: 0 0.6rem 0 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-text.medium input[type=text] {width: 280px;}
 .search-text.short input[type=text] {width: 160px;}
 .search-text.small input[type=text] {width: 80px;}
@@ -306,7 +306,7 @@
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 input[type=submit], input[type=button] {cursor: pointer;}
-input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #cfd7e4;}
+input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .5; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
 input[type="checkbox"]:disabled {cursor: default;}

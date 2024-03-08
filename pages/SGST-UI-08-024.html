@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../css/animation.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 이벤트관리</title>
+    <title>제안관리시스템 - 테마이벤트</title>
 </head>
 <body class="scroll">
     <!-- 로딩 애니메이션 시작 -->
-    <!-- <div id="loading-box">
+    <div id="loading-box">
         <div class="loading">
             <div class="cube">
                 <div></div>
@@ -25,7 +25,7 @@
                 <div></div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- 로딩 애니메이션 끝 -->
     <!-- 반복영역 건너뛰기 -->
     <div id="skipNav">
@@ -52,11 +52,12 @@
                                     <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="focus">
                                 <a href="#none"><span>테마제안</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
                                     <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
+                                    <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -64,7 +65,7 @@
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                                     <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
-                                    <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
+                                    <!-- <li><a href="./SGST-UI-04-008.html">나의실적</a></li> -->
                                 </ul>
                             </li>
                             <li>
@@ -83,13 +84,15 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#none"><span>나의제안</span></a>
+                                <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                                    <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                                    <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
+                                    <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
                                 </ul>
                             </li>
-                            <li class="focus">
+                            <li>
                                 <a href="#none"><span>관리</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
@@ -99,7 +102,7 @@
                                     <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
                                     <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
                                     <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
-                                    <li><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
                                     <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
                                     <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
                                     <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
@@ -136,11 +139,13 @@
                             <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                         </ul>
                     </li>
-                    <li class="d1">
+                    
+                    <li class="d1 active">
                         <a href="#none">테마제안</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
                             <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
+                            <li class="focus"><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -148,7 +153,7 @@
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                             <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
-                            <li><a href="./SGST-UI-04-008.html">나의실적</a></li>
+                            <!-- <li><a href="./SGST-UI-04-008.html">나의실적</a></li> -->
                         </ul>
                     </li>
                     <li class="d1">
@@ -167,13 +172,15 @@
                         </ul>
                     </li>
                     <li class="d1">
-                        <a href="#none">나의제안</a>
+                        <a href="#none">나의활동</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의실적</a></li>
+                            <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
                         </ul>
                     </li>
-                    <li class="d1 active">
+                    <li class="d1">
                         <a href="#none">관리</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
@@ -183,7 +190,7 @@
                             <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
                             <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
                             <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
-                            <li class="focus"><a href="./SGST-UI-08-022.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
                             <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
                             <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
                             <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
@@ -199,12 +206,12 @@
                     <ul class="menu-nav">
                         <li><img src="../images/board/ic_home.svg" alt="home"></li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>관리</li>
+                        <li>테마제안</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>이벤트관리</li>
+                        <li>테마이벤트</li>
                     </ul>
                     <div class="dt-wrap">
-                        <h2 class="h2-tit">이벤트관리</h2>
+                        <h2 class="h2-tit">테마이벤트</h2>
                     </div>
                     <div class="sub-content-inner">
 
@@ -212,11 +219,11 @@
                         <!-- 기본정보:s -->
                         <div class="board-block">
                             <div class="board-title">
-                                <h4 class="h4-tit">이벤트 상세내용</h4>
+                                <h4 class="h4-tit">테마이벤트 상세내용</h4>
                             </div>
                             <div class="board-list">
                                 <table class="board-table">
-                                    <caption class="hide">이벤트 상세내용 리스트</caption>
+                                    <caption class="hide">테마이벤트 상세내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
                                         <col style="width: 40%;">
@@ -224,7 +231,7 @@
                                         <col style="width: 40%;">
                                     </colgroup>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <th scope="row">이벤트구분</th>
                                             <td colspan="3">
                                                 <label for="eventName" class="hide">이벤트구분</label>
@@ -233,7 +240,7 @@
                                                     <option>제안 이벤트</option>
                                                 </select>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                         <tr>
                                             <th scope="row">테마제안명</th>
                                             <td>
@@ -256,10 +263,26 @@
                                             <td>12</td>
                                         </tr>
                                         <tr>
+                                            <th scope="row">제안결과</th>
+                                            <td>
+                                                <label for="searchResult" class="hide">제안결과</label>
+                                                <select name="searchResult" id="searchResult" class="m-select">
+                                                    <option>전체</option>
+                                                    <option>채택</option>
+                                                    <option>불채택</option>
+                                                    <option>자료보완</option>
+                                                </select>
+                                            </td>
+                                            <th scope="row">추첨참관자</th>
+                                            <td>
+                                                <input type="text" class="w100" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">선정인원</th>
                                             <td>
                                                 <label for="ppNum" class="hide">이벤트명</label>
-                                                <select name="ppNum" id="ppNum" class="s-select">
+                                                <select name="ppNum" id="ppNum" class="m-select">
                                                     <option>전체</option>
                                                     <option>제안자</option>
                                                     <option>검토자</option>
@@ -378,6 +401,7 @@
                             <div class="btn-wrap">
                                 <input type="button" value="목록" class="btn-listview">
                                 <input type="button" value="저장" class="btn-save">
+                                <input type="button" value="최종등록" class="btn-save">
                             </div>
                         </div>
                         <!-- 버튼 영역:e -->
@@ -417,7 +441,7 @@
                                         </select>
                                     </div>
                                     <div class="search-text">
-                                        <p class="mr20">테마제안명</p>
+                                        <p class="mr10">테마제안명</p>
                                         <input type="text" name="searchField" id="searchField" placeholder="">
                                     </div>
                                 </div>
@@ -544,7 +568,7 @@
 
 
     </div>
-    <!-- <script>
+    <script>
         $(window).ready(function () {
             $(".btn-roulette").click(function () {
                 $("#loading-box").css("display", "flex");
@@ -553,7 +577,7 @@
                 }, 1800); 
             });
         });
-    </script> -->
+    </script>
 </body>
 </html>
 

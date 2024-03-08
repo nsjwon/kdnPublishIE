@@ -19,8 +19,11 @@
     color: #ccc;
     width: 60px;
     height: 60px;
-    margin: 0 0 100px 280px;
+    margin: 0 0 0px 280px;
     animation: show 3s linear infinite;
+}
+@media (max-width: 1660px) {
+        .loading {margin: 0 0 0px 220px;}
 }
 
 @-webkit-keyframes cube {
