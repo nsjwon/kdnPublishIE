@@ -71,7 +71,7 @@ pre {margin: 0; white-space: pre-wrap; font-family: 'Pretendard', "NotoSansKR", 
 /* scrollbar */
 /* .scroll::-webkit-scrollbar {width: 1rem; height: 1rem;}
 .scroll::-webkit-scrollbar-thumb {height: 20%; background-color: #d0d0d0; border-radius: 10px;} */
-.scroll::-webkit-scrollbar {width: 1em; height: 1rem;}
+.scroll::-webkit-scrollbar {width: 1rem; height: 1rem;}
 .scroll::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 .scroll::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
 .scrollLock {overflow: hidden;}

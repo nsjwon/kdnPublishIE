@@ -5,11 +5,12 @@
 .popup-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: .65; filter: alpha(opacity=65); z-index: 9998;}
 .popup-content {overflow: hidden; display: block; padding: 5rem; position: absolute; border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
 .popup-content-01 {top: calc((100vh - 80rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 80rem;}
-.popup-content-02 {top: 10vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 80vh;}
+.popup-content-02 {top: 6vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 88vh;}
 .popup-content-03 {top: calc((100vh - 80rem) / 2); left: calc((100% - 60rem) / 2); width: 60rem; height: 80rem;}
 .popup-content-04 {top: calc((100vh - 60rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 60rem;}
-.popup-content-05 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
-.popup-content-06 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
+.popup-content-05, .popup-content-06 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
+/* 공지사항 목록 */
+.popup-content-05 .brd-search {flex-direction: column; gap: 10px;}
 /* 조원관리 */
 .popup-content-setMember {top: calc((100vh - 82rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 82rem;} 
 /* 활동이력 등록/수정 */
@@ -33,6 +34,8 @@
 
 
 @media (max-width: 1420px) {
+    .popup-content-05, .popup-content-06 {top: 10vh; left: 12vw; width: 78vw; height: 80vh;}
+    .popup-content-05 .brd-search-btn {margin-top: 0;}
     .popup-content-setMember {top: 18vh; left: 10vw; width: 80vw; height: 64vh;} 
     .popup-content-eventDraw {top: 10vh; left: 5vw; width: 90vw; height: 80vh;}
 }
@@ -141,7 +144,7 @@
 
 /* 그룹코드 등록/수정 */
 .board-table.popup {width: 100%; border-top: 1px solid #4f4f4f;}
-.board-table.popup input[type="text"] {width: 100%;}
+.board-table.popup input[type="text"] {width: 100%; border: 1px solid #e9e9ec;}
 
 /* 조원관리 */
 .btn-addmb {height: 40px; color: #6c7282; border: 1px solid #e9e9ec; padding: 0 3.9rem 0 2.4rem; background: #f8f8f8 url(../images/button/btn_addmember.svg) no-repeat 59px 15px;}
