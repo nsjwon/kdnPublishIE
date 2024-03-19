@@ -73,10 +73,10 @@
                             <li>
                                 <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
-                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                                    <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                                    <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                                    <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -165,10 +165,10 @@
                     <li class="d1">
                         <a href="#none">나의활동</a>
                         <ul class="two-depth">
-                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                            <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                            <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -242,17 +242,10 @@
                                         </select>
                                         <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
                                     </div>
-                                    <div class="search-text">
+                                    <div class="search-text medium">
                                         <p>소속부서</p>
-                                        <label for="searchPart" class="hide">구분</label>
-                                        <select name="searchPart" id="searchPart">
-                                            <option>소속부서</option>
-                                            <option>제목</option>
-                                            <option>내용</option>
-                                            <option>작성자</option>
-                                        </select>
                                         <label for="searchField" class="hide">검색어</label>
-                                        <input type="text" name="searchField" id="searchField" placeholder="검색어를 입력하세요.">
+                                        <input type="text" name="searchField" id="searchField" placeholder="검색어를 입력하세요." class="">
                                         <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                     </div>
                                 </div>
@@ -294,6 +287,7 @@
                                     <col style="width: 100px;">
                                     <col style="width: 110px;">
                                     <col style="width: 100px;">
+                                    <col style="width: 100px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -304,7 +298,8 @@
                                         <th scope="col">사전검토일<br>(부서이관일)</th>      
                                         <th scope="col">검토경과일</th>   
                                         <th scope="col">제안자</th>                                           
-                                        <th scope="col">소속부서</th>                                           
+                                        <th scope="col">소속부서</th>
+                                        <th scope="col">검토자</th>
                                         <th scope="col">진행상태</th>                                           
                                     </tr>
                                 </thead>
@@ -318,6 +313,7 @@
                                         <td>0</td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st07"><div>검토완료</div></td>
                                     </tr>
                                     <tr>
@@ -329,6 +325,7 @@
                                         <td>0</td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st06"><div>결과등록중</div></td>      
                                     </tr>
                                     <tr>
@@ -340,6 +337,7 @@
                                         <td>0</td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st04"><div>검토승인중</div></td>
                                     </tr>
                                     <tr>
@@ -351,6 +349,7 @@
                                         <td>0</td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st08"><div>반송처리</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -362,6 +361,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -373,6 +373,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -384,6 +385,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -395,6 +397,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -406,6 +409,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
                                     <tr class="overdue">
@@ -417,6 +421,7 @@
                                         <td class="o-day"><div>2</div></td>
                                         <td>안상훈</td>   
                                         <td>정보관리팀</td>
+                                        <td>홍길동</td>   
                                         <td class="st-level st03"><div>검토중</div></td>
                                     </tr>
 

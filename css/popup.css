@@ -14,6 +14,7 @@
 /* 조원관리 */
 .popup-content-setMember {top: calc((100vh - 82rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 82rem;} 
 /* 활동이력 등록/수정 */
+.popup-content-ctsHistory {top: calc((100vh - 66rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 66rem;}
 .popup-content-acthistoryAdd {top: calc((100vh - 66rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 66rem;}
 .popup-content-acthistoryEdit {top: calc((100vh - 83rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 83rem;}
 /* 분임조원 상세이력 */

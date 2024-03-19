@@ -71,10 +71,10 @@
                             <li class="focus">
                                 <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
-                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                                    <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                                    <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                                    <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -158,10 +158,10 @@
                     <li class="d1 active">
                         <a href="#none">나의활동</a>
                         <ul class="two-depth">
-                            <li class="focus"><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                            <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                            <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                            <li class="focus"><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <!-- <li><a href="./SGST-UI-07-011.html">제안실적</a></li> -->
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -181,7 +181,7 @@
                         </ul>
                     </li>
                     <li class="regist-card">
-                        <a href="./SGST-UI-07-003-test.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
                     </li>
                 </ul>
             </div>
@@ -192,11 +192,62 @@
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
                         <li>나의활동</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>나의활동</li>
+                        <li>제안실적</li>
                     </ul>
                     <h2 class="h2-tit">나의제안</h2>
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
+                        
+                        <!-- board chart :s -->   
+                        <div class="num-table-wrap mb20">
+                            <table class="num-table-my">
+                                <caption>나의제안실적 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 14%;">
+                                    <col style="width: 18%;">
+                                    <col style="width: 18%;">
+                                    <col style="width: 18%;">
+                                    <col style="width: 18%;">
+                                    <col style="width: 18%;">
+                                </colgroup>
+                                
+                                <tbody>	
+                                    <tr>
+                                        <th rowspan="2">제안유형</th>
+                                        <th>단순제안</th>
+                                        <th>아이디어</th>
+                                        <th>프로세스</th>
+                                        <th>개선활동</th>
+                                        <th>테마제안</th>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>1</td>
+                                        <td>15</td>
+                                        <td>3</td>
+                                        <td>44</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">제안결과</th>
+                                        <th>채택</th>
+                                        <th>불채택</th>
+                                        <th>기각</th>
+                                        <th>심의완료</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>1</td>
+                                        <td>15</td>
+                                        <td>3</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- board chart :e -->
+
                         <!-- board search :s -->
                         <div class="brd-search mb10">    
                             <div class="brd-search-form">
@@ -230,6 +281,10 @@
                                         <label for="searchResult" class="hide">제안결과</label>
                                         <select name="searchResult" id="searchResult">
                                             <option>전체</option>
+                                            <option>채택</option>
+                                            <option>불채택</option>
+                                            <option>기각</option>
+                                            <option>심의완료</option>
                                         </select>
                                     </div>
                                     <div class="search-text">
@@ -242,11 +297,10 @@
                                         <select name="searchCate" id="searchCate">
                                             <option>전체제안</option>
                                             <option>단순제안</option>
-                                            <option>테마제안</option>
                                             <option>아이디어</option>
-                                            <option>실시제안</option>
                                             <option>프로세스</option>
                                             <option>개선활동</option>
+                                            <option>테마제안</option>
                                         </select>
                                     </div> 
                                 </div>
@@ -271,7 +325,8 @@
                                 <li><span>전체 </span><em>112</em>건</li>
                                 <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
                             </ul>
-                            <a href="./SGST-UI-07-003-test.html" class="btn-new">제안등록</a>
+                            <input type="button" value="임시저장목록" class="popup-button btn-temporlist" data-target="#tempList">
+                            <!-- <a href="./SGST-UI-07-003.html" class="btn-new">제안등록</a> -->
                         </div>                               
                         <!-- board info : e-->
 
@@ -286,6 +341,7 @@
                                     <col style="width: 140px;">
                                     <col style="width: 140px;">
                                     <col style="width: 140px;">
+                                    <col style="width: 140px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -295,6 +351,7 @@
                                         <th scope="col">등록일</th>
                                         <th scope="col">진행상태</th>                                           
                                         <th scope="col">제안결과</th>                                        
+                                        <th scope="col">포상결과</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>	
@@ -307,6 +364,7 @@
                                             <div>사전검토중</div>
                                         </td>
                                         <td>채택</td>
+                                        <td>창안상</td>
                                     </tr>	
                                     <tr>
                                         <td>2023-0024</td>
@@ -316,7 +374,8 @@
                                         <td class="st-level st02">
                                             <div>접수중</div>
                                         </td>                     
-                                        <td>채택</td>                        
+                                        <td>채택</td>
+                                        <td>우수과제1등급</td>
                                     </tr>
                                     <tr>
                                         <td>2023-0023</td>
@@ -326,7 +385,8 @@
                                         <td class="st-level st03">
                                             <div>검토중</div>
                                         </td>                  
-                                        <td>불채택</td>                                
+                                        <td>불채택</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2023-0022</td>
@@ -336,7 +396,8 @@
                                         <td class="st-level st04">
                                             <div>검토승인중</div>
                                         </td>                     
-                                        <td></td>           
+                                        <td>불채택</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2023-0021</td>
@@ -346,7 +407,8 @@
                                         <td class="st-level st05">
                                             <div>계획등록중</div>
                                         </td>                               
-                                        <td></td>        
+                                        <td>기각</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2023-0020</td>
@@ -356,7 +418,8 @@
                                         <td class="st-level st06">
                                             <div>결과등록중</div>
                                         </td>                   
-                                        <td></td>            
+                                        <td>불채택</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2023-0019</td>
@@ -366,7 +429,8 @@
                                         <td class="st-level st07">
                                             <div>심의중</div>
                                         </td>
-                                        <td></td>
+                                        <td>채택</td>
+                                        <td>우수과제3등급</td>
                                     </tr>
                                     <tr>
                                         <td>2023-0018</td>
@@ -376,6 +440,7 @@
                                         <td class="st-level st08">
                                             <div>자료보완</div>
                                         </td>                                
+                                        <td>불채택</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -386,6 +451,7 @@
                                         <td class="st-level st09">
                                             <div>종료</div>
                                         </td>                                  
+                                        <td>심의완료</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -396,7 +462,8 @@
                                         <td class="st-level st09">
                                             <div>종료</div>
                                         </td>                                 
-                                        <td></td>
+                                        <td>채택</td>
+                                        <td>우수과제2등급</td>
                                     </tr>
 
                                     <!-- 게시글이 없을때  -->
@@ -447,6 +514,67 @@
                 </footer>
             </div>
         </main>
+
+        <!-- 임시저장 목록 팝업 시작 -->
+        <div id="tempList" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-01">
+                <div class="popup-header">
+                    <h2>임시저장 목록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <table class="pop-list">
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">임시저장일자</th>
+                                <th scope="col">제안명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="selectable">
+                                <td>1</td>
+                                <td>2022. 12. 02</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>2</td>
+                                <td>2022. 11. 29</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>3</td>
+                                <td>2022. 11. 27</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>4</td>
+                                <td>2022. 11. 26</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                            <tr class="selectable">
+                                <td>5</td>
+                                <td>2022. 11. 21</td>
+                                <td><p class="t-title">대기전력 차단기 설치로 전기에너지 절약</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="삭제" class="btn-delete">
+                        <input type="button" value="확인" class="btn-confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 임시저장 목록 팝업 끝 -->
     </div>
 </body>
 </html>

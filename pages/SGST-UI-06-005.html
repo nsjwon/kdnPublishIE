@@ -71,10 +71,10 @@
                             <li>
                                 <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
-                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                                    <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                                    <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                                    <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -160,10 +160,10 @@
                     <li class="d1">
                         <a href="#none">나의활동</a>
                         <ul class="two-depth">
-                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                            <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                            <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -183,7 +183,7 @@
                         </ul>
                     </li>
                     <li class="regist-card">
-                        <a href="./SGST-UI-07-003-test.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
                     </li>
                 </ul>
             </div>
@@ -215,6 +215,14 @@
                                         <input type="text" name="searchField1" id="searchField1" placeholder="">
                                         <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                     </div>
+                                    <div class="search-date">
+                                        <p>실적기간</p>
+                                        <label for="startDate" class="hide">시작일</label>
+                                        <input type="text" name="searchDate" id="startDate" value="2023. 01. 01" placeholder="시작일" class="hasDatepicker" disabled> 
+                                        <span>-</span>
+                                        <label for="endDate" class="hide">종료일</label>
+                                        <input type="text" name="searchDate" id="endDate" value="2023. 12. 31" placeholder="종료일" class="hasDatepicker" disabled> 
+                                    </div>
                                 </div>
                             </div>
                             <div class="brd-search-btn">
@@ -230,26 +238,154 @@
                         </div>
                         <!-- board note:e -->
 
-                        <!-- 월말인원 chart:s -->
-                        <div class="chart-block">
-                            <div class="chart-title">
-                                <h4 class="h4-tit">월말인원</h4>
-                            </div>
-                            <div class="chart-wrap" id="PeopleChart"></div>
+                        <!-- 제안등록 현황 chart:s -->
+                        <div class="chart-title mt40">
+                            <h4 class="h4-tit">제안등록 현황 (총<em class="mcol2 fw_700"> 6</em>건)</h4>
                         </div>
-                        <!-- 월말인원 chart:e -->
+                        <div class="num-table-wrap mt0 scroll">
+                            <table class="num-table">
+                                <caption>제안등록 현황 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 8%;">
+                                    <col style="width: 16%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    
+                                    <col style="width: 6%;">
+                                </colgroup>
+                                
+                                <tbody>	
+                                    <tr>
+                                        <th scope="col">제안번호</th>
+                                        <th scope="col">제안명</th>                                         
+                                        <th scope="col">제안유형</th>                                         
+                                        <th scope="col">제안자</th>                                         
+                                        <th scope="col">사전검토중</th>                                         
+                                        <th scope="col">접수중</th>                                         
+                                        <th scope="col">검토중</th>                                         
+                                        <th scope="col">검토승인중</th>                                         
+                                        <th scope="col">계획등록중</th>                                         
+                                        <th scope="col">결과등록중</th>
 
-                        <!-- 월별제안건수 chart:s -->
-                        <div class="chart-block">
-                            <div class="chart-title">
-                                <h4 class="h4-tit">월별제안건수</h4>
+                                        <th scope="col">심의중</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무환경개선을 위한 아이디어제안</td>
+                                        <td>아이디어</td>
+                                        <td>홍길동</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무처리 프로세스 개선안</td>
+                                        <td>개선활동</td>
+                                        <td>이상순</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무처리 프로세스 개선안</td>
+                                        <td>개선활동</td>
+                                        <td>이상순</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무처리 프로세스 개선안</td>
+                                        <td>개선활동</td>
+                                        <td>이상순</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무처리 프로세스 개선안</td>
+                                        <td>개선활동</td>
+                                        <td>이상순</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-0084</td>
+                                        <td>업무처리 프로세스 개선안</td>
+                                        <td>개선활동</td>
+                                        <td>이상순</td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+
+                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>           
+                        <!-- 제안등록 현황 chart:e -->
+                        
+                        <div class="flex-bt gap40">
+                            <!-- 월말인원 chart:s -->
+                            <div class="chart-block mt20">
+                                <div class="chart-title">
+                                    <h4 class="h4-tit">월말인원</h4>
+                                </div>
+                                <div class="chart-wrap" id="PeopleChart"></div>
                             </div>
-                            <div class="chart-wrap" id="NumberChart"></div>
+                            <!-- 월말인원 chart:e -->
+    
+                            <!-- 월별제안건수 chart:s -->
+                            <div class="chart-block mt20">
+                                <div class="chart-title">
+                                    <h4 class="h4-tit">월별제안건수</h4>
+                                </div>
+                                <div class="chart-wrap" id="NumberChart"></div>
+                            </div>
+                            <!-- 월별제안건수 chart:e -->
                         </div>
-                        <!-- 월별제안건수 chart:e -->
                         
                         <!-- 월별검토결과 chart:s -->
-                        <div class="chart-block">
+                        <div class="chart-block mt60">
                             <div class="chart-title">
                                 <h4 class="h4-tit">월별검토결과</h4>
                             </div>
@@ -258,7 +394,10 @@
                         <!-- 월별검토결과 chart:e -->
                         
                         <!-- 월별실적 chart:s -->
-                        <div class="num-table-wrap">
+                        <div class="num-table-wrap mt60">
+                            <div class="chart-title">
+                                <h4 class="h4-tit">제안등록 통계</h4>
+                            </div>
                             <table class="num-table">
                                 <caption>월별실적 리스트</caption>
                                 <colgroup>

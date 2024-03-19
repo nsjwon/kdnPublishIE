@@ -21,7 +21,7 @@
         <!-- 대회이력 등록/수정 팝업 시작 -->
         <div id="ctsHistory" class="popup-panel">
             <div class="popup-bg"></div>
-            <div class="popup-content popup-content-04">
+            <div class="popup-content popup-content-ctsHistory">
                 <div class="popup-header">
                     <h2>대회이력</h2>
                     <a class="close-button" href="#none"></a>
@@ -37,8 +37,27 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">시스템코드</th>
-                                <td>지역대회</td>
+                                <th scope="row">대회유형</th>
+                                <td class="radio-type">
+                                    <label>
+                                        <input type="radio" name="cttType" checked>
+                                        지역대회
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="cttType">
+                                        전국대회
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="cttType">
+                                        국제대회
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대회명</th>
+                                <td>
+                                    <input type="text" name="cttName">
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">대회기간</th>
@@ -54,12 +73,24 @@
                                 <th scope="row">지역명</th>
                                 <td>
                                     <select name="areaName" id="areaName">
-                                        <option value="area1">서울</option>
-                                        <option value="area2">인천</option>
-                                        <option value="area3">대전</option>
-                                        <option value="area4">광주</option>
-                                        <option value="area5">대구</option>
-                                        <option value="area6">부산</option>
+                                        <option>서울</option>
+                                        <option>부산</option>
+                                        <option>광주</option>
+                                        <option>대구</option>
+                                        <option>대전</option>
+                                        <option>인천</option>
+                                        <option>울산</option>
+                                        <option>세종</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                        <option>전북</option>
+                                        <option>전남</option>
+                                        <option>경북</option>
+                                        <option>경남</option>
+                                        <option>충북</option>
+                                        <option>충남</option>
+                                        <option>제주</option>
+                                        <option>해외</option>
                                     </select>
                                 </td>
                             </tr>

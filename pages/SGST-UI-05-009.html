@@ -71,10 +71,10 @@
                             <li class="focus">
                                 <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
-                                    <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                                    <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                                    <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                                    <li><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -159,10 +159,10 @@
                     <li class="d1 active">
                         <a href="#none">나의활동</a>
                         <ul class="two-depth">
-                            <li><a href="./SGST-UI-07-001.html">나의제안</a></li>
-                            <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li>
-                            <li><a href="./SGST-UI-04-008.html">나의경진대회실적</a></li>
-                            <li class="focus"><a href="./SGST-UI-05-009.html">나의분임조실적</a></li>
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <!-- <li><a href="./SGST-UI-07-011.html">제안실적</a></li> -->
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li class="focus"><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -193,9 +193,9 @@
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
                         <li>나의활동</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>나의분임조실적</li>
+                        <li>분임조실적</li>
                     </ul>
-                    <h2 class="h2-tit">나의 분임조 실적</h2>
+                    <h2 class="h2-tit">분임조 실적</h2>
                     <div class="sub-content-inner">
 
                         <!-- 기본정보:s -->
@@ -520,65 +520,86 @@
                         
 
         
-        <!-- 경진대회이력 등록 팝업 시작 -->
-        <div id="ctsHistoryAdd" class="popup-panel">
+        <!-- 대회이력 등록/수정 팝업 시작 -->
+        <div id="ctsHistory" class="popup-panel">
             <div class="popup-bg"></div>
-            <div class="popup-content popup-content-acthistoryAdd">
+            <div class="popup-content popup-content-ctsHistory">
                 <div class="popup-header">
-                    <h2>경진대회이력</h2>
+                    <h2>대회이력</h2>
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body flex-col">
                     
-                    <!-- 경진대회이력 테이블:s -->
+                    <!-- 대회이력 테이블:s -->
                     <table class="board-table popup">
-                        <caption class="hide">경진대회이력 리스트</caption>
+                        <caption class="hide">대회이력 리스트</caption>
                         <colgroup>
                             <col style="width: 20%;">
                             <col style="width: 80%;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">유형</th>
+                                <th scope="row">대회유형</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="cttType1" checked>
-                                        사외경진대회
+                                        <input type="radio" name="cttType" checked>
+                                        지역대회
                                     </label>
                                     <label>
-                                        <input type="radio" name="cttType1">
-                                        사내경진대회
+                                        <input type="radio" name="cttType">
+                                        전국대회
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">기준연도</th>
-                                <td>
-                                    <select>
-                                        <option value="2024">2024</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2020">2020</option>
-                                    </select>
+                                    <label>
+                                        <input type="radio" name="cttType">
+                                        국제대회
+                                    </label>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">대회명</th>
                                 <td>
-                                    <input type="text" name="cttname1">
+                                    <input type="text" name="cttName">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">과제명</th>
+                                <th scope="row">대회기간</th>
                                 <td>
-                                    <input type="text" name="mssname1">
+                                    <div class="search-date">
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>-</span>
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">수상명</th>
+                                <th scope="row">지역명</th>
                                 <td>
-                                    <input type="text" name="prcname1">
+                                    <select name="areaName" id="areaName">
+                                        <option>서울</option>
+                                        <option>부산</option>
+                                        <option>광주</option>
+                                        <option>대구</option>
+                                        <option>대전</option>
+                                        <option>인천</option>
+                                        <option>울산</option>
+                                        <option>세종</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                        <option>전북</option>
+                                        <option>전남</option>
+                                        <option>경북</option>
+                                        <option>경남</option>
+                                        <option>충북</option>
+                                        <option>충남</option>
+                                        <option>제주</option>
+                                        <option>해외</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수상이력</th>
+                                <td>
+                                    <input type="text" name="gpHist">
                                 </td>
                             </tr>
                             <tr>
@@ -586,8 +607,8 @@
                                 <td class="file-upload">
                                     <div class="flex-col">
                                         <div class="flex-bt">
-                                            <input type="text" name="loadFile2" id="loadFile2" value="첨부파일 예시.hwp" class="overtext" readonly>
-                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn2">
+                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly>
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                         </div>
                                         <ul class="att-file">
                                             <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
@@ -597,18 +618,18 @@
                             </tr>
                         </tbody>
                     </table>
-                    <!-- 경진대회이력 테이블:e -->
+                    <!-- 대회이력 테이블:e -->
                 </div>
                 <div class="popup-btn-wrap">
                     <div class="btn-wrap">
-                        <input type="button" value="닫기" class="btn-lightgray close-button">
                         <input type="button" value="등록" class="btn-confirm">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 경진대회이력 등록 팝업 끝 -->
+        <!-- 대회이력 등록/수정 팝업 끝 -->
 
 
         <!-- 경진대회이력 수정 팝업 시작 -->
