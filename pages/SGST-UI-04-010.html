@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>제안관리시스템 - 나의 실적</title>
+    <title>제안관리시스템 - 포상금지급관리</title>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -46,7 +46,7 @@
                                     <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="focus">
                                 <a href="#none"><span>경진대회</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
@@ -70,7 +70,7 @@
                                     <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                                 </ul>
                             </li>
-                            <li class="focus">
+                            <li>
                                 <a href="#none"><span>나의활동</span></a>
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
@@ -126,7 +126,6 @@
                             <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
                         </ul>
                     </li>
-                    
                     <li class="d1">
                         <a href="#none">테마제안</a>
                         <ul class="two-depth">
@@ -136,13 +135,13 @@
                             <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
                         </ul>
                     </li>
-                    <li class="d1">
+                    <li class="d1 active">
                         <a href="#none">경진대회</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                             <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
                             <!-- <li><a href="./SGST-UI-04-008.html">나의실적</a></li> -->
-                            <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                            <li class="focus"><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -160,12 +159,12 @@
                             <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
                         </ul>
                     </li>
-                    <li class="d1 active">
+                    <li class="d1">
                         <a href="#none">나의활동</a>
                         <ul class="two-depth">
                             <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
                             <!-- <li><a href="./SGST-UI-07-011.html">나의제안실적</a></li> -->
-                            <li class="focus"><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
                             <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
                         </ul>
                     </li>
@@ -195,33 +194,42 @@
                     <ul class="menu-nav">
                         <li><img src="../images/board/ic_home.svg" alt="home"></li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>나의활동</li>
+                        <li>경진대회</li>
                         <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
-                        <li>경진대회실적</li>
+                        <li>포상금지급관리</li>
                     </ul>
-                    <h2 class="h2-tit">경진대회 실적</h2>
+                    <h2 class="h2-tit">포상금지급관리</h2>
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
                         <!-- board search :s -->
-                        <div class="brd-search">    
+                        <div class="brd-search mb10"> 
                             <div class="brd-search-form">
                                 <div class="search-section">
-                                    <div class="search-select">
-                                        <p>기준년도</p>
-                                        <label for="stdYear" class="hide">선택</label>
-                                        <select name="stdYear" id="stdYear">
-                                            <option>전체</option>
-                                            <option>2024</option>
-                                            <option>2023</option>
-                                            <option>2022</option>
-                                            <option>2021</option>
-                                            <option>2020</option>
+                                    <div class="search-date">
+                                        <p>검색기준일</p>
+                                        <label for="dateOption" class="hide">검색기준일</label>
+                                        <select name="dateOption" id="dateOption">
+                                            <option>등록일</option>
+                                            <option>검토일</option>
+                                            <option>사전검토일</option>
+                                            <option>검토경과일</option>
+                                            <option>검토예정일</option>
                                         </select>
+                                        <label for="startDate" class="hide">시작일</label>
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <span>-</span>
+                                        <label for="endDate" class="hide">종료일</label>
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
                                     </div>
-                                    <div class="search-text medium">
-                                        <p>경진대회명</p>
-                                        <input type="text" name="ctsName" id="ctsName" placeholder="검색어를 입력하세요.">
-                                    </div>
+                                    <div class="search-select">
+                                        <p>지급여부</p>
+                                        <label for="payOrnot" class="hide">지급여부</label>
+                                        <select name="payOrnot" id="payOrnot" class="m-select">
+                                            <option>전체</option>
+                                            <option>지급</option>
+                                            <option>미지급</option>
+                                        </select>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="brd-search-btn">
@@ -231,155 +239,115 @@
                         </div>                
                         <!-- board search :e -->
 
+                        <!-- board note:s -->
+                        <div class="board-note-wrap">
+                            <p>※ 지급여부를 <span>미지급</span>으로 조회해야 지급처리를 할 수 있습니다.</p>
+                        </div>
+                        <!-- board note:e -->
+
                         <!-- board info : s-->
                         <div class="brd-info">
                             <ul class="brd-num">
                                 <li><span>전체 </span><em>112</em>건</li>
                                 <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
+                                <li><span>포상금합계 <em>630,000</em></span></li>
                             </ul>
-                            <!-- <div class="brd-btn-wrap">
-                                <input type="button" value="참여과제 전체 다운로드" class="btn-blue">
-                            </div> -->
+                            <div class="brd-btn-wrap">
+                                <input type="button" value="엑셀 다운로드" class="btn-excel">
+                                <input type="button" value="지급완료" class="btn-paystatus">
+                            </div>
                         </div>                               
                         <!-- board info : e-->
 
                         <!-- board table :s -->
                         <div class="board-wrap">
                             <table class="brd-list-01">
-                                <caption>경진대회 리스트</caption>
+                                <caption>관리 리스트</caption>
                                 <colgroup>
                                     <col style="width: 60px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 360px;">
-                                    <col style="width: 100px;">
+                                    <col style="width: 110px;">
+                                    <col style="width: 400px;">
                                     <col style="width: 100px;">
                                     <col style="width: 110px;">
-                                    <col style="width: 360px;">
                                     <col style="width: 100px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 140px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">기준년도</th>
-                                        <th scope="col">경진대회명</th>
-                                        <th scope="col">제출부서</th>
+                                        <th scope="col"><input type="checkbox" name="nonck1" disabled></th>
+                                        <th scope="col">제안번호</th>
+                                        <th scope="col">과제명</th>
                                         <th scope="col">제출자</th>
-                                        <th scope="col">제출일자</th>
-                                        <th scope="col">과제명</th>      
+                                        <th scope="col">소속부서</th>
                                         <th scope="col">진행상태</th>
+                                        <th scope="col">수상결과</th>
+                                        <th scope="col">포상금</th>
                                     </tr>
                                 </thead>
                                 <tbody>	
                                     <tr>
-                                        <td>1</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-009.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>내부역량 강화 세미나 기획안</td>
-                                        <td>진행중</td>
+                                        <td><input type="checkbox" name="pschck1"></td>
+                                        <td>2023-0025</td>
+                                        <td class="align-left"><a href="#none" class="popup-button" data-target="#ctsofDetail"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
+                                        <td>장태경</td>
+                                        <td>품질경영부</td>
+                                        <td class="st-level st09">
+                                            <div>종료</div>
+                                        </td>
+                                        <td>채택</td>
+                                        <td>10,000</td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-009.html"><p class="over2lines">환경개선을 위한 아이디어 대회</p></a></td>  
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>아이디어 창출을 위한 워크샵 개최안</td>
-                                        <td>진행중</td>
+                                        <td><input type="checkbox" name="pschck2"></td>
+                                        <td>2023-0024</td>
+                                        <td class="align-left"><a href="#none" class="popup-button" data-target="#ctsofDetail"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
+                                        <td>장태경</td>
+                                        <td>품질경영부</td>
+                                        <td class="st-level st09">
+                                            <div>종료</div>
+                                        </td>
+                                        <td>채택</td>
+                                        <td>10,000</td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-009.html"><p class="over2lines">하반기 KDN혁신 아이디어 대회</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>혁신아이디어</td>
-                                        <td>진행중</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-009.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td>  
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>효율적 인증체계를 위한 설계안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>내부역량 강화 세미나 기획안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>정보시스템 리뉴얼방안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>정보시스템 리뉴얼방안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>정보시스템 리뉴얼방안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>정보시스템 리뉴얼방안</td>
-                                        <td>종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>2023</td>
-                                        <td class="align-left"><a href="./SGST-UI-04-003.html"><p class="over2lines">사내정보시스템 개선사항 제안 요청</p></a></td> 
-                                        <td>정보관리부</td>
-                                        <td>홍길동</td>
-                                        <td>2023. 12. 23</td>
-                                        <td>정보시스템 리뉴얼방안</td>
-                                        <td>종료</td>
+                                        <td><input type="checkbox" name="pschck3"></td>
+                                        <td>2023-0023</td>
+                                        <td class="align-left"><a href="#none" class="popup-button" data-target="#ctsofDetail"><p class="over2lines">홍보문화팀 검토자 테스트</p></a></td>
+                                        <td>장태경</td>
+                                        <td>품질경영부</td>
+                                        <td class="st-level st09">
+                                            <div>종료</div>
+                                        </td>
+                                        <td>채택</td>
+                                        <td>10,000</td>
                                     </tr>
 
                                     <!-- 게시글이 없을때  -->
                                     <!-- <tr> 
-                                        <td colspan="8" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                        <td colspan="9">등록된 게시글이 없습니다.</td>
                                     </tr> -->
                                     
                                 </tbody>
                             </table>
                         </div>
                         <!-- board table :e -->
+
+                        <!-- board footnote :s -->
+                        <!-- <div class="brd-footnote">
+                            <ul>
+                                <li><span class="fn-num">1</span>사전검토중</li>
+                                <li><span class="fn-num">2</span>접수중</li>
+                                <li><span class="fn-num">3</span>검토중</li>
+                                <li><span class="fn-num">4</span>검토승인중</li>
+                                <li><span class="fn-num">5</span>계획등록중</li>
+                                <li><span class="fn-num">6</span>결과등록중</li>
+                                <li><span class="fn-num">7</span>심의중</li>
+                                <li><span class="fn-num">8</span>자료보완</li>
+                                <li><span class="fn-num">9</span>종료</li>
+                            </ul>
+                        </div> -->
+                        <!-- board footnote :e -->
         
                         <!-- page:s -->
                         <div class="pagination">       
@@ -387,7 +355,7 @@
                                 <a class="page-first" href="#none" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
                                 <a class="page-prev" href="#none" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
                             </span>
-                            <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                            <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="#none" onclick="" onkeypress="">2</a><a href="#none" onclick="" onkeypress="">3</a><a href="#none" onclick="" onkeypress="">4</a><a href="#none" onclick="" onkeypress="">5</a>
                             <span class="next-group">
                                 <a class="page-next" href="#none" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
                                 <a class="page-end" href="#none" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
@@ -404,10 +372,132 @@
             </div>
         </main>
 
+        <!-- 경진대회 참여 상세 팝업 시작 -->
+        <div id="ctsofDetail" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-ctsofDetail">
+                <div class="popup-header">
+                    <h2>경진대회 참여 내용</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body flex-col">
+
+                    <!-- 제안내용:s -->
+                    <div class="board-block mt10">
+                        <div class="board-title">
+                            <!-- <h4 class="h4-tit">제안내용</h4> -->
+                        </div>
+                        <!-- 제안상세 테이블:s -->
+                        <div class="board-list">
+                            <table class="board-table">
+                                <caption class="hide">제안내용 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 157px;">
+                                    <col>
+                                    <col style="width: 157px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">제출자</th>
+                                        <td colspan="3">
+                                            품질혁신부 - 박형식(123456)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">과제명</th>
+                                        <td colspan="3">
+                                            개선활동 경진대회
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">수상결과</th>
+                                        <td>우수과제1등급</td>
+                                        <th scope="row">수상금액</th>
+                                        <td>50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부</th>
+                                        <td colspan="3" class="file-download">
+                                            <div class="flex-bt">
+                                                <ul class="att-file">
+                                                    <li><a href="#none" class="underline">첨부파일서식.xlsx<span>(75.52KB)</span></a></li>
+                                                </ul>
+                                                <input type="button" class="btn-download" value="일괄다운로드">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>참여조원</th>
+                                        <td colspan="3">
+                                            <div class="inner-table-wrap">                      
+                                                <!-- 분임조 조원 테이블:s -->
+                                                <table class="inner-table short align-center">
+                                                    <caption class="hide">분임조 조원 리스트</caption>
+                                                    <colgroup>
+                                                        <col style="width: 8%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                        <col style="width: 23%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th>유형</th>
+                                                            <th>부서명</th>
+                                                            <th>성명</th>
+                                                            <th>기여율</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>조장</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>홍길동(123456)</td>
+                                                            <td>50%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>조원</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>임시완(123456)</td>
+                                                            <td>30%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>조원</td>
+                                                            <td>품질혁신부</td>
+                                                            <td>이지훈(123456)</td>
+                                                            <td>20%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- 분임조 조원 테이블:e -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 제안상세 테이블:e -->
+                    </div>
+                    <!-- 제안내용:e -->
+
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="수정" class="btn-save">
+                        <input type="button" value="닫기" class="btn-lightgray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 경진대회 참여 상세 팝업 끝 -->
+
+
     </div>
-    <!-- wrap layout:e -->
-
-
 </body>
 </html>
 

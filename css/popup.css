@@ -30,6 +30,7 @@
 /* 경진대회 */
 .popup-content-ctsEdit {top: 10vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 80vh;}
 .popup-content-ctsofEdit {top: 16vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 68vh;}
+.popup-content-ctsofDetail {top: calc((100vh - 76rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 76rem;}
 /* 경진대회 수상결과 */
 .popup-content-rwdRegist {top: calc((100vh - 54rem) / 2); left: calc((100% - 66rem) / 2); width: 66rem; height: 54rem;}
 

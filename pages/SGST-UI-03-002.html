@@ -42,6 +42,7 @@
                                 <ul class="depth2">
                                     <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
                                     <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
+                                    <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -50,6 +51,7 @@
                                     <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                                     <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
                                     <!-- <li><a href="./SGST-UI-04-008.html">나의실적</a></li> -->
+                                    <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -129,6 +131,7 @@
                             <li class="focus"><a href="./SGST-UI-03-001.html">테마제안</a></li>
                             <!-- <li><a href="./SGST-UI-03-004.html">테마제안참여</a></li> -->
                             <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                            <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -137,6 +140,7 @@
                             <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
                             <!-- <li><a href="./SGST-UI-04-004.html">참여현황</a></li> -->
                             <!-- <li><a href="./SGST-UI-04-008.html">나의실적</a></li> -->
+                            <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
                         </ul>
                     </li>
                     <li class="d1">
@@ -669,16 +673,15 @@
                         <!-- 제안상세 테이블:e -->
                     </div>
                     <!-- 제안내용:e -->
-
                     
                     <!-- 사전심사:s -->
+                    <!-- 사전심사:e -->
+
+                    <!-- 검토결과:s -->
                     <div class="board-block">
                         <div class="board-title">
-                            <h4 class="h4-tit">사전심사</h4>
-                            <!-- 펼쳤을 때 아이콘 -->
+                            <h4 class="h4-tit">검토결과</h4>
                             <a href="#none" class="btn-accordion"></a>
-                            <!-- 접었을 때 아이콘 -->
-                            <!-- <a href="#none" class="btn-accordion fold"></a> -->
                         </div>
                         <div class="board-list">
                             <table class="board-table">
@@ -696,17 +699,17 @@
                                         <th scope="row">제안번호</th>
                                         <td>2022-0018</td>
                                         <th scope="row">업무분류</th>
-                                        <td></td>
+                                        <td>전산</td>
                                         <th scope="row">검토부서</th>
                                         <td>품질경영부</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">제안유형</th>
-                                        <td>테마제안</td>
+                                        <td>개선활동</td>
                                         <th scope="row">제안일자</th>
                                         <td>2022. 11. 02</td>
                                         <th scope="row">진행상태</th>
-                                        <td><div class="stepbox step02">검토접수중</div></td>
+                                        <td><div class="stepbox step09">종료</div></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">제안자</th>
@@ -717,39 +720,54 @@
                                     <tr>
                                         <th scope="row">제안명</th>
                                         <td colspan="5">
-                                            건강한 사내환경 조성을 위한 방안
+                                            정보 보안 점검 강화
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">테마명</th>
-                                        <td colspan="5">
-                                            사내환경개선
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">사전심사결과</th>
+                                        <th scope="row">검토결과</th>
                                         <td colspan="5" class="radio-type readonly">
-                                            <label for="cpText">
-                                                <input type="radio" name="preType" id="cpText" disabled>
+                                            <label for="prrFile">
+                                                <input type="radio" name="preResult" id="prrFile" disabled>
                                                 자료보완
                                             </label>
-                                            <label for="ofEnd">
-                                                <input type="radio" name="preType" id="ofEnd" checked>
-                                                심사끝 - 제안적합
+                                            <label for="prrAdopt">
+                                                <input type="radio" name="preResult" id="prrAdopt" checked>
+                                                채택
+                                            </label>
+                                            <label for="prrNon">
+                                                <input type="radio" name="preResult" id="prrNon" disabled>
+                                                불채택
+                                            </label>
+                                            <label for="prrTrans">
+                                                <input type="radio" name="preResult" id="prrTrans" disabled>
+                                                부서이관
                                             </label>
                                         </td>
                                     </tr>
                                     <tr class="longtxt">
-                                        <th scope="row">사전심사내용</th>
+                                        <th scope="row">검토내용</th>
                                         <td colspan="5">
-                                            <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.<br>선정 시 단계별로 활동을 시행하시고 단계 종료 시 산출물을 등록하셔야 추후 평가가 가능합니다.<br>산출물은 단계별 서식과 증빙 사진등을 올려주시면 되고<br>단계별 서식 양식은 자료실에 올라가 있습니다.</p>                                            </td>
+                                            <p>제안등록에 감사드립니다.<br>본 제안은 사전검토가 완료되었습니다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">검토예정일</th>
+                                        <td colspan="5">
+                                            <p></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">검토지연사유</th>
+                                        <td colspan="5">
+                                            <p></p>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">첨부</th>
                                         <td colspan="5" class="file-download">
                                             <div class="flex-bt">
                                                 <ul class="att-file">
-                                                    <li><a href="#none" class="underline">첨부파일서식.xlsx<span>(75.52KB)</span></a></li>
+                                                    <li><a href="#none" class="underline">정보 보안 점검표 서식.xlsx<span>(75.52KB)</span></a></li>
                                                 </ul>
                                                 <input type="button" class="btn-download" value="일괄다운로드">
                                             </div>
@@ -759,8 +777,10 @@
                             </table>
                         </div>
                     </div>
-                    <!-- 사전심사:e -->
+                    <!-- 검토결과:e -->
 
+                    <!-- 부서장승인:s -->
+                    <!-- 부서장승인:e -->
 
                     <!-- 코멘트:s -->
                     <div class="board-block">
