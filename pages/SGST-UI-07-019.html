@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>공동제안자 등록</title>
+    <style>
+        .popup-panel {display: block;}
+    </style>
+</head>
+<body class="scroll">
+    <!-- wrap layout:s -->
+    <div id="wrap">
+        
+        <!-- 공동제안자 등록 팝업 시작 -->
+        <div id="findPartner" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-setMember">
+                <div class="popup-header">
+                    <h2>공동제안자 등록</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <div class="flex-bt">
+                        <!-- board search :s -->
+                        <div class="flex-col">
+                            <div class="brd-search">    
+                                <div class="brd-search-form">
+                                    <div class="search-section">                              
+                                        <div class="search-text">
+                                            <label for="searchTxt" class="hide">검색어</label>
+                                            <input type="text" name="searchTxt" id="searchTxt" placeholder="사원명 또는 사원번호">
+                                            <label for="searchPersonBtn" class="hide">조회</label>
+                                            <input type="button" class="btn-searchpart mr0" value="조회" id="searchPersonBtn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="findperson-wrap">
+                                <ul>
+                                    <li class="f1 folder open">
+                                        <a href="#none"><span>한전KDN(주)</span></a>
+                                        <ul>
+                                            <li class="f2 folder">
+                                                <a href="#none"><span>감사실</span></a>
+                                                <ul>
+                                                    <li class="f3 person"><a href="#none"><span>손우민(23006)</span></a></li>
+                                                    <li class="f3 person"><a href="#none"><span>박희정(18027)</span></a></li>
+                                                    <li class="f3 person"><a href="#none"><span>김유찬(21011)</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="f2 folder">
+                                                <a href="#none"><span>커뮤니케이션실</span></a>
+                                                <ul>
+                                                    <li class="f3 folder">
+                                                        <a href="#none"><span>커뮤니케이션1팀</span></a>
+                                                        <ul>
+                                                            <li class="f4 person"><a href="#none"><span>임시완(123456)</span></a></li>
+                                                            <li class="f4 person"><a href="#none"><span>박형식(654231)</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="f2 folder">
+                                                <a href="#none"><span>전력 ICT 기술원</span></a>
+                                                <ul>
+                                                    <li class="f3 folder">
+                                                        <a href="#none"><span>1팀</span></a>
+                                                        <ul>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="f3 folder">
+                                                        <a href="#none"><span>2팀</span></a>
+                                                        <ul>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="f2 folder folder"><a href="#none"><span>기획관리본부</span></a></li>
+                                            <li class="f2 folder folder"><a href="#none"><span>ICT본부</span></a></li>
+                                            <li class="f2 folder folder"><a href="#none"><span>전력지능화안전본부</span></a></li>
+                                            <li class="f2 folder folder">
+                                                <a href="#none"><span>전력지능화안전본부</span></a>
+                                                <ul>
+                                                    <li class="f3 folder">
+                                                        <a href="#none"><span>전력지능화안전1팀</span></a>
+                                                        <ul>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="f3 folder">
+                                                        <a href="#none"><span>전력지능화안전2팀</span></a>
+                                                        <ul>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                            <li class="f4 person"><a href="#none"><span>홍길동</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- board search :e -->
+
+                        <div class="btn-wrap center">
+                            <input type="button" value="추가" class="btn-addmb">
+                        </div>
+
+                        <!-- 조원관리 테이블:s -->
+                        <div class="inner-table-wrap popup">    
+                            <table class="board-table inner-table align-center">
+                                <caption class="hide">조원관리 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 20%;">
+                                    <col style="width: 20%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 400px;">
+                                    <col style="width: 10%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">부서명</th>
+                                        <th rowspan="2">성명</th>
+                                        <th colspan="2">역할</th>
+                                        <th rowspan="2">상세역할</th>
+                                        <th rowspan="2">삭제</th>
+                                    </tr>
+                                    <tr>
+                                        <th>조장</th>
+                                        <th class="border1">조원</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동(123456)</td>
+                                        <td><input type="radio" name="guiRole1" checked></td>
+                                        <td><input type="radio" name="guiRole1"></td>
+                                        <td>
+                                            <select name="roleSelect1" class="w100">
+                                                <option value="role1">오퍼레이션</option>
+                                                <option value="role2">발표자</option>
+                                                <option value="role3">일반</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-center">
+                                            <input type="button" value="삭제" class="btn-deltable">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동(123456)</td>
+                                        <td><input type="radio" name="guiRole2"></td>
+                                        <td><input type="radio" name="guiRole2" checked></td>
+                                        <td>
+                                            <select name="roleSelect2" class="w100">
+                                                <option value="role2">발표자</option>
+                                                <option value="role1">오퍼레이션</option>
+                                                <option value="role3">일반</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-center">
+                                            <input type="button" value="삭제" class="btn-deltable">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동(123456)</td>
+                                        <td><input type="radio" name="guiRole3"></td>
+                                        <td><input type="radio" name="guiRole3" checked></td>
+                                        <td>
+                                            <select name="roleSelect3" class="w100">
+                                                <option value="role3">일반</option>
+                                                <option value="role1">오퍼레이션</option>
+                                                <option value="role2">발표자</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-center">
+                                            <input type="button" value="삭제" class="btn-deltable">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>품질혁신부</td>
+                                        <td>홍길동(123456)</td>
+                                        <td><input type="radio" name="guiRole4"></td>
+                                        <td><input type="radio" name="guiRole4" checked></td>
+                                        <td>
+                                            <select name="roleSelect4" class="w100">
+                                                <option value="role3">일반</option>
+                                                <option value="role1">오퍼레이션</option>
+                                                <option value="role2">발표자</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-center">
+                                            <input type="button" value="삭제" class="btn-deltable">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 조원관리 테이블:e -->
+                    </div>
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
+                        <input type="button" value="저장" class="btn-save">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 공동제안자 등록 팝업 끝 -->
+
+    </div>
+    <!-- wrap layout:e -->
+    
+</body>
+</html>
+

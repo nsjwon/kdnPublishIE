@@ -87,7 +87,7 @@
 .popup-content-02 .pop-list.view-only td.radio-type label input[type="radio"] {cursor: default;}
 
 /* 부서찾기 */
-.popup-content-03 .brd-search {padding: 2.4rem;}
+.popup-content-03 .brd-search {padding: 2.4rem; margin-right: 0;}
 .popup-content-03 .search-text input[type=text] {width: 100%; max-width: 100%;}
 .parttree-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
 .parttree-wrap::-webkit-scrollbar {width: 1em;}
