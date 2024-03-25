@@ -247,24 +247,22 @@
                             <h4 class="h4-tit">제안등록 현황 (총<em class="mcol2 fw_700"> 6</em>건)</h4>
                         </div>
                         <div class="num-table-wrap mt0 scroll">
-                            <table class="num-table">
+                            <table class="num-table process">
                                 <caption>제안등록 현황 리스트</caption>
                                 <colgroup>
-                                    <col style="width: 8%;">
-                                    <col style="width: 16%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 6%;">
-                                    <col style="width: 6%;">
-                                    
-                                    <col style="width: 6%;">
+                                    <col style="width: 7%;">
+                                    <col style="width: 22%;">
+                                    <col style="width: 7%;">
+                                    <col style="width: 7%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
                                 </colgroup>
-                                
-                                <tbody>	
+                                <thead>
                                     <tr>
                                         <th scope="col">제안번호</th>
                                         <th scope="col">제안명</th>                                         
@@ -276,92 +274,75 @@
                                         <th scope="col">검토승인중</th>                                         
                                         <th scope="col">계획등록중</th>                                         
                                         <th scope="col">결과등록중</th>
-
+    
                                         <th scope="col">심의중</th>
                                     </tr>
+                                </thead>
+                                <tbody>	
                                     <tr>
                                         <td>2024-0084</td>
                                         <td>업무환경개선을 위한 아이디어제안</td>
                                         <td>아이디어</td>
                                         <td>홍길동</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td class="done"></td>
+                                        <td class="done last"></td><!-- 완료의 마지막 행에 last클래스 추가 -->
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
                                     </tr>
                                     <tr>
                                         <td>2024-0084</td>
                                         <td>업무처리 프로세스 개선안</td>
                                         <td>개선활동</td>
                                         <td>이상순</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done last"></td><!-- 완료의 마지막 행에 last클래스 추가 -->
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
                                     </tr>
                                     <tr>
                                         <td>2024-0084</td>
                                         <td>업무처리 프로세스 개선안</td>
                                         <td>개선활동</td>
                                         <td>이상순</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done last"></td><!-- 완료의 마지막 행에 last클래스 추가 -->
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
                                     </tr>
                                     <tr>
                                         <td>2024-0084</td>
                                         <td>업무처리 프로세스 개선안</td>
                                         <td>개선활동</td>
                                         <td>이상순</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done last"></td><!-- 완료의 마지막 행에 last클래스 추가 -->
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
                                     </tr>
                                     <tr>
                                         <td>2024-0084</td>
                                         <td>업무처리 프로세스 개선안</td>
                                         <td>개선활동</td>
                                         <td>이상순</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-0084</td>
-                                        <td>업무처리 프로세스 개선안</td>
-                                        <td>개선활동</td>
-                                        <td>이상순</td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process2.svg" alt="완료"></td>
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
-
-                                        <td><img src="../images/board/ic_process-yet.svg" alt="미완료"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done"></td>
+                                        <td class="done last"></td><!-- 완료의 마지막 행에 last클래스 추가 -->
+                                        <td class="yet"></td>
+                                        <td class="yet"></td>
                                     </tr>
                                 </tbody>
                             </table>

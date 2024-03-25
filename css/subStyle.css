@@ -293,9 +293,6 @@
 .chart-wrap {width: 100%; min-height: 36rem; padding: 4rem; border-radius: 6px; border: 1px solid #d9d9d9;}
 .apexcharts-text, .apexcharts-title-text, .apexcharts-legend-text, .apexcharts-xaxis-title, .apexcharts-yaxis-label {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif' !important;}
 .num-table-wrap {margin: 4rem 0;}
-.num-table-wrap.scroll {height: 424px; overflow-y: auto; border-top: 2px solid #3653B7;}
-.num-table-wrap.scroll th {position: sticky; top: 0; z-index: 1;}
-.num-table-wrap.scroll .num-table {border-top: none;}
 .num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
 .num-table th {background: #f6f7ff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
 .num-table th, .num-table td {line-height: 2rem; padding: 0rem 1rem; height: 6rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
@@ -306,6 +303,20 @@
 .num-table tbody tr:first-child th, .num-table tbody tr:first-child td {border-top:none;}
 .num-table tbody tr.picked td {background: #e4f5ff; border-color: #fff; border-left-color: #E3E9EF; color: #3653B7;}
 .num-table tbody tr.picked td:last-child {border-right-color: #E3E9EF;}
+
+/* 부서실적 차트 */
+.num-table-wrap.scroll {height: 364px; overflow-y: auto; border-top: 2px solid #3653B7;}
+.num-table-wrap.scroll .num-table.process {border-top: none;}
+.num-table.process thead th {position: sticky; top: 0; z-index: 1;}
+.num-table.process .num-table {border-top: none;}
+.num-table.process tr th {white-space: normal;}
+.num-table.process tr td {position: relative;}
+.num-table.process tr td.done {background: url(../images/board/ic_process2.svg) no-repeat center center; border-right: none;}
+.num-table.process tr td.done::after {display: block; content: ''; z-index: -1; position: absolute; top: 26px; left: 60px; width: 100%; height: 5px; background: #c8eeff;}
+.num-table.process tr td.done.last::after {display: none;}
+.num-table.process tr td.yet {background: url(../images/board/ic_process-yet.svg) no-repeat center center; border-right: none;}
+.num-table.process tr td.yet::after {display: block; content: ''; z-index: -1; position: absolute; top: 26px; right: 60px; width: 100%; height: 5px; background: #EAEFF5;}
+.num-table.process tr td:last-child {border-right: 1px solid #E3E9EF;}
 
 /* 제안실적 차트 영역 */
 .num-table-my {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
@@ -493,6 +504,11 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .vtc-table tbody tr.picked td:last-child {border-right-color: #E3E9EF;}
 
 
+@media (max-width: 1920px) {
+    .num-table.process tr td.done::after {left: 50px;}
+    .num-table.process tr td.yet::after {right: 50px;}
+}
+
 @media (max-width: 1660px) {
     #sub-gnb-wrap {width: 240px;}
     .sub-content-wrap {width: calc(100vw - 340px); margin: 26px 40px 34px;}
@@ -509,6 +525,8 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .brd-search-btn {margin-top: 3rem;}
     .brd-search-btn input[type="button"]:last-child {margin: 0 0 0 0.6rem;}
     .search-text input[type=text] {max-width: unset;}
+    .num-table.process tr td.done::after {left: 40px;}
+    .num-table.process tr td.yet::after {right: 40px;}
 }
 
 @media (max-width: 1280px) {
