@@ -41,26 +41,25 @@ $(document).ready(function() {
 //     var itemHeight = 28; // 각 .banner-content 항목의 높이
 //     var itemCount = $('.banner-content').length; // .banner-content 항목의 총 개수
 //     var currentSlideIndex = 0; // 현재 슬라이드 인덱스
-//     var direction = -1; // 슬라이드 이동 방향 (위로)
 
 //     setInterval(function() {
-//         var translateYValue = currentSlideIndex * itemHeight * direction;
+//         currentSlideIndex++; // 슬라이드 인덱스 증가
+//         var translateYValue = -(currentSlideIndex * itemHeight);
 //         $('.banner-content-track').css('transform', 'translateY(' + translateYValue + 'px)');
-
-//         currentSlideIndex += direction; // 슬라이드 인덱스 증가 또는 감소
         
-//         if (currentSlideIndex >= itemCount) {
-//             // 슬라이드가 마지막 슬라이드에 도달했을 때
-//             currentSlideIndex = itemCount - 1; // 인덱스 제한
-//             direction = -1; // 방향 변경 (위로)
-//         } else if (currentSlideIndex < 0) {
-//             // 슬라이드가 첫 번째 슬라이드로 돌아왔을 때
-//             currentSlideIndex = 0; // 인덱스 제한
-//             direction = 1; // 방향 변경 (아래로)
-//         }
+//         if (currentSlideIndex >= itemCount - 1) {
+//             // 마지막 슬라이드에 도달했을 때
+//             $('.banner-content-track').append($('.banner-content').first().clone(true));
+
+//             // 슬라이드 애니메이션 종료 후에 작업 실행
+//             $('.banner-content-track').on('transitionend', function() {
+//                 currentSlideIndex = 0; // 인덱스 초기화
+//                 $('.banner-content').first().remove(); // 기존의 첫 번째 슬라이드 삭제
+//                 $('.banner-content-track').off('transitionend'); // 이벤트 핸들러 제거
+//             });
+//         } 
 //     }, 1000); // 1000ms = 1초
 // });
-
 
 //메인페이지 제안검토 카테고리 설정 셀렉트박스
 $(document).ready(function() {
