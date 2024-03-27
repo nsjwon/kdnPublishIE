@@ -36,6 +36,32 @@ $(document).ready(function() {
     });
 });
 
+//메인페이지 상단 배너 슬라이드
+// $(document).ready(function() {
+//     var itemHeight = 28; // 각 .banner-content 항목의 높이
+//     var itemCount = $('.banner-content').length; // .banner-content 항목의 총 개수
+//     var currentSlideIndex = 0; // 현재 슬라이드 인덱스
+//     var direction = -1; // 슬라이드 이동 방향 (위로)
+
+//     setInterval(function() {
+//         var translateYValue = currentSlideIndex * itemHeight * direction;
+//         $('.banner-content-track').css('transform', 'translateY(' + translateYValue + 'px)');
+
+//         currentSlideIndex += direction; // 슬라이드 인덱스 증가 또는 감소
+        
+//         if (currentSlideIndex >= itemCount) {
+//             // 슬라이드가 마지막 슬라이드에 도달했을 때
+//             currentSlideIndex = itemCount - 1; // 인덱스 제한
+//             direction = -1; // 방향 변경 (위로)
+//         } else if (currentSlideIndex < 0) {
+//             // 슬라이드가 첫 번째 슬라이드로 돌아왔을 때
+//             currentSlideIndex = 0; // 인덱스 제한
+//             direction = 1; // 방향 변경 (아래로)
+//         }
+//     }, 1000); // 1000ms = 1초
+// });
+
+
 //메인페이지 제안검토 카테고리 설정 셀렉트박스
 $(document).ready(function() {
     $(".ct-select > a").click(function(event) {
@@ -214,3 +240,4 @@ $(document).ready(function() {
     //     fn_overlap('popup2');
     // });
 });
+

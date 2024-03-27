@@ -2142,31 +2142,6 @@
 		</tbody>
 	</table>
 
-	<!-- <script>
-	// jQuery를 사용하여 특정 열에서 "O"의 개수를 세는 함수
-	function countOInColumn(columnIndex) {
-		var count = 0;
-		$('#ResultTable tbody tr').each(function () {
-		var cellText = $(this).find('td:eq(' + columnIndex + ')').text();
-		if (cellText.trim() === 'O') {
-			count++;
-		}
-		});
-		return count;
-	}
-	
-	// 결과를 각 열에 표시
-	function displayResult() {
-		$('#ResultTable tbody tr:last td').each(function (index) {
-		var columnIndex = index;
-		var result = countOInColumn(columnIndex);
-		$(this).text(result);
-		});
-	}
-	
-	// 예제: 결과 표시
-	displayResult();
-	</script> -->
 </body>
 
 </html>
