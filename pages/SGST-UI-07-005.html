@@ -209,8 +209,36 @@
                     </div>
                     <div class="sub-content-inner">
                         <div class="board-block">
+                            <div class="board-title noborder">
+                                <h4 class="h4-tit">1단계 - 제안유형</h4>
+                            </div>
+                            <!-- doctype select :s -->
+                            <div class="doctype-section">
+                                <div class="typeSelect">
+                                    <label for="typeSuggest1" class="typeLabel typeLabel1">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest1">
+                                        <span>아이디어</span>
+                                    </label>
+                                    <label for="typeSuggest2" class="typeLabel typeLabel2">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest2">
+                                        <span>프로세스</span>
+                                    </label>
+                                    <label for="typeSuggest3" class="typeLabel typeLabel3">
+                                        <!-- 활동유형에 따라 아래 input에 checked 상태 추가 -->
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest3" checked>
+                                        <span>개선활동</span>
+                                    </label>
+                                    <label for="typeSuggest4" class="typeLabel typeLabel4">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest4">
+                                        <span>단순제안</span>
+                                    </label>
+                                </div>
+                            </div>            
+                            <!-- doctype select :e -->
+                        </div>
+                        <div class="board-block mt20">
                             <div class="board-title">
-                                <h4 class="h4-tit">제안등록</h4>
+                                <h4 class="h4-tit">2단계 - 개선활동 제안등록</h4>
                                 <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
                             </div>
                             <div class="board-list">
@@ -219,30 +247,20 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col style="width: 40%;">
+                                        <col style="width: 25%;">
                                         <col style="width: 157px;">
-                                        <col style="width: 40%;">
+                                        <col style="width: 25%;">
+                                        <col style="width: 157px;">
+                                        <col style="width: 25%;">
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>제안유형</th>
-                                            <td>
-                                                <label for="inputCate" class="hide">제안유형</label>
-                                                <select name="inputCate" id="inputCate" class="l-select">
-                                                    <option>개선활동</option>
-                                                    <option>아이디어</option>
-                                                    <option>프로세스</option>
-                                                    <option>단순제안</option>
-                                                </select>
-                                            </td>
                                             <th scope="row">제안자</th>
                                             <td>
                                                 <div class="flex-bt">
                                                     <span>장태경</span>
                                                 </div>
                                             </td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row"><span class="rq-mark">*</span>업무분류</th>
                                             <td>
                                                 <label for="inputSort" class="hide">업무분류</label>
@@ -261,7 +279,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="">
                                             </td>
                                         </tr>
@@ -274,14 +292,18 @@
                                                 </select>
                                             </td>
                                             <th scope="row">공동제안자</th>
-                                            <td>
-                                                <input type="text" name="ptnName" id="ptnName" class="l-text" value="" readonly>
+                                            <td colspan="3">
                                                 <input type="button" class="popup-button btn-searchrule" value="사원등록" data-target="#findPartner">
+                                                <ul class="partner-list">
+                                                    <li><span>손흥민</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                    <li><span>조현우</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                    <li><span>이재성</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                </ul>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">전환 제안번호</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <div class="num-type">
                                                     <input type="text" name="Numfirst" id="Numfirst" value=""><span class="mr8 ml8">-</span>
                                                     <input type="text" name="Numlast" id="Numlast" value="">
@@ -291,7 +313,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">파일첨부</th>
-                                            <td colspan="3" class="file-upload">
+                                            <td colspan="5" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>

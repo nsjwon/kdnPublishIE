@@ -241,6 +241,11 @@
 .note-list {display: flex; flex-direction: column; background: #dae2f1; border-radius: 0.6rem; padding: 2rem 4.5rem; margin-top: 1.6rem;}
 .note-list li {height: 2.8rem; line-height: 2.8rem; list-style-type: disc;}
 .bg-box {background: #dae2f1; border-radius: 0.6rem; margin-top: 1.6rem;}
+.partner-list {display: inline-flex; align-items: center; justify-content: flex-start; gap: 12px; padding: 0 6px;}
+.partner-list li {display: flex; align-items: center; padding: 6px 10px; background: #f1f4fc; border: 1px solid #dbe4f0; border-radius: 4px;}
+.partner-list li>span {line-height: 18px; padding: 0 4px; font-size: 14px; color: #193975;}
+.partner-list li>a {display: flex; align-items: center; justify-content: center;}
+.partner-list li img {vertical-align: top;}
 
 /* 코멘트 영역 스타일 */
 .comment-box {display: flex; flex-direction: column; padding: 3rem; margin-top: 1.8rem;}

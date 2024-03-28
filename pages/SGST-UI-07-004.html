@@ -209,8 +209,36 @@
                     </div>
                     <div class="sub-content-inner">
                         <div class="board-block">
+                            <div class="board-title noborder">
+                                <h4 class="h4-tit">1단계 - 제안유형</h4>
+                            </div>
+                            <!-- doctype select :s -->
+                            <div class="doctype-section">
+                                <div class="typeSelect">
+                                    <label for="typeSuggest1" class="typeLabel typeLabel1">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest1">
+                                        <span>아이디어</span>
+                                    </label>
+                                    <label for="typeSuggest2" class="typeLabel typeLabel2">
+                                        <!-- 활동유형에 따라 아래 input에 checked 상태 추가 -->
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest2" checked>
+                                        <span>프로세스</span>
+                                    </label>
+                                    <label for="typeSuggest3" class="typeLabel typeLabel3">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest3">
+                                        <span>개선활동</span>
+                                    </label>
+                                    <label for="typeSuggest4" class="typeLabel typeLabel4">
+                                        <input type="radio" name="typeSuggest" class="typeSuggest" id="typeSuggest4">
+                                        <span>단순제안</span>
+                                    </label>
+                                </div>
+                            </div>            
+                            <!-- doctype select :e -->
+                        </div>
+                        <div class="board-block mt20">
                             <div class="board-title">
-                                <h4 class="h4-tit">제안등록</h4>
+                                <h4 class="h4-tit">2단계 - 프로세스 제안등록</h4>
                                 <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
                             </div>
                             <div class="board-list">
@@ -219,30 +247,20 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 25%;">
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 25%;">
+                                        <col style="width: 157px;">
+                                        <col style="width: 25%;">
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><span class="rq-mark">*</span>제안유형</th>
-                                            <td>
-                                                <label for="inputCate" class="hide">제안유형</label>
-                                                <select name="inputCate" id="inputCate" class="l-select">
-                                                    <option>프로세스</option>
-                                                    <option>아이디어</option>
-                                                    <option>개선활동</option>
-                                                    <option>단순제안</option>
-                                                </select>
-                                            </td>
                                             <th scope="row">제안자</th>
                                             <td>
                                                 <div class="flex-bt">
                                                     <span>장태경</span>
                                                 </div>
                                             </td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row"><span class="rq-mark">*</span>업무분류</th>
                                             <td>
                                                 <label for="inputSort" class="hide">업무분류</label>
@@ -265,14 +283,14 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <label for="ofTitle" class="hide">제안명</label>
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>품질표준명</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <label for="standardName" class="hide">품질표준명</label>
                                                 <input type="text" name="standardName" id="standardName" value="" readonly>
                                                 <label for="searchRulesBtn" class="hide">사규찾기</label>
@@ -281,7 +299,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>개선부분</th>
-                                            <td colspan="3" class="radio-type">
+                                            <td colspan="5" class="radio-type">
                                                 <label for="reText">
                                                     <input type="radio" name="rePart" id="reText">
                                                     본문
@@ -298,21 +316,21 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>문제점</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <label for="ofProblem" class="hide">문제점</label>
                                                 <input type="text" name="ofProblem" id="ofProblem" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>기대효과</th>
-                                            <td colspan="3">
+                                            <td colspan="5">
                                                 <label for="epEffect" class="hide">기대효과</label>
                                                 <input type="text" name="epEffect" id="epEffect" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>개선사항</th>
-                                            <td colspan="3" class="add-type">
+                                            <td colspan="5" class="add-type">
                                                 <div class="add-tr">
                                                     <div class="in-tr">
                                                         <div class="in-header">
@@ -365,7 +383,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">파일첨부</th>
-                                            <td colspan="3" class="file-upload">
+                                            <td colspan="5" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly>
