@@ -226,13 +226,13 @@
                                         <p>제안유형</p>
                                         <label for="searchType" class="hide">제안유형</label>
                                         <select name="searchType" id="searchType">
-                                            <option>전체제안</option>
+                                            <option>전체</option>
+                                            <option>단순</option>
                                             <option>아이디어</option>
                                             <option>프로세스</option>
+                                            <option>테마</option>
                                             <option>개선활동</option>
-                                            <option>단순제안</option>
-                                            <option>테마제안</option>
-                                            <option>경진대회</option>
+                                            <option>국민</option>
                                         </select>
                                     </div>
                                     <div class="search-select">
@@ -292,7 +292,6 @@
                                         <p>제안결과</p>
                                         <label><input type="checkbox" name="offresult" id="offresult1">채택</label>
                                         <label><input type="checkbox" name="offresult" id="offresult2">불채택</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult3">상정</label>
                                         <label><input type="checkbox" name="offresult" id="offresult4">기각</label>
                                         <label><input type="checkbox" name="offresult" id="offresult5">심의완료</label>
                                     </div>
@@ -335,7 +334,7 @@
                                     <col style="width: 100px;">
                                     <col style="width: 140px;">
                                     <col style="width: 100px;">
-                                    <col style="width: 100px;">
+                                    <col style="width: 110px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
                                     
@@ -343,6 +342,7 @@
                                     <col style="width: 140px;">
                                     <col style="width: 110px;">
                                     <col style="width: 140px;">
+                                    <col style="width: 100px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
                                     <col style="width: 100px;">
@@ -366,9 +366,15 @@
                                         <th scope="col">검토부서<button class="btn-sorter"></button></th>
                                         <th scope="col">검토자<button class="btn-sorter"></button></th>
                                         <th scope="col">검토일<button class="btn-sorter"></button></th>
-                                        <th scope="col"><span class="align-center">사전검토일<br>(부서이관일)</span><button class="btn-sorter"></button></th>
+                                        <th scope="col">
+                                            <div class="flex-ct">
+                                                <span>사전검토일<br>(부서이관일)</span>
+                                                <button class="btn-sorter"></button>
+                                            </div>
+                                        </th>
                                         <th scope="col">검토경과일<button class="btn-sorter"></button></th>
                                         <th scope="col">검토예정일<button class="btn-sorter"></button></th>
+                                        <th scope="col">포상결과<button class="btn-sorter"></button></th>
                                         <th scope="col">포상금<button class="btn-sorter"></button></th>
                                     </tr>
                                 </thead>
@@ -393,6 +399,7 @@
                                         <td>2024. 01. 02</td>
                                         <td></td>
                                         <td></td>
+                                        <td>창안상</td>
                                         <td>1,000</td>
                                     </tr>
                                     <tr>
@@ -415,6 +422,7 @@
                                         <td>2024. 01. 02</td>
                                         <td></td>
                                         <td></td>
+                                        <td>창안상</td>
                                         <td>1,000</td>
                                     </tr>
                                     <tr>
@@ -437,6 +445,7 @@
                                         <td>2024. 01. 02</td>
                                         <td></td>
                                         <td></td>
+                                        <td>창안상</td>
                                         <td>1,000</td>
                                     </tr>
 
