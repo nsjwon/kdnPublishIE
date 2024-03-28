@@ -67,10 +67,10 @@
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto;}
 .search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
-.search-check {display: flex; flex-wrap: wrap;}
+.search-section .search-check {width: 100%;}
+.search-check {display: flex; flex-wrap: wrap; width: 100%;}
 .search-check label {margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
 .search-check input[type=checkbox] {margin-right: 10px; padding: 10px 0;}
-/* .search-text {width: 100%;} */
 .search-text input[type=text] {width: 485px; margin: 0 0.6rem 0 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-text input[type=text]:last-child {margin: 0;}
 .search-text.medium input[type=text] {width: 280px;}
