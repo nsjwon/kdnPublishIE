@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../css/mainStyle.css">
     <link rel="stylesheet" href="../css/subStyle.css">
     <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/plugins/swiper.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/plugins/swiper-bundle.min.js"></script>
     <title>제안관리시스템</title>
 </head>
 <body class="scroll">
@@ -284,15 +286,32 @@
                             </div>
                             <!-- 검토 현황:e -->
                             <!-- 우수제안 배너:s -->
-                            <a href="./SGST-UI-06-003.html" class="card-best">
-                                <div class="card-title-wrap">
-                                    <em>우수제안</em>
-                                    <span>KDN의 다양한 우수제안을 확인하세요.</span>
+                            <div class="card-best-wrap swiper-container">
+                                <div class="card-best-track swiper-wrapper">
+                                    <div class="card-best swiper-slide">
+                                        <div class="card-title-wrap">
+                                            <em>우수제안</em>
+                                            <span>KDN의 다양한 우수제안을 확인하세요.</span>
+                                        </div>
+                                        <a href="./SGST-UI-06-003.html" class="card-link">
+                                            바로가기
+                                        </a>
+                                    </div>
+                                    <div class="card-best swiper-slide">
+                                        <div class="card-title-wrap">
+                                            <em>사용자매뉴얼</em>
+                                            <!-- <span>사용자매뉴얼 다운로드입니다.</span> -->
+                                        </div>
+                                        <a href="./SGST-UI-06-003.html" class="card-link download">
+                                            다운로드
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="card-link">
-                                    바로가기
+                                <div class="swiper-pagination">
+                                    <a class="swiper-button-prev"></a>
+                                    <a class="swiper-button-next"></a>
                                 </div>
-                            </a>
+                            </div>
                             <!-- 우수제안 배너:e -->
                         </div>
                         <!-- 공지사항 배너:s -->
@@ -606,4 +625,17 @@
         <!-- 메인페이지 풋터:e -->
     </div>
 </body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets'
+        }
+    });
+</script>
 </html>
