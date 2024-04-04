@@ -197,7 +197,7 @@
                         <!-- board search :s -->
                         <div class="brd-search flex-col"> 
                             <div class="brd-search-form">
-                                <div class="search-section">
+                                <div class="search-section multiple">
                                     <div class="search-date">
                                         <p>검색기준일</p>
                                         <label for="dateOption" class="hide">검색기준일</label>
@@ -257,24 +257,28 @@
                                         <input type="text" name="searchField1" id="searchField1" placeholder="">
                                         <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                     </div>
-                                    <div class="search-text medium">
-                                        <p>검색어</p>
-                                        <label for="searchWord" class="hide">구분</label>
-                                        <select name="searchWord" id="searchWord">
-                                            <option>제안명</option>
-                                            <option>현행내용</option>
-                                            <option>개선내용</option>
-                                            <option>제안명+모든내용</option>
-                                        </select>
-                                        <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
-                                    </div>
-                                    <div class="search-check">
-                                        <p>포상등급</p>
-                                        <label><input type="checkbox" name="rdlevel" id="rdlevel1">창안상</label>
-                                        <label><input type="checkbox" name="rdlevel" id="rdlevel2">우수과제1등급</label>
-                                        <label><input type="checkbox" name="rdlevel" id="rdlevel3">우수과제2등급</label>
-                                        <label><input type="checkbox" name="rdlevel" id="rdlevel4">우수과제3등급</label>
-                                        <label><input type="checkbox" name="rdlevel" id="rdlevel5">우수과제4등급</label>
+                                    <div class="check-wrap">
+                                        <div class="search-text medium">
+                                            <p>검색어</p>
+                                            <label for="searchWord" class="hide">구분</label>
+                                            <select name="searchWord" id="searchWord">
+                                                <option>제안명</option>
+                                                <option>현행내용</option>
+                                                <option>개선내용</option>
+                                                <option>제안명+모든내용</option>
+                                            </select>
+                                            <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                                        </div>
+                                        <div class="search-check">
+                                            <p>포상등급</p>
+                                            <div class="check-items far">
+                                                <label><input type="checkbox" name="rdlevel" id="rdlevel1">창안상</label>
+                                                <label><input type="checkbox" name="rdlevel" id="rdlevel2">우수과제1등급</label>
+                                                <label><input type="checkbox" name="rdlevel" id="rdlevel3">우수과제2등급</label>
+                                                <label><input type="checkbox" name="rdlevel" id="rdlevel4">우수과제3등급</label>
+                                                <label><input type="checkbox" name="rdlevel" id="rdlevel5">우수과제4등급</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

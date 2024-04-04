@@ -56,22 +56,30 @@
 .brd-search-btn {display: flex; align-items: flex-end; justify-content: flex-end;}
 .brd-search .search-section {display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 10px;}
 .brd-search .search-section:last-child {margin: 0;}
-.brd-search .search-section p {color: #222; font-weight: 500; font-size: 1.6rem; min-width: 90px;}
+.brd-search .search-section p {color: #222; font-weight: 500; font-size: 1.6rem; min-width: 90px; line-height: 4rem;}
+.brd-search .search-section p.wide {width: 116px;}
 .brd-search input[type=text]::placeholder {color: #a2a2a2;}
-.brd-search select {min-width: 160px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
-.search-section > div {margin-right: 5rem; display: flex; justify-content: flex-start; align-items: center;}
+.brd-search select {min-width: 120px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.search-section > div {width: 30%; margin-right: 3rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
-.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 160px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.search-section > div.search-date.fit {width: fit-content;}
+.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px; position: relative; width: 140px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-date input[type=text]::placeholder {color: #a2a2a2;}
 .brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto;}
 .search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
-.search-section .search-check {width: 100%;}
+.search-section > div.check-wrap {gap: 6rem; width: 100%; display: flex; align-items: flex-start;}
+.check-wrap .search-text {width: 46%; display: flex; align-items: flex-start;}
+.search-section .search-check {width: 46%; flex-wrap: nowrap;}
+.check-items {display: flex; flex-wrap: wrap;}
+.check-items label {display: flex; min-width: 100px; margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
+.check-items.near label {min-width: 60px;}
+.check-items.far label {min-width: 120px;}
+
 .search-check {display: flex; flex-wrap: wrap; width: 100%;}
-.search-check label {margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
 .search-check input[type=checkbox] {margin-right: 10px; padding: 10px 0;}
-.search-text input[type=text] {width: 485px; margin: 0 0.6rem 0 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.search-text input[type=text] {width: 176px; margin: 0 0.6rem 0 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-text input[type=text]:last-child {margin: 0;}
 .search-text.medium input[type=text] {width: 280px;}
 .search-text.short input[type=text] {width: 160px;}
@@ -509,7 +517,16 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .vtc-table tbody tr.picked td:last-child {border-right-color: #E3E9EF;}
 
 
+@media (max-width: 2480px) {
+    .search-section > div {width: calc((100% - 300px) / 2);}
+    .search-section.multiple > div {width: 46%;}
+    .search-section.multiple > div.check-wrap {width: 100%;}
+    .search-section > div:nth-child(2n) {margin-right: 0;}
+}
+
 @media (max-width: 1920px) {
+    .search-section > div {min-width: 350px;}
+    .search-section.multiple > div {min-width: 480px;}
     .num-table.process tr td.done::after {left: 50px;}
     .num-table.process tr td.yet::after {right: 50px;}
 }
@@ -522,12 +539,13 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .regist-card {width: 20rem;}
     .gt-regist {padding-right: 5rem; word-break: auto-phrase;}
     .gt-regist span::before {display: none;}
+    .search-section > div.search-text.fit {width: fit-content;}
 }
 
 @media (max-width: 1440px) {
     .one-depth .d1>a {width: 200px;}
-    .brd-search {flex-direction: column;}
-    .brd-search-btn {margin-top: 3rem;}
+    /* .brd-search {flex-direction: column;} */
+    /* .brd-search-btn {margin-top: 3rem;} */
     .brd-search-btn input[type="button"]:last-child {margin: 0 0 0 0.6rem;}
     .search-text input[type=text] {max-width: unset;}
     .num-table.process tr td.done::after {left: 40px;}

@@ -198,7 +198,7 @@
                         <!-- board search :s -->
                         <div class="brd-search flex-col"> 
                             <div class="brd-search-form">
-                                <div class="search-section">
+                                <div class="search-section multiple">
                                     <div class="search-date">
                                         <p>검색기준일</p>
                                         <label for="dateOption" class="hide">검색기준일</label>
@@ -246,7 +246,7 @@
                                         <p>제안자</p>
                                         <input type="text" name="searchField" id="searchField" placeholder="">
                                     </div>
-                                    <div class="search-text medium">
+                                    <div class="search-text medium fit">
                                         <p>부서</p>
                                         <label for="searchPart" class="hide">구분</label>
                                         <select name="searchPart" id="searchPart">
@@ -269,24 +269,30 @@
                                         </select>
                                         <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
                                     </div>
-                                    <div class="search-check">
-                                        <p>진행상태</p>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel1">사전검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel2">자료보완</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel3">접수중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel4">검토중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel5">검토승인중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel6">산출물등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel7">결과서등록</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel8">심의중</label>
-                                        <label><input type="checkbox" name="stlevel" id="stlevel9">종료</label>
-                                    </div>
-                                    <div class="search-check">
-                                        <p>제안결과</p>
-                                        <label><input type="checkbox" name="offresult" id="offresult1">채택</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult2">불채택</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult4">기각</label>
-                                        <label><input type="checkbox" name="offresult" id="offresult5">심의완료</label>
+                                    <div class="check-wrap">
+                                        <div class="search-check">
+                                            <p>진행상태</p>
+                                            <div class="check-items">
+                                                <label><input type="checkbox" name="stlevel" id="stlevel1">사전검토중</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel2">자료보완</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel3">접수중</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel4">검토중</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel5">검토승인중</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel6">산출물등록</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel7">결과서등록</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel8">심의중</label>
+                                                <label><input type="checkbox" name="stlevel" id="stlevel9">종료</label>
+                                            </div>
+                                        </div>
+                                        <div class="search-check">
+                                            <p>제안결과</p>
+                                            <div class="check-items near">
+                                                <label><input type="checkbox" name="offresult" id="offresult1">채택</label>
+                                                <label><input type="checkbox" name="offresult" id="offresult2">불채택</label>
+                                                <label><input type="checkbox" name="offresult" id="offresult4">기각</label>
+                                                <label><input type="checkbox" name="offresult" id="offresult5">심의완료</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +300,7 @@
                                 <input type="button" class="btn-search" value="조회">
                                 <input type="button" class="btn-reset" value="초기화">
                             </div>
-                        </div>                
+                        </div>   
                         <!-- board search :e -->
 
                         <!-- board note:s -->
