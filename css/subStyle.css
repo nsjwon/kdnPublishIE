@@ -519,7 +519,6 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .vtc-table tbody tr.picked td {background: #e4f5ff; border-color: #fff; border-left-color: #E3E9EF;}
 .vtc-table tbody tr.picked td:last-child {border-right-color: #E3E9EF;}
 
-
 @media (max-width: 2480px) {
     .search-section > div {width: calc((100% - 300px) / 2);}
     .search-section.multiple > div {width: 46%;}
