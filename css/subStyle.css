@@ -51,15 +51,18 @@
 /* 게시판 검색 */
 .brd-wrap {position: relative;}
 .brd-half-type {display: flex; gap: 4rem; align-items: flex-start; justify-content: space-between;}
-.brd-search {display: flex; justify-content: space-between; width: 100%; margin-right: 4rem; margin-bottom: 3rem; border-radius: 6px; background: #e4e9f3; border: 1px solid #c5cce0; padding: 3rem 4rem;}
-.brd-search-form {flex: 1;}
+.brd-search {position: relative; display: flex; justify-content: space-between; width: 100%; margin-right: 4rem; margin-bottom: 3rem; border-radius: 6px; background: #e4e9f3; border: 1px solid #c5cce0; padding: 3rem 4rem;}
+.brd-search {flex: 1;}
+.brd-search.oneline .search-section > div {min-width: unset; width: fit-content;}
+.brd-search.oneline .search-section > div:nth-child(2n), .brd-search.oneline .search-section > div {margin-right: 5rem;}
 .brd-search-btn {display: flex; align-items: flex-end; justify-content: flex-end;}
+.brd-search-btn.float {position: absolute; right: 4rem; bottom: 3rem;}
 .brd-search .search-section {display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 10px;}
 .brd-search .search-section:last-child {margin: 0;}
 .brd-search .search-section p {color: #222; font-weight: 500; font-size: 1.6rem; min-width: 90px; line-height: 4rem;}
 .brd-search .search-section p.wide {width: 116px;}
 .brd-search input[type=text]::placeholder {color: #a2a2a2;}
-.brd-search select {min-width: 120px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.brd-search select {width: 140px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-section > div {width: 30%; margin-right: 3rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
 .search-section > div.search-date.fit {width: fit-content;}
@@ -69,9 +72,9 @@
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto;}
 .search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
-.search-section > div.check-wrap {gap: 6rem; width: 100%; display: flex; align-items: flex-start;}
-.check-wrap .search-text {width: 46%; display: flex; align-items: flex-start;}
-.search-section .search-check {width: 46%; flex-wrap: nowrap;}
+.search-section > div.check-wrap {gap: 4rem; width: 100%; display: flex; align-items: flex-start;}
+.check-wrap .search-text {width: 30%; display: flex; align-items: flex-start;}
+.search-section .search-check {width: 30%; flex-wrap: nowrap;}
 .check-items {display: flex; flex-wrap: wrap;}
 .check-items label {display: flex; min-width: 100px; margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
 .check-items.near label {min-width: 60px;}
@@ -81,7 +84,7 @@
 .search-check input[type=checkbox] {margin-right: 10px; padding: 10px 0;}
 .search-text input[type=text] {width: 176px; margin: 0 0.6rem 0 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-text input[type=text]:last-child {margin: 0;}
-.search-text.medium input[type=text] {width: 280px;}
+.search-text.medium input[type=text] {width: 257px;}
 .search-text.short input[type=text] {width: 160px;}
 .search-text.small input[type=text] {width: 80px;}
 .board-note-wrap {margin-bottom: 3rem; margin-left: 6px;}
@@ -522,6 +525,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .search-section.multiple > div {width: 46%;}
     .search-section.multiple > div.check-wrap {width: 100%;}
     .search-section > div:nth-child(2n) {margin-right: 0;}
+    .search-section .search-check, .check-wrap .search-text {width: 46%; flex-wrap: nowrap;}
 }
 
 @media (max-width: 1920px) {
@@ -552,11 +556,17 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .num-table.process tr td.yet::after {right: 40px;}
 }
 
+@media (max-width: 1360px) {
+    .search-section > div.check-wrap {flex-direction: column; gap: 1rem;}
+    .search-section .search-check {width: 100%;}
+    .check-items.far label {min-width: unset;}
+}
+
 @media (max-width: 1280px) {
     .sub-content-wrap {width: 965px; margin: 26px 34px 34px;}
     .search-text .btn-searchpart {margin: 0 0 0 0.6rem;}
     .helf-table-wrap {height: 48rem;}
     .brd-half-type {flex-direction: column;}
-    .brd-search-btn {margin-top: 1rem;}
+    .brd-search-btn {margin-top: 0;}
     .brd-half-block {width: 100%;}
 }
