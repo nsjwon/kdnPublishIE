@@ -58,7 +58,7 @@
 
 .pop-list {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #4f4f4f;}
 .pop-list th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; text-wrap: nowrap;}
-.pop-list th::before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
+.pop-list th:before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
 .pop-list th:first-child:before {display: none;}
 .pop-list tr {position:relative;}
 .pop-list td {padding: 2rem 1rem; vertical-align: middle; text-align: center; font-size: 1.5rem; border-bottom: 1px solid #e8e8e8; word-break: break-all; color: #333333; line-height: 1.4;}
@@ -98,23 +98,23 @@
 .parttree-wrap>ul {border-top: 1px solid #e8e8e8;}
 .parttree-wrap a { height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
 .parttree-wrap a>span {position: relative;}
-.parttree-wrap a>span::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
+.parttree-wrap a>span:after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
 
 .parttree-wrap .p1 a {padding-left: 40px;}
-.parttree-wrap .p1>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p1>a>span:after {left: -28px; top: -1px;}
 .parttree-wrap .p2 a {padding-left: 68px;}
-.parttree-wrap .p2>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p2>a>span:after {left: -28px; top: -1px;}
 .parttree-wrap .p3 a {padding-left: 96px;}
-.parttree-wrap .p3>a>span::after {left: -28px; top: -1px;}
+.parttree-wrap .p3>a>span:after {left: -28px; top: -1px;}
 .parttree-wrap .p4 a {padding-left: 124px;}
-.parttree-wrap .p4>a>span::after {left: -28px; top: 0px;}
+.parttree-wrap .p4>a>span:after {left: -28px; top: 0px;}
 
 .parttree-wrap li.choose>a {background: #EBF2FF;}
 .parttree-wrap li.choose>a:hover {background: #EBF2FF;}
-.parttree-wrap li.folder>a>span::after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
-.parttree-wrap li.folder.open>a>span::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
-.parttree-wrap li.part>a>span::after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
-.parttree-wrap li.part.choose>a>span::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.folder>a>span:after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.folder.open>a>span:after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.part>a>span:after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.parttree-wrap li.part.choose>a>span:after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
 
 /* 검토자 조회 */
 .findperson-wrap {border-radius: 6px; border: 1px solid #e8e8e8; padding: 2.4rem; flex: 1; overflow-y: scroll;}
@@ -126,23 +126,23 @@
 .findperson-wrap>ul {border-top: 1px solid #e8e8e8;}
 .findperson-wrap a { height: 4.8rem; width: 100%; display: flex; align-items: center; justify-content: flex-start;}
 .findperson-wrap a>span {position: relative;}
-.findperson-wrap a>span::after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
+.findperson-wrap a>span:after {position: absolute; content: ''; display: block; width: 20px; height: 20px; background-size: contain;}
 
 .findperson-wrap .f1 a {padding-left: 40px;}
-.findperson-wrap .f1>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f1>a>span:after {left: -28px; top: -1px;}
 .findperson-wrap .f2 a {padding-left: 68px;}
-.findperson-wrap .f2>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f2>a>span:after {left: -28px; top: -1px;}
 .findperson-wrap .f3 a {padding-left: 96px;}
-.findperson-wrap .f3>a>span::after {left: -28px; top: -1px;}
+.findperson-wrap .f3>a>span:after {left: -28px; top: -1px;}
 .findperson-wrap .f4 a {padding-left: 124px;}
-.findperson-wrap .f4>a>span::after {left: -28px; top: 0px;}
+.findperson-wrap .f4>a>span:after {left: -28px; top: 0px;}
 .findperson-wrap li.choose>a {background: #EBF2FF;}
 .findperson-wrap li.choose>a:hover {background: #EBF2FF;}
 
-.findperson-wrap li.folder>a>span::after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
-.findperson-wrap li.folder.open>a>span::after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
-.findperson-wrap li.person>a>span::after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
-.findperson-wrap li.person.choose>a>span::after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.folder>a>span:after {background: url(../images/common/pop-tree-close.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.folder.open>a>span:after {background: url(../images/common/pop-tree-open.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.person>a>span:after {background: url(../images/common/pop-tree-normal.svg) no-repeat; background-size: contain;}
+.findperson-wrap li.person.choose>a>span:after {background: url(../images/common/pop-tree-choose.svg) no-repeat; background-size: contain;}
 
 /* 그룹코드 등록/수정 */
 .board-table.popup {width: 100%; border-top: 1px solid #4f4f4f;}
@@ -184,4 +184,6 @@
 @media (max-width: 1280px) {
     .popup-content-setMember .brd-search {padding: 2rem;}
     .popup-content-setMember #searchTxt {width: 180px;}
+    .popup-panel {overflow-x: scroll;}
+    .popup-content {min-width: 800px;}
 }

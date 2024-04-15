@@ -19,20 +19,27 @@ $(document).ready(function() {
 //레프트 메뉴 클릭이벤트
 $(document).ready(function() {
     $(".d1 > a").click(function(e) {
-        e.preventDefault(); // 기본 동작을 막음
-
-        var parentD1 = $(this).parent(".d1");
-        var twoDepthMenu = parentD1.find(".two-depth");
-
-        // 클릭한 one-depth 메뉴를 제외하고 모든 two-depth 메뉴를 숨김
-        $(".two-depth").not(twoDepthMenu).hide();
-        $(".d1").not(parentD1).removeClass("active");
-
-        // 현재 클릭한 one-depth 메뉴의 two-depth 메뉴를 토글
-        twoDepthMenu.toggle();
-
-        // 현재 클릭한 one-depth 메뉴에 active 클래스를 추가
-        parentD1.toggleClass("active");
+        if ($(this).parent(".one-menu").length > 0) {
+            // one-menu 클래스가 있는 경우에는 링크로 이동
+            window.location.href = $(this).attr("href");
+        } else {
+            e.preventDefault();
+            var twoDepthMenu = $(this).siblings(".two-depth");
+            
+            // 클릭한 one-depth 메뉴를 제외하고 모든 two-depth 메뉴를 숨김
+            $(".two-depth").not(twoDepthMenu).hide();
+            $(".d2").removeClass("active");
+            $(".three-depth").not(twoDepthMenu).hide();
+            
+            // 클릭한 one-depth 메뉴의 two-depth 메뉴를 토글
+            twoDepthMenu.toggle();
+            
+            // 모든 one-depth 메뉴에서 "active" 클래스 제거
+            $(".d1").removeClass("active");
+            
+            // 클릭한 one-depth 메뉴에 "active" 클래스 추가
+            $(this).parent(".d1").addClass("active");
+        }
     });
 });
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/placeholders.min.js"></script>
     <title>테마제안 참여상세</title>
     <style>
         .popup-panel {display: block;}
@@ -29,6 +31,61 @@
                 </div>
                 <div class="popup-body flex-col">
 
+                    <!-- 제안개요:s -->
+                    <div class="board-block">
+                        <div class="board-title">
+                            <h4 class="h4-tit">제안개요</h4>
+                            <!-- 펼쳤을 때 아이콘 -->
+                            <a href="#none" class="btn-accordion"></a>
+                            <!-- 접었을 때 아이콘 -->
+                            <!-- <a href="#none" class="btn-accordion fold"></a> -->
+                        </div>
+                        <div class="board-list">
+                            <table class="board-table">
+                                <caption class="hide">제안내용 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 157px;">
+                                    <col>
+                                    <col style="width: 157px;">
+                                    <col>
+                                    <col style="width: 157px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">제안번호</th>
+                                        <td>2022-0018</td>
+                                        <th scope="row">업무분류</th>
+                                        <td>전산</td>
+                                        <th scope="row">검토부서</th>
+                                        <td>품질경영부</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제안유형</th>
+                                        <td>테마제안</td>
+                                        <th scope="row">제안일자</th>
+                                        <td>2022. 11. 02</td>
+                                        <th scope="row">진행상태</th>
+                                        <td><div class="stepbox step02">검토접수중</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제안자</th>
+                                        <td>홍길동(953341)</td>
+                                        <th scope="row">공동제안자</th>
+                                        <td colspan="3">강감찬, 이순신</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제안명</th>
+                                        <td colspan="5">
+                                            정보 보안 점검 강화
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 제안개요:e -->
+
                     <!-- 제안내용:s -->
                     <div class="board-block mt10">
                         <div class="board-title">
@@ -48,34 +105,6 @@
                                     <col>
                                 </colgroup>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">제안번호</th>
-                                        <td>2022-0018</td>
-                                        <th scope="row">업무분류</th>
-                                        <td></td>
-                                        <th scope="row">검토부서</th>
-                                        <td>품질경영부</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안유형</th>
-                                        <td>테마제안</td>
-                                        <th scope="row">제안일자</th>
-                                        <td>2022. 11. 02</td>
-                                        <th scope="row">진행상태</th>
-                                        <td><div class="stepbox step02">검토접수중</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안자</th>
-                                        <td>홍길동(953341)</td>
-                                        <th scope="row">공동제안자</th>
-                                        <td colspan="3"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안명</th>
-                                        <td colspan="5">
-                                            건강한 사내환경 조성을 위한 방안
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <th scope="row">테마명</th>
                                         <td colspan="5">
@@ -139,34 +168,6 @@
                                     <col>
                                 </colgroup>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">제안번호</th>
-                                        <td>2022-0018</td>
-                                        <th scope="row">업무분류</th>
-                                        <td>전산</td>
-                                        <th scope="row">검토부서</th>
-                                        <td>품질경영부</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안유형</th>
-                                        <td>개선활동</td>
-                                        <th scope="row">제안일자</th>
-                                        <td>2022. 11. 02</td>
-                                        <th scope="row">진행상태</th>
-                                        <td><div class="stepbox step09">종료</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안자</th>
-                                        <td>홍길동(953341)</td>
-                                        <th scope="row">공동제안자</th>
-                                        <td colspan="3"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제안명</th>
-                                        <td colspan="5">
-                                            정보 보안 점검 강화
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <th scope="row">검토결과</th>
                                         <td colspan="5" class="radio-type readonly">

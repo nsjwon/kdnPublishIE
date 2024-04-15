@@ -9,133 +9,335 @@
     <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
-    <title>공지사항 목록</title>
-    <style>
-        .popup-panel {display: block;}
-    </style>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/placeholders.min.js"></script>
+    <title>제안관리시스템 - 공지사항</title>
 </head>
 <body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#sub-container">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
     <!-- wrap layout:s -->
-    <div id="wrap">        
-        
-        <!-- 공지사항 목록 팝업 시작 -->
-        <div id="noticeList" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-05">
-                <div class="popup-header">
-                    <h2>공지사항</h2>
-                    <a class="close-button" href="#none"></a>
+    <div id="wrap">
+        <!-- 상단메뉴 layout:s -->
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                                    <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의활동</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="popup-body">
-                    <!-- board search :s -->
-                    <div class="brd-search">    
-                        <div class="brd-search-form">
-                            <div class="search-section">
-                                <div class="search-text">
-                                    <p>키워드검색</p>
-                                    <label for="searchWord" class="hide">선택</label>
-                                    <select name="searchWord" id="searchWord">
-                                        <option>선택</option>
-                                        <option>내용</option>
-                                        <option>제목</option>
-                                        <option>작성자</option>
-                                    </select>
-                                    <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <!-- 상단메뉴 layout:e -->
+
+        <!-- 서브페이지 메인 layout:s -->
+        <main id="sub-container">
+            <!-- 좌측메뉴 layout:s -->
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="d1">
+                        <a href="#none">테마제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                            <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의활동</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">관리</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 one-menu active">
+                        <a href="./SGST-UI-01-003.html">공지사항</a>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 좌측메뉴 layout:e -->
+            <!-- 서브페이지 컨텐츠 layout:s -->
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <!-- 현재 페이지 경로:s -->
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>공지사항</li>
+                    </ul>
+                    <!-- 현재 페이지 경로:e -->
+                    <h2 class="h2-tit">공지사항</h2>
+                    <!-- board wrap :s-->
+                    <div class="brd-wrap">
+                        <!-- board search :s -->
+                        <div class="brd-search oneline">
+                            <div class="brd-search-form">
+                                <div class="search-section">
+                                    <div class="search-text large">
+                                        <p>키워드검색</p>
+                                        <label for="searchWord" class="hide">선택</label>
+                                        <select name="searchWord" id="searchWord">
+                                            <option>선택</option>
+                                            <option>내용</option>
+                                            <option>제목</option>
+                                            <option>작성자</option>
+                                        </select>
+                                        <input type="text" name="searchField2" id="searchField2" placeholder="검색어를 입력하세요.">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="brd-search-btn">
-                            <input type="button" class="btn-search" value="조회">
-                            <input type="button" class="btn-reset" value="초기화">
-                        </div>
-                    </div>                
-                    <!-- board search :e -->
-                    <!-- board info : s-->
-                    <div class="brd-info">
-                        <ul class="brd-num">
-                            <li><span>전체 </span><em>112</em>건</li>
-                            <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
-                        </ul>
-                    </div>                               
-                    <!-- board info : e-->
-
-                    <!-- board table :s -->
-                    <div class="table-wrap">
-                        <table class="brd-list-01">
-                            <caption>나의제안 리스트</caption>
-                            <colgroup>
-                                <col style="width: 60%;">
-                                <col style="width: 10%;">
-                                <col style="width: 10%;">
-                                <col style="width: 10%;">
-                                <col style="width: 10%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">제목</th>
-                                    <th scope="col">첨부파일</th>
-                                    <th scope="col">작성자</th>
-                                    <th scope="col">등록일</th>
-                                    <th scope="col">조회수</th>                                            
-                                </tr>
-                            </thead>
-                            <tbody>	
-                                <tr>
-                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[결과보고] 개선활동 결과보고서 양식</p></a></td> 
-                                    <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
-                                    <td>홍길동</td>
-                                    <td>2023. 12. 23</td>
-                                    <td>24</td>
-                                </tr>
-                                <tr>
-                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[산출물등록] 개선활동 PAIR 시트양식</p></a></td> 
-                                    <td></td>
-                                    <td>홍길동</td>
-                                    <td>2023. 12. 23</td>
-                                    <td>36</td>
-                                </tr>
-                                <tr>
-                                    <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
-                                    <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
-                                    <td>홍길동</td>
-                                    <td>2023. 12. 23</td>
-                                    <td>100</td>
-                                </tr>
-
-                                <!-- 게시글이 없을때  -->
-                                <!-- <tr> 
-                                    <td colspan="5" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
-                                </tr> -->
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- board table :e -->
+                            <div class="brd-search-btn">
+                                <input type="button" class="btn-search" value="조회">
+                                <input type="button" class="btn-reset" value="초기화">
+                            </div>
+                        </div>                
+                        <!-- board search :e -->
+                        <!-- board info : s-->
+                        <div class="brd-info">
+                            <ul class="brd-num">
+                                <li><span>전체 </span><em>112</em>건</li>
+                                <li><span>현재 페이지 </span><em class="pcol2">1</em>/14</li>
+                            </ul>
+                        </div>                               
+                        <!-- board info : e-->
     
-                    <!-- page:s -->
-                    <div class="pagination">       
-                        <span class="prev-group">
-                            <a class="page-first" href="#none" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
-                            <a class="page-prev" href="#none" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
-                        </span>
-                        <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
-                        <span class="next-group">
-                            <a class="page-next" href="#none" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
-                            <a class="page-end" href="#none" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
-                        </span>                
-                    </div>                  
-                    <!-- page:e -->      
+                        <!-- board table :s -->
+                        <div class="table-wrap">
+                            <table class="brd-list-01">
+                                <caption>나의제안 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 60%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 10%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">첨부파일</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">등록일</th>
+                                        <th scope="col">조회수</th>                                            
+                                    </tr>
+                                </thead>
+                                <tbody>	
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[결과보고] 개선활동 결과보고서 양식</p></a></td> 
+                                        <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>24</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">[산출물등록] 개선활동 PAIR 시트양식</p></a></td> 
+                                        <td></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>36</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
+                                        <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
+                                        <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
+                                        <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl20"><a href="./SGST-UI-01-004.html"><p class="over2lines">과제제안 등록 및 개선활동 안내</p></a></td> 
+                                        <td><img src="../images/board/ic_file-list.svg" alt="첨부파일"></td>
+                                        <td>홍길동</td>
+                                        <td>2023. 12. 23</td>
+                                        <td>100</td>
+                                    </tr>
+    
+                                    <!-- 게시글이 없을때  -->
+                                    <!-- <tr> 
+                                        <td colspan="5" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                    </tr> -->
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- board table :e -->
+        
+                        <!-- page:s -->
+                        <div class="pagination">       
+                            <span class="prev-group">
+                                <a class="page-first" href="#none" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
+                                <a class="page-prev" href="#none" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
+                            </span>
+                            <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                            <span class="next-group">
+                                <a class="page-next" href="#none" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
+                                <a class="page-end" href="#none" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
+                            </span>                
+                        </div>                  
+                        <!-- page:e -->      
+                    </div>                          
+                    <!-- board wrap :e-->
                 </div>
-                <!-- <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
-                    </div>
-                </div> -->
+                <!-- 서브페이지 풋터:s -->
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+                <!-- 서브페이지 풋터:e -->
             </div>
-        </div>
-        <!-- 공지사항 목록 팝업 끝 -->
-
-
+        </main>
+        <!-- 서브페이지 메인 layout:e -->
     </div>
     <!-- wrap layout:e -->
     

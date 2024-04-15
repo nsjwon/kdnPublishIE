@@ -233,9 +233,9 @@ a.underline:hover {text-decoration: underline;}
 
 /* list style */
 ul.circle li {position: relative; margin-left: 15px;}
-ul.circle li::before {position: absolute; content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; top: 14px; left: -15px; background: #181818;}
+ul.circle li:before {position: absolute; content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; top: 14px; left: -15px; background: #181818;}
 ul.circle-30 li {position: relative; margin-left: 15px;}
-ul.circle-30 li::before {position: absolute; content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; top: 20px; left: -15px; background: #181818;}
+ul.circle-30 li:before {position: absolute; content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; top: 20px; left: -15px; background: #181818;}
 
 /* align */
 .align-left {text-align: left !important;}
