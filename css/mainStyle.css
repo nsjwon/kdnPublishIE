@@ -137,9 +137,11 @@
 .bs-wrap.normal-user .card-best {padding: 36px 30px;}
 .bs-wrap.normal-user .card-best-wrap .card-navi {bottom: 36px; left: 30px;}
 .bs-wrap.normal-user .card-best-wrap .swiper-pagination {left: 30px;}
-.bs-col {display: flex; flex-direction: column; width: 100%; gap: 40px;}
+.bs-col {display: flex; flex-direction: column; width: calc(50% - 24px); gap: 40px;}
+.bs-col.right {gap: 0;}
 .bs-items {display: flex; align-items: flex-start; justify-content: space-between; gap: 37px; width: 100%; height: 294px;}
-.bs-item {display: flex; flex-direction: column; width: 100%;}
+.bs-item {display: flex; flex-direction: column; width: calc(50% - 24px);}
+.bs-col .bs-item {width: 100%;}
 .bs-item.left {flex: 1; height: 100%;}
 .card-best-wrap {position: relative; height: 100%; width: 247px; overflow: hidden;}
 .card-best-track {height: 100%;}
@@ -201,8 +203,10 @@
 
 @media (max-width: 1420px) {
     .bs-col {justify-content: space-between;}
-    .bs-items {flex-direction: column; gap: 2.2rem;}
+    .bs-items {flex-direction: column; gap: 2.2rem; height: auto;}
     .bs-wrap.normal-user .bs-items {height: 363px;}
+    .card-best-wrap {width: 100%;}
+    .card-best-wrap .swiper-pagination {right: 36px; bottom: 22px; left: unset;}
     .card-best {width: 100%; height: 104px; flex-direction: row; justify-content: space-between; align-items: flex-end; padding: 22px 36px; background-size: 26%; padding-right: 120px;}
     .card-title-wrap>span {width: auto;}
     .card-link {line-height: 22px;}

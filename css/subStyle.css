@@ -76,8 +76,9 @@
 .search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat calc(100% - 0.8rem) 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
 .search-section > div.check-wrap {gap: 4rem; width: 100%; display: flex; align-items: flex-start;}
+.search-section.multiple > div.search-check {width: 100%; flex-wrap: nowrap;}
+.search-section div.search-check {width: 100%; flex-wrap: nowrap;}
 .check-wrap .search-text {width: 30%; display: flex; align-items: flex-start;}
-.search-section .search-check {width: 30%; flex-wrap: nowrap;}
 .check-items {display: flex; flex-wrap: wrap;}
 .check-items label {display: flex; min-width: 100px; margin-right: 3.6rem; height: 4rem; padding: 10px 0; cursor: pointer;}
 .check-items.near label {min-width: 60px;}
@@ -485,7 +486,6 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .helf-table-wrap .brd-list-01 input[type="text"] {width: 100%;}
 .helf-table-wrap .brd-list-01 input[type="text"].wauto {width: auto;}
 .helf-table-wrap .brd-list-01 select {width: 100%; padding: 0.8rem 3.8rem 0.8rem 1.3rem;}
-
 .helf-table-wrap tbody tr.selectable.select {background: #e0eeff;}
 .helf-table-wrap tbody tr.selectable.select:hover {background: #e0eeff;}
 .helf-note-wrap {padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;}
@@ -529,7 +529,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .search-section.multiple > div {width: 46%;}
     .search-section.multiple > div.check-wrap {width: 100%;}
     .search-section > div:nth-child(2n) {margin-right: 0;}
-    .search-section .search-check, .check-wrap .search-text {width: 46%; flex-wrap: nowrap;}
+    .search-section .search-check, .check-wrap .search-text {width: 100%; flex-wrap: nowrap;}
 }
 
 @media (max-width: 1920px) {
