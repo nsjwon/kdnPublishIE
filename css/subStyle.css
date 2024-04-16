@@ -472,7 +472,8 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .board-wrap::-webkit-scrollbar {width: 1em; height: 1rem;}
 .board-wrap::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 .board-wrap::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
-.table-wrap.scroll table {min-width: 1080px;}
+.table-wrap.scroll {overflow-x: auto;}
+.table-wrap.scroll table {min-width: 1200px;}
 
 /* 코드관리목록 */
 .bh-title {height: 3.8rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;}

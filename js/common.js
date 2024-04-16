@@ -93,6 +93,24 @@ $(document).ready(function() {
     });
 });
 
+//window 사이즈에 따라 테이블 스크롤 추가
+$(document).ready(function(){
+    function checkWindowSize() {
+        if($(window).width() <= 1440){
+            $('.table-wrap').addClass('scroll');
+        } else {
+            $('.table-wrap').removeClass('scroll');
+        }
+    }
+
+    // 페이지 로드시 확인
+    checkWindowSize();
+
+    // 창의 크기가 변경될 때마다 확인
+    $(window).resize(function(){
+        checkWindowSize();
+    });
+});
 
 //팝업 이벤트
 $(document).ready(function() {
