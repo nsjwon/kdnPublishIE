@@ -262,6 +262,7 @@
 .partner-list li>span {line-height: 18px; padding: 0 4px; font-size: 14px; color: #193975;}
 .partner-list li>a {display: flex; align-items: center; justify-content: center;}
 .partner-list li img {vertical-align: top;}
+.ic_edit {width: 20px; height: 20px; margin-left: 4px; display: inline-block; background: url(../images/button/ic_editpen.svg) no-repeat; background-size: contain; vertical-align: middle;}
 
 /* 코멘트 영역 스타일 */
 .comment-box {display: flex; flex-direction: column; padding: 3rem; margin-top: 1.8rem;}
