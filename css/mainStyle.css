@@ -3,7 +3,7 @@
 Author : jwshin
 Create date : 2024-01-19
 Version : v1.0
-Reversion date : 2024-04-24
+Revision date : 2024-04-24
 Version : v2.0
 -------------------------------------------------*/
 
@@ -13,7 +13,7 @@ Version : v2.0
 .main-banner .banner-content-track {transition: all .5s ease-out;}
 .main-banner .banner-content {display: flex; align-items: center; justify-content: center;}
 .main-banner .banner-tag {margin-right: 12px; display: flex; align-items: center; justify-content: center; height: 28px; padding: 0 16px; font-size: 1.4rem; line-height: 1.4rem; border: 1px solid #111827; color: #111827; border-radius: 150px;}
-.main-banner .banner-title {font-weight: 500; font-size: 1.5rem; margin-right: 12px;}
+.main-banner .banner-title {font-weight: 500; font-size: 1.5rem;}
 .main-banner .banner-link {position: relative; font-size: 1.5rem; color: #2141B0; line-height: 24px;}
 .main-banner .banner-link>a {display: flex; height: 25px;}
 .main-banner .banner-link>a>img {width: 24px; height: 24px;}
@@ -143,7 +143,7 @@ Version : v2.0
 }
 
 .bs-wrap {display: flex; justify-content: space-between; margin: 40px 50px 44px; gap: 48px;}
-.bs-wrap.normal-user .bs-items {height: 230px;}
+/* .bs-wrap.normal-user .bs-items {height: 230px;} */
 /* .bs-wrap.normal-user .bs-box {height: 100%;} */
 .bs-wrap.normal-user .bs-confirm {padding: 14px 32px;}
 .bs-wrap.normal-user .bs-box {flex: 1;}
@@ -170,7 +170,7 @@ Version : v2.0
 .card-title-wrap {display: flex; flex-direction: column; justify-content: flex-start;}
 .card-title-wrap>em {font-size: 2.6rem; font-weight: 700; width: fit-content; background: linear-gradient(94deg, #FDFDFD 0%, #67DCFF 55.9%, #D27EFF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif;}
 .card-title-wrap>span {line-height: 21px; width: 140px; word-break: auto-phrase;}
-.card-link {display: flex; align-items: center; gap: 4px; font-weight: 500; position: relative; width: fit-content; line-height: 24px; margin-top: 16px;}
+.card-link {display: flex; align-items: center; gap: 4px; font-weight: 500; position: relative; width: 52px; line-height: 24px; margin-top: 16px;}
 .card-link.download:after {background: url(../images/main/ic_card-link-download.svg) no-repeat;}
 .card-link:after {position: absolute; content: ''; display: block; right: -28px; top: 0; width: 24px; height: 24px; background: url(../images/main/ic_card-link.svg) no-repeat;}
 .bs-title {display: flex; align-items: flex-start; justify-content: space-between; font-size: 2.4rem; line-height: 2.4rem; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif;}
@@ -185,7 +185,7 @@ Version : v2.0
 .ct-option {position: absolute; left: 0; top: 4rem; width: 12rem; padding: 1.2rem 0; display: none; flex-direction: column; border-radius: 8px; border: 2px solid #000126; background: #fff; z-index: 50;}
 .ct-option li a {color: #36383c; font-size: 1.6rem; line-height: 1.6rem; padding-left: 1.8rem; width: 100%; height: 32px; display: flex; align-items: center; justify-content: flex-start; font-weight: 700;}
 .ct-option li a:hover {color: #4763c2; text-decoration: underline;}
-.bs-box-wrap {display: flex; flex-wrap: wrap; flex: 1;}
+.bs-box-wrap {display: flex; flex-wrap: wrap; flex: 1; justify-content: center;}
 .bs-box {margin-right: 11px; margin-bottom: 12px; width: calc((100% - 22px) / 3); height: 72px; background: #fff; border-radius: 12px; box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column; align-items: center; justify-content: center;}
 .bs-box-wrap .bs-box:nth-child(3n) {margin-right: 0;}
 .bs-box.mybox {background: #fafbff; border: 2px solid #3653b7;}
@@ -210,7 +210,7 @@ Version : v2.0
 }
 
 @media (max-width: 1580px) {
-    .ck-result-wrap .ck-count {gap: 0.6rem;}
+    .ck-result-wrap .ck-count li {margin-right: 0;}
     .ck-result-wrap .ck-count li span {font-size: 1.3rem;}
     .ck-result-wrap .ck-count strong {font-size: 1.5rem; line-height: 1.5rem;}
     .card-best {width: 220px; padding: 36px 26px;}
@@ -219,6 +219,7 @@ Version : v2.0
 @media (max-width: 1420px) {
     .bs-col {justify-content: space-between;}
     .bs-items {flex-direction: column; gap: 2.2rem; height: auto;}
+    .bs-items>div {flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
     .bs-wrap.normal-user .bs-items {height: 363px;}
     .card-best-wrap {width: 100%;}
     .card-best-wrap .swiper-pagination {right: 36px; bottom: 22px; left: unset;}
@@ -251,12 +252,13 @@ Version : v2.0
 .bs-confirm:hover .confirm-title h5 {text-decoration: underline;}
 .bs-confirm:hover .confirm-state {background: linear-gradient(135deg, #0A48C2 0%, #4DA9FF 100%);}
 .bs-confirm:hover .confirm-state.notyet {background: linear-gradient(135deg, #0A48C2 0%, #4DA9FF 100%); color: #fff;}
-.confirm-title {display: flex; flex-direction: column; gap: 12px; flex: 1;}
-.confirm-title>div {display: flex; align-items: center; gap: 10px;}
-.confirm-title .deadline {display: flex; align-items: center; justify-content: center; padding: 0 16px; height: 25px; color: #f83131; border: 1px solid #ef6161; border-radius: 15px; box-sizing: border-box; background: #fff6f6; font-size: 1.4rem; font-weight: 500; text-align: center; word-break: break-word;}
+.confirm-title {display: flex; flex-direction: column; flex: 1;}
+.confirm-title>div {display: flex; align-items: center; margin-bottom: 12px;}
+.confirm-title .deadline {display: flex; align-items: center; justify-content: center; padding: 0 16px; height: 25px; color: #f83131; border: 1px solid #ef6161; border-radius: 15px; box-sizing: border-box; background: #fff6f6; font-size: 1.4rem; font-weight: 500; text-align: center; word-break: break-word; margin-right: 10px;}
 .confirm-title h5 {font-size: 1.8rem; font-weight: 600; line-height: 21px;}
 .confirm-title.deadline h5 {width: calc(100% - 148px);}
-.confirm-title ul {display: flex; align-items: center; justify-content: flex-start; gap: 16px;}
+.confirm-title ul {display: flex; align-items: center; justify-content: flex-start;}
+.confirm-title ul li {margin-right: 16px;}
 .confirm-title ul li p {font-weight: 500; display: inline-block;}
 .confirm-title ul li span {color: #4a4b4d;}
 .confirm-state {width: 66px; height: 66px; padding: 12px; word-break: keep-all; border-radius: 150px; background: #6c88c0; color: #fff; font-size: 1.4rem; font-weight: 500; display: flex; align-items: center; justify-content: center; text-align: center;}

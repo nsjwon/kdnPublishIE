@@ -4,6 +4,8 @@
 Author : jwshin
 Create date : 2024-01-19
 Version : v1.0
+Revision date : 2024-04-24
+Version : v2.0
 -------------------------------------------------*/
 
 /* usual setting */
@@ -21,7 +23,7 @@ caption, legend {position: absolute; width: 1px; height: 1px; padding: 0; margin
 button, input, optgroup, select, textarea {font-weight: 400; appearance:none; padding: 0;}
 select, input {color: #383939; vertical-align: middle; font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400;}
 select::placeholder, input::placeholder {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400; color: #D1D2D2;}
-select {-webkit-appearance:none; /* for chrome */-moz-appearance:none; /*for firefox*/appearance:none; background: url('../images/ic_select.svg') no-repeat 100% 50%/34px auto;}
+select {-webkit-appearance:none; /* for chrome */-moz-appearance:none; /*for firefox*/appearance:none;}
 select::-ms-expand{display:none;/*for IE10,11*/}
 em {font-weight: 600;}
 b, strong {font-weight: 700;}
@@ -269,3 +271,13 @@ ul.circle-30 li:before {position: absolute; content: ''; display: block; width: 
 	100% {transform: translate(-50%, -48%);}
 }
 
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    header, main, nav, section, footer {display: block;}
+}
+
+/* IE9,10 */
+@media screen and (min-width:0\0){
+    header, main, nav, section, footer {display: block;}
+} 
